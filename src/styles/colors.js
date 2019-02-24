@@ -3,7 +3,8 @@ const colors = {
   secondary: '#4C3D54',
   white: '#fff',
   dark: '#4C3D54',
-  lightgrey: '#F6F6F6'
+  lightgrey: '#F6F6F6',
+  darkgrey: '#c9c7c7'
 }
 
 export default colors

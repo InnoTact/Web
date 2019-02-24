@@ -8,5 +8,5 @@ const Text = styled.p`
     line-height: 1.4;
 `
 
-export default ({children, dark, light}) => <Text dark={dark} light={light}>{children}</Text>
+export default ({children, dark, light, style = {}}) => <Text style={{...style}} dark={dark} light={light}>{children}</Text>
 
