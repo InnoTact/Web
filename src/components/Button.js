@@ -1,12 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
+import colors from './../styles/colors'
 
 const Button = styled.button`
-  padding: 10px 14px;
-  font-size: 1.2rem;
-  border-radius: 0;
-  border-color: ${props => (props.primary ? 'red' : 'white')};
+  position: relative;
+  overflow: hidden;
+  padding: 0 40px;
+  height: 56px;
+  line-height: 42px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: center;
   font-weight: 500;
+  background-color: transparent;
+  color: ${props => (props.primary ? colors.primary : colors.white)};
+  border: 1px solid ${props => (props.primary ? colors.primary : colors.white)};
+  transition: all 0.3s ease 0s;
 `
 
-export default ({ children }) => <Button>{children}</Button>
+export default Button
