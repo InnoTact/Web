@@ -27,6 +27,7 @@
     "typography-theme-irving": "^0.16.18"
   },
   "devDependencies": {
+    "eslint-plugin-better-styled-components": "^1.1.1",
     "prettier": "^1.16.4"
   },
   "repository": {

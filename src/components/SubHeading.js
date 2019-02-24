@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import colors from '../styles/colors'
 
 const SubHeading = styled.h3`
-  color: colors.dark;
+  color: ${props => props.dark ? colors.dark : colors.white};
   margin-bottom: 1.2rem;
   display: inline-block;
   font-size: 1.8rem;
@@ -11,4 +11,4 @@ const SubHeading = styled.h3`
   line-height: 1.5;
 `
 
-export default ({ text }) => <SubHeading>{text}</SubHeading>
+export default ({ text, dark, light }) => <SubHeading dark={dark} light={light}>{text}</SubHeading>

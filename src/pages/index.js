@@ -15,6 +15,13 @@ const Hero = styled.div`
   align-items: center;
 `
 
+const ServiceContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`
+
 export default () => (
   <React.Fragment>
     <Navbar />
@@ -32,7 +39,16 @@ export default () => (
     <Section>
         <ContentWrapper>
           <SectionTop dark header={`Let's get started`} text='Our team of highly skilled and motivated developers always strive towards perfection. While working with close relationships we make sure to meet every need of our customers while we develop Augmented Reality applications to change the way our customers work today. ' buttonText='' />
-          <ContentBlob />
+          <ServiceContainer>
+            <ContentBlob heading='Bring your idea to life' 
+            text='Do you already have an AR idea? Let us turn it into reality.'
+            buttonText='Make it Real'
+             />
+            <ContentBlob heading='Let us create an idea together' 
+            text='If you are not sure how use AR to improve your business we evaluate your opportunities and create an idea. '
+            buttonText={`Let's do it`}
+             />
+          </ServiceContainer>
         </ContentWrapper>
     </Section>
 
