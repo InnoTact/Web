@@ -37,15 +37,13 @@ const NavItem = styled.div`
 const NavItemStyle = {
   textDecoration: 'none',
   color: '#647E95',
-  fontSize: '1rem',
-  fontFamily: 'Courier'
+  fontSize: '1rem'
 }
 
 const LogoText = styled.h1`
   font-size: 1.3rem;
   display: inline-block;
   margin-left: 1.1rem;
-  font-family: 'Courier';
   font-weight: normal;
 `
 
@@ -77,7 +75,7 @@ const Navbar = () => (
             Services
           </Link>
         </NavItem>
-        <Button onClick={console.log('clicked')}>Contact</Button>
+        <Button primary>Contact</Button>
       </LinkContainer>
     </Container>
   </Wrapper>
