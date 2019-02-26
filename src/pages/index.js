@@ -7,6 +7,9 @@ import ContentWrapper from './../components/ContentWrapper'
 import ContentBlob from './../components/ContentBlob'
 import colors from '../styles/colors'
 import PeopleCard from '../components/PeopleCard';
+import TextCard from '../components/TextCard';
+import Progress from '../components/Progress';
+import Button from '../components/Button';
 
 const Hero = styled.div`
   background-image: linear-gradient(to right, #c31432, #240b36);
@@ -29,6 +32,11 @@ const PeopleContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+`
+
+const StepsWrapper = styled.div`
+  margin-left: 8%;
+  position: relative;
 `
 
 export default () => (
@@ -63,7 +71,10 @@ export default () => (
 
     <Section backgroundColor={colors.lightgrey}>
       <ContentWrapper>
-        <SectionTop dark header='Our Team' text='Augmented Solutions AB (ASAB) consists of a team of high-performance and dedicated engineers from Chalmers University of Technology, located in Gothenburg, Sweden. Our number one priority is always customer satisfaction. We love to create ideas together with our customers to improve and simplify their businesses.' />
+        <SectionTop dark header='The Team' text='Augmented Solutions AB (ASAB) consists of a team of high-performance and dedicated engineers from Chalmers University of Technology, located in Gothenburg, Sweden. Our number one priority is always customer satisfaction. We love to create ideas together with our customers to improve and simplify their businesses.' />
+        <CenterContainer>
+          <SubHeader style={{color: colors.dark, textAlign: 'center'}} text='Since Augmented Reality is a fast growing technology we make sure to stay updated on every single advance of the technology to stay on the cutting edge. Our goal is to become the most high performance Augmented Reality company in the country. ' /> 
+        </CenterContainer>
         <PeopleContainer>
           <PeopleCard 
             name='Niklas Gustafsson' 
@@ -122,20 +133,57 @@ export default () => (
       </ContentWrapper>
     </Section>
 
-    <Section>
-      <Header>Previous Work</Header>
+    <Section backgroundColor={colors.white}>
+        <ContentWrapper>
+          <SectionTop dark header={`How we bring your product to life`} text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. In ut malesuada quam. Nulla facilisi. Etiam et erat ultricies, bibendum nunc nec, elementum ex. Phasellus fringilla mi in libero mattis, a gravida massa pharetra. Nunc facilisis pulvinar mauris, scelerisque ornare metus egestas ac.' />
+          <StepsWrapper>
+            <TextCard 
+            header='Lets arrange for a meeting.' 
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            number={'1'}
+            dark
+            />
+            <TextCard 
+            header='We create an action plan depending on your needs' 
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            number={'2'}
+            dark
+            />
+            <TextCard 
+            header='While maintaining close contact we start executing the action plan' 
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            number={'3'}
+            dark
+            />
+            <TextCard 
+            header='We keep on working on the solution until all your needs are met' 
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            number={'4'}
+            dark
+            />
+            <TextCard 
+            header='We finish and lunch the solution' 
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            number={'5'}
+            dark
+            />
+            <TextCard 
+            header='Continuous improvements for your future needs' 
+            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+            number={'6'}
+            dark
+            />
+          </StepsWrapper>
+        </ContentWrapper>
     </Section>
 
-    <Section>
-      <Header>How we bring your product to life</Header>
-    </Section>
-
-    <Section>
-      <Header>Testimony</Header>
-    </Section>
-
-    <Section>
-      <Header>Blogg</Header>
+    <Section backgroundColor={colors.lightgrey}>
+        <ContentWrapper>
+          <SectionTop dark header={`Ready to Get Started?`} text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.' />
+          <CenterContainer>
+            <Button style={{marginTop: 25}} primary>Start a project</Button>
+          </CenterContainer>
+        </ContentWrapper>
     </Section>
   </React.Fragment>
 )

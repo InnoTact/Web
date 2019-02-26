@@ -17,7 +17,7 @@ const SectionTop = ({ header, text, buttonText = '', light = false, dark = false
   <Container>
     <React.Fragment>
       <Header text={header} styles={{ color: dark ? colors.dark : colors.white }} />
-      <SubHeader styles={{ color: dark ? colors.dark : colors.white }} text={text} />
+      <SubHeader style={{ color: dark ? colors.dark : colors.white }} text={text} />
       {buttonText && <Button secondary>Start a Project</Button>}
     </React.Fragment>
   </Container>

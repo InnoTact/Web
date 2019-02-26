@@ -1,8 +1,9 @@
 import React, {Fragment} from 'react'
 import styled from 'styled-components'
+import colors from '../styles/colors'
 
 const SubHeader = styled.h2`
-  color: #ccc;
+  color: ${props => props.dark ? colors.dark : colors.white};
   display: inline-block;
   margin-bottom: 1.2rem;
   margin: 0 auto 30px;
@@ -14,4 +15,4 @@ const SubHeader = styled.h2`
   max-width: 1080px;
 `
 
-export default ({ text, styles = {} }) => <SubHeader style={{ ...styles }}>{text}</SubHeader>
+export default ({ text, ...props }) => <SubHeader {...props}>{text}</SubHeader>

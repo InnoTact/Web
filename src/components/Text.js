@@ -6,7 +6,8 @@ const Text = styled.p`
     color: ${props => props.dark ? colors.dark : colors.white};
     font-size: 1.1rem;
     line-height: 1.4;
+    margin-bottom: 1.5rem;
 `
 
-export default ({children, dark, light, style = {}}) => <Text style={{...style}} dark={dark} light={light}>{children}</Text>
+export default ({children, dark, light, ...props}) => <Text {...props} dark={dark} light={light}>{children}</Text>
 

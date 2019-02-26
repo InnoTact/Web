@@ -16,7 +16,7 @@ const Button = styled.button`
   font-weight: 500;
   background-color: transparent;
   color: ${props => (props.primary ? colors.primary : colors.white)};
-  border: 1px solid ${props => (props.primary ? colors.primary : colors.white)};
+  border: 2px solid ${props => (props.primary ? colors.primary : colors.white)};
   transition: all 0.3s ease 0s;
 `
 

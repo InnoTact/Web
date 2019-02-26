@@ -9,6 +9,7 @@ import Anton_Claesson from '../img/Anton_Claesson.jpg'
 import Niklas_Gustafsson from '../img/Niklas_Gustafsson.jpg'
 import Carl_Claesson from '../img/Carl_Claesson.jpg'
 import { FaMapMarker, FaEnvelope, FaLinkedin } from 'react-icons/fa'
+import ColorFadeSection from './ColorFadeSection';
 
 const Container = styled.div`
     padding: 1.5rem;
@@ -22,6 +23,7 @@ const Container = styled.div`
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
+    position: relative;
 `
 
 const Image = styled.img`
@@ -34,6 +36,7 @@ const Name = styled.h5`
     font-weight: bold;
     margin: 15px 0 0 0;
     padding: 0;
+    color: ${colors.dark};
 `
 
 const LocationContainer = styled.div`
@@ -48,10 +51,12 @@ const Position = styled.p`
     font-style: italic;
     color: ${colors.darkgrey};
     margin-top: 0.8rem;
+    margin-bottom: 0.4rem;
 `
 
 const LogosContainer = styled.div`
-    margin-top: 50px;
+    margin-top: auto;
+    margin-bottom: 5px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -101,13 +106,14 @@ export default ({name, position, town, text, email, linkedin}) => {
         </LocationContainer>
         <Text style={{textAlign: 'center'}} dark>{text}</Text>
         <LogosContainer>
-            <SocialLogo>
+            <SocialLogo href={`mailto:${email}`}>
                 <FaEnvelope style={{fontSize: 25, color: colors.primary}} />
             </SocialLogo>
-            <SocialLogo>
+            <SocialLogo href={linkedin}>
                 <FaLinkedin style={{fontSize: 25, color: colors.primary}} />
             </SocialLogo>
         </LogosContainer>
+        <ColorFadeSection style={{position: 'absolute', bottom: 0, left: 0, right: 0}} />
     </Container>
     )
 }
