@@ -10,7 +10,7 @@ const Container = styled.div`
     padding: 2rem 3.3rem 0.5rem 3.3rem;
     position: relative;
     background-color: ${colors.lightgrey};
-    width: 700px;
+    width: 740px;
     margin-top: 65px;
 `
 const Number = styled.div`

@@ -18,6 +18,7 @@ const Button = styled.button`
   color: ${props => (props.primary ? colors.primary : colors.white)};
   border: 2px solid ${props => (props.primary ? colors.primary : colors.white)};
   transition: all 0.3s ease 0s;
+  font-weight: 500;
 
   :hover {
     cursor: pointer;
