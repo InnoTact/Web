@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import { FaObjectGroup } from 'react-icons/fa'
+import { FaCubes } from 'react-icons/fa'
 import colors from '../styles/colors'
 import SubHeading from './SubHeading'
 import Text from './Text'
@@ -22,7 +22,7 @@ const Item = styled.div`
 export default ({ children, heading, text, buttonText }) => (
   <Wrapper>
     <Item>
-      <FaObjectGroup style={{ fontSize: '5rem', color: colors.dark, position: 'relative', bottom: -30 }} />
+      <FaCubes style={{ fontSize: '5rem', color: colors.dark, position: 'relative', bottom: -30 }} />
     </Item>
     <Item>
       <SubHeading dark text={heading} />

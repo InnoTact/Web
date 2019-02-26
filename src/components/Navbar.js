@@ -6,7 +6,7 @@ import Logo from './Logo';
 import NavItems from './NavItems'
 
 const Wrapper = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 5.4rem;
   display: flex;
   align-items: center;

@@ -11,7 +11,7 @@ const Container = styled.div`
     position: relative;
     background-color: ${colors.lightgrey};
     width: 700px;
-    margin-top: 60px;
+    margin-top: 65px;
 `
 const Number = styled.div`
     position: absolute;
@@ -26,8 +26,8 @@ const Number = styled.div`
     align-items: center;
 `
 
-export default ({header, text, number}) => 
-<Container>
+export default ({header, text, number, ...props}) => 
+<Container {...props}>
     <SubHeader dark text={header} />
     <Text dark>{text}</Text>
     {number && <Number>

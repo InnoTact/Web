@@ -37,6 +37,7 @@ const SocialLogos = styled.div`
 const SocialLogoAnchor = styled.a`
     :hover {
         color: ${colors.primary};
+        cursor: pointer;
     }
 `
 

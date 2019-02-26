@@ -36,8 +36,10 @@ const PeopleContainer = styled.div`
 `
 
 const StepsWrapper = styled.div`
-  margin-left: 8%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 export default () => (
@@ -104,7 +106,7 @@ export default () => (
             position='Co-Founder &amp; Developer'
             town='Mölnlycke, Sweden'
             text={`Anton's artistic mind makes him the perfect man to be responsible for our design and users experience. Anton makes
-            sure our products always are aesthetic and easy to use. Anton is now studying  ... If there are any questions about the user 
+            sure our products always are aesthetic and easy to use. Anton is now studying automation and mechatronics If there are any questions about the user 
             experience or visuals of our products, Anton is the man to ask. `}
             email='anton@innotactsoftware.se'
             linkedin='https://www.linkedin.com/in/anton-claesson/'
@@ -139,37 +141,38 @@ export default () => (
           <SectionTop dark header={`How we bring your product to life`} text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. In ut malesuada quam. Nulla facilisi. Etiam et erat ultricies, bibendum nunc nec, elementum ex. Phasellus fringilla mi in libero mattis, a gravida massa pharetra. Nunc facilisis pulvinar mauris, scelerisque ornare metus egestas ac.' />
           <StepsWrapper>
             <TextCard 
+            style={{marginTop: 40}}
             header='Lets arrange for a meeting.' 
             text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             number={'1'}
             dark
             />
             <TextCard 
-            header='We create an action plan depending on your needs' 
+            header='We create an action plan depending on your needs.' 
             text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             number={'2'}
             dark
             />
             <TextCard 
-            header='While maintaining close contact we start executing the action plan' 
+            header='While maintaining close contact we start executing the action plan.' 
             text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             number={'3'}
             dark
             />
             <TextCard 
-            header='We keep on working on the solution until all your needs are met' 
+            header='We keep on working on the solution until all your needs are met.' 
             text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             number={'4'}
             dark
             />
             <TextCard 
-            header='We finish and lunch the solution' 
+            header='We finish and lunch the solution.' 
             text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             number={'5'}
             dark
             />
             <TextCard 
-            header='Continuous improvements for your future needs' 
+            header='Continuous improvements for your future needs.' 
             text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
             number={'6'}
             dark
