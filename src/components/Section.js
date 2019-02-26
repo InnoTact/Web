@@ -7,6 +7,6 @@ const StyledContainer = styled.div`
   background-color: ${props => props.backgroundColor ? props.backgroundColor : '#fff'};
 `
 
-const Section = ({ children, backgroundColor }) => <StyledContainer backgroundColor={backgroundColor}>{children}</StyledContainer>
+const Section = ({ children, backgroundColor, ...props }) => <StyledContainer {...props} backgroundColor={backgroundColor}>{children}</StyledContainer>
 
 export default Section

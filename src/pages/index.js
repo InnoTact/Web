@@ -10,6 +10,7 @@ import PeopleCard from '../components/PeopleCard';
 import TextCard from '../components/TextCard';
 import Progress from '../components/Progress';
 import Button from '../components/Button';
+import Footer from '../components/Footer';
 
 const Hero = styled.div`
   background-image: linear-gradient(to right, #c31432, #240b36);
@@ -185,5 +186,7 @@ export default () => (
           </CenterContainer>
         </ContentWrapper>
     </Section>
+
+    <Footer />
   </React.Fragment>
 )

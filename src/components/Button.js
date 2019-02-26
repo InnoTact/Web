@@ -18,6 +18,14 @@ const Button = styled.button`
   color: ${props => (props.primary ? colors.primary : colors.white)};
   border: 2px solid ${props => (props.primary ? colors.primary : colors.white)};
   transition: all 0.3s ease 0s;
+
+  :hover {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    transform: scale(1.02);
+    color: ${props => (props.primary ? colors.white : colors.primary)};
+    background-color: ${props => (props.primary ? colors.primary : colors.white)};
+  }
 `
 
 export default Button
