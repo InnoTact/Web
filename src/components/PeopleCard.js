@@ -57,26 +57,26 @@ const Position = styled.p`
 const LogosContainer = styled.div`
     padding-top: 12px;
     margin-top: auto;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 `
 
 const SocialLogo = styled.a`
-    color: ${colors.primary};
-    width: 40px;
-    height: 40px;
+    width: 43px;
+    height: 43px;
     border-radius: 50%;
-    border: 1px solid ${colors.primary};
+    border: 2px solid ${colors.primaryHighLighten};
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 6px;
-    margin-left: 6px;
+    margin-right: 5px;
+    margin-left: 5px;
 
     :hover {
-        color: blue;
+        border-color: ${colors.primaryLowLighten};
+        transition: all ease-in-out 0.2s;
     }
 `
 

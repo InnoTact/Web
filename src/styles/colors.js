@@ -1,6 +1,11 @@
+import { lighten } from 'polished'
+
+let primary = '#4C3D54'
+
 const colors = {
-  primary: '#4C3D54', /* #E73536 */
-  lightPrimary: '#c775ea',
+  primary,
+  primaryLowLighten: lighten(0.2, primary),
+  primaryHighLighten: lighten(0.5, primary),
   secondary: '#4C3D54',
   white: '#fff',
   dark: '#4C3D54',
