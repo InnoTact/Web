@@ -11,9 +11,12 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: absolute;
+  transition: top 0.25s ease-in-out;
   top: 0;
-  background-color: white;
+  left: 0;
+  right: 0;
+  background-color: transparent;
   z-index: 10;
 `
 
@@ -29,7 +32,7 @@ const Container = styled.div`
 const Navbar = () => (
   <Wrapper>
     <Container>
-      <Logo dark />
+      <Logo light />
       <NavItems dark />
     </Container>
   </Wrapper>

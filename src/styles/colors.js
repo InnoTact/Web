@@ -5,6 +5,7 @@ const colors = {
   white: '#fff',
   dark: '#4C3D54',
   lightgrey: '#f7f7f7',
+  mediumGrey: '#d3d1d1',
   darkgrey: '#333333',
   green: '#3cba54',
   normalBoxShadow: '2px 4px 30px 0px rgba(165,165,165,0.3)'

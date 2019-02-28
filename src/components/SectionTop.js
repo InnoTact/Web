@@ -5,6 +5,7 @@ import SubHeader from './SubHeader'
 import Button from './Button'
 import colors from './../styles/colors'
 import Text from './Text';
+import { Link } from 'gatsby'
 
 const Container = styled.div`
   margin-top: 2rem;
@@ -22,26 +23,26 @@ const ReadMore = styled(Text)`
   margin-right: auto;
   bottom: 15px;
   text-align: center;
-  color: ${colors.lightgrey};
+  color: ${colors.mediumGrey};
 
   ::after {
     content: '<';
     display: inline-block;
     position: relative;
     left: 8px;
-    color: ${colors.lightgrey};
+    color: ${colors.mediumGrey};
     transform: rotate(-90deg);
   }
 `
 
-const SectionTop = ({ header, text, buttonText = '', dark, readMore }) => (
+const SectionTop = ({ header, text, buttonText = '', dark, bottomText }) => (
   <Container>
     <React.Fragment>
       <Header text={header} styles={{ color: dark ? colors.dark : colors.white }} />
-      <SubHeader style={{ color: dark ? colors.dark : colors.lightgrey, fontStyle: 'italic' }} text={text} />
-      {buttonText && <Button secondary>Start a Project</Button>}
-      {readMore && <ReadMore>
-        Learn More
+      <SubHeader style={{ color: dark ? colors.dark : colors.mediumGrey, fontStyle: 'italic' }} text={text} />
+      {buttonText && <Link to='/contact/'><Button secondary>Start a Project</Button></Link>}
+      {bottomText && <ReadMore>
+        {bottomText}
       </ReadMore>}
     </React.Fragment>
   </Container>

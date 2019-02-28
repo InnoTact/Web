@@ -50,7 +50,7 @@ export default () =>
         position='Co-Founder &amp; Developer'
         town='Mölnlycke, Sweden'
         text={`Anton's artistic mind makes him the perfect man to be responsible for our design and users experience. Anton makes
-        sure our products always are aesthetic and easy to use. Anton is now studying automation and mechatronics If there are any questions about the user 
+        sure our products always are aesthetic and easy to use. Anton is now studying automation and mechatronics. If there are any questions about the user 
         experience or visuals of our products, Anton is the man to ask. `}
         email='anton@innotactsoftware.se'
         linkedin='https://www.linkedin.com/in/anton-claesson/'
@@ -59,9 +59,9 @@ export default () =>
         name='Casper Lindberg' 
         position='Co-Founder, CTO &amp; Developer'
         town='Göteborg, Sweden'
-        text='As our CTO Casper is in charge of our work structure. Besides being a very skilled programmer Casper has an impressive
-        ability to find the right resources for the right task. As a best-in-class electrical engineer Casper is better than anyone 
-        at adapting to and learning new technologies. If there are any questions about new technologies or our work structure, Casper
+        text='As our CTO Casper is in charge of our work structure. Besides being a very skilled programmer, Casper has an impressive
+        ability to find the right resources for the right task. As a best-in-class electrical engineer Casper is better than anyone at
+        adapting to and learning new technologies. If there are any questions about new technologies or our work structure, Casper
         is the man to ask.'
         email='casper@innotactsoftware.se'
         linkedin='https://www.linkedin.com/in/casperlindberg1997/'

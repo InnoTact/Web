@@ -1,8 +1,8 @@
 import React from 'react'
-import { Navbar, Section } from '../components/'
+import { Navbar, Section } from '../components'
 import styled from 'styled-components'
-import SectionTop from './../components/SectionTop'
-import ContentWrapper from './../components/ContentWrapper'
+import SectionTop from '../components/SectionTop'
+import ContentWrapper from '../components/ContentWrapper'
 import colors from '../styles/colors'
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
@@ -28,9 +28,9 @@ export default () => (
       <ContentWrapper>
         <SectionTop 
         light
-        header='Contact Us' 
+        header='Capabilities' 
         text='Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse. Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse.' 
-        bottomText='Send us a message'
+        bottomText='Learn More'
         />
       </ContentWrapper>
     </Hero>
@@ -39,7 +39,7 @@ export default () => (
         <ContentWrapper>
           <SectionTop
             dark
-            header={`Let's Create Something Great.`} 
+            header={`Experts At Our Craft`} 
             text='Id tempor ullamco cupidatat cillum eiusmod. Labore aliquip laboris enim incididunt laboris ad velit.' 
             />
         </ContentWrapper>

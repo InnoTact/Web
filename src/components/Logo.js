@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { FaCube } from 'react-icons/fa'
 import { CenterContainer } from '.';
+import { Link } from 'gatsby'
 import colors from '../styles/colors'
 
 const LogoText = styled.h1`
@@ -14,7 +15,12 @@ const LogoText = styled.h1`
   color: ${props => props.dark ? colors.dark : colors.white};
 `
 
-export default ({...props}) => <CenterContainer>
-<FaCube style={{ fontSize: '2.5rem' }} />
-<LogoText {...props}>Augmented Solutions</LogoText>
+export default ({...props}) => 
+<CenterContainer>
+    <Link to='/'>
+      <FaCube style={{ fontSize: '2.5rem', color: 'black' }} />
+    </Link>
+    <Link to='/'>
+      <LogoText {...props}>Augmented Solutions</LogoText>
+    </Link>
 </CenterContainer>

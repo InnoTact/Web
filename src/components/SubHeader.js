@@ -10,7 +10,7 @@ const SubHeader = styled.h2`
   font-size: 1.2rem;
   letter-spacing: 0;
   text-transform: none;
-  line-height: 1.5;
+  line-height: 1.8;
   text-align: center;
   max-width: 1080px;
 `

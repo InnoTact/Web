@@ -4,6 +4,7 @@ import colors from '../styles/colors'
 import SubHeading from './SubHeading'
 import Text from './Text'
 import Button from './Button';
+import { Link } from 'gatsby'
 
 const Wrapper = styled.div`
   display: flex;
@@ -29,7 +30,7 @@ export default ({ children, heading, text, buttonText }) => (
       <Text dark>{text}</Text>
     </Item>
     <Item>
-      {buttonText && <Button primary>{buttonText}</Button>}
+      {buttonText && <Link to='./contact/'><Button primary>{buttonText}</Button></Link>}
     </Item>
   </Wrapper>
 )

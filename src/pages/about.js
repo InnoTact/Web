@@ -35,7 +35,7 @@ export default () => (
         light
         header='The Company' 
         text='Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse. Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse.' 
-        readMore
+        bottomText='Read More'
         />
       </ContentWrapper>
     </Hero>

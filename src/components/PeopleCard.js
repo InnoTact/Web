@@ -55,6 +55,7 @@ const Position = styled.p`
 `
 
 const LogosContainer = styled.div`
+    padding-top: 12px;
     margin-top: auto;
     margin-bottom: 5px;
     display: flex;
@@ -73,6 +74,10 @@ const SocialLogo = styled.a`
     align-items: center;
     margin-right: 6px;
     margin-left: 6px;
+
+    :hover {
+        color: blue;
+    }
 `
 
 export default ({name, position, town, text, email, linkedin}) => {

@@ -17,7 +17,7 @@ const NavItem = styled.div`
 const NavItemStyleDark = {
   textDecoration: 'none',
   fontSize: '1rem',
-  color: colors.dark
+  color: colors.mediumGrey
 }
 
 const NavItemStyleLight = {
@@ -34,6 +34,11 @@ export default ({...props}) =>
           </Link>
         </NavItem>
         <NavItem>
+          <Link style={props.dark ? NavItemStyleDark : NavItemStyleLight} to='/capabilities/'>
+            Capabilities
+          </Link>
+        </NavItem>
+        <NavItem>
           <Link style={props.dark ? NavItemStyleDark : NavItemStyleLight} to='/about/'>
             About us
           </Link>
@@ -41,11 +46,6 @@ export default ({...props}) =>
         <NavItem>
           <Link style={props.dark ? NavItemStyleDark : NavItemStyleLight} to='/contact/'>
             Contact us
-          </Link>
-        </NavItem>
-        <NavItem>
-          <Link style={props.dark ? NavItemStyleDark : NavItemStyleLight} to='/services/'>
-            Services
           </Link>
         </NavItem>
 </LinkContainer>
