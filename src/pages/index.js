@@ -15,7 +15,7 @@ import Footer from '../components/Footer';
 import People from '../components/People'
 import Hero from '../components/Hero';
 import GetStarted from '../components/GetStarted'
-import { FaCubes } from 'react-icons/fa'
+import { FaCubes, FaCreativeCommonsShare } from 'react-icons/fa'
 
 const ServiceContainer = styled.div`
   display: flex;
@@ -59,7 +59,7 @@ export default () => (
             text='If you are not sure how use AR to improve your business we evaluate your opportunities and create an idea. '
             buttonText={`Let's do it`}
              >
-              <FaCubes style={styles.icon} />
+              <FaCreativeCommonsShare style={styles.icon} />
              </ContentBlob>
           </ServiceContainer>
         </ContentWrapper>
