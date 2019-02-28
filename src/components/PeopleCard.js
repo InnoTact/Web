@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import colors from '../styles/colors'
 import Text from './Text'
-import { graphql } from "gatsby"
 import Casper_Lindberg from '../img/Casper_Lindberg.jpg'
 import Joel_Rudsberg from '../img/Joel_Rudsberg.jpg'
 import Anton_Claesson from '../img/Anton_Claesson.jpg'
@@ -24,6 +23,7 @@ const Container = styled.div`
     margin-right: auto;
     margin-top: 60px;
     position: relative;
+    box-shadow: ${colors.normalBoxShadow};
 `
 
 const Image = styled.img`

@@ -7,7 +7,7 @@ const SubHeader = styled.h2`
   display: inline-block;
   margin-bottom: 1.2rem;
   margin: 0 auto 30px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   letter-spacing: 0;
   text-transform: none;
   line-height: 1.5;

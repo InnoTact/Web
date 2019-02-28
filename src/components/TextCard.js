@@ -9,9 +9,10 @@ import CenterContainer from './CenterContainer';
 const Container = styled.div`
     padding: 2rem 3.3rem 0.5rem 3.3rem;
     position: relative;
-    background-color: ${colors.lightgrey};
+    background-color: ${colors.white};
     width: 740px;
     margin-top: 65px;
+    box-shadow: ${colors.normalBoxShadow};
 `
 const Number = styled.div`
     position: absolute;
@@ -19,11 +20,12 @@ const Number = styled.div`
     height: 40px;
     top: 35px;
     left: -20px;
-    background-color: ${colors.lightgrey};
+    background-color: ${colors.white};
     color: ${colors.primary};
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: ${colors.normalBoxShadow};
 `
 
 export default ({header, text, number, ...props}) => 

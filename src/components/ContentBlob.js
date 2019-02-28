@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import { FaCubes } from 'react-icons/fa'
 import colors from '../styles/colors'
 import SubHeading from './SubHeading'
 import Text from './Text'
@@ -16,13 +15,12 @@ const Wrapper = styled.div`
 `
 
 const Item = styled.div`
-  text-align: center;
 `
 
 export default ({ children, heading, text, buttonText }) => (
   <Wrapper>
     <Item>
-      <FaCubes style={{ fontSize: '5rem', color: colors.dark, position: 'relative', bottom: -30 }} />
+      {children}
     </Item>
     <Item>
       <SubHeading dark text={heading} />
@@ -31,7 +29,7 @@ export default ({ children, heading, text, buttonText }) => (
       <Text dark>{text}</Text>
     </Item>
     <Item>
-      <Button primary>{buttonText}</Button>
+      {buttonText && <Button primary>{buttonText}</Button>}
     </Item>
   </Wrapper>
 )
