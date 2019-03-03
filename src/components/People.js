@@ -59,10 +59,9 @@ export default () =>
         name='Casper Lindberg' 
         position='Co-Founder, CTO &amp; Developer'
         town='Göteborg, Sweden'
-        text='As our CTO Casper is in charge of our work structure. Besides being a very skilled programmer, Casper has an impressive
-        ability to find the right resources for the right task. As a best-in-class electrical engineer Casper is better than anyone at
-        adapting to and learning new technologies. If there are any questions about new technologies or our work structure, Casper
-        is the man to ask.'
+        text='Being the CTO of the company, Casper is charge of our technical strategy. As a skilled programmer and Electrical engineering student, Casper is
+        an expert at adapting to and learning new technologies. To make sure that the right tools and technologies are used efficienctly in our company, Casper
+        is in responsible of our work structure. If there are any questions about new technologies or our work structure, Casper is the man to ask.'
         email='casper@innotactsoftware.se'
         linkedin='https://www.linkedin.com/in/casperlindberg1997/'
         />

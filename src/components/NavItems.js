@@ -29,9 +29,9 @@ const NavItemStyleLight = {
 export default ({...props}) => 
 <LinkContainer {...props}>
         <NavItem>
-          <Link style={props.dark ? NavItemStyleDark : NavItemStyleLight} to='/'>
-            Home
-          </Link>
+            <Link style={props.dark ? NavItemStyleDark : NavItemStyleLight} to='/'>
+              Home
+            </Link>
         </NavItem>
         <NavItem>
           <Link style={props.dark ? NavItemStyleDark : NavItemStyleLight} to='/capabilities/'>
