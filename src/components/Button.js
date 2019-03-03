@@ -27,6 +27,12 @@ const Button = styled.button`
     color: ${props => (props.primary ? colors.white : colors.primary)};
     background-color: ${props => (props.primary ? colors.primary : colors.white)};
   }
+
+  :disabled {
+    color: ${colors.primaryHighLighten};
+    border-color: ${colors.primaryHighLighten};
+    cursor: not-allowed;
+  }
 `
 
 export default Button
