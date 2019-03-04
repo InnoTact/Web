@@ -15,6 +15,7 @@ import Footer from '../components/Footer';
 import People from '../components/People'
 import Hero from '../components/Hero';
 import GetStarted from '../components/GetStarted'
+import { graphql } from "gatsby"
 import { FaCubes, FaCreativeCommonsShare } from 'react-icons/fa'
 
 const ServiceContainer = styled.div`
@@ -31,7 +32,7 @@ const StepsWrapper = styled.div`
   align-items: center;
 `
 
-export default () => (
+export default ({ data }) => (
   <React.Fragment>
     <Navbar />
 
@@ -65,7 +66,7 @@ export default () => (
         </ContentWrapper>
     </Section>
 
-    <People />
+    <People peopleImagesData={data} />
 
     <Section backgroundColor={colors.lightgrey}>
         <ContentWrapper>
@@ -117,3 +118,43 @@ export default () => (
     <Footer />
   </React.Fragment>
 )
+
+export const pageQuery = graphql`
+  query {
+    JoelImage: file(relativePath: {eq: "Joel_Rudsberg.jpg"}) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    NiklasImage: file(relativePath: {eq: "Niklas_Gustafsson.jpg"}) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    AntonImage: file(relativePath: {eq: "Anton_Claesson.jpg"}) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    CasperImage: file(relativePath: {eq: "Casper_Lindberg.jpg"}) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    CarlImage: file(relativePath: {eq: "Carl_Claesson.jpg"}) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`

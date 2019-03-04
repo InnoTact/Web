@@ -9,7 +9,8 @@ import Card from "../components/Card"
 import Hero from "../components/Hero"
 import Text from "../components/Text"
 import Button from "../components/Button"
-import { Link } from 'gatsby'
+import { Link } from "gatsby"
+import { navigateTo } from "gatsby-link";
 
 const ContactFormContainer = styled.div`
   width: 80%;
@@ -55,7 +56,6 @@ class Contact extends Component {
   }
 
   updateState = (type, event) => {
-    const { name, email } = this.state
     const newState = { ...this.state }
     newState[type] = event.target.value
 
@@ -66,6 +66,12 @@ class Contact extends Component {
     }
 
     this.setState(newState)
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    navigateTo(form.getAttribute("action"))
   }
 
   render() {
@@ -95,10 +101,15 @@ class Contact extends Component {
             />
             <ContactFormContainer>
               <Card>
-                <form action='/success/' name="contact" method="POST" data-netlify="true">
+                <form
+                  onSubmit={this.handleSubmit}
+                  action="/success/"
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                >
                   <ContactItem>
                     <ContactText dark>What's your name?*</ContactText>
-                    <Link to='/success/'><Text dark>Success</Text></Link>
                     <Input
                       placeholder="Full name"
                       required
@@ -126,11 +137,15 @@ class Contact extends Component {
                     <TextArea
                       placeholder="What do you want to build? What is your idea? What is the deadline?"
                       name="message"
-                      disabled={!this.state.formFilled}
+                      disabled={!formFilled}
                     />
                   </ContactItem>
                   <ContactItem style={{ marginTop: "2rem", textAlign: "left" }}>
-                    <Button type='submit' disabled={!this.state.formFilled} primary>
+                    <Button
+                      type="submit"
+                      disabled={!formFilled}
+                      primary
+                    >
                       Send my message
                     </Button>
                   </ContactItem>

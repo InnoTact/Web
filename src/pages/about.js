@@ -12,6 +12,8 @@ import { FaCubes } from 'react-icons/fa'
 import styles from '../styles/styles'
 import People from '../components/People';
 import GetStarted from '../components/GetStarted';
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 const Image = styled.img`
   max-width: 100%;
@@ -25,7 +27,7 @@ const BlobContainer = styled.div`
   align-items: center;
 `
 
-export default () => (
+export default ({ data }) => (
   <React.Fragment>
     <Navbar />
 
@@ -42,7 +44,7 @@ export default () => (
 
     <Section backgroundColor={colors.lightgrey}>
         <ContentWrapper>
-          <Image src={team} alt="Team photo" />
+        <Img alt="Team photo of Innotact Software" fluid={data.TeamImage.childImageSharp.fluid} />
           <BlobContainer>
             <ContentBlob heading='Trait i teamet 1' 
             text='Ullamco dolore labore fugiat sit qui. Tempor amet ullamco laborum ullamco elit est cillum ullamco anim ut. Occaecat culpa sint esse ea tempor irure eu eiusmod.'
@@ -63,8 +65,56 @@ export default () => (
         </ContentWrapper>
     </Section>
 
-    <People />
+    <People peopleImagesData={data} />
     <GetStarted />
     <Footer />
   </React.Fragment>
 )
+
+export const pageQuery = graphql`
+  query {
+    TeamImage: file(relativePath: {eq: "team.jpg"}) {
+      childImageSharp {
+        fluid(maxWidth: 1400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    JoelImage: file(relativePath: {eq: "Joel_Rudsberg.jpg"}) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    NiklasImage: file(relativePath: {eq: "Niklas_Gustafsson.jpg"}) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    AntonImage: file(relativePath: {eq: "Anton_Claesson.jpg"}) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    CasperImage: file(relativePath: {eq: "Casper_Lindberg.jpg"}) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    CarlImage: file(relativePath: {eq: "Carl_Claesson.jpg"}) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
+
