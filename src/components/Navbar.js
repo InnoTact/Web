@@ -21,7 +21,8 @@ const Wrapper = styled.div`
 `
 
 const Container = styled.div`
-  width: 1080px;
+  width: 90%;
+  max-width: 1244px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;

@@ -8,7 +8,7 @@ import Card from "./Card"
 
 const Container = styled.div`
   position: relative;
-  width: 740px;
+  max-width: 740px;
   margin-top: 65px;
 `
 
