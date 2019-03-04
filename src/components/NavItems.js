@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import colors from '../styles/colors'
+import React from "react"
+import { Link } from "gatsby"
+import styled from "styled-components"
+import colors from "../styles/colors"
 
 const LinkContainer = styled.div`
   display: flex;
@@ -14,38 +14,50 @@ const NavItem = styled.div`
   margin-left: 2.3rem;
 `
 
-const NavItemStyleDark = {
-  textDecoration: 'none',
-  fontSize: '1rem',
-  color: colors.mediumGrey
-}
+const NavLink = styled.div`
+  text-decoration: none;
+  font-size: 1rem;
+  color: ${({ dark }) => (dark ? colors.mediumGrey : colors.white)};
 
-const NavItemStyleLight = {
-    textDecoration: 'none',
-    fontSize: '1rem',
-    color: colors.white
+  :hover {
+    color: ${({ dark }) => (dark ? colors.mediumGreyLighten : colors.white)};
+    transition: all ease-in-out 0.2s;
   }
+`
 
-export default ({...props}) => 
-<LinkContainer {...props}>
-        <NavItem>
-            <Link style={props.dark ? NavItemStyleDark : NavItemStyleLight} to='/'>
-              Home
-            </Link>
-        </NavItem>
-        <NavItem>
-          <Link style={props.dark ? NavItemStyleDark : NavItemStyleLight} to='/capabilities/'>
-            Capabilities
-          </Link>
-        </NavItem>
-        <NavItem>
-          <Link style={props.dark ? NavItemStyleDark : NavItemStyleLight} to='/about/'>
-            About us
-          </Link>
-        </NavItem>
-        <NavItem>
-          <Link style={props.dark ? NavItemStyleDark : NavItemStyleLight} to='/contact/'>
-            Contact us
-          </Link>
-        </NavItem>
-</LinkContainer>
+export default ({ ...props }) => (
+  <LinkContainer {...props}>
+    <NavItem>
+      <Link to="/">
+        <NavLink {...props}>Home</NavLink>
+      </Link>
+    </NavItem>
+    <NavItem>
+      <Link
+        to="/capabilities/"
+      >
+        <NavLink {...props}>
+        Capabilities
+        </NavLink>
+      </Link>
+    </NavItem>
+    <NavItem>
+      <Link
+        to="/about/"
+      >
+        <NavLink {...props}>
+        About us
+        </NavLink>
+      </Link>
+    </NavItem>
+    <NavItem>
+      <Link
+        to="/contact/"
+      >
+        <NavLink {...props}>
+        Contact us
+        </NavLink>
+      </Link>
+    </NavItem>
+  </LinkContainer>
+)

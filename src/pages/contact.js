@@ -9,6 +9,7 @@ import Card from "../components/Card"
 import Hero from "../components/Hero"
 import Text from "../components/Text"
 import Button from "../components/Button"
+import { Link } from 'gatsby'
 
 const ContactFormContainer = styled.div`
   width: 80%;
@@ -97,6 +98,7 @@ class Contact extends Component {
                 <form action='/success/' name="contact" method="POST" data-netlify="true">
                   <ContactItem>
                     <ContactText dark>What's your name?*</ContactText>
+                    <Link to='/success/'><Text dark>Success</Text></Link>
                     <Input
                       placeholder="Full name"
                       required
