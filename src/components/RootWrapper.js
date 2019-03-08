@@ -14,11 +14,13 @@ class RootWrapper extends Component {
   constructor() {
     super()
     const isMobile = this.isMobile()
+    const isTablet = this.isTablet()
     this.state = {
       context: {
         screenWidth: window.innerWidth,
         screenHeight: window.innerHeight,
-        isMobile
+        isMobile,
+        isTablet
       },
     }
   }
@@ -26,15 +28,20 @@ class RootWrapper extends Component {
   componentDidMount = () => {
     window.addEventListener("resize", () => {
       let isMobile = this.isMobile()
+      let isTablet = this.isTablet()
       this.setState({
         ...this.state,
-        context: { screenWidth: window.innerWidth, screenHeight: window.innerHeight, isMobile },
+        context: { screenWidth: window.innerWidth, screenHeight: window.innerHeight, isMobile, isTablet },
       })
     })
   }
 
   isMobile = () => {
     return window.innerWidth < styles.breakpoints.sm
+  }
+
+  isTablet = () => {
+    return window.innerWidth > styles.breakpoints.sm && window.innerHeight < styles.breakpoints.md
   }
 
   componentWillUnmount = () => {

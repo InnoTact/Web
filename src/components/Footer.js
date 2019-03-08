@@ -17,7 +17,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
     flex-direction: column;
     justify-content: space-around;
     margin: 1rem 0;
