@@ -11,12 +11,17 @@ import Text from "../components/Text"
 import Button from "../components/Button"
 import { Link } from "gatsby"
 import { navigateTo } from "gatsby-link";
+import styles from '../styles/styles'
 
 const ContactFormContainer = styled.div`
   width: 80%;
   margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
+  
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    width: 100%;
+  }
 `
 
 const ContactItem = styled.div`
@@ -40,6 +45,7 @@ const TextArea = styled.textarea`
   background-color: ${colors.white};
   width: 100%;
   min-height: 140px;
+  line-height: 1.55;
 `
 
 const ContactText = styled(Text)`

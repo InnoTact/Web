@@ -67,10 +67,10 @@ const socialLogoStyle = {
 }
 
 const socialLogoStyleLarge = {
-    fontSize: 32,
-    marginLeft: 20,
-    color: colors.white,
-  }
+  fontSize: 32,
+  marginLeft: 20,
+  color: colors.white,
+}
 
 const InfoIconsContainer = styled.div`
   display: relative;
@@ -96,7 +96,7 @@ export default () => (
         <ContentWrapper>
           <Container>
             <Item>
-              <Logo light />
+              <Logo light />  
             </Item>
             <Item
               style={{
@@ -143,13 +143,31 @@ export default () => (
                 </Text>
                 <SocialLogos>
                   <SocialLogoAnchor href="https://github.com/">
-                    <FaGithub style={isMobile(value.screenWidth) ? socialLogoStyleLarge : socialLogoStyle} />
+                    <FaGithub
+                      style={
+                        isMobile(value.screenWidth)
+                          ? socialLogoStyleLarge
+                          : socialLogoStyle
+                      }
+                    />
                   </SocialLogoAnchor>
                   <SocialLogoAnchor href="https://www.linkedin.com/company/innotact-software-ab/about/">
-                    <FaLinkedin style={isMobile(value.screenWidth) ? socialLogoStyleLarge : socialLogoStyle} />
+                    <FaLinkedin
+                      style={
+                        isMobile(value.screenWidth)
+                          ? socialLogoStyleLarge
+                          : socialLogoStyle
+                      }
+                    />
                   </SocialLogoAnchor>
                   <SocialLogoAnchor href="mailto:niklas@innotactsoftware.com">
-                    <FaEnvelope style={isMobile(value.screenWidth) ? socialLogoStyleLarge : socialLogoStyle} />
+                    <FaEnvelope
+                      style={
+                        isMobile(value.screenWidth)
+                          ? socialLogoStyleLarge
+                          : socialLogoStyle
+                      }
+                    />
                   </SocialLogoAnchor>
                 </SocialLogos>
               </InfoIconsContainer>

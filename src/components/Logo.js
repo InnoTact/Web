@@ -3,11 +3,12 @@ import styled from 'styled-components'
 import { FaCube } from 'react-icons/fa'
 import { CenterContainer } from '.';
 import { Link } from 'gatsby'
-import colors from '../styles/colors'
+import colors from "../styles/colors"
 
 const LogoText = styled.h1`
   font-size: 1.3rem;
-  display: inline;
+  white-space: nowrap;
+  display: block;
   margin: 0;
   padding: 0;
   margin-left: 1.1rem;
