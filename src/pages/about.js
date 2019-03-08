@@ -15,16 +15,16 @@ import GetStarted from '../components/GetStarted';
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Image = styled.img`
-  max-width: 100%;
-  margin: 10px auto 0;
-`
-
 const BlobContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    flex-direction: column;
+    justify-content: space-around;
+  }
 `
 
 export default ({ data }) => (

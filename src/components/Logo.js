@@ -4,6 +4,7 @@ import { FaCube } from 'react-icons/fa'
 import { CenterContainer } from '.';
 import { Link } from 'gatsby'
 import colors from "../styles/colors"
+import styles from '../styles/styles'
 
 const LogoText = styled.h1`
   font-size: 1.3rem;
@@ -14,6 +15,11 @@ const LogoText = styled.h1`
   margin-left: 1.1rem;
   font-weight: 400;
   color: ${props => props.dark ? colors.dark : colors.white};
+  
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    margin-left: 0.5rem;
+    font-size: 1.15rem;
+  }
 `
 
 export default ({...props}) => 
