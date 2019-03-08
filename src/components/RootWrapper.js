@@ -1,39 +1,46 @@
-import React, { Component } from 'react'
+import React, { Component } from "react"
 
-export const AppContext = React.createContext({
-    width: window.innerHeight,
-    height: window.innerHeight
-});
+const initialContext = {
+  width: window.innerHeight,
+  height: window.innerHeight,
+}
+
+export const AppContext = React.createContext(initialContext)
 
 class RootWrapper extends Component {
-    constructor() {
-        super()
-        this.state = {
-            context: {
-                width: window.innerWidth,
-                height: window.innerHeight
-            }
-        }
-    }
+  static contextType = AppContext
 
-    componentDidMount = () => {
-        window.addEventListener('resize', () => {
-            this.setState({
-                width: window.innerWidth,
-                height: window.innerHeight
-            })
-        })
+  constructor() {
+    super()
+    this.state = {
+      context: {
+        screenWidth: window.innerWidth,
+        screenHeight: window.innerHeight,
+      },
     }
+  }
 
-    componentWillUnmount = () => {
-        window.removeEventListener('resize')
-    }
+  componentDidMount = () => {
+    window.addEventListener("resize", () => {
+      this.setState({
+        ...this.state,
+        context: { screenWidth: window.innerWidth, screenHeight: window.innerHeight },
+      })
+    })
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener("resize")
+  }
 
   render() {
     const { children } = this.props
-    const { context } = this.state
 
-    return <AppContext.Provider value={context}>{children}</AppContext.Provider>
+    return (
+      <AppContext.Provider value={this.state.context}>
+        {children}
+      </AppContext.Provider>
+    )
   }
 }
 
