@@ -1,12 +1,7 @@
 import React, { Component } from "react"
-import styles from '../styles/styles'
+import styles from "../styles/styles"
 
-const initialContext = {
-  width: window.innerHeight,
-  height: window.innerHeight,
-}
-
-export const AppContext = React.createContext(initialContext)
+export const AppContext = React.createContext()
 
 class RootWrapper extends Component {
   static contextType = AppContext
@@ -20,19 +15,29 @@ class RootWrapper extends Component {
         screenWidth: window.innerWidth,
         screenHeight: window.innerHeight,
         isMobile,
-        isTablet
+        isTablet,
       },
     }
   }
 
   componentDidMount = () => {
+    this.onWindowResize()
     window.addEventListener("resize", () => {
-      let isMobile = this.isMobile()
-      let isTablet = this.isTablet()
-      this.setState({
-        ...this.state,
-        context: { screenWidth: window.innerWidth, screenHeight: window.innerHeight, isMobile, isTablet },
-      })
+      this.onWindowResize()
+    })
+  }
+
+  onWindowResize = () => {
+    let isMobile = this.isMobile()
+    let isTablet = this.isTablet()
+    this.setState({
+      ...this.state,
+      context: {
+        screenWidth: window.innerWidth,
+        screenHeight: window.innerHeight,
+        isMobile,
+        isTablet,
+      },
     })
   }
 
@@ -41,7 +46,10 @@ class RootWrapper extends Component {
   }
 
   isTablet = () => {
-    return window.innerWidth > styles.breakpoints.sm && window.innerHeight < styles.breakpoints.md
+    return (
+      window.innerWidth > styles.breakpoints.sm &&
+      window.innerHeight < styles.breakpoints.md
+    )
   }
 
   componentWillUnmount = () => {
