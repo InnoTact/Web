@@ -52,6 +52,4 @@ class Navbar extends Component {
   }
 }
 
-Navbar.contextType = AppContext
-
 export default Navbar
