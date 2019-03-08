@@ -4,9 +4,17 @@ import SubHeading from './SubHeading';
 import Button from './Button';
 import Text from './Text';
 import {Link} from 'gatsby'
+import styles from '../styles/styles'
 
 const Container = styled.div`
     position: relative;
+`
+
+const ContentWrapper = styled.div`
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const InfoContainer = styled.div`
@@ -14,6 +22,11 @@ const InfoContainer = styled.div`
     text-align: left;
     width: 50vw;
     margin-left: ${({textLeft}) => textLeft ? 0 : '50%'};
+
+    
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    width: unset;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -23,6 +36,11 @@ const ImageContainer = styled.div`
     top: 0;
     bottom: 0;
     overflow: hidden;
+
+    
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    position: static;
+  }
 `
 
 export default ({textLeft, header, text, buttonText, children, ...props}) => {

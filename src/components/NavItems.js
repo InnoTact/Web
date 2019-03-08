@@ -84,12 +84,6 @@ class NavItems extends Component {
   menuClicked = () => {
     const { open } = this.state
     this.setState({ open: !open })
-
-    if (open) {
-      document.getElementsByTagName("body")[0].setAttribute("scroll", "no")
-    } else {
-      document.getElementsByTagName("body")[0].setAttribute("scroll", "no")
-    }
   }
 
   isMobile = () => {

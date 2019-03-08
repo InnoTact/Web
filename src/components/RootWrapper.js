@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import styles from '../styles/styles'
 
 const initialContext = {
   width: window.innerHeight,
@@ -12,21 +13,28 @@ class RootWrapper extends Component {
 
   constructor() {
     super()
+    const isMobile = this.isMobile()
     this.state = {
       context: {
         screenWidth: window.innerWidth,
         screenHeight: window.innerHeight,
+        isMobile
       },
     }
   }
 
   componentDidMount = () => {
     window.addEventListener("resize", () => {
+      let isMobile = this.isMobile()
       this.setState({
         ...this.state,
-        context: { screenWidth: window.innerWidth, screenHeight: window.innerHeight },
+        context: { screenWidth: window.innerWidth, screenHeight: window.innerHeight, isMobile },
       })
     })
+  }
+
+  isMobile = () => {
+    return window.innerWidth < styles.breakpoints.sm
   }
 
   componentWillUnmount = () => {
