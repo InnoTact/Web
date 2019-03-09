@@ -4,7 +4,6 @@ import styled from "styled-components"
 import colors from "../styles/colors"
 import Logo from "./Logo"
 import NavItems from "./NavItems"
-import { AppContext } from "./RootWrapper"
 
 const Wrapper = styled.div`
   width: 100%;
@@ -34,21 +33,13 @@ const Container = styled.div`
 class Navbar extends Component {
   render() {
     return (
-      <AppContext.Consumer>
-        {value => {
-          const {screenWidth} = value
-
-          return (
             <Wrapper>
               <Container>
                 <Logo light />
-                <NavItems screenWidth={screenWidth} dark />
+                <NavItems dark />
               </Container>
             </Wrapper>
           )
-        }}
-      </AppContext.Consumer>
-    )
   }
 }
 

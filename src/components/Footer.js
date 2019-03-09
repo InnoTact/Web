@@ -82,13 +82,11 @@ const InfoIconsContainer = styled.div`
   }
 `
 
-const isMobile = screenWidth => {
-  return screenWidth < styles.breakpoints.sm
-}
-
 export default () => (
   <AppContext.Consumer>
-    {value => (
+    {value => {
+
+    return (
       <Section
         style={{ padding: "3rem 3rem" }}
         backgroundColor={colors.darkgrey}
@@ -100,7 +98,7 @@ export default () => (
             </Item>
             <Item
               style={{
-                display: isMobile(value.screenWidth) ? "none" : "inline-block",
+                display: value.isMobile ? "none" : "inline-block",
               }}
             >
               <NavItems light />
@@ -108,7 +106,7 @@ export default () => (
             <Item style={{ minWidth: 300 }}>
               <Text
                 style={{
-                  display: isMobile(value.screenWidth) ? "none" : "block",
+                  display: value.isMobile ? "none" : "block",
                 }}
                 small
                 borderBottom
@@ -145,7 +143,7 @@ export default () => (
                   <SocialLogoAnchor href="https://github.com/">
                     <FaGithub
                       style={
-                        isMobile(value.screenWidth)
+                        value.isMobile
                           ? socialLogoStyleLarge
                           : socialLogoStyle
                       }
@@ -154,7 +152,7 @@ export default () => (
                   <SocialLogoAnchor href="https://www.linkedin.com/company/innotact-software-ab/about/">
                     <FaLinkedin
                       style={
-                        isMobile(value.screenWidth)
+                        value.isMobile
                           ? socialLogoStyleLarge
                           : socialLogoStyle
                       }
@@ -163,7 +161,7 @@ export default () => (
                   <SocialLogoAnchor href="mailto:niklas@innotactsoftware.com">
                     <FaEnvelope
                       style={
-                        isMobile(value.screenWidth)
+                        value.isMobile
                           ? socialLogoStyleLarge
                           : socialLogoStyle
                       }
@@ -175,6 +173,6 @@ export default () => (
           </Container>
         </ContentWrapper>
       </Section>
-    )}
+    )}}
   </AppContext.Consumer>
 )

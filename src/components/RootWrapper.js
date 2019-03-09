@@ -1,7 +1,12 @@
 import React, { Component } from "react"
 import styles from "../styles/styles"
 
-export const AppContext = React.createContext()
+export const AppContext = React.createContext({
+  screenWidth: '',
+  screenHeight: '',
+  isMobile: '',
+  isTablet: ''
+})
 
 class RootWrapper extends Component {
   static contextType = AppContext

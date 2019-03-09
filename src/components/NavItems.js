@@ -4,6 +4,7 @@ import styled, { css } from "styled-components"
 import colors from "../styles/colors"
 import styles from "../styles/styles"
 import HamburgerMenu from "react-hamburger-menu"
+import { AppContext } from "./RootWrapper"
 
 const LinkContainer = styled.div`
   display: flex;
@@ -44,7 +45,8 @@ const NavItem = styled.div`
       transform: translate(-16px);
       transition: all 0.2s ease-in-out;
       transition-delay: 0.1s 0.1s 0;
-      transition: transform .2s ease-in-out .1s,opacity .2s ease-in-out .1s,color .2s ease-in-out;
+      transition: transform 0.2s ease-in-out 0.1s, opacity 0.2s ease-in-out 0.1s,
+        color 0.2s ease-in-out;
     `}
 `
 
@@ -57,7 +59,7 @@ const NavLink = styled.div`
     color: ${({ dark }) => (dark ? colors.mediumGreyLighten : colors.white)};
     transition: all ease-in-out 0.2s;
   }
-  
+
   ${({ open }) =>
     open &&
     css`
@@ -86,10 +88,6 @@ class NavItems extends Component {
     this.setState({ open: !open })
   }
 
-  isMobile = () => {
-    return this.props.screenWidth < styles.breakpoints.sm
-  }
-
   render() {
     const { screenWidth, ...props } = this.props
     const { open } = this.state
@@ -98,50 +96,64 @@ class NavItems extends Component {
       <Fragment>
         <NavItem open={open}>
           <Link to="/">
-            <NavLink open={open} {...props}>Home</NavLink>
+            <NavLink open={open} {...props}>
+              Home
+            </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
           <Link to="/capabilities/">
-            <NavLink open={open} {...props}>Capabilities</NavLink>
+            <NavLink open={open} {...props}>
+              Capabilities
+            </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
           <Link to="/about/">
-            <NavLink open={open} {...props}>About us</NavLink>
+            <NavLink open={open} {...props}>
+              About us
+            </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
           <Link to="/contact/">
-            <NavLink open={open} {...props}>Contact us</NavLink>
+            <NavLink open={open} {...props}>
+              Contact us
+            </NavLink>
           </Link>
         </NavItem>
       </Fragment>
     )
 
     return (
-        <LinkContainer open={open} {...props}>
-          <Fragment>
-            {this.isMobile() && (
-                <HamburgerContainer>
-                  <HamburgerMenu
-                    isOpen={open}
-                    width={32}
-                    height={18}
-                    strokeWidth={1}
-                    rotate={0}
-                    color={open ? colors.primary : colors.white}
-                    borderRadius={0}
-                    animationDuration={0.5}
-                    menuClicked={this.menuClicked}
-                  />
-                </HamburgerContainer>
-            )}
+      <LinkContainer open={open} {...props}>
+        <AppContext.Consumer>
+          {value => {
+            return (
+              <Fragment>
+                {value.isMobile && (
+                  <HamburgerContainer>
+                    <HamburgerMenu
+                      isOpen={open}
+                      width={32}
+                      height={18}
+                      strokeWidth={1}
+                      rotate={0}
+                      color={open ? colors.primary : colors.white}
+                      borderRadius={0}
+                      animationDuration={0.5}
+                      menuClicked={this.menuClicked}
+                    />
+                  </HamburgerContainer>
+                )}
 
-            {this.isMobile() && open ? navItems : null}
-            {!this.isMobile() ? navItems : null}
-          </Fragment>
-        </LinkContainer>
+                {value.isMobile && open ? navItems : null}
+                {!value.isMobile ? navItems : null}
+              </Fragment>
+            )
+          }}
+        </AppContext.Consumer>
+      </LinkContainer>
     )
   }
 }
