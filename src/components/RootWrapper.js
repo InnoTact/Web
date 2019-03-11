@@ -13,7 +13,7 @@ class RootWrapper extends Component {
 
   constructor() {
     super()
-    const isMobile = this.isMobile()
+    const isMobile = this.isMobile() 
     const isTablet = this.isTablet()
     this.state = {
       context: {
