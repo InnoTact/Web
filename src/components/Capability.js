@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React, { Fragment, Component } from "react"
 import styled from "styled-components"
 import SubHeading from "./SubHeading"
 import Button from "./Button"
@@ -6,16 +6,11 @@ import Text from "./Text"
 import { Link } from "gatsby"
 import styles from "../styles/styles"
 import { AppContext } from "./RootWrapper"
+import windowSize from 'react-window-size';
+import isMobile from '../util/screen'
 
 const Container = styled.div`
   position: relative;
-`
-
-const ContentWrapper = styled.div`
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    display: flex;
-    flex-direction: column;
-  }
 `
 
 const InfoContainer = styled.div`
@@ -45,35 +40,37 @@ const ImageContainer = styled.div`
   }
 `
 
-export default ({ textLeft, header, text, buttonText, children, ...props }) => {
-  let info = (
-    <InfoContainer textLeft={textLeft}>
-      <SubHeading dark text={header} />
-      <Text dark>{text}</Text>
-      <Link to="/contact/">
-        <Button primary>{buttonText}</Button>
-      </Link>
-    </InfoContainer>
-  )
+class Capability extends Component {
+  render() {
+    const { textLeft, header, text, buttonText, children, windowWidth, ...props } = this.props
 
-  let image = <ImageContainer textLeft={textLeft}>{children}</ImageContainer>
-
-  let output
-  if (textLeft) {
-      output = <Fragment>{info}{image}</Fragment>
-  } else {
-    output = <Fragment>{image}{info}</Fragment>
+    let info = (
+      <InfoContainer textLeft={textLeft}>
+        <SubHeading dark text={header} />
+        <Text dark>{text}</Text>
+        <Link to="/contact/">
+          <Button primary>{buttonText}</Button>
+        </Link>
+      </InfoContainer>
+    )
+  
+    let image = <ImageContainer textLeft={textLeft}>{children}</ImageContainer>
+  
+    let output
+    if (textLeft) {
+        output = <Fragment>{info}{image}</Fragment>
+    } else {
+      output = <Fragment>{image}{info}</Fragment>
+    }
+  
+    return (
+      <Container {...props}>
+        <Fragment>
+          {isMobile(windowWidth) ? <Fragment>{info}{image}</Fragment> : output }
+        </Fragment>
+      </Container>
+    )
   }
-
-  return (
-    <Container {...props}>
-      <Fragment>
-        <AppContext.Consumer>
-            {value => (
-                value.isMobile ? <Fragment>{info}{image}</Fragment> : output 
-            )}
-        </AppContext.Consumer>
-      </Fragment>
-    </Container>
-  )
 }
+
+export default windowSize(Capability)

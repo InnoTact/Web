@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import styled from "styled-components"
 import Section from "./Section"
 import colors from "../styles/colors"
@@ -7,9 +7,9 @@ import NavItems from "./NavItems"
 import Text from "./Text"
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
 import ContentWrapper from "./ContentWrapper"
-import { AppContext } from "./RootWrapper"
 import styles from "../styles/styles"
-import { relative } from "path"
+import windowSize from "react-window-size"
+import isMobile from "../util/screen"
 
 const Container = styled.div`
   display: flex;
@@ -82,9 +82,13 @@ const InfoIconsContainer = styled.div`
   }
 `
 
-export default () => (
-  <AppContext.Consumer>
-    {value => {
+class Footer extends Component {
+  isTablet = (width) => {
+    return width > styles.breakpoints.sm && width <= styles.breakpoints.md
+  }
+
+  render() {
+    const { windowWidth } = this.props
 
     return (
       <Section
@@ -94,11 +98,11 @@ export default () => (
         <ContentWrapper>
           <Container>
             <Item>
-              <Logo light />  
+              <Logo light />
             </Item>
             <Item
               style={{
-                display: value.isMobile ? "none" : "inline-block",
+                display: this.isTablet(windowWidth) || isMobile(windowWidth) ? "none" : "inline-block",
               }}
             >
               <NavItems light />
@@ -106,7 +110,7 @@ export default () => (
             <Item style={{ minWidth: 300 }}>
               <Text
                 style={{
-                  display: value.isMobile ? "none" : "block",
+                  display: this.isTablet(windowWidth) || isMobile(windowWidth) ? "none" : "block",
                 }}
                 small
                 borderBottom
@@ -143,7 +147,7 @@ export default () => (
                   <SocialLogoAnchor href="https://github.com/">
                     <FaGithub
                       style={
-                        value.isMobile
+                        isMobile(windowWidth)
                           ? socialLogoStyleLarge
                           : socialLogoStyle
                       }
@@ -152,7 +156,7 @@ export default () => (
                   <SocialLogoAnchor href="https://www.linkedin.com/company/innotact-software-ab/about/">
                     <FaLinkedin
                       style={
-                        value.isMobile
+                        isMobile(windowWidth)
                           ? socialLogoStyleLarge
                           : socialLogoStyle
                       }
@@ -161,7 +165,7 @@ export default () => (
                   <SocialLogoAnchor href="mailto:niklas@innotactsoftware.com">
                     <FaEnvelope
                       style={
-                        value.isMobile
+                        isMobile(windowWidth)
                           ? socialLogoStyleLarge
                           : socialLogoStyle
                       }
@@ -173,6 +177,8 @@ export default () => (
           </Container>
         </ContentWrapper>
       </Section>
-    )}}
-  </AppContext.Consumer>
-)
+    )
+  }
+}
+
+export default windowSize(Footer)

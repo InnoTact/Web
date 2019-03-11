@@ -5,6 +5,8 @@ import colors from "../styles/colors"
 import styles from "../styles/styles"
 import HamburgerMenu from "react-hamburger-menu"
 import { AppContext } from "./RootWrapper"
+import isMobile from "../util/screen";
+import windowSize from 'react-window-size';
 
 const LinkContainer = styled.div`
   display: flex;
@@ -89,7 +91,7 @@ class NavItems extends Component {
   }
 
   render() {
-    const { screenWidth, ...props } = this.props
+    const { windowWidth, ...props } = this.props
     const { open } = this.state
 
     const navItems = (
@@ -127,11 +129,8 @@ class NavItems extends Component {
 
     return (
       <LinkContainer open={open} {...props}>
-        <AppContext.Consumer>
-          {value => {
-            return (
               <Fragment>
-                {value.isMobile && (
+                {isMobile(windowWidth) && (
                   <HamburgerContainer>
                     <HamburgerMenu
                       isOpen={open}
@@ -147,15 +146,12 @@ class NavItems extends Component {
                   </HamburgerContainer>
                 )}
 
-                {value.isMobile && open ? navItems : null}
-                {!value.isMobile ? navItems : null}
+                {isMobile(windowWidth) && open ? navItems : null}
+                {!isMobile(windowWidth) ? navItems : null}
               </Fragment>
-            )
-          }}
-        </AppContext.Consumer>
       </LinkContainer>
     )
   }
 }
 
-export default NavItems
+export default windowSize(NavItems)

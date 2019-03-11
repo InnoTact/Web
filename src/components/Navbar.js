@@ -33,13 +33,13 @@ const Container = styled.div`
 class Navbar extends Component {
   render() {
     return (
-            <Wrapper>
-              <Container>
-                <Logo light />
-                <NavItems dark />
-              </Container>
-            </Wrapper>
-          )
+      <Wrapper>
+        <Container>
+          <Logo light />
+          <NavItems dark />
+        </Container>
+      </Wrapper>
+    )
   }
 }
 
