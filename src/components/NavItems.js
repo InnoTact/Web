@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 import styled, { css } from "styled-components"
 import colors from "../styles/colors"
 import HamburgerMenu from "react-hamburger-menu"
-import isMobile from "../util/screen";
-import windowSize from 'react-window-size';
+import { AppContext } from "./RootWrapper"
+import isMobile from "../util/screen"
 
 const LinkContainer = styled.div`
   display: flex;
@@ -127,29 +127,40 @@ class NavItems extends Component {
 
     return (
       <LinkContainer open={open} {...props}>
-              <Fragment>
-                {isMobile(windowWidth) && (
-                  <HamburgerContainer>
-                    <HamburgerMenu
-                      isOpen={open}
-                      width={32}
-                      height={18}
-                      strokeWidth={1}
-                      rotate={0}
-                      color={open ? colors.primary : colors.white}
-                      borderRadius={0}
-                      animationDuration={0.5}
-                      menuClicked={this.menuClicked}
-                    />
-                  </HamburgerContainer>
-                )}
-
-                {isMobile(windowWidth) && open ? navItems : null}
-                {!isMobile(windowWidth) ? navItems : null}
-              </Fragment>
+        <AppContext.Consumer>
+          {value => {
+            let output = null
+            if (value) {
+              if (value.isMobile) {
+                output = (
+                  <Fragment>
+                    <HamburgerContainer>
+                      <HamburgerMenu
+                        isOpen={open}
+                        width={32}
+                        height={18}
+                        strokeWidth={1}
+                        rotate={0}
+                        color={open ? colors.primary : colors.white}
+                        borderRadius={0}
+                        animationDuration={0.5}
+                        menuClicked={this.menuClicked}
+                      />
+                    </HamburgerContainer>
+                    {open && navItems}
+                  </Fragment>
+                )
+              } else {
+                output = navItems
+              }
+            }
+            
+            return output
+          }}
+        </AppContext.Consumer>
       </LinkContainer>
     )
   }
 }
 
-export default windowSize(NavItems)
+export default NavItems

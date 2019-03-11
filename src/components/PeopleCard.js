@@ -22,11 +22,6 @@ const Container = styled.div`
   box-shadow: ${colors.normalBoxShadow};
 `
 
-const Image = styled.img`
-  width: 180px;
-  border-radius: 50%;
-`
-
 const Name = styled.h5`
   font-size: 1.3rem;
   font-weight: bold;

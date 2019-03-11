@@ -5,8 +5,8 @@ import Button from "./Button"
 import Text from "./Text"
 import { Link } from "gatsby"
 import styles from "../styles/styles"
-import windowSize from 'react-window-size';
-import isMobile from '../util/screen'
+import isMobile from "../util/screen"
+import { AppContext } from "./RootWrapper"
 
 const Container = styled.div`
   position: relative;
@@ -41,7 +41,15 @@ const ImageContainer = styled.div`
 
 class Capability extends Component {
   render() {
-    const { textLeft, header, text, buttonText, children, windowWidth, ...props } = this.props
+    const {
+      textLeft,
+      header,
+      text,
+      buttonText,
+      children,
+      windowWidth,
+      ...props
+    } = this.props
 
     let info = (
       <InfoContainer textLeft={textLeft}>
@@ -52,24 +60,46 @@ class Capability extends Component {
         </Link>
       </InfoContainer>
     )
-  
+
     let image = <ImageContainer textLeft={textLeft}>{children}</ImageContainer>
-  
+
     let output
     if (textLeft) {
-        output = <Fragment>{info}{image}</Fragment>
+      output = (
+        <Fragment>
+          {info}
+          {image}
+        </Fragment>
+      )
     } else {
-      output = <Fragment>{image}{info}</Fragment>
+      output = (
+        <Fragment>
+          {image}
+          {info}
+        </Fragment>
+      )
     }
-  
+
     return (
       <Container {...props}>
-        <Fragment>
-          {isMobile(windowWidth) ? <Fragment>{info}{image}</Fragment> : output }
-        </Fragment>
+        <AppContext.Consumer>
+          {value => {
+            let output = null
+            if (value) {
+              output = isMobile(windowWidth) && (
+                <Fragment>
+                  {info}
+                  {image}
+                </Fragment>
+              )
+            }
+
+            return output
+          }}
+        </AppContext.Consumer>
       </Container>
     )
   }
 }
 
-export default windowSize(Capability)
+export default Capability
