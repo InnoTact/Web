@@ -1,6 +1,5 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { Navbar, Section } from "../components"
-import styled from "styled-components"
 import SectionTop from "../components/SectionTop"
 import ContentWrapper from "../components/ContentWrapper"
 import colors from "../styles/colors"

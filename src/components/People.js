@@ -16,8 +16,6 @@ const PeopleContainer = styled.div`
 `
 
 export default ({ peopleImagesData }) => {
-  console.log(peopleImagesData)
-
   return (
     <Section backgroundColor={colors.white}>
       <ContentWrapper>

@@ -1,6 +1,5 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import colors from '../styles/colors'
 import SubHeading from './SubHeading'
 import Text from './Text'
 import Button from './Button';
@@ -30,7 +29,7 @@ export default ({ children, heading, text, buttonText }) => (
       <Text dark>{text}</Text>
     </Item>
     <Item>
-      {buttonText && <Link to='./contact/'><Button primary>{buttonText}</Button></Link>}
+      {buttonText && <Link to='/contact/'><Button primary>{buttonText}</Button></Link>}
     </Item>
   </Wrapper>
 )

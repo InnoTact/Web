@@ -9,7 +9,6 @@ import Card from "../components/Card"
 import Hero from "../components/Hero"
 import Text from "../components/Text"
 import Button from "../components/Button"
-import { Link } from "gatsby"
 import { navigateTo } from "gatsby-link";
 import styles from '../styles/styles'
 

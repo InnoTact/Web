@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Section, CenterContainer } from '../components/'
+import { Navbar, Section } from '../components/'
 import styled from 'styled-components'
 import SectionTop from './../components/SectionTop'
 import ContentWrapper from './../components/ContentWrapper'
@@ -7,7 +7,6 @@ import ContentBlob from './../components/ContentBlob'
 import colors from '../styles/colors'
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
-import team from '../img/team.jpg'
 import { FaCubes } from 'react-icons/fa'
 import styles from '../styles/styles'
 import People from '../components/People';

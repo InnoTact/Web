@@ -120,29 +120,19 @@ class Footer extends Component {
               </Text>
               <InfoIconsContainer>
                 <div style={{ marginBottom: 6 }}>
-                  <Text style={{ display: "inline" }} small light>
-                    p:{" "}
-                    <Anchor
-                      style={{ display: "inline" }}
+                  <Anchor style={{ display: "inline" }}
                       small
                       light
-                      href="tel:+46737303797"
-                    >
+                      href="tel:+46737303797">
                       +46737303797
-                    </Anchor>
-                  </Text>
-                </div>
-                <Text small light style={{ display: "inline" }}>
-                  e:{" "}
-                  <Anchor
-                    style={{ display: "inline" }}
-                    small
-                    light
-                    href="mailto:niklas@innotactsoftware.com"
-                  >
-                    niklas@innotactsoftware.com
                   </Anchor>
-                </Text>
+                </div>
+                <Anchor style={{ display: "inline" }}
+                      small
+                      light
+                      href="mailto:niklas@innotactsoftware.com">                    
+                      niklas@innotactsoftware.com
+                      </Anchor>
                 <SocialLogos>
                   <SocialLogoAnchor href="https://github.com/">
                     <FaGithub

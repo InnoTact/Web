@@ -2,9 +2,7 @@ import React, { Component, Fragment } from "react"
 import { Link } from "gatsby"
 import styled, { css } from "styled-components"
 import colors from "../styles/colors"
-import styles from "../styles/styles"
 import HamburgerMenu from "react-hamburger-menu"
-import { AppContext } from "./RootWrapper"
 import isMobile from "../util/screen";
 import windowSize from 'react-window-size';
 
