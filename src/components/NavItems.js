@@ -4,7 +4,6 @@ import styled, { css } from "styled-components"
 import colors from "../styles/colors"
 import HamburgerMenu from "react-hamburger-menu"
 import { AppContext } from "./RootWrapper"
-import isMobile from "../util/screen"
 
 const LinkContainer = styled.div`
   display: flex;

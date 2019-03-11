@@ -5,7 +5,6 @@ import Button from "./Button"
 import Text from "./Text"
 import { Link } from "gatsby"
 import styles from "../styles/styles"
-import isMobile from "../util/screen"
 import { AppContext } from "./RootWrapper"
 
 const Container = styled.div`
@@ -86,7 +85,7 @@ class Capability extends Component {
           {value => {
             let output = null
             if (value) {
-              output = isMobile(windowWidth) && (
+              output = value.isMobile && (
                 <Fragment>
                   {info}
                   {image}

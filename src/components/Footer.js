@@ -8,7 +8,6 @@ import Text from "./Text"
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
 import ContentWrapper from "./ContentWrapper"
 import styles from "../styles/styles"
-import isMobile from "../util/screen"
 import { AppContext } from "./RootWrapper"
 
 const Container = styled.div`
@@ -88,8 +87,6 @@ class Footer extends Component {
   }
 
   render() {
-    const { windowWidth } = this.props
-
     return (
       <Section
         style={{ padding: "3rem 3rem" }}
@@ -108,7 +105,7 @@ class Footer extends Component {
                     <Item
                       style={{
                         display:
-                          this.isTablet(windowWidth) || isMobile(windowWidth)
+                          value.isTablet || value.isMobile
                             ? "none"
                             : "inline-block",
                       }}
@@ -119,7 +116,7 @@ class Footer extends Component {
                       <Text
                         style={{
                           display:
-                            this.isTablet(windowWidth) || isMobile(windowWidth)
+                            value.isTablet || value.isMobile
                               ? "none"
                               : "block",
                         }}
@@ -152,7 +149,7 @@ class Footer extends Component {
                           <SocialLogoAnchor href="https://github.com/">
                             <FaGithub
                               style={
-                                isMobile(windowWidth)
+                                value.isMobile
                                   ? socialLogoStyleLarge
                                   : socialLogoStyle
                               }
@@ -161,7 +158,7 @@ class Footer extends Component {
                           <SocialLogoAnchor href="https://www.linkedin.com/company/innotact-software-ab/about/">
                             <FaLinkedin
                               style={
-                                isMobile(windowWidth)
+                                value.isMobile
                                   ? socialLogoStyleLarge
                                   : socialLogoStyle
                               }
@@ -170,7 +167,7 @@ class Footer extends Component {
                           <SocialLogoAnchor href="mailto:niklas@innotactsoftware.com">
                             <FaEnvelope
                               style={
-                                isMobile(windowWidth)
+                                value.isMobile
                                   ? socialLogoStyleLarge
                                   : socialLogoStyle
                               }
