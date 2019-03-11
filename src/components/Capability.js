@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 import styles from "../styles/styles"
 import { AppContext } from "./RootWrapper"
 import windowSize from 'react-window-size';
-import { isMobile } from '../util/screen'
+import isMobile from '../util/screen'
 
 const Container = styled.div`
   position: relative;
@@ -42,7 +42,7 @@ const ImageContainer = styled.div`
 
 class Capability extends Component {
   render() {
-    const { textLeft, header, text, buttonText, children, windowSize, ...props } = this.props
+    const { textLeft, header, text, buttonText, children, windowWidth, ...props } = this.props
 
     let info = (
       <InfoContainer textLeft={textLeft}>
@@ -66,7 +66,7 @@ class Capability extends Component {
     return (
       <Container {...props}>
         <Fragment>
-          {isMobile(windowSize) ? <Fragment>{info}{image}</Fragment> : output }
+          {isMobile(windowWidth) ? <Fragment>{info}{image}</Fragment> : output }
         </Fragment>
       </Container>
     )
