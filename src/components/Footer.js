@@ -31,7 +31,7 @@ const Item = styled.div`
 
 const Anchor = styled(Text)`
   :hover {
-    color: ${colors.primary};
+    color: ${colors.mediumGreyLighten};
   }
 `
 
