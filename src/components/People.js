@@ -29,7 +29,7 @@ export default ({ peopleImagesData }) => {
         <CenterContainer>
           <SubHeader
             style={{ color: colors.dark, textAlign: "center" }}
-            text="Since Augmented Reality is a fast growing technology we make sure to stay updated on every single advance of the technology to stay on the cutting edge. Our goal is to become the most high performance Augmented Reality company in the country. "
+            text="Since Augmented Reality is a fast growing technology we make sure to stay updated on every advance of the technology to stay on the cutting edge. Our goal is to become the most high performance Augmented Reality company in the country. "
           />
         </CenterContainer>
         <PeopleContainer>

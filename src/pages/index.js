@@ -89,43 +89,43 @@ class Index extends Component {
             <SectionTop
               dark
               header={`How we bring your product to life`}
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. In ut malesuada quam. Nulla facilisi. Etiam et erat ultricies, bibendum nunc nec, elementum ex. Phasellus fringilla mi in libero mattis, a gravida massa pharetra. Nunc facilisis pulvinar mauris, scelerisque ornare metus egestas ac."
+              text="Our methology for maximizing custumer value and satisfy your needs is divided into the following six steps."
             />
             <StepsWrapper>
               <TextCard
                 style={{ marginTop: 40 }}
                 header="Lets arrange for a meeting."
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                text="Press here to book a meeting with us where we can discuss your needs and posibilities."
                 number={"1"}
                 dark
               />
               <TextCard
                 header="We create an action plan depending on your needs."
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                text="After identifying the best solution to your situation we create an action plan together to make sure you get your solution the way you want it at the time you need it."
                 number={"2"}
                 dark
               />
               <TextCard
                 header="While maintaining close contact we start executing the action plan."
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                text="While we start the execution state we make continious checks with you to make sure the solution turns out the way you want it."
                 number={"3"}
                 dark
               />
               <TextCard
                 header="We keep on working on the solution until all your needs are met."
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                text="The solution is not completed until you are fully satisfied."
                 number={"4"}
                 dark
               />
               <TextCard
                 header="We finish and lunch the solution."
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                text="When the solution is ready we bring it to life and launch it in your bussiness."
                 number={"5"}
                 dark
               />
               <TextCard
                 header="Continuous improvements for your future needs."
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sem ipsum, egestas a maximus ac, varius id nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                text="Even when your solution is launched we continue working on improvements to fit the dvelopment of your company."
                 number={"6"}
                 dark
               />
