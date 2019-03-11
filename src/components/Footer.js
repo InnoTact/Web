@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import styled from "styled-components"
 import Section from "./Section"
 import colors from "../styles/colors"
@@ -7,9 +7,9 @@ import NavItems from "./NavItems"
 import Text from "./Text"
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
 import ContentWrapper from "./ContentWrapper"
-import { AppContext } from "./RootWrapper"
 import styles from "../styles/styles"
-import { relative } from "path"
+import windowSize from 'react-window-size';
+import { isTablet } from "../util/screen";
 
 const Container = styled.div`
   display: flex;
@@ -82,99 +82,99 @@ const InfoIconsContainer = styled.div`
   }
 `
 
-const isMobile = screenWidth => {
-  return screenWidth < styles.breakpoints.sm
+class Footer extends Component {
+  render() {
+    const { windowSize } = this.props
+
+    return (
+          <Section
+            style={{ padding: "3rem 3rem" }}
+            backgroundColor={colors.darkgrey}
+          >
+            <ContentWrapper>
+              <Container>
+                <Item>
+                  <Logo light />  
+                </Item>
+                <Item
+                  style={{
+                    display: isTablet(windowSize) ? "none" : "inline-block",
+                  }}
+                >
+                  <NavItems light />
+                </Item>
+                <Item style={{ minWidth: 300 }}>
+                  <Text
+                    style={{
+                      display: isTablet(windowSize) ? "none" : "block",
+                    }}
+                    small
+                    borderBottom
+                    light
+                  >
+                    Gothenburg, Sweden
+                  </Text>
+                  <InfoIconsContainer>
+                    <div style={{ marginBottom: 6 }}>
+                      <Text style={{ display: "inline" }} small light>
+                        p:{" "}
+                        <Anchor
+                          style={{ display: "inline" }}
+                          small
+                          light
+                          href="tel:+46737303797"
+                        >
+                          +46737303797
+                        </Anchor>
+                      </Text>
+                    </div>
+                    <Text small light style={{ display: "inline" }}>
+                      e:{" "}
+                      <Anchor
+                        style={{ display: "inline" }}
+                        small
+                        light
+                        href="mailto:niklas@innotactsoftware.com"
+                      >
+                        niklas@innotactsoftware.com
+                      </Anchor>
+                    </Text>
+                    <SocialLogos>
+                      <SocialLogoAnchor href="https://github.com/">
+                        <FaGithub
+                          style={
+                            isTablet(windowSize)
+                              ? socialLogoStyleLarge
+                              : socialLogoStyle
+                          }
+                        />
+                      </SocialLogoAnchor>
+                      <SocialLogoAnchor href="https://www.linkedin.com/company/innotact-software-ab/about/">
+                        <FaLinkedin
+                          style={
+                            isTablet(windowSize)
+                              ? socialLogoStyleLarge
+                              : socialLogoStyle
+                          }
+                        />
+                      </SocialLogoAnchor>
+                      <SocialLogoAnchor href="mailto:niklas@innotactsoftware.com">
+                        <FaEnvelope
+                          style={
+                            isTablet(windowSize)
+                              ? socialLogoStyleLarge
+                              : socialLogoStyle
+                          }
+                        />
+                      </SocialLogoAnchor>
+                    </SocialLogos>
+                  </InfoIconsContainer>
+                </Item>
+              </Container>
+            </ContentWrapper>
+          </Section>
+    )
+  }
 }
 
-export default () => (
-  <AppContext.Consumer>
-    {value => (
-      <Section
-        style={{ padding: "3rem 3rem" }}
-        backgroundColor={colors.darkgrey}
-      >
-        <ContentWrapper>
-          <Container>
-            <Item>
-              <Logo light />  
-            </Item>
-            <Item
-              style={{
-                display: isMobile(value.screenWidth) ? "none" : "inline-block",
-              }}
-            >
-              <NavItems light />
-            </Item>
-            <Item style={{ minWidth: 300 }}>
-              <Text
-                style={{
-                  display: isMobile(value.screenWidth) ? "none" : "block",
-                }}
-                small
-                borderBottom
-                light
-              >
-                Gothenburg, Sweden
-              </Text>
-              <InfoIconsContainer>
-                <div style={{ marginBottom: 6 }}>
-                  <Text style={{ display: "inline" }} small light>
-                    p:{" "}
-                    <Anchor
-                      style={{ display: "inline" }}
-                      small
-                      light
-                      href="tel:+46737303797"
-                    >
-                      +46737303797
-                    </Anchor>
-                  </Text>
-                </div>
-                <Text small light style={{ display: "inline" }}>
-                  e:{" "}
-                  <Anchor
-                    style={{ display: "inline" }}
-                    small
-                    light
-                    href="mailto:niklas@innotactsoftware.com"
-                  >
-                    niklas@innotactsoftware.com
-                  </Anchor>
-                </Text>
-                <SocialLogos>
-                  <SocialLogoAnchor href="https://github.com/">
-                    <FaGithub
-                      style={
-                        isMobile(value.screenWidth)
-                          ? socialLogoStyleLarge
-                          : socialLogoStyle
-                      }
-                    />
-                  </SocialLogoAnchor>
-                  <SocialLogoAnchor href="https://www.linkedin.com/company/innotact-software-ab/about/">
-                    <FaLinkedin
-                      style={
-                        isMobile(value.screenWidth)
-                          ? socialLogoStyleLarge
-                          : socialLogoStyle
-                      }
-                    />
-                  </SocialLogoAnchor>
-                  <SocialLogoAnchor href="mailto:niklas@innotactsoftware.com">
-                    <FaEnvelope
-                      style={
-                        isMobile(value.screenWidth)
-                          ? socialLogoStyleLarge
-                          : socialLogoStyle
-                      }
-                    />
-                  </SocialLogoAnchor>
-                </SocialLogos>
-              </InfoIconsContainer>
-            </Item>
-          </Container>
-        </ContentWrapper>
-      </Section>
-    )}
-  </AppContext.Consumer>
-)
+export default windowSize(Footer)
