@@ -16,7 +16,7 @@ const SubHeader = styled.h2`
   max-width: 1080px;
 
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    font-size: 1.05rem;
+    font-size: 0.9rem;
   }
 `
 

@@ -6,6 +6,7 @@ import Button from './Button'
 import colors from './../styles/colors'
 import Text from './Text';
 import { Link } from 'gatsby'
+import styles from '../styles/styles'
 
 const Container = styled.div`
   margin-top: 2rem;
@@ -16,6 +17,7 @@ const Container = styled.div`
 `
 
 const ReadMore = styled(Text)`
+  display: block;
   position: absolute;
   left: 0;
   right: 0; 
@@ -24,6 +26,10 @@ const ReadMore = styled(Text)`
   bottom: 15px;
   text-align: center;
   color: ${colors.mediumGrey};
+
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    display: none;
+  }
 
   ::after {
     content: '<';
