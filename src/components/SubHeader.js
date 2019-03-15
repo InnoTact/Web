@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react'
 import styled from 'styled-components'
 import colors from '../styles/colors'
+import styles from '../styles/styles'
 
 const SubHeader = styled.h2`
   color: ${props => props.dark ? colors.dark : colors.white};
@@ -13,6 +14,10 @@ const SubHeader = styled.h2`
   line-height: 1.8;
   text-align: center;
   max-width: 1080px;
+
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    font-size: 1.05rem;
+  }
 `
 
 export default ({ text, ...props }) => <SubHeader {...props}>{text}</SubHeader>

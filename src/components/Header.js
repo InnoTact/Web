@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import styles from '../styles/styles'
 
 const StyledHeader = styled.h1`
   color: white;
@@ -12,6 +13,10 @@ const StyledHeader = styled.h1`
   line-height: 1.5;
   text-align: center;
   max-width: 1080px;
+
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    font-size: 1.8rem;
+  }
 `
 
 const Header = ({ text, styles = {} }) => <StyledHeader style={{ ...styles }}>{text}</StyledHeader>

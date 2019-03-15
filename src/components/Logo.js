@@ -17,15 +17,15 @@ const LogoText = styled.h1`
   color: ${props => props.dark ? colors.dark : colors.white};
   
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    margin-left: 0.5rem;
-    font-size: 1.15rem;
+    margin-left: 0.4rem;
+    font-size: 0.9rem;
   }
 `
 
 export default ({...props}) => 
 <CenterContainer>
-    <Link to='/'>
-      <FaCube style={{ fontSize: '2.5rem', color: 'black' }} />
+    <Link style={{width: '2.3rem', height: '2.3rem'}} to='/'>
+      <FaCube style={{ fontSize: '2.3rem', color: 'black' }} />
     </Link>
     <Link to='/'>
       <LogoText {...props}>Augmented Solutions</LogoText>

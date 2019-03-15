@@ -27,7 +27,7 @@ const LinkContainer = styled.div`
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      padding-top: 3rem;
+      padding-top: 0;
     `}
 `
 
