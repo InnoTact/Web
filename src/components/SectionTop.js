@@ -35,11 +35,11 @@ const ReadMore = styled(Text)`
   }
 `
 
-const SectionTop = ({ header, text, buttonText = '', dark, bottomText }) => (
+const SectionTop = ({ header, children, buttonText = '', dark, bottomText }) => (
   <Container>
     <React.Fragment>
       <Header text={header} styles={{ color: dark ? colors.dark : colors.white }} />
-      <SubHeader style={{ color: dark ? colors.dark : colors.mediumGrey, fontStyle: 'italic' }} text={text} />
+      <SubHeader style={{ color: dark ? colors.dark : colors.mediumGrey, fontStyle: 'italic' }}>{children}</SubHeader>
       {buttonText && <Link to='/contact/'><Button secondary>Start a Project</Button></Link>}
       {bottomText && <ReadMore>
         {bottomText}

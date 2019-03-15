@@ -18,8 +18,7 @@ class Success extends Component {
             <SectionTop
               light
               header="Possibilites ahead!"
-              text="We will get back to you soon... bla bla"
-            />
+            >We will get back to you soon... bla bla</SectionTop>
           </ContentWrapper>
         </Hero>
     
@@ -28,8 +27,7 @@ class Success extends Component {
             <SectionTop
               dark
               header={`Lorem ipsum dolor`}
-              text="Id tempor ullamco cupidatat cillum eiusmod. Labore aliquip laboris enim incididunt laboris ad velit. Consequat sit nulla consectetur amet enim commodo cillum nulla Lorem qui magna."
-            />
+            >Id tempor ullamco cupidatat cillum eiusmod. Labore aliquip laboris enim incididunt laboris ad velit. Consequat sit nulla consectetur amet enim commodo cillum nulla Lorem qui magna.</SectionTop>
           </ContentWrapper>
         </Section>
     

@@ -46,9 +46,8 @@ class Index extends Component {
             <SectionTop
               light
               header="We are experts in Augmented Reality"
-              text="Together we will take your business to the next level by developing innovative augmented reality experiences."
               buttonText="Start a project"
-            />
+            >Together we will take your business to the next level by developing innovative augmented reality experiences.</SectionTop>
           </ContentWrapper>
         </Hero>
 
@@ -57,8 +56,7 @@ class Index extends Component {
             <SectionTop
               dark
               header={`Let's get started`}
-              text="Our team of highly skilled and motivated developers always strive towards perfection. While working with close relationships we make sure to meet every need of our customers while we develop Augmented Reality applications to change the way our customers work today. "
-            />
+            >Our team of highly skilled and motivated developers always strive towards perfection. While working with close relationships we make sure to meet every need of our customers while we develop Augmented Reality applications to change the way our customers work today. </SectionTop>
             <ServiceContainer>
               <ContentBlob
                 heading="Bring your idea to life"
@@ -85,8 +83,7 @@ class Index extends Component {
             <SectionTop
               dark
               header={`How we bring your product to life`}
-              text="Our methology for maximizing custumer value and satisfy your needs is divided into the following six steps."
-            />
+              >Our methodology for maximizing custumer value and satisfy your needs is divided into the following six steps.</SectionTop>
             <StepsWrapper>
               <TextCard
                 style={{ marginTop: 40 }}

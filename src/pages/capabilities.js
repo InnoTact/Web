@@ -23,9 +23,9 @@ class Capabilities extends Component {
             <SectionTop
               light
               header="Capabilities"
-              text="Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse. Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse."
               bottomText="Learn More"
-            />
+            > Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse. Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse.
+            </SectionTop>
           </ContentWrapper>
         </Hero>
   
@@ -38,8 +38,7 @@ class Capabilities extends Component {
               <SectionTop
                 dark
                 header={`Experts At Our Craft`}
-                text="Förklarande text som svarar på tviveln kring att vi är nya och inte har erfarenhet."
-              />
+              >Förklarande text som svarar på tviveln kring att vi är nya och inte har erfarenhet.</SectionTop>
             </ContentWrapper>
             <Capability
               buttonText="Build the Future"
@@ -91,9 +90,8 @@ class Capabilities extends Component {
             <SectionTop
               dark
               header="Technology Capabilities"
-              text="Förklara vilka superheta teknoligier vi använder. Att vi alltid ligger i framkant. Fördelarn det ger för kund. Esse commodo veniam id officia. Aliqua incididunt voluptate in labore id ad magna
-            proident enim nostrud ex. Anim et excepteur nulla culpa enim."
-            />
+            >Förklara vilka superheta teknoligier vi använder. Att vi alltid ligger i framkant. Fördelarn det ger för kund. Esse commodo veniam id officia. Aliqua incididunt voluptate in labore id ad magna
+            proident enim nostrud ex. Anim et excepteur nulla culpa enim.</SectionTop>
           </ContentWrapper>
         </Section>
   

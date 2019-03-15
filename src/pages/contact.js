@@ -91,9 +91,8 @@ class Contact extends Component {
             <SectionTop
               light
               header="Contact Us"
-              text="Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse. Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse."
               bottomText="Send us a message"
-            />
+            >Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse. Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse.</SectionTop>
           </ContentWrapper>
         </Hero>
 
@@ -102,8 +101,7 @@ class Contact extends Component {
             <SectionTop
               dark
               header={`Let's Create Something Great.`}
-              text="Id tempor ullamco cupidatat cillum eiusmod. Labore aliquip laboris enim incididunt laboris ad velit."
-            />
+            >Id tempor ullamco cupidatat cillum eiusmod. Labore aliquip laboris enim incididunt laboris ad velit.</SectionTop>
             <ContactFormContainer>
               <Card>
                 <form

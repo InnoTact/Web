@@ -39,9 +39,9 @@ class About extends Component {
             <SectionTop
               light
               header="The Company"
-              text="Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse. Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse."
               bottomText="Read More"
-            />
+            >Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse. Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse.
+            </SectionTop>
           </ContentWrapper>
         </Hero>
 

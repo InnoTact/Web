@@ -20,4 +20,4 @@ const SubHeader = styled.h2`
   }
 `
 
-export default ({ text, ...props }) => <SubHeader {...props}>{text}</SubHeader>
+export default ({ children, ...props }) => <SubHeader {...props}>{children}</SubHeader>

@@ -29,7 +29,7 @@ const Number = styled.div`
 export default ({ header, text, number, ...props }) => (
   <Container>
     <Card {...props}>
-      <SubHeader dark text={header} />
+      <SubHeader dark >{header}</SubHeader>
       <Text dark>{text}</Text>
       {number && (
         <Number>
