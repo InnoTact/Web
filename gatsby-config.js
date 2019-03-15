@@ -2,7 +2,6 @@ const path = require(`path`)
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -16,6 +15,7 @@ module.exports = {
         path: path.join(__dirname, `src`, `img`),
       },
     },
-    `gatsby-transformer-sharp`, `gatsby-plugin-sharp`
+    `gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
+    `gatsby-plugin-styled-components`,
   ]
 }
