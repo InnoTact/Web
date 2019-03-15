@@ -13,6 +13,7 @@ import Hero from "../components/Hero"
 import GetStarted from "../components/GetStarted"
 import { graphql } from "gatsby"
 import { FaCubes, FaCreativeCommonsShare } from "react-icons/fa"
+import {Helmet} from "react-helmet";
 
 const ServiceContainer = styled.div`
   display: flex;
@@ -39,10 +40,14 @@ class Index extends Component {
 
     return (
       <React.Fragment>
+        <Helmet>
+          <meta name="description" content="InnoTact website. We build amazing Augmented Reality (AR) experiences and mobile applications"/>
+        </Helmet>
+
         <Navbar />
 
         <Hero>
-          <ContentWrapper>
+          <ContentWrapper> 
             <SectionTop
               light
               header="We are experts in Augmented Reality"
