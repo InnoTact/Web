@@ -28,6 +28,6 @@ export default ({...props}) =>
       <FaCube style={{ fontSize: '2.3rem', color: 'black' }} />
     </Link>
     <Link to='/'>
-      <LogoText {...props}>Augmented Solutions</LogoText>
+      <LogoText {...props}>InnoTact Software</LogoText>
     </Link>
 </CenterContainer>

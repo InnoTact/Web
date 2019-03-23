@@ -3,9 +3,11 @@ import styled from "styled-components"
 import Logo from "./Logo"
 import NavItems from "./NavItems"
 
+const navHeight = 5.4
+
 const Wrapper = styled.div`
   width: 100%;
-  height: 5.4rem;
+  height: ${navHeight + "rem"};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +33,7 @@ const Container = styled.div`
 class Navbar extends Component {
   render() {
     return (
-      <Wrapper>
+      <Wrapper id="navbar-wrapper">
         <Container>
           <Logo light />
           <NavItems dark />

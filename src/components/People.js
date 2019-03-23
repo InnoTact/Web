@@ -22,7 +22,7 @@ export default ({ peopleImagesData }) => {
         <SectionTop
           dark
           header="The Team"
-        >Augmented Solutions AB (ASAB) consists of a team of high-performance and dedicated engineers from Chalmers University of Technology, located in Gothenburg, Sweden. Our number one priority is always customer satisfaction. We love to create ideas together with our customers to improve and simplify their businesses.</SectionTop>
+        >InnoTact Software AB consists of a team of high-performance and dedicated engineers from Chalmers University of Technology, located in Gothenburg, Sweden. Our number one priority is always customer satisfaction. We love to create ideas together with our customers to improve and simplify their businesses.</SectionTop>
         <CenterContainer>
           <SubHeader
             style={{ color: colors.dark, textAlign: "center" }}
