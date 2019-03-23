@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Header from './Header'
 import SubHeader from './SubHeader'
@@ -7,6 +7,7 @@ import colors from './../styles/colors'
 import Text from './Text';
 import { Link } from 'gatsby'
 import styles from '../styles/styles'
+import { animateScroll as scroll } from 'react-scroll'
 
 const Container = styled.div`
   margin-top: 2rem;
@@ -41,13 +42,18 @@ const ReadMore = styled(Text)`
   }
 `
 
+function vh(v) {
+  var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  return (v * h) / 100;
+}
+
 const SectionTop = ({ header, children, buttonText = '', dark, bottomText }) => (
   <Container>
     <React.Fragment>
       <Header text={header} styles={{ color: dark ? colors.dark : colors.white }} />
       <SubHeader style={{ color: dark ? colors.dark : colors.mediumGrey, fontStyle: 'italic' }}>{children}</SubHeader>
       {buttonText && <Link to='/contact/'><Button secondary>Start a Project</Button></Link>}
-      {bottomText && <ReadMore>
+      {bottomText && <ReadMore onClick={() => scroll.scrollTo(vh(82))}>
         {bottomText}
       </ReadMore>}
     </React.Fragment>

@@ -45,8 +45,8 @@ class RootWrapper extends Component {
 
   isTablet = () => {
     return (
-      window.innerWidth > styles.breakpoints.sm &&
-      window.innerHeight < styles.breakpoints.md
+      window.innerWidth >= styles.breakpoints.sm &&
+      window.innerWidth < styles.breakpoints.md
     )
   }
 

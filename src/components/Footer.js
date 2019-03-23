@@ -82,10 +82,6 @@ const InfoIconsContainer = styled.div`
 `
 
 class Footer extends Component {
-  isTablet = width => {
-    return width > styles.breakpoints.sm && width <= styles.breakpoints.md
-  }
-
   render() {
     return (
       <Section
