@@ -9,6 +9,15 @@ import Capability from "../components/Capability"
 import GetStarted from "../components/GetStarted"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from 'styled-components'
+import styles from '../styles/styles'
+
+const ExtraMargin = styled.div`
+  margin-top: 60px;
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    margin-top: -15px;
+  }
+`
 
 class Capabilities extends Component {
   render() {
@@ -40,21 +49,22 @@ class Capabilities extends Component {
                 header={`Experts At Our Craft`}
               >Förklarande text som svarar på tviveln kring att vi är nya och inte har erfarenhet.</SectionTop>
             </ContentWrapper>
-            <Capability
-              buttonText="Build the Future"
-              style={{ marginTop: 60 }}
-              textLeft
-              header="Augmented Reality"
-              text="Culpa labore tempor sint excepteur esse non enim elit eu veniam. Exercitation incididunt incididunt nostrud irure
-                anim nostrud do Lorem amet. Ullamco voluptate ea ullamco cupidatat. Adipisicing sint reprehenderit qui mollit aliqua ut aute Lorem excepteur esse labore. Elit id cillum
-                duis aliqua laborum nulla nulla aute Lorem irure deserunt consectetur dolore. Adipisicing ad voluptate deserunt consequat officia laboris irure dolore dolor ut commodo 
-                irure sit eiusmod."
-            >
-              <Img
-                alt="Virtual Reality"
-                fluid={data.VRImage.childImageSharp.fluid}
-              />
-            </Capability>
+            <ExtraMargin>
+              <Capability
+                buttonText="Build the Future"
+                textLeft
+                header="Augmented Reality"
+                text="Culpa labore tempor sint excepteur esse non enim elit eu veniam. Exercitation incididunt incididunt nostrud irure
+                  anim nostrud do Lorem amet. Ullamco voluptate ea ullamco cupidatat. Adipisicing sint reprehenderit qui mollit aliqua ut aute Lorem excepteur esse labore. Elit id cillum
+                  duis aliqua laborum nulla nulla aute Lorem irure deserunt consectetur dolore. Adipisicing ad voluptate deserunt consequat officia laboris irure dolore dolor ut commodo 
+                  irure sit eiusmod."
+              >
+                <Img
+                  alt="Virtual Reality"
+                  fluid={data.VRImage.childImageSharp.fluid}
+                />
+              </Capability>
+            </ExtraMargin>
             <Capability
               buttonText="Get Started"
               header="Mobile App Development"

@@ -6,6 +6,7 @@ import Text from "./Text"
 import { Link } from "gatsby"
 import styles from "../styles/styles"
 import { AppContext } from "./RootWrapper"
+import ContentWrapper from "./ContentWrapper";
 
 const Container = styled.div`
   position: relative;
@@ -19,6 +20,7 @@ const InfoContainer = styled.div`
 
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
     width: unset;
+    padding: 0 0 4rem 0;
     margin-left: unset;
   }
 `
@@ -52,11 +54,13 @@ class Capability extends Component {
 
     let info = (
       <InfoContainer textLeft={textLeft}>
-        <SubHeading dark text={header} />
-        <Text dark>{text}</Text>
-        <Link to="/contact/">
-          <Button primary>{buttonText}</Button>
-        </Link>
+        <ContentWrapper>
+          <SubHeading dark text={header} />
+          <Text dark>{text}</Text>
+          <Link to="/contact/">
+            <Button primary>{buttonText}</Button>
+          </Link>
+        </ContentWrapper>
       </InfoContainer>
     )
 
@@ -83,17 +87,18 @@ class Capability extends Component {
       <Container {...props}>
         <AppContext.Consumer>
           {value => {
-            let output = null
             if (value) {
-              output = value.isMobile && (
-                <Fragment>
-                  {info}
-                  {image}
-                </Fragment>
-              )
+              if (value.isMobile) {
+                output =
+                  <Fragment>
+                    {info}
+                    {image}
+                  </Fragment>
+              }
+              return output
+            } else {
+              return null
             }
-
-            return output
           }}
         </AppContext.Consumer>
       </Container>
