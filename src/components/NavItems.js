@@ -52,7 +52,6 @@ const NavItem = styled.div`
 const NavLink = styled.div`
   text-decoration: none;
   font-size: 1rem;
-  color: ${({ dark }) => (dark ? colors.mediumGrey : colors.white)};
 
   :hover {
     color: ${({ dark }) => (dark ? colors.mediumGreyLighten : colors.white)};
@@ -88,34 +87,36 @@ class NavItems extends Component {
   }
 
   render() {
-    const { windowWidth, ...props } = this.props
+    const { windowWidth, dark, ...props } = this.props
     const { open } = this.state
+    const linkColor = dark ? colors.mediumGrey : colors.white
+    const activeLinkColor = dark ? colors.mediumGreyLighten : colors.white
 
     const navItems = (
       <Fragment>
         <NavItem open={open}>
-          <Link to="/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor}} to="/">
             <NavLink open={open} {...props}>
               Home
             </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link to="/capabilities/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor}} to="/capabilities/">
             <NavLink open={open} {...props}>
               Capabilities
             </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link to="/about/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor}} to="/about/">
             <NavLink open={open} {...props}>
               About us
             </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link to="/contact/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor}} to="/contact/">
             <NavLink open={open} {...props}>
               Contact us
             </NavLink>

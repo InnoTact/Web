@@ -14,6 +14,7 @@ import GetStarted from "../components/GetStarted"
 import { graphql } from "gatsby"
 import { FaCubes, FaCreativeCommonsShare } from "react-icons/fa"
 import {Helmet} from "react-helmet";
+import ClickMe from '../components/ClickMe'
 
 const ServiceContainer = styled.div`
   display: flex;
@@ -50,9 +51,9 @@ class Index extends Component {
           <ContentWrapper> 
             <SectionTop
               light
-              header="We are experts in Augmented Reality"
+              header="We build amazing Augmented Reality experiences"
               buttonText="Start a project"
-            >Together we will take your business to the next level by developing innovative augmented reality experiences.</SectionTop>
+            >Together we will take your business to the next level by developing innovative augmented reality and mobile applications.</SectionTop>
           </ContentWrapper>
         </Hero>
 
@@ -61,7 +62,8 @@ class Index extends Component {
             <SectionTop
               dark
               header={`Let's get started`}
-            >Our team of highly skilled and motivated developers always strive towards perfection. While working with close relationships we make sure to meet every need of our customers while we develop Augmented Reality applications to change the way our customers work today. </SectionTop>
+              text="Our team of highly skilled and motivated developers always strive towards perfection. While working with close relationships we make sure to meet every need of our customers while we develop Augmented Reality applications to change the way our customers work today. "
+            />
             <ServiceContainer>
               <ContentBlob
                 heading="Bring your idea to life"
@@ -88,12 +90,13 @@ class Index extends Component {
             <SectionTop
               dark
               header={`How we bring your product to life`}
-              >Our methodology for maximizing custumer value and satisfy your needs is divided into the following six steps.</SectionTop>
+              text="Our methology for maximizing custumer value and satisfy your needs is divided into the following six steps."
+            />
             <StepsWrapper>
               <TextCard
                 style={{ marginTop: 40 }}
                 header="Lets arrange for a meeting."
-                text="Press here to book a meeting with us where we can discuss your needs and posibilities."
+                text={[`Press `, <ClickMe url='/contact/'>here</ClickMe> , ' to book a meeting with us where we can discuss your needs and posibilities.']}
                 number={"1"}
                 dark
               />
