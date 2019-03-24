@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import colors from '../styles/colors'
 import styles from '../styles/styles'
+import PropTypes from 'prop-types';
 
 const SubHeading = styled.h3`
   color: ${props => props.dark ? colors.dark : colors.white};
@@ -16,4 +17,8 @@ const SubHeading = styled.h3`
   }
 `
 
-export default ({ text, small, dark, light }) => <SubHeading small={small} dark={dark} light={light}>{text}</SubHeading>
+SubHeading.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+export default ({ children, small, dark, light }) => <SubHeading small={small} dark={dark} light={light}>{children}</SubHeading>

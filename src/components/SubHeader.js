@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import colors from '../styles/colors'
 import styles from '../styles/styles'
+import PropTypes from 'prop-types';
 
 const SubHeader = styled.h2`
   color: ${props => props.dark ? colors.dark : colors.white};
@@ -19,5 +20,9 @@ const SubHeader = styled.h2`
     font-size: 1rem;
   }
 `
+
+SubHeader.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default ({ children, ...props }) => <SubHeader {...props}>{children}</SubHeader>

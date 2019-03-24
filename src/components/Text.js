@@ -2,6 +2,7 @@ import React from 'react'
 import styled, {css} from 'styled-components'
 import colors from '../styles/colors'
 import styles from '../styles/styles'
+import PropTypes from 'prop-types';
 
 const Text = styled.p`
     color: ${props => props.dark ? colors.dark : colors.white};
@@ -27,6 +28,10 @@ const Text = styled.p`
         font-size: ${props => props.small ? '0.75rem' : '0.95rem'};
   }
 `
+
+Text.propTypes = {
+    children: PropTypes.node.isRequired,
+}
 
 export default ({children, dark, light, ...props}) => <Text {...props} dark={dark} light={light}>{children}</Text>
 

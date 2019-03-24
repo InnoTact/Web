@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../styles/styles'
 import styled from 'styled-components'
 import colors from './../styles/colors'
+import PropTypes from 'prop-types';
 
 const Anchor = styled.a`
   display: "inline";
@@ -20,4 +21,9 @@ const Anchor = styled.a`
   }
 `
 
-export default ({href, children, dark, light, ...props}) => <Anchor href={href} {...props} dark={dark} light={light}>{children}</Anchor>
+Anchor.propTypes = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+}
+
+export default ({href, children, dark, light, italic, ...props}) => <Anchor italic={italic} href={href} {...props} dark={dark} light={light}>{children}</Anchor>

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import colors from '../styles/colors'
 import Text from './Text'
 import { Link } from "gatsby"
+import PropTypes from 'prop-types';
 
 const ClickMe = styled(Text)`
     color: ${colors.primary};
@@ -14,5 +15,10 @@ const ClickMe = styled(Text)`
     }
 `
 
-export default ({url, children, ...props}) => <Link {...props} to={url}><ClickMe {...props} >{children}</ClickMe></Link>
+ClickMe.propTypes = {
+    url: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
+  }
+
+export default ({url, children, ...props}) => <Link {...props} to={url}><ClickMe url={url} {...props}>{children}</ClickMe></Link>
 

@@ -8,6 +8,8 @@ import Text from './Text';
 import { Link } from 'gatsby'
 import styles from '../styles/styles'
 import { animateScroll as scroll } from 'react-scroll'
+import PropTypes from 'prop-types';
+import Section from './Section';
 
 const Container = styled.div`
   margin-top: 2rem;
@@ -67,5 +69,9 @@ const SectionTop = ({ header, children, buttonText = '', dark, bottomText, ...pr
     </React.Fragment>
   </Container>
 )
+
+SectionTop.propTypes = {
+  header: PropTypes.string.isRequired,
+}
 
 export default SectionTop

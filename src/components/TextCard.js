@@ -5,6 +5,7 @@ import Text from "./Text"
 import colors from "../styles/colors"
 import ColorFadeSection from "./ColorFadeSection"
 import Card from "./Card"
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
   position: relative;
@@ -26,23 +27,36 @@ const Number = styled.div`
   box-shadow: ${colors.normalBoxShadow};
 `
 
-export default ({ header, text, number, ...props }) => (
+const TextCard = ({ header, text, number, ...props }) => (
   <Container>
     <Card {...props}>
-      <SubHeader dark >{header}</SubHeader>
-      <Text style={{marginBottom: 0}} dark>{text}</Text>
-      {number && (
-        <Number>
-          <React.Fragment>
-            <Text style={{ marginBottom: 4, fontSize: "1.3rem" }} dark>
-              {number}
-            </Text>
-            <ColorFadeSection
-              style={{ position: "absolute", bottom: 0, left: 0, right: 0 }}
-            />
-          </React.Fragment>
-        </Number>
-      )}
+      <React.Fragment>
+        <SubHeader dark >{header}</SubHeader>
+        <Text style={{marginBottom: 0}} dark>{text}</Text>
+        {number && (
+          <Number>
+            <React.Fragment>
+              <Text style={{ marginBottom: 4, fontSize: "1.3rem" }} dark>
+                {number}
+              </Text>
+              <ColorFadeSection
+                style={{ position: "absolute", bottom: 0, left: 0, right: 0 }}
+              />
+            </React.Fragment>
+          </Number>
+        )}
+      </React.Fragment>
     </Card>
   </Container>
 )
+
+TextCard.propTypes = {
+  header: PropTypes.string.isRequired,
+  text: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+  ]).isRequired,
+  number: PropTypes.string.isRequired,
+}
+
+export default TextCard

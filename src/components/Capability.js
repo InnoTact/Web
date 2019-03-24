@@ -7,6 +7,7 @@ import { Link } from "gatsby"
 import styles from "../styles/styles"
 import { AppContext } from "./RootWrapper"
 import ContentWrapper from "./ContentWrapper";
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
   position: relative;
@@ -55,7 +56,7 @@ class Capability extends Component {
     let info = (
       <InfoContainer {...props} textLeft={textLeft}>
         <ContentWrapper>
-          <SubHeading dark text={header} />
+          <SubHeading dark>{header}</SubHeading>
           <Text dark>{text}</Text>
           <Link to="/contact/">
             <Button primary>{buttonText}</Button>
@@ -104,6 +105,13 @@ class Capability extends Component {
       </Container>
     )
   }
+}
+
+Capability.propTypes = {
+  header: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default Capability

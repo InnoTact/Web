@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import colors from './../styles/colors'
+import PropTypes from 'prop-types'
 
 const Button = styled.button`
   position: relative;
@@ -33,5 +34,9 @@ const Button = styled.button`
     cursor: not-allowed;
   }
 `
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default Button
