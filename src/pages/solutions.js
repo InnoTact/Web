@@ -11,12 +11,19 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from 'styled-components'
 import styles from '../styles/styles'
+import ContentBlob from "../components/ContentBlob";
 
 const ExtraMargin = styled.div`
   margin-top: 60px;
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
     margin-top: -15px;
   }
+`
+
+const SolutionsContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 `
 
 class Solutions extends Component {
@@ -46,7 +53,7 @@ class Solutions extends Component {
             <ContentWrapper>
               <SectionTop
                 dark
-                header={`AR will revolutionze all industries`}
+                header={`AR will Revolutionze All Industries`}
               >We are here to give you the competetive edge. We will help adapt your business to thrive in the new market.</SectionTop>
             </ContentWrapper>
             <ExtraMargin>
@@ -93,6 +100,24 @@ class Solutions extends Component {
                 />
             </Capability>
           </React.Fragment>
+        </Section>
+
+        <Section backgroundColor={colors.white}>
+          <ContentWrapper>
+            <SectionTop
+              dark
+              header="Solutions We Can Provide"
+              style={{paddingBottom: 0, marginBottom: -35}}
+            />
+            <SolutionsContainer>
+              <ContentBlob width={360} small heading="AR For Advertising" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />
+              <ContentBlob width={360} small heading="AR For Training" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />
+              <ContentBlob width={360} small heading="AR For Model Visualization" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />
+              <ContentBlob width={360} small heading="AR For Navigation" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />
+              <ContentBlob width={360} small heading="AR And Machine Learning" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />
+              <ContentBlob width={360} small heading="AR For Sales" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />
+            </SolutionsContainer>
+          </ContentWrapper>
         </Section>
   
         <Section backgroundColor={colors.lightgrey}>

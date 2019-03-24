@@ -53,7 +53,7 @@ class Capability extends Component {
     } = this.props
 
     let info = (
-      <InfoContainer textLeft={textLeft}>
+      <InfoContainer {...props} textLeft={textLeft}>
         <ContentWrapper>
           <SubHeading dark text={header} />
           <Text dark>{text}</Text>

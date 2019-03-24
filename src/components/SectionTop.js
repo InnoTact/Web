@@ -53,12 +53,11 @@ function vh(v) {
   return (v * h) / 100;
 }
 
-const SectionTop = 
-({ header, children, buttonText = '', dark, bottomText }) => (
-  <Container>
+const SectionTop = ({ header, children, buttonText = '', dark, bottomText, ...props }) => (
+  <Container {...props}>
     <React.Fragment>
       <Header text={header} styles={{ color: dark ? colors.dark : colors.white }} />
-      <SubHeader style={{ color: dark ? colors.dark : colors.mediumGrey, fontStyle: 'italic' }}>{children}</SubHeader>
+      {children && <SubHeader style={{ color: dark ? colors.dark : colors.mediumGrey, fontStyle: 'italic' }}>{children}</SubHeader>}
       {buttonText && <Link to='/contact/#contact-form'><Button secondary>Start a Project</Button></Link>}
       {bottomText && <ReadMore onClick={() => scroll.scrollTo(vh(82))}>
         {bottomText}

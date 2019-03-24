@@ -10,6 +10,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 550px;
+  width: ${({width}) => width ? width + 'px' : 'unset'};
   margin: 2rem auto 0 auto;
   text-align: center;
 `
@@ -17,13 +18,13 @@ const Wrapper = styled.div`
 const Item = styled.div`
 `
 
-export default ({ children, heading, text, buttonText }) => (
-  <Wrapper>
+export default ({ children, heading, text, small = false, width, buttonText }) => (
+  <Wrapper width={width}>
     <Item>
       {children}
     </Item>
     <Item>
-      <SubHeading dark text={heading} />
+      <SubHeading small={small} dark text={heading} />
     </Item>
     <Item>
       <Text dark>{text}</Text>

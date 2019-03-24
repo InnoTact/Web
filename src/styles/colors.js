@@ -1,7 +1,7 @@
 import { lighten } from 'polished'
 
-let primary = '#4C3D54'
-let mediumGrey = '#d3d1d1'
+const primary = '#4C3D54'
+const mediumGrey = '#d3d1d1'
 
 const colors = {
   primary,
@@ -12,8 +12,9 @@ const colors = {
   whiteLighten: lighten(0.4, '#fff'),
   dark: '#4C3D54',
   lightgrey: '#f7f7f7',
-  mediumGrey,
-  mediumGreyLighten: lighten(0.4, mediumGrey),
+  lightdarkerGrey: '#efefef',
+  mediumGrey: mediumGrey,
+  mediumGreyLighten: lighten(0.5, mediumGrey),
   darkgrey: '#333333',
   green: '#3cba54',
   normalBoxShadow: '2px 4px 30px 0px rgba(165,165,165,0.3)'
