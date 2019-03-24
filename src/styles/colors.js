@@ -9,6 +9,7 @@ const colors = {
   primaryHighLighten: lighten(0.5, primary),
   secondary: '#4C3D54',
   white: '#fff',
+  whiteLighten: lighten(0.4, '#fff'),
   dark: '#4C3D54',
   lightgrey: '#f7f7f7',
   mediumGrey,

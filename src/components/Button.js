@@ -22,9 +22,9 @@ const Button = styled.button`
   :hover {
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    transform: scale(1.02);
-    color: ${props => (props.primary ? colors.white : colors.primary)};
-    background-color: ${props => (props.primary ? colors.primary : colors.white)};
+    transform: ${({disabled}) => !disabled && 'scale(1.02)'};
+    color: ${({primary, disabled}) => ((primary && !disabled)   ? colors.white : colors.primary)};
+    background-color: ${({primary, disabled}) => ((primary && !disabled)  ? colors.primary : colors.white)};
   }
 
   :disabled {

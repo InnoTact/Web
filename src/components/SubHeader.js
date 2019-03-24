@@ -8,7 +8,7 @@ const SubHeader = styled.h2`
   display: inline-block;
   margin-bottom: 1.2rem;
   margin: 0 auto 30px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: 0;
   text-transform: none;
   line-height: 1.8;
@@ -16,7 +16,7 @@ const SubHeader = styled.h2`
   max-width: 1080px;
 
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 `
 

@@ -1,5 +1,5 @@
-import React, { Component } from "react"
-import { Navbar, Section } from "../components/"
+import React, { Component, Fragment } from "react"
+import { Navbar, Section, CenterContainer } from "../components/"
 import styled from "styled-components"
 import SectionTop from "./../components/SectionTop"
 import ContentWrapper from "./../components/ContentWrapper"
@@ -9,17 +9,63 @@ import Card from "../components/Card"
 import Hero from "../components/Hero"
 import Text from "../components/Text"
 import Button from "../components/Button"
-import { navigateTo } from "gatsby-link";
-import styles from '../styles/styles'
+import { navigateTo } from "gatsby-link"
+import styles from "../styles/styles"
+import SubHeader from "../components/SubHeader"
+import { FaMobileAlt } from "react-icons/fa"
 
-const ContactFormContainer = styled.div`
-  width: 80%;
+const ContactUsWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
   margin-top: 2rem;
-  margin-left: auto;
-  margin-right: auto;
+
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    flex-direction: column;
+    align-items: center;
+  }
+`
+
+const CallContainer = styled.div`
+  width: 30%;
   
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    order: 1;
     width: 100%;
+    margin-bottom: 4rem;
+  }
+`
+
+const CallUsContent = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+`
+
+const Anchor = styled.a`
+  display: "inline";
+  margin-bottom: 0;
+  color: ${colors.primary};
+  font-size: 1.1rem;
+
+  :hover {
+    color: ${colors.primaryLowLighten};
+    cursor: pointer;
+  }
+
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    font-size: 1.1rem;
+  }
+`
+
+const ContactFormContainer = styled.div`
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    width: 100%;
+    order: 2;
   }
 `
 
@@ -74,8 +120,8 @@ class Contact extends Component {
   }
 
   handleSubmit = e => {
-    e.preventDefault();
-    const form = e.target;
+    e.preventDefault()
+    const form = e.target
     navigateTo(form.getAttribute("action"))
   }
 
@@ -92,69 +138,88 @@ class Contact extends Component {
               light
               header="Contact Us"
               bottomText="Send us a message"
-            >Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse. Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse.</SectionTop>
+            >
+              Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur
+              nostrud occaecat eiusmod fugiat consequat esse. Non ullamco amet
+              esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat
+              eiusmod fugiat consequat esse.
+            </SectionTop>
           </ContentWrapper>
         </Hero>
 
-        <Section backgroundColor={colors.lightgrey}>
+        <Section id="contact-form" backgroundColor={colors.lightgrey}>
           <ContentWrapper>
-            <SectionTop
-              dark
-              header={`Let's Create Something Great.`}
-            >Id tempor ullamco cupidatat cillum eiusmod. Labore aliquip laboris enim incididunt laboris ad velit.</SectionTop>
-            <ContactFormContainer>
-              <Card>
-                <form
-                  onSubmit={this.handleSubmit}
-                  action="/success/"
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                >
-                  <ContactItem>
-                    <ContactText dark>What's your name?*</ContactText>
-                    <Input
-                      placeholder="Full name"
-                      required
-                      type="text"
-                      name="name"
-                      onChange={event => this.updateState("name", event)}
-                    />
-                  </ContactItem>
-                  <ContactItem>
-                    <ContactText margi dark>
-                      What email can we reach you at?*
-                    </ContactText>
-                    <Input
-                      placeholder="info@innotactsoftware.se"
-                      required
-                      type="email"
-                      name="email"
-                      onChange={event => this.updateState("email", event)}
-                    />
-                  </ContactItem>
-                  <ContactItem>
-                    <ContactText dark>
-                      Tell us more about your project or idea*
-                    </ContactText>
-                    <TextArea
-                      placeholder="What do you want to build? What is your idea? What is the deadline?"
-                      name="message"
-                      disabled={!formFilled}
-                    />
-                  </ContactItem>
-                  <ContactItem style={{ marginTop: "2rem", textAlign: "left" }}>
-                    <Button
-                      type="submit"
-                      disabled={!formFilled}
-                      primary
+            <SectionTop dark header={`Let's Create Something Great.`}>
+              Give us a call or fill the form so we can learn more about your
+              needs.
+            </SectionTop>
+            <ContactUsWrapper>
+              <ContactFormContainer>
+                <Card>
+                  <SubHeader style={{marginBottom: -10}} dark>Fill Out the Form</SubHeader>
+                  <form
+                    onSubmit={this.handleSubmit}
+                    action="/success/"
+                    name="contact"
+                    method="POST"
+                    data-netlify="true"
+                  >
+                    <ContactItem>
+                      <ContactText dark>What's your name?*</ContactText>
+                      <Input
+                        placeholder="Full name"
+                        required
+                        type="text"
+                        name="name"
+                        onChange={event => this.updateState("name", event)}
+                      />
+                    </ContactItem>
+                    <ContactItem>
+                      <ContactText margi dark>
+                        What email can we reach you at?*
+                      </ContactText>
+                      <Input
+                        placeholder="info@innotactsoftware.se"
+                        required
+                        type="email"
+                        name="email"
+                        onChange={event => this.updateState("email", event)}
+                      />
+                    </ContactItem>
+                    <ContactItem>
+                      <ContactText dark>
+                        Tell us more about your project or idea*
+                      </ContactText>
+                      <TextArea
+                        placeholder={`What do you want to build? What's your idea? What's the deadline?`}
+                        name="message"
+                        disabled={!formFilled}
+                      />
+                    </ContactItem>
+                    <ContactItem
+                      style={{ marginTop: "2rem", textAlign: "left" }}
                     >
-                      Send my message
-                    </Button>
-                  </ContactItem>
-                </form>
-              </Card>
-            </ContactFormContainer>
+                      <Button type="submit" disabled={!formFilled} primary>
+                        Send my message
+                      </Button>
+                    </ContactItem>
+                  </form>
+                </Card>
+              </ContactFormContainer>
+              <CallContainer>
+                <Card>
+                  <SubHeader dark>Give Us a Call</SubHeader>
+                  <CallUsContent>
+                    <CenterContainer>
+                      <FaMobileAlt style={{fontSize: 30, color: colors.primary}} />
+                    </CenterContainer>
+                    <CenterContainer>
+                      <Anchor style={{marginLeft: 10}} href="tel:+46737303797">+46737303797</Anchor>
+                    </CenterContainer>
+                  </CallUsContent>
+                </Card>
+              </CallContainer>
+            </ContactUsWrapper>
           </ContentWrapper>
         </Section>
 

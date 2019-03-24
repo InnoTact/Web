@@ -30,7 +30,7 @@ export default ({ header, text, number, ...props }) => (
   <Container>
     <Card {...props}>
       <SubHeader dark >{header}</SubHeader>
-      <Text dark>{text}</Text>
+      <Text style={{marginBottom: 0}} dark>{text}</Text>
       {number && (
         <Number>
           <React.Fragment>

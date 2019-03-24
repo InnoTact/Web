@@ -87,7 +87,7 @@ class Index extends Component {
 
         <Section backgroundColor={colors.lightgrey}>
           <ContentWrapper>
-            <SectionTop
+            <SectionTop   
               dark
               header={`How we bring your product to life`}
               text="Our methology for maximizing custumer value and satisfy your needs is divided into the following six steps."
@@ -96,7 +96,7 @@ class Index extends Component {
               <TextCard
                 style={{ marginTop: 40 }}
                 header="Lets arrange for a meeting."
-                text={[`Press `, <ClickMe url='/contact/'>here</ClickMe> , ' to book a meeting with us where we can discuss your needs and posibilities.']}
+                text={[`Press `, <ClickMe italic url='/contact/'>here</ClickMe> , ' to book a meeting with us where we can discuss your needs and posibilities.']}
                 number={"1"}
                 dark
               />
@@ -119,7 +119,7 @@ class Index extends Component {
                 dark
               />
               <TextCard
-                header="We finish and lunch the solution."
+                header="We finish and launch the solution."
                 text="When the solution is ready we bring it to life and launch it in your bussiness."
                 number={"5"}
                 dark

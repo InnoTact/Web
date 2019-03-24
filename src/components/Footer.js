@@ -6,7 +6,7 @@ import Logo from "./Logo"
 import NavItems from "./NavItems"
 import Text from "./Text"
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
-import ContentWrapper from "./ContentWrapper"
+import ContentWrapper from "./ContentWrapper"   
 import styles from "../styles/styles"
 import { AppContext } from "./RootWrapper"
 
@@ -28,9 +28,19 @@ const Item = styled.div`
   position: relative;
 `
 
-const Anchor = styled(Text)`
+const Anchor = styled.a`
+  display: "inline";
+  margin-bottom: 0;
+  color: white;
+  font-size: 0.85rem;
+
   :hover {
-    color: ${colors.mediumGreyLighten};
+    color: ${colors.primaryHighLighten};
+    cursor: pointer;
+  }
+
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    font-size: 0.75rem;
   }
 `
 
@@ -73,11 +83,12 @@ const socialLogoStyleLarge = {
 
 const InfoIconsContainer = styled.div`
   display: relative;
-  text-align: center;
+  text-align: left;
 
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
     margin-top: 1.8rem;
     margin-bottom: 2rem;
+    text-align: center;
   }
 `
 
@@ -125,7 +136,6 @@ class Footer extends Component {
                       <InfoIconsContainer>
                         <div style={{ marginBottom: 6 }}>
                           <Anchor
-                            style={{ display: "inline" }}
                             small
                             light
                             href="tel:+46737303797"
@@ -134,12 +144,11 @@ class Footer extends Component {
                           </Anchor>
                         </div>
                         <Anchor
-                          style={{ display: "inline" }}
                           small
                           light
-                          href="mailto:niklas@innotactsoftware.com"
+                          href="mailto:contact@innotactsoftware.com"
                         >
-                          niklas@innotactsoftware.com
+                          contact@innotactsoftware.com
                         </Anchor>
                         <SocialLogos>
                           <SocialLogoAnchor href="https://github.com/">
@@ -160,7 +169,7 @@ class Footer extends Component {
                               }
                             />
                           </SocialLogoAnchor>
-                          <SocialLogoAnchor href="mailto:niklas@innotactsoftware.com">
+                          <SocialLogoAnchor href="mailto:contact@innotactsoftware.com">
                             <FaEnvelope
                               style={
                                 value.isMobile

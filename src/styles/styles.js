@@ -8,6 +8,7 @@ const styles = {
         bottom: -30
     },
     breakpoints: {
+        xs: 520,
         sm: 760, 
         md: 992,
         lg: 1200

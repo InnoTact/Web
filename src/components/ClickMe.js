@@ -7,12 +7,12 @@ import { Link } from "gatsby"
 const ClickMe = styled(Text)`
     color: ${colors.primary};
     display: inline;
-    font-style: italic;
+    font-style: ${({italic}) => italic ? 'italic' : 'none'};
     :hover {
         color: ${colors.primaryLowLighten};
         transition: all ease-in-out 300ms;
     }
 `
 
-export default ({url, children, ...props}) => <Link to={url}><ClickMe {...props} >{children}</ClickMe></Link>
+export default ({url, children, ...props}) => <Link {...props} to={url}><ClickMe {...props} >{children}</ClickMe></Link>
 

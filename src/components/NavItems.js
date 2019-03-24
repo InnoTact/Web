@@ -54,7 +54,7 @@ const NavLink = styled.div`
   font-size: 1rem;
 
   :hover {
-    color: ${({ dark }) => (dark ? colors.mediumGreyLighten : colors.white)};
+    color: ${({ dark }) => (dark ? colors.mediumGreyLighten : colors.primaryLowLighten)};
     transition: all ease-in-out 0.2s;
   }
 
@@ -89,34 +89,34 @@ class NavItems extends Component {
   render() {
     const { windowWidth, dark, ...props } = this.props
     const { open } = this.state
-    const linkColor = dark ? colors.mediumGrey : colors.white
+    const linkColor = dark ? colors.mediumGrey : colors.mediumGrey
     const activeLinkColor = dark ? colors.mediumGreyLighten : colors.white
 
     const navItems = (
       <Fragment>
         <NavItem open={open}>
-          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor}} to="/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/">
             <NavLink open={open} {...props}>
               Home
             </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor}} to="/capabilities/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/capabilities/">
             <NavLink open={open} {...props}>
               Capabilities
             </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor}} to="/about/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/about/">
             <NavLink open={open} {...props}>
               About us
             </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor}} to="/contact/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/contact/">
             <NavLink open={open} {...props}>
               Contact us
             </NavLink>
