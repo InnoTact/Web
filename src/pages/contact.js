@@ -54,7 +54,7 @@ const Anchor = styled.a`
   }
 
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 `
 

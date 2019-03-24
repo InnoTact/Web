@@ -12,7 +12,7 @@ export default () =>
     <ContentWrapper>
     <SectionTop dark header={`Ready to Get Started?`}>We are here to help you. Press the button below to get in contact with us.<br/>Together we will make your ideas come true.</SectionTop>
     <CenterContainer>
-        <Link to='/contact/'>
+        <Link to='/contact/#contact-form'>
             <Button style={{marginTop: 25}} primary>Start a project</Button>
         </Link>
     </CenterContainer>
