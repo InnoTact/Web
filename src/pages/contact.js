@@ -96,6 +96,10 @@ const TextArea = styled.textarea`
 const ContactText = styled(Text)`
   font-size: 1rem;
   margin-bottom: 0.35rem;
+
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    font-size: 0.95rem;
+  }
 `
 
 class Contact extends Component {
@@ -156,13 +160,14 @@ class Contact extends Component {
             <ContactUsWrapper>
               <ContactFormContainer>
                 <Card>
-                  <SubHeader style={{marginBottom: -10}} dark>Fill Out the Form</SubHeader>
+                  <SubHeader dark>Fill Out the Form</SubHeader>
                   <form
                     onSubmit={this.handleSubmit}
                     action="/success/"
                     name="contact"
                     method="POST"
                     data-netlify="true"
+                    style={{marginTop: -45}}
                   >
                     <ContactItem>
                       <ContactText dark>What's your name?*</ContactText>
