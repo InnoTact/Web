@@ -18,7 +18,8 @@ const Container = styled.div`
 `
 
 const ReadMore = styled(Text)`
-  display: block;
+  display: inline-block;
+  max-width: 200px;
   position: absolute;
   left: 0;
   right: 0; 
@@ -45,6 +46,7 @@ const ReadMore = styled(Text)`
     cursor: pointer;
     color: white;
     transition: all ease-in-out 300ms;
+    transform: translateY(-5px);
   }
 `
 

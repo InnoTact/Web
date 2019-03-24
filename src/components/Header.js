@@ -13,9 +13,14 @@ const StyledHeader = styled.h1`
   line-height: 1.5;
   text-align: center;
   max-width: 1080px;
+  white-space: nowrap;
 
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
     font-size: 1.8rem;
+  }
+
+  @media (max-width: ${styles.breakpoints.lg + "px"}) {
+    white-space: normal;
   }
 `
 

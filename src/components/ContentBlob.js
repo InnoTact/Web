@@ -18,8 +18,8 @@ const Wrapper = styled.div`
 const Item = styled.div`
 `
 
-export default ({ children, heading, text, small = false, width, buttonText }) => (
-  <Wrapper width={width}>
+export default ({ children, heading, text, small = false, width, buttonText, buttonLink, ...props }) => (
+  <Wrapper {...props} width={width}>
     <Item>
       {children}
     </Item>
@@ -30,7 +30,7 @@ export default ({ children, heading, text, small = false, width, buttonText }) =
       <Text dark>{text}</Text>
     </Item>
     <Item>
-      {buttonText && <Link to='/contact/'><Button primary>{buttonText}</Button></Link>}
+      {buttonText && <Link to={buttonLink}><Button primary>{buttonText}</Button></Link>}
     </Item>
   </Wrapper>
 )

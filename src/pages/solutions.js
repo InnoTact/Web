@@ -107,8 +107,7 @@ class Solutions extends Component {
             <SectionTop
               dark
               header="Solutions We Can Provide"
-              style={{paddingBottom: 0, marginBottom: -35}}
-            />
+            >AR can and will be applied in all different sectors, especially when AR glasses are improved. However, here are some solutions we can give you today.</SectionTop>
             <SolutionsContainer>
               <ContentBlob width={360} small heading="AR For Advertising" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />
               <ContentBlob width={360} small heading="AR For Training" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />

@@ -100,14 +100,16 @@ class Index extends Component {
               <ContentBlob
                 heading="Bring your idea to life"
                 text="Do you already have an AR idea? Let us turn it into reality."
-                buttonText="Make it Real"
+                buttonText="What We Offer"
+                buttonLink='/solutions/'
               >
                 <FaCubes style={styles.icon} />
               </ContentBlob>
               <ContentBlob
                 heading="Let us create an idea together"
-                text="If you are not sure how use AR to improve your business we evaluate your opportunities and create an idea. "
-                buttonText={`Let's do it`}
+                text="If you are not sure how use AR to improve your business we evaluate your opportunities and create an idea."
+                buttonText='Learn More'
+                buttonLink='/solutions/'
               >
                 <FaCreativeCommonsShare style={styles.icon} />
               </ContentBlob>
