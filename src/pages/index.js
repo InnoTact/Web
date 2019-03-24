@@ -1,8 +1,9 @@
 import React, { Component } from "react"
-import { Navbar, Section } from "../components/"
 import styled from "styled-components"
 import styles from "../styles/styles"
 import SectionTop from "./../components/SectionTop"
+import Navbar from "./../components/Navbar"
+import Section from "./../components/Section"
 import ContentWrapper from "./../components/ContentWrapper"
 import ContentBlob from "./../components/ContentBlob"
 import colors from "../styles/colors"
@@ -15,7 +16,6 @@ import { graphql } from "gatsby"
 import { FaCubes, FaCreativeCommonsShare } from "react-icons/fa"
 import {Helmet} from "react-helmet";
 import ClickMe from '../components/ClickMe'
-import Card from '../components/Card'
 import Text from '../components/Text'
 import Anchor from "../components/Anchor";
 

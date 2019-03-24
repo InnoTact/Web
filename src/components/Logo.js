@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaCube } from 'react-icons/fa'
-import { CenterContainer } from '.';
+import CenterContainer from '../components/CenterContainer'
 import { Link } from 'gatsby'
 import colors from "../styles/colors"
 import styles from '../styles/styles'

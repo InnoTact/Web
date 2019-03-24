@@ -1,6 +1,7 @@
 import React, { Component } from "react"
-import { Navbar, Section } from "../components"
 import SectionTop from "../components/SectionTop"
+import Navbar from "../components/Navbar"
+import Section from "../components/Section"
 import ContentWrapper from "../components/ContentWrapper"
 import colors from "../styles/colors"
 import Footer from "../components/Footer"
