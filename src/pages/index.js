@@ -90,11 +90,9 @@ class Index extends Component {
             <SectionTop   
               dark
               header={`How we bring your product to life`}
-              text="Our methology for maximizing custumer value and satisfy your needs is divided into the following six steps."
-            />
+            >Our methology for maximizing custumer value and satisfy your needs is divided into the following six steps.</SectionTop>
             <StepsWrapper>
               <TextCard
-                style={{ marginTop: 40 }}
                 header="Lets arrange for a meeting."
                 text={[`Press `, <ClickMe italic url='/contact/'>here</ClickMe> , ' to book a meeting with us where we can discuss your needs and posibilities.']}
                 number={"1"}
