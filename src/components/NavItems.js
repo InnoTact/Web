@@ -102,9 +102,9 @@ class NavItems extends Component {
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/capabilities/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/solutions/">
             <NavLink open={open} {...props}>
-              Capabilities
+              Solutions
             </NavLink>
           </Link>
         </NavItem>

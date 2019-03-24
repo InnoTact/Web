@@ -19,7 +19,7 @@ const ExtraMargin = styled.div`
   }
 `
 
-class Capabilities extends Component {
+class Solutions extends Component {
   render() {
     const { data } = this.props
 
@@ -31,7 +31,7 @@ class Capabilities extends Component {
           <ContentWrapper>
             <SectionTop
               light
-              header="Capabilities"
+              header="Solutions"
               bottomText="Learn More"
             > Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse. Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse.
             </SectionTop>
@@ -46,51 +46,51 @@ class Capabilities extends Component {
             <ContentWrapper>
               <SectionTop
                 dark
-                header={`Experts At Our Craft`}
-              >Förklarande text som svarar på tviveln kring att vi är nya och inte har erfarenhet.</SectionTop>
+                header={`AR will revolutionze all industries`}
+              >We are here to give you the competetive edge. We will help adapt your business to thrive in the new market.</SectionTop>
             </ContentWrapper>
             <ExtraMargin>
               <Capability
                 buttonText="Build the Future"
                 textLeft
-                header="Augmented Reality"
-                text="Culpa labore tempor sint excepteur esse non enim elit eu veniam. Exercitation incididunt incididunt nostrud irure
+                header="Visualization"
+                text="Berätta hur visualisering kan användas .Culpa labore tempor sint excepteur esse non enim elit eu veniam. Exercitation incididunt incididunt nostrud irure
                   anim nostrud do Lorem amet. Ullamco voluptate ea ullamco cupidatat. Adipisicing sint reprehenderit qui mollit aliqua ut aute Lorem excepteur esse labore. Elit id cillum
                   duis aliqua laborum nulla nulla aute Lorem irure deserunt consectetur dolore. Adipisicing ad voluptate deserunt consequat officia laboris irure dolore dolor ut commodo 
                   irure sit eiusmod."
               >
                 <Img
-                  alt="Virtual Reality"
-                  fluid={data.VRImage.childImageSharp.fluid}
+                  alt="Augmented Reality"
+                  fluid={data.AugmentedRealityImage1.childImageSharp.fluid}
                 />
               </Capability>
             </ExtraMargin>
             <Capability
               buttonText="Get Started"
-              header="Mobile App Development"
+              header="Interaction"
               text="Culpa labore tempor sint excepteur esse non enim elit eu veniam. Exercitation incididunt incididunt nostrud irure
                 anim nostrud do Lorem amet. Ullamco voluptate ea ullamco cupidatat. Adipisicing sint reprehenderit qui mollit aliqua ut aute Lorem excepteur esse labore. Elit id cillum
                 duis aliqua laborum nulla nulla aute Lorem irure deserunt consectetur dolore. Adipisicing ad voluptate deserunt consequat officia laboris irure dolore dolor ut commodo 
                 irure sit eiusmod."
             >
               <Img
-                alt="Mobile Development"
-                fluid={data.MobileImage.childImageSharp.fluid}
-              />
+                  alt="Augmented Reality"
+                  fluid={data.AugmentedRealityImage2.childImageSharp.fluid}
+                />
             </Capability>
             <Capability
               buttonText="Contact Us"
               textLeft
-              header="Websites &amp; Web Apps"
+              header="Instruct &amp; Guide"
               text="Culpa labore tempor sint excepteur esse non enim elit eu veniam. Exercitation incididunt incididunt nostrud irure
                 anim nostrud do Lorem amet. Ullamco voluptate ea ullamco cupidatat. Adipisicing sint reprehenderit qui mollit aliqua ut aute Lorem excepteur esse labore. Elit id cillum
                 duis aliqua laborum nulla nulla aute Lorem irure deserunt consectetur dolore. Adipisicing ad voluptate deserunt consequat officia laboris irure dolore dolor ut commodo 
                 irure sit eiusmod."
             >
-              <Img
-                alt="Websites and web apps"
-                fluid={data.DevelopmentImage.childImageSharp.fluid}
-              />
+             <Img
+                  alt="Augmented Reality"
+                  fluid={data.AugmentedRealityImage3.childImageSharp.fluid}
+                />
             </Capability>
           </React.Fragment>
         </Section>
@@ -115,7 +115,21 @@ class Capabilities extends Component {
 
 export const pageQuery = graphql`
   query {
-    MobileImage: file(relativePath: { eq: "mobile.jpg" }) {
+    AugmentedRealityImage1: file(relativePath: { eq: "augmented-reality1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    AugmentedRealityImage2: file(relativePath: { eq: "augmented-reality2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    AugmentedRealityImage3: file(relativePath: { eq: "augmented-reality3.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
@@ -139,4 +153,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default Capabilities
+export default Solutions
