@@ -13,13 +13,19 @@ const Container = styled.div`
   position: relative;
 `
 
+const Header = styled(SubHeading)`
+  @media (min-width: ${styles.breakpoints.md + "px"}) and (max-width: ${styles.breakpoints.lg + "px"}) {
+    margin-top: 0;
+  }
+`
+
 const InfoContainer = styled.div`
   padding: 1rem 4rem 4rem 4rem;
   text-align: left;
   width: 50vw;
   margin-left: ${({ textLeft }) => (textLeft ? 0 : "50%")};
 
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
     width: unset;
     padding: 0 0 4rem 0;
     margin-left: unset;
@@ -34,7 +40,7 @@ const ImageContainer = styled.div`
   bottom: 0;
   overflow: hidden;
 
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
     position: static;
     right: initial;
     left: initial;
@@ -56,7 +62,7 @@ class Capability extends Component {
     let info = (
       <InfoContainer {...props} textLeft={textLeft}>
         <ContentWrapper>
-          <SubHeading dark>{header}</SubHeading>
+          <Header dark>{header}</Header>
           <Text dark>{text}</Text>
           <Link to="/contact/">
             <Button primary>{buttonText}</Button>
@@ -89,7 +95,7 @@ class Capability extends Component {
         <AppContext.Consumer>
           {value => {
             if (value) {
-              if (value.isMobile) {
+              if (value.isMobile || value.isTablet) {
                 output =
                   <Fragment>
                     {info}

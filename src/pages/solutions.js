@@ -54,7 +54,7 @@ class Solutions extends Component {
             <ContentWrapper>
               <SectionTop
                 dark
-                header={`AR will Revolutionze All Industries`}
+                header={`AR Will Revolutionze All Industries`}
               >We are here to give you the competetive edge. We will help adapt your business to thrive in the new market.</SectionTop>
             </ContentWrapper>
             <ExtraMargin>
@@ -64,8 +64,7 @@ class Solutions extends Component {
                 header="Visualization"
                 text="Berätta hur visualisering kan användas .Culpa labore tempor sint excepteur esse non enim elit eu veniam. Exercitation incididunt incididunt nostrud irure
                   anim nostrud do Lorem amet. Ullamco voluptate ea ullamco cupidatat. Adipisicing sint reprehenderit qui mollit aliqua ut aute Lorem excepteur esse labore. Elit id cillum
-                  duis aliqua laborum nulla nulla aute Lorem irure deserunt consectetur dolore. Adipisicing ad voluptate deserunt consequat officia laboris irure dolore dolor ut commodo 
-                  irure sit eiusmod."
+                  duis aliqua."
               >
                 <Img
                   alt="Augmented Reality"
@@ -78,8 +77,7 @@ class Solutions extends Component {
               header="Interaction"
               text="Culpa labore tempor sint excepteur esse non enim elit eu veniam. Exercitation incididunt incididunt nostrud irure
                 anim nostrud do Lorem amet. Ullamco voluptate ea ullamco cupidatat. Adipisicing sint reprehenderit qui mollit aliqua ut aute Lorem excepteur esse labore. Elit id cillum
-                duis aliqua laborum nulla nulla aute Lorem irure deserunt consectetur dolore. Adipisicing ad voluptate deserunt consequat officia laboris irure dolore dolor ut commodo 
-                irure sit eiusmod."
+                duis aliqua."
             >
               <Img
                   alt="Augmented Reality"
@@ -92,8 +90,7 @@ class Solutions extends Component {
               header="Instruct &amp; Guide"
               text="Culpa labore tempor sint excepteur esse non enim elit eu veniam. Exercitation incididunt incididunt nostrud irure
                 anim nostrud do Lorem amet. Ullamco voluptate ea ullamco cupidatat. Adipisicing sint reprehenderit qui mollit aliqua ut aute Lorem excepteur esse labore. Elit id cillum
-                duis aliqua laborum nulla nulla aute Lorem irure deserunt consectetur dolore. Adipisicing ad voluptate deserunt consequat officia laboris irure dolore dolor ut commodo 
-                irure sit eiusmod."
+                duis aliqua."
             >
              <Img
                   alt="Augmented Reality"
