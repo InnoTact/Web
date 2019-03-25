@@ -41,7 +41,7 @@ class Solutions extends Component {
               light
               header="Solutions"
               bottomText="Learn More"
-            > Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse. Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat eiusmod fugiat consequat esse.
+            >One of our biggest strengths is quick adaption to new technology and challenges. Therefore we can create solutions for you no matter if you use android, iOS or if you want a web solution or want to use AR glasses. Our solutions are always created to last long and maintenance is a big part of our work.
             </SectionTop>
           </ContentWrapper>
         </Hero>
@@ -54,17 +54,15 @@ class Solutions extends Component {
             <ContentWrapper>
               <SectionTop
                 dark
-                header={`AR Will Revolutionze All Industries`}
-              >We are here to give you the competetive edge. We will help adapt your business to thrive in the new market.</SectionTop>
+                header={`How AR will Improve your Business`}
+              >Our solutions always aim to improve the ways our partners work and all businesses can benefit from implementing AR. There are three areas where AR particularly effective.</SectionTop>
             </ContentWrapper>
             <ExtraMargin>
               <Capability
                 buttonText="Build the Future"
                 textLeft
                 header="Visualization"
-                text="Berätta hur visualisering kan användas .Culpa labore tempor sint excepteur esse non enim elit eu veniam. Exercitation incididunt incididunt nostrud irure
-                  anim nostrud do Lorem amet. Ullamco voluptate ea ullamco cupidatat. Adipisicing sint reprehenderit qui mollit aliqua ut aute Lorem excepteur esse labore. Elit id cillum
-                  duis aliqua."
+                text="Augmented Reality is the most effective way of visualizing objects in your environment. You can for example see how a painting would look on your wall or how your office would look if you bought new furniture. Visualization can be very effective before purchasing decisions and give you all information you need within a few minutes."
               >
                 <Img
                   alt="Augmented Reality"

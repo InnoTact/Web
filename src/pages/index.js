@@ -178,7 +178,7 @@ class Index extends Component {
             <SectionTop   
               dark
               header={`How we bring your product to life`}
-            >Our methology for maximizing custumer value and satisfy your needs is divided into the following six steps.</SectionTop>
+            >Our methodology for maximizing custumer value and satisfy your needs is divided into the following six steps.</SectionTop>
             <StepsWrapper>
               <TextCard
                 header="Lets arrange for a meeting."
