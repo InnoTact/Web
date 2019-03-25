@@ -145,10 +145,7 @@ class Contact extends Component {
               header="Contact Us"
               bottomText="Send us a message"
             >
-              Non ullamco amet esse anim tempor mollit fugiat duis. Pariatur
-              nostrud occaecat eiusmod fugiat consequat esse. Non ullamco amet
-              esse anim tempor mollit fugiat duis. Pariatur nostrud occaecat
-              eiusmod fugiat consequat esse.
+              When you want to come in contact with us you can either fill in our form below or give us a call. We are always ready to discuss your needs and possible solutions. 
             </SectionTop>
           </ContentWrapper>
         </Hero>

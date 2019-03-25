@@ -120,11 +120,11 @@ class Index extends Component {
         <Section style={{paddingBottom: 0, paddingTop: 0}} backgroundColor={colors.lightgrey}>
             <FactContainer>
               <FactItem style={{backgroundColor: colors.lightgrey}}>
-                <Text  style={{marginBottom: '0.7rem'}} dark>Augmented Reality revenue is expected to hit $120 billion by 2020</Text>
+                <Text  style={{marginBottom: '0.7rem'}} dark>Augmented Reality revenue is expected to hit $120 billion by 2020.</Text>
                 <Anchor small italic dark href="https://www.digi-capital.com/news/2016/01/augmentedvirtual-reality-revenue-forecast-revised-to-hit-120-billion-by-2020/">Digi-Capital</Anchor>
               </FactItem>
               <FactItem style={{backgroundColor: colors.lightdarkerGrey}}>
-                <Text style={{marginBottom: '0.7rem'}} dark>60% to 70% of consumers see clear benefits in using AR and IoT devices in their daily life and at work</Text>
+                <Text style={{marginBottom: '0.7rem'}} dark>60% to 70% of consumers see clear benefits in using AR and IoT devices in their daily life and at work.</Text>
                 <Anchor small italic dark href="http://www.isaca.org/About-ISACA/Press-room/News-Releases/2016/Pages/2016-IT-RRB-News-Release-US.aspx">Isaca</Anchor>
               </FactItem>
               <FactItem style={{backgroundColor: colors.mediumGrey}}>
@@ -141,7 +141,7 @@ class Index extends Component {
             <SectionTop   
               dark
               header={`How we bring your product to life`}
-            >Our methology for maximizing custumer value and satisfy your needs is divided into the following six steps.</SectionTop>
+            >Our methodology for maximizing custumer value and satisfy your needs is divided into the following six steps.</SectionTop>
             <StepsWrapper>
               <TextCard
                 header="Lets arrange for a meeting."

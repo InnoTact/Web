@@ -22,12 +22,8 @@ export default ({ peopleImagesData }) => {
         <SectionTop
           dark
           header="The Team"
-        >InnoTact Software AB consists of a team of high-performance and dedicated engineers from Chalmers University of Technology, located in Gothenburg, Sweden. Our number one priority is always customer satisfaction. We love to create ideas together with our customers to improve and simplify their businesses.</SectionTop>
-        <CenterContainer>
-          <SubHeader
-            style={{ color: colors.dark, textAlign: "center" }}
-      >Since Augmented Reality is a fast growing technology we make sure to stay updated on every advance of the technology to stay on the cutting edge. Our goal is to become the most high performance Augmented Reality company in the country. </SubHeader>
-        </CenterContainer>
+        >Meet the team that consits of a group of close friens with years of experience of working together.  </SectionTop>
+        
         <PeopleContainer>
           <PeopleCard
             name="Niklas Gustafsson"
