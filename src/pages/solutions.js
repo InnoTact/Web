@@ -41,7 +41,7 @@ class Solutions extends Component {
               light
               header="Solutions"
               bottomText="Learn More"
-            >One of our biggest strengths is quick adaption to new technology and challenges. Therefore we can create solutions for you no matter if you use android, iOS or if you want a web solution or want to use AR glasses. Our solutions are always created to last long and maintenance is a big part of our work.
+            >One of our biggest strengths is quick adaption to new technology. Therefore we can create solutions for you no matter if you use android, iOS or AR glasses. Our products are always created to last long and maintenance is a big part of our work.
             </SectionTop>
           </ContentWrapper>
         </Hero>
@@ -55,7 +55,7 @@ class Solutions extends Component {
               <SectionTop
                 dark
                 header={`How AR will Improve your Business`}
-              >Our solutions always aim to improve the ways our partners work and all businesses can benefit from implementing AR. There are three areas where AR particularly effective.</SectionTop>
+              >Our solutions always aim to improve the ways our partners work. We truly believe all businesses can benefit from implementing AR. There are three areas where AR is particularly effective.</SectionTop>
             </ContentWrapper>
             <ExtraMargin>
               <Capability
