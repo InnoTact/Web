@@ -59,7 +59,7 @@ const SocialLogo = styled.a`
   width: 43px;
   height: 43px;
   border-radius: 50%;
-  border: 2px solid ${colors.primaryHighLighten};
+  border: 2px solid ${colors.primary};
   display: flex;
   justify-content: center;
   align-items: center;

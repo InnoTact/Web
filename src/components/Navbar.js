@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   right: 0;
   background-color: ${({ scrollPos }) => scrollPos < 100 ? "transparent" : colors.primary};
   z-index: 10;
-  transition: all ease-in-out 0.4s;
+  transition: all 0.6s;
 `
 
 const Container = styled.div`

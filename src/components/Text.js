@@ -9,6 +9,7 @@ const Text = styled.p`
     line-height: 1.65;
     margin-bottom: 1.5rem;
     position: relative;
+    text-align: ${({center}) => center ? 'center' : 'left'};
     ${({borderBottom}) => borderBottom && 
     css`
         ::after {
