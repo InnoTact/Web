@@ -120,16 +120,16 @@ class Index extends Component {
         <Section style={{paddingBottom: 0, paddingTop: 0}} backgroundColor={colors.lightgrey}>
             <FactContainer>
               <FactItem style={{backgroundColor: colors.lightgrey}}>
-                <Text  style={{marginBottom: '0.7rem'}} dark>Augmented Reality revenue is expected to hit $120 billion by 2020.</Text>
-                <Anchor small italic dark href="https://www.digi-capital.com/news/2016/01/augmentedvirtual-reality-revenue-forecast-revised-to-hit-120-billion-by-2020/">Digi-Capital</Anchor>
+                <Text style={{marginBottom: '0.7rem'}} dark>Augmented Reality revenue is expected to hit $120 billion by 2020</Text>
+                <Anchor small italic dark target="_blank" href="https://www.digi-capital.com/news/2016/01/augmentedvirtual-reality-revenue-forecast-revised-to-hit-120-billion-by-2020/">Digi-Capital</Anchor>
               </FactItem>
               <FactItem style={{backgroundColor: colors.lightdarkerGrey}}>
-                <Text style={{marginBottom: '0.7rem'}} dark>60% to 70% of consumers see clear benefits in using AR and IoT devices in their daily life and at work.</Text>
-                <Anchor small italic dark href="http://www.isaca.org/About-ISACA/Press-room/News-Releases/2016/Pages/2016-IT-RRB-News-Release-US.aspx">Isaca</Anchor>
+                <Text style={{marginBottom: '0.7rem'}} dark>60% to 70% of consumers see clear benefits in using AR and IoT devices in their daily life and at work</Text>
+                <Anchor small italic dark target="_blank" href="http://www.isaca.org/About-ISACA/Press-room/News-Releases/2016/Pages/2016-IT-RRB-News-Release-US.aspx">Isaca</Anchor>
               </FactItem>
               <FactItem style={{backgroundColor: colors.mediumGrey}}>
                 <Text style={{marginBottom: '0.7rem'}} dark>Augmented Reality headsets will have an estimated 1 Billion users by 2020.</Text>
-                <Anchor small italic dark href="https://www.statista.com/topics/3286/augmented-reality-ar/">Statista</Anchor>
+                <Anchor small italic dark target="_blank" href="https://www.statista.com/topics/3286/augmented-reality-ar/">Statista</Anchor>
               </FactItem>
             </FactContainer>
         </Section>

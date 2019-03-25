@@ -15,11 +15,10 @@ const LinkContainer = styled.div`
     open &&
     css`
       position: fixed;
-      top: 0;
+      top: -40px;
       left: 0;
       right: 0;
-      bottom: 0;
-      height: 100%;
+      bottom: -40px;
       width: 100%;
       overflow-y: scroll;
       transition: all 0.4s ease-in-out;
@@ -72,7 +71,7 @@ const NavLink = styled.div`
 
 const HamburgerContainer = styled.div`
   position: absolute;
-  top: 2.2rem;
+  top: ${({isOpen}) => isOpen ? '4.65rem' : '2.2rem'};
   right: 2.2rem;
 `
 
@@ -130,11 +129,14 @@ class NavItems extends Component {
         <AppContext.Consumer>
           {value => {
             let output = null
-            if (value) {
+            if (!value) {
+              return null
+            }
+
               if (value.isMobile) {
                 output = (
                   <Fragment>
-                    <HamburgerContainer>
+                    <HamburgerContainer isOpen={open}>
                       <HamburgerMenu
                         isOpen={open}
                         width={32}
@@ -153,7 +155,6 @@ class NavItems extends Component {
               } else {
                 output = navItems
               }
-            }
             
             return output
           }}
