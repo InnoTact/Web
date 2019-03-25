@@ -64,7 +64,7 @@ class Capability extends Component {
         <ContentWrapper>
           <Header dark>{header}</Header>
           <Text dark>{text}</Text>
-          <Link to="/contact/">
+          <Link to="/contact/#contact-form">
             <Button primary>{buttonText}</Button>
           </Link>
         </ContentWrapper>

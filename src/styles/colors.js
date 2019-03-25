@@ -1,6 +1,6 @@
 import { lighten } from 'polished'
 
-const primary = '#4C3D54'
+const primary = '#4C0E35'
 const mediumGrey = '#d3d1d1'
 
 const colors = {
