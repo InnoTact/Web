@@ -130,7 +130,10 @@ class NavItems extends Component {
         <AppContext.Consumer>
           {value => {
             let output = null
-            if (value) {
+            if (!value) {
+              return null
+            }
+
               if (value.isMobile) {
                 output = (
                   <Fragment>
@@ -153,7 +156,6 @@ class NavItems extends Component {
               } else {
                 output = navItems
               }
-            }
             
             return output
           }}
