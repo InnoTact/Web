@@ -29,8 +29,8 @@ const Button = styled.button`
   }
 
   :disabled {
-    color: ${colors.primaryHighLighten};
-    border-color: ${colors.primaryHighLighten};
+    color: ${colors.mediumGrey};
+    border-color: ${colors.mediumGrey};
     cursor: not-allowed;
   }
 `
