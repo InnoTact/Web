@@ -82,15 +82,13 @@ const Input = styled.input`
   color: ${colors.darkgrey};
   background-color: ${colors.white};
   width: 100%;
+
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    padding: 0.8rem 1.2rem;
+  }
 `
 
-const TextArea = styled.textarea`
-  padding: 1.3rem 2rem;
-  border: 1px solid ${colors.mediumGrey};
-  border-radius: 6px;
-  color: ${colors.darkgrey};
-  background-color: ${colors.white};
-  width: 100%;
+const TextArea = styled(Input)`
   min-height: 140px;
   line-height: 1.55;
 `
@@ -186,7 +184,7 @@ class Contact extends Component {
                         What email can we reach you at?*
                       </ContactText>
                       <Input
-                        placeholder="info@innotactsoftware.se"
+                        placeholder="robert@hotmail.com"
                         required
                         type="email"
                         name="email"
@@ -198,6 +196,7 @@ class Contact extends Component {
                         Tell us more about your project or idea*
                       </ContactText>
                       <TextArea
+                        as='textarea'
                         placeholder={`What do you want to build? What's your idea? What's the deadline?`}
                         name="message"
                         disabled={!formFilled}

@@ -8,7 +8,7 @@ const StyledContainer = styled.div`
   background-color: ${props => props.backgroundColor ? props.backgroundColor : '#fff'};
 `
 
-const Section = ({ children, backgroundColor, ...props }) => <StyledContainer {...props} backgroundColor={backgroundColor}>{children}</StyledContainer>
+const Section = ({ children, backgroundColor, className, ...props }) => <StyledContainer className={className} {...props} backgroundColor={backgroundColor}>{children}</StyledContainer>
 
 Section.propTypes = {
   backgroundColor: PropTypes.string.isRequired,

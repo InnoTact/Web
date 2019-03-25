@@ -12,5 +12,5 @@ ContentWrapper.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default ({children}) => <ContentWrapper><React.Fragment>{children}</React.Fragment></ContentWrapper>
+export default ({children, className, ...props}) => <ContentWrapper className={className} {...props}><React.Fragment>{children}</React.Fragment></ContentWrapper>
 

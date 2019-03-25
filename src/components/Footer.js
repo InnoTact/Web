@@ -39,7 +39,7 @@ const Anchor = styled.a`
     cursor: pointer;
   }
 
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
     font-size: 0.75rem;
   }
 `
@@ -51,7 +51,7 @@ const SocialLogos = styled.div`
   display: flex;
   flex-direction: row;
 
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
     top: unset;
     bottom: -1.5rem;
     left: 0;
@@ -85,10 +85,24 @@ const InfoIconsContainer = styled.div`
   display: relative;
   text-align: left;
 
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
     margin-top: 1.8rem;
     margin-bottom: 2rem;
     text-align: center;
+  }
+`
+
+const AdressText = styled(Text)`
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
+    margin-bottom: -20px;
+    margin-top: 20px; 
+    text-align: center;
+  }
+`
+
+const Wrapper = styled(ContentWrapper)`
+  @media (max-width: ${styles.breakpoints.lg + "px"}) and (min-width: ${styles.breakpoints.md + "px"}) {
+    width: 95%;
   }
 `
 
@@ -96,10 +110,10 @@ class Footer extends Component {
   render() {
     return (
       <Section
-        style={{ padding: "3rem 3rem" }}
         backgroundColor={colors.darkgrey}
+        style={{padding: '3rem 3rem'}}
       >
-        <ContentWrapper>
+        <Wrapper>
           <AppContext.Consumer>
             {value => {
               let output = null
@@ -120,19 +134,13 @@ class Footer extends Component {
                       <NavItems light />
                     </Item>
                     <Item style={{ minWidth: 300 }}>
-                      <Text
-                        style={{
-                          display:
-                            value.isTablet || value.isMobile
-                              ? "none"
-                              : "block",
-                        }}
+                      <AdressText
                         small
-                        borderBottom
+                        borderBottom={!(value.isTablet || value.isMobile)}
                         light
                       >
-                        Gothenburg, Sweden
-                      </Text>
+                        Kungsportsavenyn 10, Gothenburg
+                      </AdressText>
                       <InfoIconsContainer>
                         <div style={{ marginBottom: 6 }}>
                           <Anchor
@@ -154,7 +162,7 @@ class Footer extends Component {
                           <SocialLogoAnchor href="https://github.com/">
                             <FaGithub
                               style={
-                                value.isMobile
+                                value.isTablet || value.isMobile
                                   ? socialLogoStyleLarge
                                   : socialLogoStyle
                               }
@@ -163,7 +171,7 @@ class Footer extends Component {
                           <SocialLogoAnchor href="https://www.linkedin.com/company/innotact-software-ab/about/">
                             <FaLinkedin
                               style={
-                                value.isMobile
+                                value.isTablet || value.isMobile
                                   ? socialLogoStyleLarge
                                   : socialLogoStyle
                               }
@@ -172,7 +180,7 @@ class Footer extends Component {
                           <SocialLogoAnchor href="mailto:contact@innotactsoftware.com">
                             <FaEnvelope
                               style={
-                                value.isMobile
+                                value.isTablet || value.isMobile
                                   ? socialLogoStyleLarge
                                   : socialLogoStyle
                               }
@@ -188,7 +196,7 @@ class Footer extends Component {
               return output
             }}
           </AppContext.Consumer>
-        </ContentWrapper>
+        </Wrapper>
       </Section>
     )
   }
