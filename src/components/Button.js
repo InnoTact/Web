@@ -24,9 +24,26 @@ const Button = styled.button`
     cursor: pointer;
     transition: all 0.3s ease 0s;
     transform: ${({disabled}) => !disabled && 'scale(1.02)'};
-    color: ${({primary, disabled}) => ((primary && !disabled)   ? colors.white : colors.primary)};
-    background-color: ${({primary, disabled}) => ((primary && !disabled)  ? colors.primary : colors.white)};
+    color: ${({primary, disabled}) => ((primary && !disabled)  ? colors.white : colors.primary)};
   }
+
+  ::before {
+    content: '';
+    width: 800px;
+    height: 300px;
+    position: absolute;
+    background-color: ${props => (props.primary ? colors.primary : colors.white)};;
+    left: -400px;
+    top: -300px;
+    transform-origin: bottom center;
+    transform: rotate(-45deg);
+    transition: 0.4s ease-in-out left;
+    z-index: -5;
+ }
+
+ :hover::before {
+   left: 0;
+ }
 
   :disabled {
     color: ${colors.mediumGrey};
