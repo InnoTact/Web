@@ -62,7 +62,7 @@ const SectionTop = ({ header, children, buttonText = '', dark, bottomText, ...pr
     <React.Fragment>
       <Header text={header} styles={{ color: dark ? colors.dark : colors.white }} />
       {children && <SubHeader style={{ color: dark ? colors.dark : colors.mediumGrey, fontStyle: 'italic' }}>{children}</SubHeader>}
-      {buttonText && <Link to='/contact/#contact-form'><Button secondary>Start a Project</Button></Link>}
+      {buttonText && <Link to='/contact/#contact-form'><Button secondary>Starta ett projekt</Button></Link>}
       {bottomText && <ReadMore onClick={() => scroll.scrollTo(vh(82))}>
         {bottomText}
       </ReadMore>}

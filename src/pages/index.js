@@ -108,10 +108,11 @@ class Index extends Component {
           <ContentWrapper> 
             <SectionTop
               light
-              header="We build amazing Augmented Reality experiences"
-              buttonText="Start a project"
-              bottomText='Learn More'
-            >Together we will take your business to the next level by developing innovative augmented reality and mobile applications.</SectionTop>
+              header="Vi utvecklar Augmented Reality-applikationer
+"
+              buttonText="STARTA ETT PROJEKT"
+              bottomText='Läs mer'
+            >Vi tar ditt företag till nästa nivå genom att implementera innovativa lösningar baserade på Augmented Reality.</SectionTop>
           </ContentWrapper>
         </Hero>
 
@@ -119,22 +120,23 @@ class Index extends Component {
           <ContentWrapper>
             <SectionTop
               dark
-              header={`Let's get started`} 
-              >Our team of highly skilled and motivated developers always strive towards perfection. While working with close relationships we make sure to meet every need of our customers while we develop Augmented Reality applications to change the way our customers work today. </SectionTop>
+              header={`Starta projekt`} 
+              >Vårt team som består av motiverade och drivna utvecklare strävar alltid efter perfektion.  Vi arbetar alltid med nära kundrelationer för att garantera att vi uppyller alla bevov våra kunder har. Genom detta förbättrar vi sättet våra kunder arbetar på genom nytänkande AR-lösningar. </SectionTop>
             <ServiceContainer>
               <ContentBlob
-                heading="Bring your idea to life"
-                text="Do you already have an AR idea? Let us turn it into reality."
-                buttonText="What We Offer"
-                buttonLink='/solutions/'
+                heading="Realisera din idé"
+                text="Har du redan en AR-idé? Låt oss verkställa den tillsammans."
+                buttonText="Vad vi erbjuder"
+                buttonLink='/Lösningar/'
               >
                 <FaCubes style={styles.icon} />
               </ContentBlob>
               <ContentBlob
-                heading="Let us create an idea together"
-                text="If you are not sure how use AR to improve your business we evaluate your opportunities and create an idea."
-                buttonText='Learn More'
-                buttonLink='/solutions/'
+                heading="Vi skapar en idé tillsammans"
+                text="Om du är osäker på hur AR kan implementeras i just ditt företag utvärderar vi dina möjligheter och skapar en idé.
+"
+                buttonText='Läs mer'
+                buttonLink='/Lösningar/'
               >
                 <FaCreativeCommonsShare style={styles.icon} />
               </ContentBlob>
@@ -177,42 +179,44 @@ class Index extends Component {
           <ContentWrapper>
             <SectionTop   
               dark
-              header={`How we bring your product to life`}
-            >Our methodology for maximizing custumer value and satisfy your needs is divided into the following six steps.</SectionTop>
+              header={`Hur vi realiserar din idé`}
+            >
+              Våran metodik för att maximera nytta och uppfylla dina behov delas in i följande 6 steg.
+            </SectionTop>
             <StepsWrapper>
               <TextCard
-                header="Lets arrange for a meeting."
-                text={[`Press `, <ClickMe italic url='/contact/'>here</ClickMe> , ' to book a meeting with us where we can discuss your needs and posibilities.']}
+                header="Vi bokar ett möte"
+                text={[`Tryck `, <ClickMe italic url='/contact/'>här</ClickMe> , ' för att boka ett möte där vi kan diskutera dina behov och möjligheter.']}
                 number={"1"}
                 dark
               />
               <TextCard
-                header="We create an action plan depending on your needs."
-                text="After identifying the best solution to your situation we create an action plan together to make sure you get your solution the way you want it at the time you need it."
+                header=" Vi skapar en plan baserad på dina behov."
+                text="Efter att ha identifierat den besta lösningen på dina problem skapar vi en plan tillsammans för att se till att du får precis den lösning du behöver."
                 number={"2"}
                 dark
               />
               <TextCard
-                header="While maintaining close contact we start executing the action plan."
-                text="While we start the execution state we make continious checks with you to make sure the solution turns out the way you want it."
+                header="Samtidigt som vi håller en nära kontakt börjar vi utveckla lösningen."
+                text="Medan vi utvecklar gör vi ständiga kontroller med dig för att se till att vi utvecklar något du blir nöjd med."
                 number={"3"}
                 dark
               />
               <TextCard
-                header="We keep on working on the solution until all your needs are met."
-                text="The solution is not completed until you are fully satisfied."
+                header="Vi forstsätter arbeta tills du är fullt nöjd."
+                text="Vår lösning är inte färdig för än du säger att du är helt nöjd med resltatet."
                 number={"4"}
                 dark
               />
               <TextCard
-                header="We finish and launch the solution."
-                text="When the solution is ready we bring it to life and launch it in your bussiness."
+                header="Vi avslutar och integrerar lösningen."
+                text="När lösningen är klar ser vi till att den kan integreras i ditt företag."
                 number={"5"}
                 dark
               />
               <TextCard
-                header="Continuous improvements for your future needs."
-                text="Even when your solution is launched we continue working on improvements to fit the dvelopment of your company."
+                header="Kontinuerliga förbättringar för dina framtida behov."
+                text="Även när lösningen är lanserad fortsätter vi arbeta på förbättringar efter dina önskemål."
                 number={"6"}
                 dark
               />

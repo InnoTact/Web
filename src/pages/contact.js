@@ -140,24 +140,23 @@ class Contact extends Component {
           <ContentWrapper>
             <SectionTop
               light
-              header="Contact Us"
-              bottomText="Send us a message"
+              header="Kontakta oss"
+              bottomText="Kontakta oss"
             >
-              When you want to come in contact with us you can either fill in our form below or give us a call. We are always ready to discuss your needs and possible solutions. 
+              När du vill komma i kontakt med oss kan ni antingen fylla i formuläret nedan eller nå oss via telefon. Vi är alltid berädda att diskutera dina behov och möjliga lösningar. 
             </SectionTop>
           </ContentWrapper>
         </Hero>
 
         <Section id="contact-form" backgroundColor={colors.lightgrey}>
           <ContentWrapper>
-            <SectionTop dark header={`Let's Create Something Great.`}>
-              Give us a call or fill the form so we can learn more about your
-              needs.
+            <SectionTop dark header={`Låt oss skapa något grymt tillsammans.`}>
+            Ring oss eller fyll i formuläret så vi kan få en större förståelse kring dina behov.
             </SectionTop>
             <ContactUsWrapper>
               <ContactFormContainer>
                 <Card>
-                  <SubHeader dark>Fill Out the Form</SubHeader>
+                  <SubHeader dark>Fyll i formuläret</SubHeader>
                   <form
                     onSubmit={this.handleSubmit}
                     action="/success/"
@@ -167,9 +166,9 @@ class Contact extends Component {
                     style={{marginTop: -45}}
                   >
                     <ContactItem>
-                      <ContactText dark>What's your name?*</ContactText>
+                      <ContactText dark>Vad heter du?*</ContactText>
                       <Input
-                        placeholder="Full name"
+                        placeholder="Ditt namn"
                         required
                         type="text"
                         name="name"
@@ -178,10 +177,10 @@ class Contact extends Component {
                     </ContactItem>
                     <ContactItem>
                       <ContactText margi dark>
-                        What email can we reach you at?*
+                        Vad är din email-address?*
                       </ContactText>
                       <Input
-                        placeholder="robert@hotmail.com"
+                        placeholder="dinmail@hotmail.com"
                         required
                         type="email"
                         name="email"
@@ -190,11 +189,11 @@ class Contact extends Component {
                     </ContactItem>
                     <ContactItem>
                       <ContactText dark>
-                        Tell us more about your project or idea*
+                        Berätta om din idé*
                       </ContactText>
                       <TextArea
                         as='textarea'
-                        placeholder={`What do you want to build? What's your idea? What's the deadline?`}
+                        placeholder={`Vad vill du skapa? Vad är din idé? När ska det vara klart?`}
                         name="message"
                         disabled={!formFilled}
                       />
@@ -203,7 +202,7 @@ class Contact extends Component {
                       style={{ marginTop: "2rem", textAlign: "left" }}
                     >
                       <Button type="submit" disabled={!formFilled} primary>
-                        Send my message
+                        Skicka
                       </Button>
                     </ContactItem>
                   </form>
@@ -211,7 +210,7 @@ class Contact extends Component {
               </ContactFormContainer>
               <CallContainer>
                 <Card>
-                  <SubHeader dark>Give Us a Call</SubHeader>
+                  <SubHeader dark>Ring oss</SubHeader>
                   <CallUsContent>
                     <CenterContainer>
                       <FaMobileAlt style={{fontSize: 30, color: colors.primary}} />

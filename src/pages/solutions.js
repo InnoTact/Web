@@ -39,9 +39,9 @@ class Solutions extends Component {
           <ContentWrapper>
             <SectionTop
               light
-              header="Solutions"
-              bottomText="Learn More"
-            >One of our biggest strengths is quick adaption to new technology. Therefore we can create solutions for you no matter if you use android, iOS or AR glasses. Our products are always created to last long and maintenance is a big part of our work.
+              header="Våra lösningar"
+              bottomText="Läs mer"
+            >En av våra största styrkor är att snappt kunna anpassa oss till nya utmaningar och ny teknologi. Därför kan vi skapa lösningar till dig oavsett om du vill använda android, iOS eller AR-glasögon. Våra produkter skapas alltid med framtiden i åtanke och underhåll är en stor del av det vi gör.
             </SectionTop>
           </ContentWrapper>
         </Hero>
@@ -54,15 +54,17 @@ class Solutions extends Component {
             <ContentWrapper>
               <SectionTop
                 dark
-                header={`How AR will Improve your Business`}
-              >Our solutions always aim to improve the ways our partners work. We truly believe all businesses can benefit from implementing AR. There are three areas where AR is particularly effective.</SectionTop>
+                header={`Hur AR kommer förbättra ditt företag`}
+              >
+                Våra lösningar syftar alltid till att förbättra sättet våra kunder arbetar på. Alla företag kan förbättras genom att implementera AR på något sätt. Det finns framförallt tre områden som AR är särskilt effektivt.
+              </SectionTop>
             </ContentWrapper>
             <ExtraMargin>
               <Capability
-                buttonText="Build the Future"
+                buttonText="Kom igång"
                 textLeft
-                header="Visualization"
-                text="Augmented Reality is the most effective way of visualizing objects in your environment. You can for example see how a painting would look on your wall or how your office would look if you bought new furniture. Visualization can be very effective before purchasing decisions and give you all information you need within a few minutes."
+                header="Visualisering"
+                text="AR är den effektivasste teknologin för att visualisera objekt i din miljö och omgivning. Du kan exempelvis se hur en ny tavla hade sett ut i ditt vardagsrum eller hur ditt kontor hade sett ut om du inredde det med nya möbler. Visualisering kan vara extremt viktigt innan köpbeslut och ge dig all information du behöver inom några få minuter."
               >
                 <Img
                   alt="Augmented Reality"
@@ -71,11 +73,9 @@ class Solutions extends Component {
               </Capability>
             </ExtraMargin>
             <Capability
-              buttonText="Get Started"
-              header="Interaction"
-              text="Culpa labore tempor sint excepteur esse non enim elit eu veniam. Exercitation incididunt incididunt nostrud irure
-                anim nostrud do Lorem amet. Ullamco voluptate ea ullamco cupidatat. Adipisicing sint reprehenderit qui mollit aliqua ut aute Lorem excepteur esse labore. Elit id cillum
-                duis aliqua."
+              buttonText="Starta ett projekt"
+              header="Interaktion"
+              text="Vad som tidigare krävt fysiska knappar eller en navigation via en smart mobilskärm kan nu ske genom bildigenkänning och maskininlärning i realtid via AR. Användar upplevelsen av digitala lösningar kan förändras helt när AR-glasögon möjliggör att kunna ha båda händerna fria samtidigt som du får all information du behöver."
             >
               <Img
                   alt="Augmented Reality"
@@ -83,12 +83,10 @@ class Solutions extends Component {
                 />
             </Capability>
             <Capability
-              buttonText="Contact Us"
+              buttonText="Kontakta oss"
               textLeft
-              header="Instruct &amp; Guide"
-              text="Culpa labore tempor sint excepteur esse non enim elit eu veniam. Exercitation incididunt incididunt nostrud irure
-                anim nostrud do Lorem amet. Ullamco voluptate ea ullamco cupidatat. Adipisicing sint reprehenderit qui mollit aliqua ut aute Lorem excepteur esse labore. Elit id cillum
-                duis aliqua."
+              header="Instruktioner &amp; vägledning"
+              text="Genom AR kan du få tydliga instruktioner i realtid för att hjälpa dig med olika problem som uppstår. Du kan dels få tillgång till detaljerad information som annars hade fått hämtas via internet eller en manual men även få support via en extern part i realtid. Detta kan hjälpa både dig som privatperson som vill förenkla reparationer eller dig som arbetar med avancerad support."
             >
              <Img
                   alt="Augmented Reality"
@@ -102,15 +100,17 @@ class Solutions extends Component {
           <ContentWrapper>
             <SectionTop
               dark
-              header="Solutions We Can Provide"
-            >AR can and will be applied in all different sectors, especially when AR glasses are improved. However, here are some solutions we can give you today.</SectionTop>
+              header="Lösningar vi erbjuder"
+            >
+              Genom AR kan du få tydliga instruktioner i realtid för att hjälpa dig med olika problem som uppstår. Du kan dels få tillgång till detaljerad information som annars hade fått hämtas via internet eller en manual men även få support via en extern part i realtid. Detta kan hjälpa både dig som privatperson som vill förenkla reparationer eller dig som arbetar med avancerad support.
+            </SectionTop>
             <SolutionsContainer>
-              <ContentBlob width={360} small heading="AR For Advertising" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />
-              <ContentBlob width={360} small heading="AR For Training" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />
-              <ContentBlob width={360} small heading="AR For Model Visualization" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />
-              <ContentBlob width={360} small heading="AR For Navigation" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />
-              <ContentBlob width={360} small heading="AR And Machine Learning" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />
-              <ContentBlob width={360} small heading="AR For Sales" text='Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis. Aliqua sunt do esse occaecat dolore ut et minim laborum Lorem ad occaecat in quis' />
+              <ContentBlob width={360} small heading="AR för marknadsföring" text='Genom AR kan du visualisera information om ditt företag rakt framför ögonen på potentioella kunder utan att investera i hårdvara. Detta är ett steg i digitaliseringens framfart och hur framtiden kommer förändra sättet vi marknadsför oss.' />
+              <ContentBlob width={360} small heading="AR för upplärning" text='Genom att simulera de arbetsmiljöer som finns inom företaget att upplärning ske vart som helst utan risk för att störa er process. AR-upplärning kan både minksa tid och kostnader för att utbilda ny arbetskraft.' />
+              <ContentBlob width={360} small heading="AR för modellvisualisering" text='AR möjliggör att kunna studera 3D-modeller i realtid för att få en inblick i hur en viss komponent eller maskin ser ut och fungerar. Det går även att interagera med objektet och välja särskilda delar man vill studera i mer detalj.' />
+              <ContentBlob width={360} small heading="AR för navigering" text='Istället för att navigera sig genom att översätta information från en GPS i 2D till verkligheten kan navigeringen ske rakt framför dina ögon. Genom AR-navigation behöver man inte fokusera på en GPS utan kan fullt ut konentrera sig på att exempelvis köra bil eller cykla.' />
+              <ContentBlob width={360} small heading="AR och maskininlärning" text='Genom att kombinera AR och maskininlärning kan du få infomration i realtid som du inte kunnat drömma om innan. Information kommer inte längre behöva sökas upp via mobilen eller användarmanualer utan vara tillgänglig rakt framför dina ögon.' />
+              <ContentBlob width={360} small heading="AR för internetförsäljning" text='Att köpa artiklar via internet har många fördelar men en nakdel är att du oftast inte kan se mer av produkten av en 2D-bild. Genom AR kan man visualisera hur produkten ser ut i verklig form och storlek i den miljön du vill använda den i.' />
             </SolutionsContainer>
           </ContentWrapper>
         </Section>
@@ -119,7 +119,7 @@ class Solutions extends Component {
           <ContentWrapper>
             <SectionTop
               dark
-              header="Technology Capabilities"
+              header="Technology Capabilitie"
             >Förklara vilka superheta teknoligier vi använder. Att vi alltid ligger i framkant. Fördelarn det ger för kund. Esse commodo veniam id officia. Aliqua incididunt voluptate in labore id ad magna
             proident enim nostrud ex. Anim et excepteur nulla culpa enim.</SectionTop>
           </ContentWrapper>

@@ -39,9 +39,9 @@ class About extends Component {
           <ContentWrapper>
             <SectionTop
               light
-              header="The Company"
-              bottomText="Read More"
-            >InnoTact Software AB consists of a team of high-performance and dedicated engineers from Chalmers University of Technology, located in Gothenburg, Sweden. Our number one priority is always customer satisfaction. We love to create ideas together with our customers to improve and simplify their businesses. 
+              header="Företaget"
+              bottomText="Läs mer"
+            > TheSpark består av ett team högpresterande ingenjörsstudenter från Chalmers Tekniska Högskola, i Göteborg. Vår högsta prioritet är alltid att göra våra kunder nöjda. Vi älskar att skapa idéer tillsammans med våra kunder för att förbättra och förenkla processerna i deras företag.
             </SectionTop>
           </ContentWrapper>
         </Hero>
@@ -49,25 +49,26 @@ class About extends Component {
         <Section backgroundColor={colors.lightgrey}>
           <ContentWrapper>
             <Img
-              alt="Team photo of Innotact Software"
+              alt="Team photo of TheSpark"
               fluid={data.TeamImage.childImageSharp.fluid}
             />
             <BlobContainer>
               <ContentBlob
-                heading="Trait i teamet 1"
-                text="Ullamco dolore labore fugiat sit qui. Tempor amet ullamco laborum ullamco elit est cillum ullamco anim ut. Occaecat culpa sint esse ea tempor irure eu eiusmod."
+                heading="Ungdomligt driv"
+                text="Vår unga ålder, som av vissa kan ses som en svaghet, är en av våra största styrkor. Vi har ett driv och en gnista som inte finns hos många andra företag. Välj oss för att få en partner som kommer göra allt för att göra dig nöjd. 
+"
               >
                 <FaCubes style={styles.icon} />
               </ContentBlob>
               <ContentBlob
-                heading="Trait i teamet 2"
-                text="Ullamco dolore labore fugiat sit qui. Tempor amet ullamco laborum ullamco elit est cillum ullamco anim ut. Occaecat culpa sint esse ea tempor irure eu eiusmod."
+                heading="Flexibilitet"
+                text="Både gällande anpassning till nya tekniker och till arbetstider och krav från kunder är flexibiliteten genomlysande i TheSpark. Vi gör vad som krävs för att uppnå våra mål."
               >
                 <FaCubes style={styles.icon} />
               </ContentBlob>
               <ContentBlob
-                heading="Trait i teamet 3"
-                text="Ullamco dolore labore fugiat sit qui. Tempor amet ullamco laborum ullamco elit est cillum ullamco anim ut. Occaecat culpa sint esse ea tempor irure eu eiusmod."
+                heading="Vårat team"
+                text="Vi tror otroligt mycket på ett team-baserat arbetssätt. Som ett team kommer vi kunna producera dubbelt så mycket som summan av vad vi hade producerat som enskillda individer."
               >
                 <FaCubes style={styles.icon} />
               </ContentBlob>
