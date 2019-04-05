@@ -139,7 +139,7 @@ class Footer extends Component {
                         borderBottom={!(value.isTablet || value.isMobile)}
                         light
                       >
-                        Kungsportsavenyn 10, Gothenburg
+                        Kungsportsavenyn 10, Göteborg
                       </AdressText>
                       <InfoIconsContainer>
                         <div style={{ marginBottom: 6 }}>
