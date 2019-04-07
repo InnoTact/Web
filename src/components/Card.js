@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import colors from '../styles/colors'
 import styles from '../styles/styles'
@@ -13,4 +14,4 @@ const Container = styled.div`
   }
 `
 
-export default Container
+export default ({ className, children, ...props }) => <Container className={className} {...props}>{children}</Container>
