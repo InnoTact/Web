@@ -74,13 +74,13 @@ class About extends Component {
               </ContentBlobCustom>
               <ContentBlobCustom
                 heading="Flexibilitet"
-                text="Både gällande anpassning till nya tekniker och till arbetstider och krav från kunder är flexibiliteten genomlysande i TheSpark. Vi gör vad som krävs för att uppnå våra mål."
+                text="Gällande anpassning till nya tekniker, arbetstider och krav från kunder är flexibiliteten genomlysande i TheSpark. Vi gör vad som krävs för att uppnå våra mål."
               >
                 <FaExpandArrowsAlt style={styles.icon} />
               </ContentBlobCustom>
               <ContentBlobCustom
                 heading="Vårat team"
-                text="Vi tror otroligt mycket på ett team-baserat arbetssätt. Som ett team kommer vi kunna producera dubbelt så mycket som summan av vad vi hade producerat som enskillda individer."
+                text="Vi tror på ett team-baserat arbetssätt. Som ett team kommer vi kunna producera mycket mer än summan av vad vi hade producerat som enskillda individer."
               >
                 <FaUsers style={styles.icon} />
               </ContentBlobCustom>
