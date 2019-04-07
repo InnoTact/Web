@@ -5,6 +5,7 @@ import Text from "./Text"
 import { FaMapMarker, FaEnvelope, FaLinkedin } from "react-icons/fa"
 import ColorFadeSection from "./ColorFadeSection"
 import Img from "gatsby-image"
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
   padding: 1.5rem;
@@ -58,7 +59,7 @@ const SocialLogo = styled.a`
   width: 43px;
   height: 43px;
   border-radius: 50%;
-  border: 2px solid ${colors.primaryHighLighten};
+  border: 2px solid ${colors.primary};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +78,7 @@ const ImageStyle = {
     height: 180
 }
 
-export default ({ name, image, position, town, text, email, linkedin }) => {
+const PeopleCard = ({ name, image, position, town, text, email, linkedin }) => {
   return (
     <Container>
       {image && <Img style={ImageStyle} fixed={image} />}
@@ -108,3 +109,14 @@ export default ({ name, image, position, town, text, email, linkedin }) => {
     </Container>
   )
 }
+
+PeopleCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  town: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  linkedin: PropTypes.string.isRequired,
+}
+
+export default PeopleCard

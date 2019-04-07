@@ -6,9 +6,17 @@ import Text from "./Text"
 import { Link } from "gatsby"
 import styles from "../styles/styles"
 import { AppContext } from "./RootWrapper"
+import ContentWrapper from "./ContentWrapper";
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
   position: relative;
+`
+
+const Header = styled(SubHeading)`
+  @media (min-width: ${styles.breakpoints.md + "px"}) and (max-width: ${styles.breakpoints.lg + "px"}) {
+    margin-top: 0;
+  }
 `
 
 const InfoContainer = styled.div`
@@ -17,8 +25,9 @@ const InfoContainer = styled.div`
   width: 50vw;
   margin-left: ${({ textLeft }) => (textLeft ? 0 : "50%")};
 
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
     width: unset;
+    padding: 0 0 4rem 0;
     margin-left: unset;
   }
 `
@@ -31,7 +40,7 @@ const ImageContainer = styled.div`
   bottom: 0;
   overflow: hidden;
 
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
     position: static;
     right: initial;
     left: initial;
@@ -51,12 +60,14 @@ class Capability extends Component {
     } = this.props
 
     let info = (
-      <InfoContainer textLeft={textLeft}>
-        <SubHeading dark text={header} />
-        <Text dark>{text}</Text>
-        <Link to="/contact/">
-          <Button primary>{buttonText}</Button>
-        </Link>
+      <InfoContainer {...props} textLeft={textLeft}>
+        <ContentWrapper>
+          <Header dark>{header}</Header>
+          <Text dark>{text}</Text>
+          <Link to="/contact/#contact-form">
+            <Button primary>{buttonText}</Button>
+          </Link>
+        </ContentWrapper>
       </InfoContainer>
     )
 
@@ -83,22 +94,30 @@ class Capability extends Component {
       <Container {...props}>
         <AppContext.Consumer>
           {value => {
-            let output = null
             if (value) {
-              output = value.isMobile && (
-                <Fragment>
-                  {info}
-                  {image}
-                </Fragment>
-              )
+              if (value.isMobile || value.isTablet) {
+                output =
+                  <Fragment>
+                    {info}
+                    {image}
+                  </Fragment>
+              }
+              return output
+            } else {
+              return null
             }
-
-            return output
           }}
         </AppContext.Consumer>
       </Container>
     )
   }
+}
+
+Capability.propTypes = {
+  header: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 export default Capability

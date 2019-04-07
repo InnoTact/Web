@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import colors from './../styles/colors'
+import PropTypes from 'prop-types'
 
 const Button = styled.button`
   position: relative;
@@ -22,16 +23,37 @@ const Button = styled.button`
   :hover {
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    transform: scale(1.02);
-    color: ${props => (props.primary ? colors.white : colors.primary)};
-    background-color: ${props => (props.primary ? colors.primary : colors.white)};
+    transform: ${({disabled}) => !disabled && 'scale(1.02)'};
+    color: ${({primary, disabled}) => ((primary && !disabled)  ? colors.white : colors.primary)};
   }
 
+  ::before {
+    content: '';
+    width: 800px;
+    height: 300px;
+    position: absolute;
+    background-color: ${props => (props.primary ? colors.primary : colors.white)};;
+    left: -400px;
+    top: -300px;
+    transform-origin: bottom center;
+    transform: rotate(-45deg);
+    transition: 0.4s ease-in-out left;
+    z-index: -5;
+ }
+
+ :hover::before {
+   left: 0;
+ }
+
   :disabled {
-    color: ${colors.primaryHighLighten};
-    border-color: ${colors.primaryHighLighten};
+    color: ${colors.mediumGrey};
+    border-color: ${colors.mediumGrey};
     cursor: not-allowed;
   }
 `
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default Button

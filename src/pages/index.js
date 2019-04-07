@@ -1,8 +1,9 @@
 import React, { Component } from "react"
-import { Navbar, Section } from "../components/"
 import styled from "styled-components"
 import styles from "../styles/styles"
 import SectionTop from "./../components/SectionTop"
+import Navbar from "./../components/Navbar"
+import Section from "./../components/Section"
 import ContentWrapper from "./../components/ContentWrapper"
 import ContentBlob from "./../components/ContentBlob"
 import colors from "../styles/colors"
@@ -14,6 +15,10 @@ import GetStarted from "../components/GetStarted"
 import { graphql } from "gatsby"
 import { FaCubes, FaCreativeCommonsShare } from "react-icons/fa"
 import {Helmet} from "react-helmet";
+import ClickMe from '../components/ClickMe'
+import Text from '../components/Text'
+import Anchor from "../components/Anchor";
+import SubHeading from "../components/SubHeading";
 
 const ServiceContainer = styled.div`
   display: flex;
@@ -34,6 +39,59 @@ const StepsWrapper = styled.div`
   align-items: center;
 `
 
+const FactContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 250px;
+
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    flex-direction: column;
+    height: auto;
+  }
+`
+
+const FactItem = styled.div`
+  padding: 3rem;
+  text-align: center;
+  width: 33%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    width: 100%;
+    height: auto;
+  }
+`
+
+const QuoteSection = styled(Section)`
+   @media (max-width: ${styles.breakpoints.md + "px"}) {
+    display: none;
+  }
+`
+
+const QuoteContainer = styled.div`
+  padding: 4rem 0 5rem 0;
+`
+
+const Quote = styled(SubHeading)`
+  text-align: center;
+  line-height: 2.2;
+  font-style: italic;
+`
+
+const QuoteName = styled(Anchor)`
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-top: 1rem;
+  display: block;
+`
+
 class Index extends Component {
   render() {
     const { data } = this.props
@@ -50,30 +108,35 @@ class Index extends Component {
           <ContentWrapper> 
             <SectionTop
               light
-              header="We are experts in Augmented Reality"
-              buttonText="Start a project"
-            >Together we will take your business to the next level by developing innovative augmented reality experiences.</SectionTop>
+              header="Vi utvecklar Augmented Reality-applikationer
+"
+              buttonText="STARTA ETT PROJEKT"
+              bottomText='Läs mer'
+            >Vi tar ditt företag till nästa nivå genom att implementera innovativa lösningar baserade på Augmented Reality.</SectionTop>
           </ContentWrapper>
         </Hero>
 
-        <Section backgroundColor={colors.lightgrey}>
+        <Section backgroundColor={colors.white}>
           <ContentWrapper>
             <SectionTop
               dark
-              header={`Let's get started`}
-            >Our team of highly skilled and motivated developers always strive towards perfection. While working with close relationships we make sure to meet every need of our customers while we develop Augmented Reality applications to change the way our customers work today. </SectionTop>
+              header={`Starta projekt`} 
+              >Vårt team som består av motiverade och drivna utvecklare strävar alltid efter perfektion.  Vi arbetar alltid med nära kundrelationer för att garantera att vi uppyller alla bevov våra kunder har. Genom detta förbättrar vi sättet våra kunder arbetar på genom nytänkande AR-lösningar. </SectionTop>
             <ServiceContainer>
               <ContentBlob
-                heading="Bring your idea to life"
-                text="Do you already have an AR idea? Let us turn it into reality."
-                buttonText="Make it Real"
+                heading="Realisera din idé"
+                text="Har du redan en AR-idé? Låt oss verkställa den tillsammans."
+                buttonText="Vad vi erbjuder"
+                buttonLink='/Lösningar/'
               >
                 <FaCubes style={styles.icon} />
               </ContentBlob>
               <ContentBlob
-                heading="Let us create an idea together"
-                text="If you are not sure how use AR to improve your business we evaluate your opportunities and create an idea. "
-                buttonText={`Let's do it`}
+                heading="Vi skapar en idé tillsammans"
+                text="Om du är osäker på hur AR kan implementeras i just ditt företag utvärderar vi dina möjligheter och skapar en idé.
+"
+                buttonText='Läs mer'
+                buttonLink='/Lösningar/'
               >
                 <FaCreativeCommonsShare style={styles.icon} />
               </ContentBlob>
@@ -81,49 +144,79 @@ class Index extends Component {
           </ContentWrapper>
         </Section>
 
+        <Section style={{paddingBottom: 0, paddingTop: 0}} backgroundColor={colors.lightgrey}>
+            <FactContainer>
+              <FactItem style={{backgroundColor: colors.lightgrey}}>
+                <Text style={{marginBottom: '0.7rem', textAlign: 'center'}} dark>Augmented Reality revenue is expected to hit $120 billion by 2020</Text>
+                <Anchor small italic dark target="_blank" href="https://www.digi-capital.com/news/2016/01/augmentedvirtual-reality-revenue-forecast-revised-to-hit-120-billion-by-2020/">Digi-Capital</Anchor>
+              </FactItem>
+              <FactItem style={{backgroundColor: colors.lightdarkerGrey}}>
+                <Text style={{marginBottom: '0.7rem', textAlign: 'center'}} dark>60% to 70% of consumers see clear benefits in using AR and IoT devices in their daily life and at work</Text>
+                <Anchor small italic dark target="_blank" href="http://www.isaca.org/About-ISACA/Press-room/News-Releases/2016/Pages/2016-IT-RRB-News-Release-US.aspx">Isaca</Anchor>
+              </FactItem>
+              <FactItem style={{backgroundColor: colors.mediumGrey}}>
+                <Text style={{marginBottom: '0.7rem', textAlign: 'center'}} dark>Augmented Reality headsets will have an estimated 1 Billion users by 2020.</Text>
+                <Anchor small italic dark target="_blank" href="https://www.statista.com/topics/3286/augmented-reality-ar/">Statista</Anchor>
+              </FactItem>
+            </FactContainer>
+        </Section>
+
+        <QuoteSection style={{paddingBottom: 0, paddingTop: 0}} backgroundColor={colors.lightgrey}>
+          <ContentWrapper>
+            <QuoteContainer>
+              <Quote dark>
+                "I do think that a significant portion of the population of developed countries, and eventually all countries, will have AR experiences every day, almost like eating three meals a day, it will become that much a part of you."
+              </Quote>
+              <QuoteName target="_blank" href="https://nordic.businessinsider.com/apple-ceo-tim-cook-explains-augmented-reality-2016-10?r=US&IR=T" 
+              center dark>Tim Cook CEO Apple</QuoteName>
+            </QuoteContainer>
+            </ContentWrapper>
+        </QuoteSection>
+
         <People peopleImagesData={data} />
 
         <Section backgroundColor={colors.lightgrey}>
           <ContentWrapper>
-            <SectionTop
+            <SectionTop   
               dark
-              header={`How we bring your product to life`}
-              >Our methodology for maximizing custumer value and satisfy your needs is divided into the following six steps.</SectionTop>
+              header={`Hur vi realiserar din idé`}
+            >
+              Våran metodik för att maximera nytta och uppfylla dina behov delas in i följande 6 steg.
+            </SectionTop>
             <StepsWrapper>
               <TextCard
-                style={{ marginTop: 40 }}
-                header="Lets arrange for a meeting."
-                text="Press here to book a meeting with us where we can discuss your needs and posibilities."
+                header="Vi bokar ett möte"
+                text={[`Tryck `, <ClickMe italic url='/contact/'>här</ClickMe> , ' för att boka ett möte där vi kan diskutera dina behov och möjligheter.']}
                 number={"1"}
                 dark
               />
               <TextCard
-                header="We create an action plan depending on your needs."
-                text="After identifying the best solution to your situation we create an action plan together to make sure you get your solution the way you want it at the time you need it."
+                header=" Vi skapar en plan baserad på dina behov."
+                text="Efter att ha identifierat den besta lösningen på dina problem skapar vi en plan tillsammans för att se till att du får precis den lösning du behöver."
                 number={"2"}
                 dark
               />
               <TextCard
-                header="While maintaining close contact we start executing the action plan."
-                text="While we start the execution state we make continious checks with you to make sure the solution turns out the way you want it."
+                header="Samtidigt som vi håller en nära kontakt börjar vi utveckla lösningen."
+                text="Medan vi utvecklar gör vi ständiga kontroller med dig för att se till att vi utvecklar något du blir nöjd med."
                 number={"3"}
                 dark
               />
               <TextCard
-                header="We keep on working on the solution until all your needs are met."
-                text="The solution is not completed until you are fully satisfied."
+                header="Vi forstsätter arbeta tills du är fullt nöjd."
+                text="Vår lösning är inte färdig för än du säger att du är helt nöjd med resltatet."
                 number={"4"}
                 dark
               />
               <TextCard
-                header="We finish and lunch the solution."
-                text="When the solution is ready we bring it to life and launch it in your bussiness."
+                header="Vi avslutar och integrerar lösningen."
+                text="När lösningen är klar ser vi till att den kan integreras i ditt företag."
                 number={"5"}
                 dark
               />
               <TextCard
-                header="Continuous improvements for your future needs."
-                text="Even when your solution is launched we continue working on improvements to fit the dvelopment of your company."
+                header="Kontinuerliga förbättringar för dina framtida behov."
+                text="Även när lösningen är lanserad fortsätter vi arbeta på förbättringar efter dina önskemål."
                 number={"6"}
                 dark
               />

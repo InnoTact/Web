@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import styles from '../styles/styles'
+import PropTypes from 'prop-types';
 
 const initialState = {
   screenWidth: '',
@@ -45,8 +46,8 @@ class RootWrapper extends Component {
 
   isTablet = () => {
     return (
-      window.innerWidth > styles.breakpoints.sm &&
-      window.innerHeight < styles.breakpoints.md
+      window.innerWidth >= styles.breakpoints.sm &&
+      window.innerWidth < styles.breakpoints.md
     )
   }
 
@@ -63,6 +64,10 @@ class RootWrapper extends Component {
       </AppContext.Provider>
     )
   }
+}
+
+RootWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default RootWrapper

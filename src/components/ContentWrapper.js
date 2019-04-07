@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types';
 
 const ContentWrapper = styled.div`
   width: 90%;
@@ -7,5 +8,9 @@ const ContentWrapper = styled.div`
   margin: 0 auto;
 `
 
-export default ({children}) => <ContentWrapper><React.Fragment>{children}</React.Fragment></ContentWrapper>
+ContentWrapper.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+export default ({children, className, ...props}) => <ContentWrapper className={className} {...props}><React.Fragment>{children}</React.Fragment></ContentWrapper>
 

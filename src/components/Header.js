@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import styles from '../styles/styles'
+import PropTypes from 'prop-types';
 
 const StyledHeader = styled.h1`
   color: white;
@@ -13,12 +14,21 @@ const StyledHeader = styled.h1`
   line-height: 1.5;
   text-align: center;
   max-width: 1080px;
+  white-space: nowrap;
 
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
     font-size: 1.8rem;
   }
+
+  @media (max-width: ${styles.breakpoints.lg + "px"}) {
+    white-space: normal;
+  }
 `
 
 const Header = ({ text, styles = {} }) => <StyledHeader style={{ ...styles }}>{text}</StyledHeader>
+
+Header.propTypes = {
+  text: PropTypes.string.isRequired,
+}
 
 export default Header

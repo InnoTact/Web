@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { FaCube } from 'react-icons/fa'
-import { CenterContainer } from '.';
+import CenterContainer from '../components/CenterContainer'
 import { Link } from 'gatsby'
 import colors from "../styles/colors"
 import styles from '../styles/styles'
@@ -28,6 +28,6 @@ export default ({...props}) =>
       <FaCube style={{ fontSize: '2.3rem', color: 'black' }} />
     </Link>
     <Link to='/'>
-      <LogoText {...props}>Augmented Solutions</LogoText>
+      <LogoText {...props}>The Spark</LogoText>
     </Link>
 </CenterContainer>

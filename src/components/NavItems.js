@@ -15,11 +15,10 @@ const LinkContainer = styled.div`
     open &&
     css`
       position: fixed;
-      top: 0;
+      top: -40px;
       left: 0;
       right: 0;
-      bottom: 0;
-      height: 100%;
+      bottom: -40px;
       width: 100%;
       overflow-y: scroll;
       transition: all 0.4s ease-in-out;
@@ -52,10 +51,9 @@ const NavItem = styled.div`
 const NavLink = styled.div`
   text-decoration: none;
   font-size: 1rem;
-  color: ${({ dark }) => (dark ? colors.mediumGrey : colors.white)};
 
   :hover {
-    color: ${({ dark }) => (dark ? colors.mediumGreyLighten : colors.white)};
+    color: ${({ dark }) => (dark ? colors.mediumGreyLighten : colors.primaryLowLighten)};
     transition: all ease-in-out 0.2s;
   }
 
@@ -73,7 +71,7 @@ const NavLink = styled.div`
 
 const HamburgerContainer = styled.div`
   position: absolute;
-  top: 2.2rem;
+  top: ${({isOpen}) => isOpen ? '4.65rem' : '2.2rem'};
   right: 2.2rem;
 `
 
@@ -88,36 +86,38 @@ class NavItems extends Component {
   }
 
   render() {
-    const { windowWidth, ...props } = this.props
+    const { windowWidth, dark, ...props } = this.props
     const { open } = this.state
+    const linkColor = dark ? colors.mediumGrey : colors.mediumGrey
+    const activeLinkColor = dark ? colors.mediumGreyLighten : colors.white
 
     const navItems = (
       <Fragment>
         <NavItem open={open}>
-          <Link to="/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/">
             <NavLink open={open} {...props}>
-              Home
+              Hem
             </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link to="/capabilities/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/solutions/">
             <NavLink open={open} {...props}>
-              Capabilities
+              Lösningar
             </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link to="/about/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/about/">
             <NavLink open={open} {...props}>
-              About us
+              Om oss
             </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link to="/contact/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/contact/">
             <NavLink open={open} {...props}>
-              Contact us
+              Kontakt
             </NavLink>
           </Link>
         </NavItem>
@@ -129,11 +129,14 @@ class NavItems extends Component {
         <AppContext.Consumer>
           {value => {
             let output = null
-            if (value) {
+            if (!value) {
+              return null
+            }
+
               if (value.isMobile) {
                 output = (
                   <Fragment>
-                    <HamburgerContainer>
+                    <HamburgerContainer isOpen={open}>
                       <HamburgerMenu
                         isOpen={open}
                         width={32}
@@ -152,7 +155,6 @@ class NavItems extends Component {
               } else {
                 output = navItems
               }
-            }
             
             return output
           }}
