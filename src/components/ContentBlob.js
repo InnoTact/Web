@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   max-width: 550px;
   width: ${({width}) => width ? width + 'px' : 'unset'};
@@ -16,23 +17,12 @@ const Wrapper = styled.div`
   text-align: center;
 `
 
-const Item = styled.div`
-`
-
-const ContentBlob = ({ children, heading, text, small = false, width, buttonText, buttonLink, ...props }) => (
-  <Wrapper {...props} width={width}>
-    <Item>
-      {children}
-    </Item>
-    <Item>
+const ContentBlob = ({ className, children, heading, text, small = false, width, buttonText, buttonLink, ...props }) => (
+  <Wrapper className={className} {...props} width={width}>
+    {children}
       <SubHeading small={small} dark>{heading}</SubHeading>
-    </Item>
-    <Item>
-      <Text dark>{text}</Text>
-    </Item>
-    <Item>
+      <Text style={{textAlign: 'center'}} dark>{text}</Text>
       {buttonText && <Link to={buttonLink}><Button primary>{buttonText}</Button></Link>}
-    </Item>
   </Wrapper>
 )
 
