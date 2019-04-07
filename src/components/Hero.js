@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import colors from '../styles/colors'
 
 const Hero = styled.div`
-  background-image: linear-gradient(to right, #c31432, #240b36);
+  background-image: linear-gradient(to right, ${colors.primaryLower}, ${colors.primaryHigher});
   width: 100vw;
   height: 85vh;
   display: flex;
