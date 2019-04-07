@@ -16,9 +16,9 @@ const Wrapper = styled.div`
   top: ${({ isVisible }) => (isVisible ? 0 : `-${navHeight}rem`)};
   left: 0;
   right: 0;
-  background-color: ${({ scrollPos }) => scrollPos < 100 ? "transparent" : colors.primary};
+  background-color: ${({ scrollPos }) => scrollPos < 150 ? "transparent" : colors.primary};
   z-index: 10;
-  transition: all 0.6s;
+  transition: all 0.4s;
 `
 
 const Container = styled.div`
@@ -36,13 +36,17 @@ class Navbar extends Component {
     super(props)
 
     this.state = {
-      prevScrollpos: window.pageYOffset,
+      prevScrollpos: [],
       visible: true,
     }
   }
 
+
   componentDidMount() {
-    this.setState({ ...this.state, prevScrollpos: window.pageYOffset })
+    const { prevScrollpos } = this.state
+    let newPrevScrollPos = prevScrollpos.slice()
+    newPrevScrollPos.push(window.pageYOffset)
+    this.setState({ ...this.state, prevScrollpos: newPrevScrollPos })
     window.addEventListener("scroll", this.handleScroll)
   }
 
@@ -53,22 +57,34 @@ class Navbar extends Component {
   handleScroll = () => {
     const { prevScrollpos } = this.state
 
+    const scrollOffset = 30
+  
+    let visible, newPrevScrollPos
     const currentScrollPos = window.pageYOffset
-    const visible = prevScrollpos > currentScrollPos
 
+    console.log(currentScrollPos)
+    if (prevScrollpos.length > scrollOffset) {
+      visible = prevScrollpos[prevScrollpos.length - (scrollOffset - 1)] > currentScrollPos
+    } else {
+      visible = false
+    }
+    
+    newPrevScrollPos = prevScrollpos.slice()
+    newPrevScrollPos.push(currentScrollPos)
     this.setState({
-      prevScrollpos: currentScrollPos,
+      prevScrollpos: newPrevScrollPos,
       visible,
     })
   }
 
   render() {
     const { visible, prevScrollpos } = this.state
+    const currentScrollPos = prevScrollpos[prevScrollpos.length - 1]
 
     return (
-      <Wrapper isVisible={visible} scrollPos={prevScrollpos}>
+      <Wrapper isVisible={visible} scrollPos={currentScrollPos}>
         <Container>
-          <Logo light />
+          <Logo light />  
           <NavItems dark />
         </Container>
       </Wrapper>
