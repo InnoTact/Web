@@ -17,12 +17,16 @@ const Wrapper = styled.div`
   text-align: center;
 `
 
+const Heading = styled(SubHeading)`
+  white-space: nowrap;
+`
+
 const ContentBlob = ({ className, children, heading, text, small = false, width, buttonText, buttonLink, ...props }) => (
   <Wrapper className={className} {...props} width={width}>
-    {children}
-      <SubHeading small={small} dark>{heading}</SubHeading>
+      {children}
+      <Heading small={small} dark>{heading}</Heading>
       <Text style={{textAlign: 'center'}} dark>{text}</Text>
-      {buttonText && <Link to={buttonLink}><Button primary>{buttonText}</Button></Link>}
+      {buttonText && <Link to={buttonLink}><Button style={{marginTop: 'auto'}} primary>{buttonText}</Button></Link>}
   </Wrapper>
 )
 

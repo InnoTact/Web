@@ -24,11 +24,24 @@ const ServiceContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
     flex-direction: column;
     justify-content: space-around;
+  }
+`
+
+const ContentBlobCustom = styled(ContentBlob)`
+  min-height: 340px;
+  max-width: 47%;
+
+  @media (max-width: ${styles.breakpoints.lg + "px"}) {
+    max-width: 45%
+  }
+
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
+    max-width: unset;
   }
 `
 
@@ -123,15 +136,15 @@ class Index extends Component {
               header={`Starta projekt`} 
               >Vårt team som består av motiverade och drivna utvecklare strävar alltid efter perfektion.  Vi arbetar alltid med nära kundrelationer för att garantera att vi uppyller alla bevov våra kunder har. Genom detta förbättrar vi sättet våra kunder arbetar på genom nytänkande AR-lösningar. </SectionTop>
             <ServiceContainer>
-              <ContentBlob
+              <ContentBlobCustom
                 heading="Realisera din idé"
-                text="Har du redan en AR-idé? Låt oss verkställa den tillsammans."
+                text="Har du redan en AR-idé? Lorem ipsum dolor heor harem dolor exam? Låt oss verkställa den tillsammans."
                 buttonText="Vad vi erbjuder"
                 buttonLink='/Lösningar/'
               >
                 <FaCubes style={styles.icon} />
-              </ContentBlob>
-              <ContentBlob
+              </ContentBlobCustom>
+              <ContentBlobCustom
                 heading="Vi skapar en idé tillsammans"
                 text="Om du är osäker på hur AR kan implementeras i just ditt företag utvärderar vi dina möjligheter och skapar en idé.
 "
@@ -139,7 +152,7 @@ class Index extends Component {
                 buttonLink='/Lösningar/'
               >
                 <FaCreativeCommonsShare style={styles.icon} />
-              </ContentBlob>
+              </ContentBlobCustom>
             </ServiceContainer>
           </ContentWrapper>
         </Section>
