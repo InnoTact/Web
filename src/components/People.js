@@ -36,7 +36,7 @@ export default ({ peopleImagesData }) => {
             }
             position="Grundare &amp; VD "
             town="Göteborg, Sverige"
-            text="Som bolagets VD ser Niklas till att vi når vårat mål om att bli det bästa AR-företaget i landet. Då han studerar industriell ekkonomi är han expert inom företagsstrategi och kundrelationer. Han ansvarar för att teamet alltid mår bra och presterar på toppen av sin förmåga. Vid frågor om företagets strategi och kunder är Niklas rätt person att fråga."
+            text="Som bolagets VD ser Niklas till att vi når vårt mål om att bli det bästa AR-företaget i landet. Då han studerar industriell ekonomi är han expert inom företagsstrategi och kundrelationer. Han ansvarar för att teamet alltid mår bra och presterar på toppen av sin förmåga. Vid frågor om företagets strategi och kunder är Niklas rätt person att fråga."
             email="niklas@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/niklas-gustafsson-93025a12a/"
           />
@@ -48,7 +48,7 @@ export default ({ peopleImagesData }) => {
                   : ""
               }            position="Grundare &amp; Utvecklare"
             town="Göteborg, Sverige"
-            text="Som projektledare är Joel ofta i nära kontakt med våra kunder. Han ansvarar för att kunderna är nöjda gällande produkterna vi skapar, vilket han verkar lyckas med varje gång. Efter ha studerat Software Engineering i USA under ett år håller Joel nu till på IT-programmet på Chalmers. Vid frågor specifika projekt är Joel rätt person att fråga."
+            text="Som projektledare är Joel ofta i nära kontakt med våra kunder. Han ansvarar för att kunderna är nöjda med produkterna vi skapar, vilket han verkar lyckas med varje gång. Efter att ha studerat Software Engineering i USA under ett år håller Joel nu till på IT-programmet på Chalmers. Vid frågor om specifika projekt är Joel rätt person att fråga."
             email="joel@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/joel-rudsberg/"
           />
@@ -72,7 +72,7 @@ export default ({ peopleImagesData }) => {
                   : ""
               }            position="Grundare, CTO &amp; utvecklare"
             town="Göteborg, Sverige"
-            text="Som företagets CTO ansvarar Casper för företagets tekniska strategi. Som en erfaren programmerare och kommande elektroingenjör är Casper expert på att snabbt lära sig och anpassa sig till nya teknologier. Casper ser till att vårat arbetssätt är effektivt och anpassat till de senaste teknologierna. Vid frågor om vår arbetsstruktur är Casper rätt person att fråga."
+            text="Som företagets CTO ansvarar Casper för företagets tekniska strategi. Som erfaren programmerare och blivande elektroingenjör är Casper expert på att snabbt lära sig och anpassa sig till nya teknologier. Casper ser till att vårt arbetssätt är effektivt och anpassat till de senaste teknologierna. Vid tekniska frågor är Casper rätt person att fråga."
             email="casper@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/casperlindberg1997/"
           />
@@ -84,7 +84,7 @@ export default ({ peopleImagesData }) => {
                   : ""
               }            position="Grundare, CFO &amp; utvecklare"
             town="Mölnlycke, Sverige"
-            text="Förutom att vara företagets CFO bidrar Carl med mycket struktur till företaget. Som teknisk fysikstuden vet Carl betydelsen av hårt jobb och dedikation. Något som han sprider till alla i teamet. Han ser till att alla presterar sitt yttersta vid varje given tidpunkt. Vid frågor om vår ekonomi eller arbetskapacitet är Carl rätt person att fråga. "
+            text="Förutom att vara företagets CFO bidrar Carl med mycket struktur till företaget. Som teknisk fysikstudent vet Carl betydelsen av hårt jobb och dedikation. Något som han sprider till alla i teamet. Han ser till att alla presterar sitt yttersta vid varje given tidpunkt. Vid frågor om vår ekonomi eller arbetskapacitet är Carl rätt person att fråga. "
             email="carl@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/carl-claesson-29145a16a/"
           />

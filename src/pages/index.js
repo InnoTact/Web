@@ -120,12 +120,12 @@ class Index extends Component {
           <ContentWrapper>
             <SectionTop
               dark
-              header={`Starta projekt`} 
-              >Vårt team som består av motiverade och drivna utvecklare strävar alltid efter perfektion.  Vi arbetar alltid med nära kundrelationer för att garantera att vi uppyller alla bevov våra kunder har. Genom detta förbättrar vi sättet våra kunder arbetar på genom nytänkande AR-lösningar. </SectionTop>
+              header={`Starta projekt`}   
+              >Vårt team, som består av motiverade och drivna utvecklare, strävar alltid efter att hjälpa ditt företag till nästa nivå.  Vi arbetar med nära kundrelationer för att garantera att vi uppyller alla dina behov. </SectionTop>
             <ServiceContainer>
               <ContentBlob
                 heading="Realisera din idé"
-                text="Har du redan en AR-idé? Låt oss verkställa den tillsammans."
+                text="Har du redan en idé inom Augmented Reality? Låt oss verkställa den tillsammans."
                 buttonText="Vad vi erbjuder"
                 buttonLink='/Lösningar/'
               >
@@ -133,7 +133,7 @@ class Index extends Component {
               </ContentBlob>
               <ContentBlob
                 heading="Vi skapar en idé tillsammans"
-                text="Om du är osäker på hur AR kan implementeras i just ditt företag utvärderar vi dina möjligheter och skapar en idé.
+                text="Är du osäker på hur Augmented Reality kan implementeras i just ditt företag? Låt oss utvärdera dina möjligheter och skapa en idé tillsammans.
 "
                 buttonText='Läs mer'
                 buttonLink='/Lösningar/'
@@ -181,30 +181,30 @@ class Index extends Component {
               dark
               header={`Hur vi realiserar din idé`}
             >
-              Våran metodik för att maximera nytta och uppfylla dina behov delas in i följande 6 steg.
+              Vår metodik för att maximera nytta och uppfylla dina behov delas in i följande sex steg.
             </SectionTop>
             <StepsWrapper>
               <TextCard
-                header="Vi bokar ett möte"
+                header="Vi bokar ett möte."
                 text={[`Tryck `, <ClickMe italic url='/contact/'>här</ClickMe> , ' för att boka ett möte där vi kan diskutera dina behov och möjligheter.']}
                 number={"1"}
                 dark
               />
               <TextCard
                 header=" Vi skapar en plan baserad på dina behov."
-                text="Efter att ha identifierat den besta lösningen på dina problem skapar vi en plan tillsammans för att se till att du får precis den lösning du behöver."
+                text="Efter att ha identifierat den bästa lösningen till dina problem skapar vi en plan tillsammans för att se till att du får den lösning du behöver."
                 number={"2"}
                 dark
               />
               <TextCard
                 header="Samtidigt som vi håller en nära kontakt börjar vi utveckla lösningen."
-                text="Medan vi utvecklar gör vi ständiga kontroller med dig för att se till att vi utvecklar något du blir nöjd med."
+                text="Under hela utvecklingsfasen uppdaterar vi dig kontinuerligt för att säkerställa att vi utvecklar något du blir nöjd med."
                 number={"3"}
                 dark
               />
               <TextCard
-                header="Vi forstsätter arbeta tills du är fullt nöjd."
-                text="Vår lösning är inte färdig för än du säger att du är helt nöjd med resltatet."
+                header="Vi fortsätter arbeta tills du är nöjd."
+                text="Vår lösning är inte färdig förrän du är helt nöjd med resultatet."
                 number={"4"}
                 dark
               />

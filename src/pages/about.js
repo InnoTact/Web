@@ -62,13 +62,13 @@ class About extends Component {
               </ContentBlob>
               <ContentBlob
                 heading="Flexibilitet"
-                text="Både gällande anpassning till nya tekniker och till arbetstider och krav från kunder är flexibiliteten genomlysande i TheSpark. Vi gör vad som krävs för att uppnå våra mål."
+                text="Gällande anpassning till nya tekniker, arbetstider och krav från kunder är flexibiliteten genomlysande i TheSpark. Vi gör vad som krävs för att uppnå våra mål."
               >
                 <FaCubes style={styles.icon} />
               </ContentBlob>
               <ContentBlob
-                heading="Vårat team"
-                text="Vi tror otroligt mycket på ett team-baserat arbetssätt. Som ett team kommer vi kunna producera dubbelt så mycket som summan av vad vi hade producerat som enskillda individer."
+                heading="Vårt team"
+                text="Vi tror på ett team-baserat arbetssätt. Som ett team kommer vi kunna producera mycket mer än summan av vad vi hade producerat som enskillda individer."
               >
                 <FaCubes style={styles.icon} />
               </ContentBlob>

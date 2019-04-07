@@ -143,7 +143,7 @@ class Contact extends Component {
               header="Kontakta oss"
               bottomText="Kontakta oss"
             >
-              När du vill komma i kontakt med oss kan ni antingen fylla i formuläret nedan eller nå oss via telefon. Vi är alltid berädda att diskutera dina behov och möjliga lösningar. 
+              När du vill komma i kontakt med oss kan ni antingen fylla i formuläret nedan eller nå oss via telefon. Vi är alltid beredda att diskutera dina behov och möjliga lösningar. 
             </SectionTop>
           </ContentWrapper>
         </Hero>
@@ -151,7 +151,7 @@ class Contact extends Component {
         <Section id="contact-form" backgroundColor={colors.lightgrey}>
           <ContentWrapper>
             <SectionTop dark header={`Låt oss skapa något grymt tillsammans.`}>
-            Ring oss eller fyll i formuläret så vi kan få en större förståelse kring dina behov.
+            Ring oss eller fyll i formuläret så att vi får en större förståelse för dina behov.
             </SectionTop>
             <ContactUsWrapper>
               <ContactFormContainer>
@@ -180,7 +180,8 @@ class Contact extends Component {
                         Vad är din email-address?*
                       </ContactText>
                       <Input
-                        placeholder="dinmail@hotmail.com"
+                        placeholder="dinmail@gmail.com"
+
                         required
                         type="email"
                         name="email"
