@@ -62,7 +62,6 @@ class Navbar extends Component {
     let visible, newPrevScrollPos
     const currentScrollPos = window.pageYOffset
 
-    console.log(currentScrollPos)
     if (prevScrollpos.length > scrollOffset) {
       visible = prevScrollpos[prevScrollpos.length - (scrollOffset - 1)] > currentScrollPos
     } else {

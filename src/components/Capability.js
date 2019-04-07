@@ -14,13 +14,13 @@ const Container = styled.div`
 `
 
 const Header = styled(SubHeading)`
-  @media (min-width: ${styles.breakpoints.md + "px"}) and (max-width: ${styles.breakpoints.lg + "px"}) {
+  @media (min-width: ${styles.breakpoints.md + "px"}) {
     margin-top: 0;
   }
 `
 
 const InfoContainer = styled.div`
-  padding: 1rem 4rem 4rem 4rem;
+  padding: 4rem 4rem 4rem 4rem;
   text-align: left;
   width: 50vw;
   margin-left: ${({ textLeft }) => (textLeft ? 0 : "50%")};
