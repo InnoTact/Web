@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   top: ${({ isVisible }) => (isVisible ? 0 : `-${navHeight}rem`)};
   left: 0;
   right: 0;
-  background-color: ${({ scrollPos }) => scrollPos < 150 ? "transparent" : colors.primary};
+  background-color: ${({ scrollPos }) => scrollPos > 150 ? colors.primary : 'transparent'};
   z-index: 10;
   transition: all 0.4s;
 `
@@ -36,7 +36,7 @@ class Navbar extends Component {
     super(props)
 
     this.state = {
-      prevScrollpos: [],
+      prevScrollpos: [0],
       visible: true,
     }
   }
@@ -59,12 +59,12 @@ class Navbar extends Component {
 
     const scrollOffset = 30
   
-    let visible, newPrevScrollPos
+    let visible = true, newPrevScrollPos
     const currentScrollPos = window.pageYOffset
 
     if (prevScrollpos.length > scrollOffset) {
       visible = prevScrollpos[prevScrollpos.length - (scrollOffset - 1)] > currentScrollPos
-    } else {
+    } else if (prevScrollpos.length > 10) {
       visible = false
     }
     

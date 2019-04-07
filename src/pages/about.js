@@ -20,6 +20,7 @@ const BlobContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  margin-top: 5rem;
 
   @media (max-width: ${styles.breakpoints.md + "px"}) {
     flex-direction: column;
@@ -28,7 +29,8 @@ const BlobContainer = styled.div`
 `
 
 const ContentBlobCustom = styled(ContentBlob)`
-  width: 380px;
+  width: 350px;
+  margin: 0 2rem 0 0;
   
   @media (max-width: ${styles.breakpoints.lg + "px"}) {
     width: 320px;
@@ -67,8 +69,7 @@ class About extends Component {
             <BlobContainer>
               <ContentBlobCustom
                 heading="Ungdomligt driv"
-                text="Vår unga ålder, som av vissa kan ses som en svaghet, är en av våra största styrkor. Vi har ett driv och en gnista som inte finns hos många andra företag. Välj oss för att få en partner som kommer göra allt för att göra dig nöjd. 
-"
+                text="Vår unga ålder, som av vissa kan ses som en svaghet, är en av våra största styrkor. Vi har ett driv och en gnista som inte finns hos många andra företag. Välj oss för att få en partner som kommer göra allt för att göra dig nöjd."
               >
                 <FaFire style={styles.icon} />
               </ContentBlobCustom>

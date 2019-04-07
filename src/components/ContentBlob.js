@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: ${({ left }) => left ? 'flex-start' : 'center'};
   max-width: 550px;
   width: ${({width}) => width ? width + 'px' : 'unset'};
   margin: 2rem auto 0 auto;
@@ -21,11 +21,11 @@ const Heading = styled(SubHeading)`
   white-space: nowrap;
 `
 
-const ContentBlob = ({ className, children, heading, text, small = false, width, buttonText, buttonLink, ...props }) => (
-  <Wrapper className={className} {...props} width={width}>
+const ContentBlob = ({ className, left, children, heading, text, small = false, width, buttonText, buttonLink, ...props }) => (
+  <Wrapper className={className} {...props} left={left} width={width}>
       {children}
       <Heading small={small} dark>{heading}</Heading>
-      <Text style={{textAlign: 'center'}} dark>{text}</Text>
+      <Text style={{textAlign: left ? 'left' : 'center'}} dark>{text}</Text>
       {buttonText && <Link to={buttonLink}><Button style={{marginTop: 'auto'}} primary>{buttonText}</Button></Link>}
   </Wrapper>
 )

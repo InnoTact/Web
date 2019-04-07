@@ -20,12 +20,17 @@ const ExtraMargin = styled.div`
     margin-top: -15px;
   }
 `
-
 const SolutionsContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 `
+
+const imageStyle = {
+  objectFit: 'contain',
+  fontFamily: 'object-fit: contain;',
+  height: '100%'
+}
 
 class Solutions extends Component {
   render() {
@@ -69,6 +74,7 @@ class Solutions extends Component {
                 <Img
                   alt="Augmented Reality"
                   fluid={data.AugmentedRealityImage1.childImageSharp.fluid}
+                  style={imageStyle}
                 />
               </Capability>
             </ExtraMargin>
@@ -80,6 +86,7 @@ class Solutions extends Component {
               <Img
                   alt="Augmented Reality"
                   fluid={data.AugmentedRealityImage2.childImageSharp.fluid}
+                  style={imageStyle}
                 />
             </Capability>
             <Capability
@@ -91,12 +98,13 @@ class Solutions extends Component {
              <Img
                   alt="Augmented Reality"
                   fluid={data.AugmentedRealityImage3.childImageSharp.fluid}
+                  style={imageStyle}
                 />
             </Capability>
           </React.Fragment>
         </Section>
 
-        <Section backgroundColor={colors.white}>
+        <Section backgroundColor={colors.lightgrey}>
           <ContentWrapper>
             <SectionTop
               dark
@@ -105,23 +113,13 @@ class Solutions extends Component {
               Genom AR kan du få tydliga instruktioner i realtid för att hjälpa dig med olika problem som uppstår. Du kan få tillgång till detaljerad information som annars hade hämtats via Internet eller en manual. Du kan även få support via en extern part i realtid. Detta kan hjälpa både dig som privatperson som vill förenkla reparationer eller dig som arbetar med avancerad support.
             </SectionTop>
             <SolutionsContainer>
-              <ContentBlob width={360} small heading="AR för marknadsföring" text='Genom AR kan du visualisera information om ditt företag rakt framför ögonen på potentiella kunder utan att investera i hårdvara. Detta är ett steg i digitaliseringens framfart och hur framtiden kommer förändra sättet vi marknadsför oss.' />
-              <ContentBlob width={360} small heading="AR för upplärning" text='Genom att simulera de arbetsmiljöer som finns inom företaget kan upplärning ske vart som helst utan risk för att störa er process. AR-upplärning kan både minksa tid och kostnader för att utbilda ny arbetskraft.' />
-              <ContentBlob width={360} small heading="AR för modellvisualisering" text='AR möjliggör att kunna studera 3D-modeller i realtid för att få en inblick i hur en viss komponent eller maskin ser ut och fungerar. Det går även att interagera med objektet och välja särskilda delar du vill studera mer i detalj.' />
-              <ContentBlob width={360} small heading="AR för navigation" text='Istället för att översätta information från en GPS på en skärm till verkligheten kan navigationen ske rakt framför dina ögon. Genom AR-navigation behöver du inte fokusera på en GPS utan kan fullt ut koncentrera sig på att exempelvis köra bil eller cykla.' />
-              <ContentBlob width={360} small heading="AR och maskininlärning" text='Genom att kombinera AR och maskininlärning kan du få information i realtid. Information kommer inte längre behöva sökas upp via mobilen eller användarmanualer utan vara tillgänglig rakt framför dina ögon när du behöver den.' />
-              <ContentBlob width={360} small heading="AR för Internetförsäljning" text='När du köper artiklar via Internet finns det så mycket mer att se av produkten än bara bilder på en skärm. Genom AR kan du visualisera hur produkten ser ut i verklig form och storlek i den miljön du vill använda den i.' />
+              <ContentBlob left width={360} small heading="AR för upplärning" text='Genom att simulera de arbetsmiljöer som finns inom företaget kan upplärning ske vart som helst utan risk för att störa er process. AR-upplärning kan både minksa tid och kostnader för att utbilda ny arbetskraft.' />
+              <ContentBlob left width={360} small heading="AR för marknadsföring" text='Genom AR kan du visualisera information om ditt företag rakt framför ögonen på potentiella kunder utan att investera i hårdvara. Detta är ett steg i digitaliseringens framfart och hur framtiden kommer förändra sättet vi marknadsför oss.' />
+              <ContentBlob left width={360} small heading="AR för modellvisualisering" text='AR möjliggör att kunna studera 3D-modeller i realtid för att få en inblick i hur en viss komponent eller maskin ser ut och fungerar. Det går även att interagera med objektet och välja särskilda delar du vill studera mer i detalj.' />
+              <ContentBlob left width={360} small heading="AR för navigation" text='Istället för att översätta information från en GPS på en skärm till verkligheten kan navigationen ske rakt framför dina ögon. Genom AR-navigation behöver du inte fokusera på en GPS utan kan fullt ut koncentrera sig på att exempelvis köra bil eller cykla.' />
+              <ContentBlob left width={360} small heading="AR och maskininlärning" text='Genom att kombinera AR och maskininlärning kan du få information i realtid. Information kommer inte längre behöva sökas upp via mobilen eller användarmanualer utan vara tillgänglig rakt framför dina ögon när du behöver den.' />
+              <ContentBlob left width={360} small heading="AR för Internetförsäljning" text='När du köper artiklar via Internet finns det så mycket mer att se av produkten än bara bilder på en skärm. Genom AR kan du visualisera hur produkten ser ut i verklig form och storlek i den miljön du vill använda den i.' />
             </SolutionsContainer>
-          </ContentWrapper>
-        </Section>
-  
-        <Section backgroundColor={colors.lightgrey}>
-          <ContentWrapper>
-            <SectionTop
-              dark
-              header="Technology Capabilitie"
-            >Förklara vilka superheta teknoligier vi använder. Att vi alltid ligger i framkant. Fördelarn det ger för kund. Esse commodo veniam id officia. Aliqua incididunt voluptate in labore id ad magna
-            proident enim nostrud ex. Anim et excepteur nulla culpa enim.</SectionTop>
           </ContentWrapper>
         </Section>
   

@@ -138,7 +138,7 @@ class Index extends Component {
             <ServiceContainer>
               <ContentBlobCustom
                 heading="Realisera din idé"
-                text="Har du redan en idé inom Augmented Reality? Låt oss verkställa den tillsammans."
+                text="Har du redan en idé inom Augmented Reality? Har du en produkt du vill förverkliga? Låt oss verkställa den tillsammans."
                 buttonText="Vad vi erbjuder"
                 buttonLink='/Lösningar/'
               >
@@ -146,8 +146,7 @@ class Index extends Component {
               </ContentBlobCustom>
               <ContentBlobCustom
                 heading="Vi skapar en idé tillsammans"
-                text="Är du osäker på hur Augmented Reality kan implementeras i just ditt företag? Låt oss utvärdera dina möjligheter och skapa en idé tillsammans.
-"
+                text="Är du osäker på hur Augmented Reality kan implementeras i just ditt företag? Låt oss utvärdera dina möjligheter och skapa en idé tillsammans."
                 buttonText='Läs mer'
                 buttonLink='/Lösningar/'
               >
