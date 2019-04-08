@@ -60,10 +60,10 @@ function vh(v) {
 const SectionTop = ({ header, children, buttonText = '', dark, bottomText, ...props }) => (
   <Container {...props}>
     <React.Fragment>
-      <Header text={header} styles={{ color: dark ? colors.dark : colors.white }} />
-      {children && <SubHeader style={{ color: dark ? colors.dark : colors.mediumGrey, fontStyle: 'italic' }}>{children}</SubHeader>}
-      {buttonText && <Link to='/contact/#contact-form'><Button secondary>Starta ett projekt</Button></Link>}
-      {bottomText && <ReadMore onClick={() => scroll.scrollTo(vh(82))}>
+      <Header text={header} styles={{ color: dark ? colors.dark : colors.white, zIndex: 10 }} />
+      {children && <SubHeader style={{ color: dark ? colors.dark : colors.mediumGrey, fontStyle: 'italic', zIndex: 10 }}>{children}</SubHeader>}
+      {buttonText && <Link to='/contact/#contact-form'><Button style={{zIndex: 10}} secondary>Starta ett projekt</Button></Link>}
+      {bottomText && <ReadMore style={{zIndex: 10}} onClick={() => scroll.scrollTo(vh(82))}>
         {bottomText}
       </ReadMore>}
     </React.Fragment>

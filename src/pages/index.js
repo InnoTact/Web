@@ -14,11 +14,13 @@ import Hero from "../components/Hero"
 import GetStarted from "../components/GetStarted"
 import { graphql } from "gatsby"
 import { FaCubes, FaCreativeCommonsShare } from "react-icons/fa"
-import {Helmet} from "react-helmet";
-import ClickMe from '../components/ClickMe'
-import Text from '../components/Text'
-import Anchor from "../components/Anchor";
-import SubHeading from "../components/SubHeading";
+import { Helmet } from "react-helmet"
+import ClickMe from "../components/ClickMe"
+import Text from "../components/Text"
+import Anchor from "../components/Anchor"
+import SubHeading from "../components/SubHeading"
+import Img from "gatsby-image"
+import BackgroundImage from '../components/BackgroundImage'
 
 const ServiceContainer = styled.div`
   display: flex;
@@ -37,7 +39,7 @@ const ContentBlobCustom = styled(ContentBlob)`
   max-width: 47%;
 
   @media (max-width: ${styles.breakpoints.lg + "px"}) {
-    max-width: 45%
+    max-width: 45%;
   }
 
   @media (max-width: ${styles.breakpoints.md + "px"}) {
@@ -82,7 +84,7 @@ const FactItem = styled.div`
 `
 
 const QuoteSection = styled(Section)`
-   @media (max-width: ${styles.breakpoints.md + "px"}) {
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
     display: none;
   }
 `
@@ -105,6 +107,12 @@ const QuoteName = styled(Anchor)`
   display: block;
 `
 
+const imageStyle = {
+  objectFit: 'contain',
+  fontFamily: 'object-fit: contain;',
+  height: '100%'
+}
+
 class Index extends Component {
   render() {
     const { data } = this.props
@@ -112,43 +120,52 @@ class Index extends Component {
     return (
       <React.Fragment>
         <Helmet>
-          <meta name="description" content="InnoTact website. We build amazing Augmented Reality (AR) experiences and mobile applications"/>
+          <meta
+            name="description"
+            content="InnoTact website. We build amazing Augmented Reality (AR) experiences and mobile applications"
+          />
         </Helmet>
 
         <Navbar />
 
-        <Hero>
-          <ContentWrapper> 
-            <SectionTop
-              light
-              header="Vi utvecklar Augmented Reality-applikationer
-"
-              buttonText="STARTA ETT PROJEKT"
-              bottomText='Läs mer'
-            >Vi tar ditt företag till nästa nivå genom att implementera innovativa lösningar baserade på Augmented Reality.</SectionTop>
-          </ContentWrapper>
+        <Hero
+          header="Vi utvecklar Augmented Reality-applikationer"
+          subHeader="Vi tar ditt företag till nästa nivå genom att implementera innovativa lösningar baserade på Augmented Reality."
+          buttonText="STARTA ETT PROJEKT"
+          bottomText="Läs mer"
+        >
+          <BackgroundImage
+                  alt="Augmented Reality"
+                  fluid={data.HeroBackgroundImage.childImageSharp.fluid}
+                  fit='contain'
+                  height='100%'
+                  width='100%'
+                  style={{bottom: 0, right: 0, position: 'absolute'}}
+                />
         </Hero>
 
         <Section backgroundColor={colors.white}>
           <ContentWrapper>
-            <SectionTop
-              dark
-              header={`Starta projekt`}   
-              >Vårt team, som består av motiverade och drivna utvecklare, strävar alltid efter att hjälpa ditt företag till nästa nivå.  Vi arbetar med nära kundrelationer för att garantera att vi uppyller alla dina behov. </SectionTop>
+            <SectionTop dark header={`Starta projekt`}>
+              Vårt team, som består av motiverade och drivna utvecklare, strävar
+              alltid efter att hjälpa ditt företag till nästa nivå. Vi arbetar
+              med nära kundrelationer för att garantera att vi uppyller alla
+              dina behov.{" "}
+            </SectionTop>
             <ServiceContainer>
               <ContentBlobCustom
                 heading="Realisera din idé"
                 text="Har du redan en idé inom Augmented Reality? Har du en produkt du vill förverkliga? Låt oss verkställa den tillsammans."
                 buttonText="Vad vi erbjuder"
-                buttonLink='/Lösningar/'
+                buttonLink="/Lösningar/"
               >
                 <FaCubes style={styles.icon} />
               </ContentBlobCustom>
               <ContentBlobCustom
                 heading="Vi skapar en idé tillsammans"
                 text="Är du osäker på hur Augmented Reality kan implementeras i just ditt företag? Låt oss utvärdera dina möjligheter och skapa en idé tillsammans."
-                buttonText='Läs mer'
-                buttonLink='/Lösningar/'
+                buttonText="Läs mer"
+                buttonLink="/Lösningar/"
               >
                 <FaCreativeCommonsShare style={styles.icon} />
               </ContentBlobCustom>
@@ -156,49 +173,110 @@ class Index extends Component {
           </ContentWrapper>
         </Section>
 
-        <Section style={{paddingBottom: 0, paddingTop: 0}} backgroundColor={colors.lightgrey}>
-            <FactContainer>
-              <FactItem style={{backgroundColor: colors.lightgrey}}>
-                <Text style={{marginBottom: '0.7rem', textAlign: 'center'}} dark>Augmented Reality revenue is expected to hit $120 billion by 2020</Text>
-                <Anchor small italic dark target="_blank" href="https://www.digi-capital.com/news/2016/01/augmentedvirtual-reality-revenue-forecast-revised-to-hit-120-billion-by-2020/">Digi-Capital</Anchor>
-              </FactItem>
-              <FactItem style={{backgroundColor: colors.lightdarkerGrey}}>
-                <Text style={{marginBottom: '0.7rem', textAlign: 'center'}} dark>60% to 70% of consumers see clear benefits in using AR and IoT devices in their daily life and at work</Text>
-                <Anchor small italic dark target="_blank" href="http://www.isaca.org/About-ISACA/Press-room/News-Releases/2016/Pages/2016-IT-RRB-News-Release-US.aspx">Isaca</Anchor>
-              </FactItem>
-              <FactItem style={{backgroundColor: colors.mediumGrey}}>
-                <Text style={{marginBottom: '0.7rem', textAlign: 'center'}} dark>Augmented Reality headsets will have an estimated 1 Billion users by 2020.</Text>
-                <Anchor small italic dark target="_blank" href="https://www.statista.com/topics/3286/augmented-reality-ar/">Statista</Anchor>
-              </FactItem>
-            </FactContainer>
+        <Section
+          style={{ paddingBottom: 0, paddingTop: 0 }}
+          backgroundColor={colors.lightgrey}
+        >
+          <FactContainer>
+            <FactItem style={{ backgroundColor: colors.lightgrey }}>
+              <Text
+                style={{ marginBottom: "0.7rem", textAlign: "center" }}
+                dark
+              >
+                Augmented Reality revenue is expected to hit $120 billion by
+                2020
+              </Text>
+              <Anchor
+                small
+                italic
+                dark
+                target="_blank"
+                href="https://www.digi-capital.com/news/2016/01/augmentedvirtual-reality-revenue-forecast-revised-to-hit-120-billion-by-2020/"
+              >
+                Digi-Capital
+              </Anchor>
+            </FactItem>
+            <FactItem style={{ backgroundColor: colors.lightdarkerGrey }}>
+              <Text
+                style={{ marginBottom: "0.7rem", textAlign: "center" }}
+                dark
+              >
+                60% to 70% of consumers see clear benefits in using AR and IoT
+                devices in their daily life and at work
+              </Text>
+              <Anchor
+                small
+                italic
+                dark
+                target="_blank"
+                href="http://www.isaca.org/About-ISACA/Press-room/News-Releases/2016/Pages/2016-IT-RRB-News-Release-US.aspx"
+              >
+                Isaca
+              </Anchor>
+            </FactItem>
+            <FactItem style={{ backgroundColor: colors.mediumGrey }}>
+              <Text
+                style={{ marginBottom: "0.7rem", textAlign: "center" }}
+                dark
+              >
+                Augmented Reality headsets will have an estimated 1 Billion
+                users by 2020.
+              </Text>
+              <Anchor
+                small
+                italic
+                dark
+                target="_blank"
+                href="https://www.statista.com/topics/3286/augmented-reality-ar/"
+              >
+                Statista
+              </Anchor>
+            </FactItem>
+          </FactContainer>
         </Section>
 
-        <QuoteSection style={{paddingBottom: 0, paddingTop: 0}} backgroundColor={colors.lightgrey}>
+        <QuoteSection
+          style={{ paddingBottom: 0, paddingTop: 0 }}
+          backgroundColor={colors.lightgrey}
+        >
           <ContentWrapper>
             <QuoteContainer>
               <Quote dark>
-                "I do think that a significant portion of the population of developed countries, and eventually all countries, will have AR experiences every day, almost like eating three meals a day, it will become that much a part of you."
+                "I do think that a significant portion of the population of
+                developed countries, and eventually all countries, will have AR
+                experiences every day, almost like eating three meals a day, it
+                will become that much a part of you."
               </Quote>
-              <QuoteName target="_blank" href="https://nordic.businessinsider.com/apple-ceo-tim-cook-explains-augmented-reality-2016-10?r=US&IR=T" 
-              center dark>Tim Cook CEO Apple</QuoteName>
+              <QuoteName
+                target="_blank"
+                href="https://nordic.businessinsider.com/apple-ceo-tim-cook-explains-augmented-reality-2016-10?r=US&IR=T"
+                center
+                dark
+              >
+                Tim Cook CEO Apple
+              </QuoteName>
             </QuoteContainer>
-            </ContentWrapper>
+          </ContentWrapper>
         </QuoteSection>
 
         <People peopleImagesData={data} />
 
         <Section backgroundColor={colors.lightgrey}>
           <ContentWrapper>
-            <SectionTop   
-              dark
-              header={`Hur vi realiserar din idé`}
-            >
-              Vår metodik för att maximera nytta och uppfylla dina behov delas in i följande sex steg.
+            <SectionTop dark header={`Hur vi realiserar din idé`}>
+              Vår metodik för att maximera nytta och uppfylla dina behov delas
+              in i följande sex steg.
             </SectionTop>
             <StepsWrapper>
               <TextCard
                 header="Vi bokar ett möte."
-                text={[`Tryck `, <ClickMe italic url='/contact/'>här</ClickMe> , ' för att boka ett möte där vi kan diskutera dina behov och möjligheter.']}
+                text={[
+                  `Tryck `,
+                  <ClickMe italic url="/contact/">
+                    här
+                  </ClickMe>,
+                  " för att boka ett möte där vi kan diskutera dina behov och möjligheter.",
+                ]}
                 number={"1"}
                 dark
               />
@@ -278,6 +356,13 @@ export const pageQuery = graphql`
       childImageSharp {
         fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    HeroBackgroundImage: file(relativePath: { eq: "augmented-reality1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
