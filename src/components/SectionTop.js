@@ -48,7 +48,7 @@ const ReadMore = styled(Text)`
     cursor: pointer;
     color: white;
     transition: all ease-in-out 300ms;
-    transform: translateY(-5px);
+    transform: translateY(5px);
   }
 `
 
@@ -57,13 +57,13 @@ function vh(v) {
   return (v * h) / 100;
 }
 
-const SectionTop = ({ header, children, buttonText = '', dark, bottomText, ...props }) => (
+const SectionTop = ({ header, children, buttonText = '', dark, bottomText, zIndexHigh, ...props }) => (
   <Container {...props}>
     <React.Fragment>
-      <Header text={header} styles={{ color: dark ? colors.dark : colors.white, zIndex: 10 }} />
-      {children && <SubHeader style={{ color: dark ? colors.dark : colors.mediumGrey, fontStyle: 'italic', zIndex: 10 }}>{children}</SubHeader>}
-      {buttonText && <Link to='/contact/#contact-form'><Button style={{zIndex: 10}} secondary>Starta ett projekt</Button></Link>}
-      {bottomText && <ReadMore style={{zIndex: 10}} onClick={() => scroll.scrollTo(vh(82))}>
+      <Header text={header} styles={{ color: dark ? colors.dark : colors.white, zIndex: zIndexHigh ? 1 : 'unset' }} />
+      {children && <SubHeader style={{ color: dark ? colors.dark : colors.mediumGrey, fontStyle: 'italic', zIndex: zIndexHigh ? 1 : 'unset' }}>{children}</SubHeader>}
+      {buttonText && <Link to='/contact/#contact-form'><Button style={{zIndex: zIndexHigh ? 1 : 'unset'}} secondary>Starta ett projekt</Button></Link>}
+      {bottomText && <ReadMore style={{zIndex: zIndexHigh ? 1 : 'unset'}} onClick={() => scroll.scrollTo(vh(82))}>
         {bottomText}
       </ReadMore>}
     </React.Fragment>

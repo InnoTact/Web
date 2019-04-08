@@ -15,6 +15,8 @@ import { navigateTo } from "gatsby-link"
 import styles from "../styles/styles"
 import SubHeader from "../components/SubHeader"
 import { FaMobileAlt } from "react-icons/fa"
+import { graphql } from "gatsby"
+import BackgroundImage from "../components/BackgroundImage"
 
 const ContactUsWrapper = styled.div`
   display: flex;
@@ -30,7 +32,7 @@ const ContactUsWrapper = styled.div`
 
 const CallContainer = styled.div`
   width: 30%;
-  
+
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
     order: 1;
     width: 100%;
@@ -108,19 +110,26 @@ class Contact extends Component {
     name: "",
     email: "",
     message: "",
+    emailValid: false
   }
 
   updateState = (type, event) => {
     const newState = { ...this.state }
     newState[type] = event.target.value
+    newState['emailValid'] = this.validateEmail(newState['email'])
 
-    if (newState.name && newState.email) {
+    if (newState.name && newState.email && newState.emailValid) {
       newState.formFilled = true
     } else {
       newState.formFilled = false
     }
 
     this.setState(newState)
+  }
+
+  validateEmail = (email) => {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
   }
 
   handleSubmit = e => {
@@ -130,28 +139,42 @@ class Contact extends Component {
   }
 
   render() {
-    const { formFilled } = this.state
+    const { formFilled, emailValid, email } = this.state
+    const { data } = this.props
+
+    let emailInputColor
+    if (email === '') {
+      emailInputColor = colors.mediumGrey
+    } else if (emailValid) {
+      emailInputColor = colors.green
+    } else {
+      emailInputColor = colors.red
+    }
 
     return (
       <React.Fragment>
         <Navbar />
 
-        <Hero>
-          <ContentWrapper>
-            <SectionTop
-              light
-              header="Kontakta oss"
-              bottomText="Kontakta oss"
-            >
-              När du vill komma i kontakt med oss kan ni antingen fylla i formuläret nedan eller nå oss via telefon. Vi är alltid beredda att diskutera dina behov och möjliga lösningar. 
-            </SectionTop>
-          </ContentWrapper>
+        <Hero
+          header="Kontakta oss"
+          subHeader="När du vill komma i kontakt med oss kan ni antingen fylla i formuläret nedan eller nå oss via telefon. Vi är alltid beredda att diskutera dina behov och möjliga lösningar."
+          bottomText="Kontakta oss"
+        >
+          <BackgroundImage
+            alt="Augmented Reality"
+            fluid={data.HeroBackgroundImage.childImageSharp.fluid}
+            fit="contain"
+            height="100%"
+            width="100%"
+            style={{ bottom: 0, right: 0, position: "absolute" }}
+          />
         </Hero>
 
         <Section id="contact-form" backgroundColor={colors.lightgrey}>
           <ContentWrapper>
             <SectionTop dark header={`Låt oss skapa något grymt tillsammans.`}>
-            Ring oss eller fyll i formuläret så att vi får en större förståelse för dina behov.
+              Ring oss eller fyll i formuläret så att vi får en större
+              förståelse för dina behov.
             </SectionTop>
             <ContactUsWrapper>
               <ContactFormContainer>
@@ -163,7 +186,7 @@ class Contact extends Component {
                     name="contact"
                     method="POST"
                     data-netlify="true"
-                    style={{marginTop: -45}}
+                    style={{ marginTop: -45 }}
                   >
                     <ContactItem>
                       <ContactText dark>Vad heter du?*</ContactText>
@@ -180,8 +203,8 @@ class Contact extends Component {
                         Vad är din email-address?*
                       </ContactText>
                       <Input
+                        style={{ borderColor: emailInputColor }}
                         placeholder="dinmail@gmail.com"
-
                         required
                         type="email"
                         name="email"
@@ -189,11 +212,9 @@ class Contact extends Component {
                       />
                     </ContactItem>
                     <ContactItem>
-                      <ContactText dark>
-                        Berätta om din idé*
-                      </ContactText>
+                      <ContactText dark>Berätta om din idé*</ContactText>
                       <TextArea
-                        as='textarea'
+                        as="textarea"
                         placeholder={`Vad vill du skapa? Vad är din idé? När ska det vara klart?`}
                         name="message"
                         disabled={!formFilled}
@@ -214,10 +235,17 @@ class Contact extends Component {
                   <SubHeader dark>Ring oss</SubHeader>
                   <CallUsContent>
                     <CenterContainer>
-                      <FaMobileAlt style={{fontSize: 30, color: colors.primary}} />
+                      <FaMobileAlt
+                        style={{ fontSize: 30, color: colors.dark }}
+                      />
                     </CenterContainer>
                     <CenterContainer>
-                      <Anchor style={{marginLeft: 10}} href="tel:+46737303797">+46737303797</Anchor>
+                      <Anchor
+                        style={{ marginLeft: 10 }}
+                        href="tel:+46737303797"
+                      >
+                        +46737303797
+                      </Anchor>
                     </CenterContainer>
                   </CallUsContent>
                 </Card>
@@ -231,5 +259,17 @@ class Contact extends Component {
     )
   }
 }
+
+export const pageQuery = graphql`
+  query {
+    HeroBackgroundImage: file(relativePath: { eq: "development1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default Contact

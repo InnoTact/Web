@@ -34,16 +34,23 @@ class Solutions extends Component {
       <React.Fragment>
         <Navbar />
 
-        <Hero>
-          <ContentWrapper>
-            <SectionTop light header="Våra lösningar" bottomText="Läs mer">
-              En av våra största styrkor är att snabbt kunna anpassa oss till
-              nya utmaningar och ny teknologi. Därför kan vi skapa lösningar
-              till dig oavsett om du vill använda Android, iOS eller
-              AR-glasögon. Våra produkter skapas alltid med framtiden i åtanke
-              och underhåll är en stor del av det vi gör.
-            </SectionTop>
-          </ContentWrapper>
+        <Hero
+          header="Våra lösningar"
+          subHeader="En av våra största styrkor är att snabbt kunna anpassa oss till
+          nya utmaningar och ny teknologi. Därför kan vi skapa lösningar
+          till dig oavsett om du vill använda Android, iOS eller
+          AR-glasögon. Våra produkter skapas alltid med framtiden i åtanke
+          och underhåll är en stor del av det vi gör."
+          bottomText="Läs mer"
+        >
+          <BackgroundImage
+            alt="Augmented Reality"
+            fluid={data.HeroBackgroundImage.childImageSharp.fluid}
+            fit="contain"
+            height="100%"
+            width="100%"
+            style={{ bottom: 0, right: 0, position: "absolute" }}
+          />
         </Hero>
 
         <Section
@@ -207,6 +214,13 @@ export const pageQuery = graphql`
       }
     }
     DevelopmentImage: file(relativePath: { eq: "development.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    HeroBackgroundImage: file(relativePath: { eq: "development1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid

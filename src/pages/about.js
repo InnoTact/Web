@@ -14,6 +14,7 @@ import People from "../components/People"
 import GetStarted from "../components/GetStarted"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import BackgroundImage from "../components/BackgroundImage"
 
 const BlobContainer = styled.div`
   display: flex;
@@ -31,7 +32,7 @@ const BlobContainer = styled.div`
 const ContentBlobCustom = styled(ContentBlob)`
   width: 350px;
   margin: 0 2rem 0 0;
-  
+
   @media (max-width: ${styles.breakpoints.lg + "px"}) {
     width: 320px;
   }
@@ -49,15 +50,23 @@ class About extends Component {
       <React.Fragment>
         <Navbar />
 
-        <Hero>
-          <ContentWrapper>
-            <SectionTop
-              light
-              header="Företaget"
-              bottomText="Läs mer"
-            > TheSpark består av ett team högpresterande ingenjörsstudenter från Chalmers Tekniska Högskola, i Göteborg. Vår högsta prioritet är alltid att göra våra kunder nöjda. Vi älskar att skapa idéer tillsammans med våra kunder för att förbättra och förenkla processerna i deras företag.
-            </SectionTop>
-          </ContentWrapper>
+        <Hero
+          header="Företaget"
+          subHeader="The Spark består av ett team högpresterande ingenjörsstudenter från
+          Chalmers Tekniska Högskola, i Göteborg. Vår högsta prioritet är
+          alltid att göra våra kunder nöjda. Vi älskar att skapa idéer
+          tillsammans med våra kunder för att förbättra och förenkla
+          processerna i deras företag."
+          bottomText="Läs mer"
+        >
+          <BackgroundImage
+            alt="Augmented Reality"
+            fluid={data.HeroBackgroundImage.childImageSharp.fluid}
+            fit="contain"
+            height="100%"
+            width="100%"
+            style={{ bottom: 0, right: 0, position: "absolute" }}
+          />
         </Hero>
 
         <Section backgroundColor={colors.lightgrey}>
@@ -138,6 +147,13 @@ export const pageQuery = graphql`
       childImageSharp {
         fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    HeroBackgroundImage: file(relativePath: { eq: "development1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

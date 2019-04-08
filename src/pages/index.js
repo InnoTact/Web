@@ -19,7 +19,6 @@ import ClickMe from "../components/ClickMe"
 import Text from "../components/Text"
 import Anchor from "../components/Anchor"
 import SubHeading from "../components/SubHeading"
-import Img from "gatsby-image"
 import BackgroundImage from '../components/BackgroundImage'
 
 const ServiceContainer = styled.div`
@@ -163,7 +162,7 @@ class Index extends Component {
               </ContentBlobCustom>
               <ContentBlobCustom
                 heading="Vi skapar en idé tillsammans"
-                text="Är du osäker på hur Augmented Reality kan implementeras i just ditt företag? Låt oss utvärdera dina möjligheter och skapa en idé tillsammans."
+                text="Är du osäker på hur Augmented Reality kan implementeras i ditt företag? Låt oss utvärdera dina möjligheter tillsammans."
                 buttonText="Läs mer"
                 buttonLink="/Lösningar/"
               >
@@ -359,7 +358,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    HeroBackgroundImage: file(relativePath: { eq: "augmented-reality1.jpg" }) {
+    HeroBackgroundImage: file(relativePath: { eq: "development1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid

@@ -59,7 +59,7 @@ const SocialLogo = styled.a`
   width: 43px;
   height: 43px;
   border-radius: 50%;
-  border: 2px solid ${colors.primary};
+  border: 2px solid ${colors.primaryLowLighten};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +67,7 @@ const SocialLogo = styled.a`
   margin-left: 5px;
 
   :hover {
-    border-color: ${colors.primaryLowLighten};
+    border-color: ${colors.primary};
     transition: all ease-in-out 0.2s;
   }
 `
@@ -86,7 +86,7 @@ const PeopleCard = ({ name, image, position, town, text, email, linkedin }) => {
       <Position>{position}</Position>
       <LocationContainer>
         <FaMapMarker
-          style={{ fontSize: "1rem", marginRight: 12, color: colors.primary }}
+          style={{ fontSize: "1rem", marginRight: 12, color: colors.dark }}
         />
         <Text style={{ margin: 0 }} dark>
           {town}
@@ -97,10 +97,10 @@ const PeopleCard = ({ name, image, position, town, text, email, linkedin }) => {
       </Text>
       <LogosContainer>
         <SocialLogo href={`mailto:${email}`}>
-          <FaEnvelope style={{ fontSize: 25, color: colors.primary }} />
+          <FaEnvelope style={{ fontSize: 20, color: colors.primary }} />
         </SocialLogo>
         <SocialLogo href={linkedin}>
-          <FaLinkedin style={{ fontSize: 25, color: colors.primary }} />
+          <FaLinkedin style={{ fontSize: 20, color: colors.primary }} />
         </SocialLogo>
       </LogosContainer>
       <ColorFadeSection

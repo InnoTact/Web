@@ -53,7 +53,7 @@ const NavLink = styled.div`
   font-size: 1rem;
 
   :hover {
-    color: ${({ dark }) => (dark ? colors.mediumGreyLighten : colors.primaryLowLighten)};
+    color: ${({ dark }) => (dark ? colors.mediumGreyLighten : colors.white)};
     transition: all ease-in-out 0.2s;
   }
 
