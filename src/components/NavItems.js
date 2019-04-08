@@ -101,21 +101,21 @@ class NavItems extends Component {
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/solutions/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/lösningar/">
             <NavLink open={open} {...props}>
               Lösningar
             </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/about/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/om-oss/">
             <NavLink open={open} {...props}>
               Om oss
             </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/contact/">
+          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/kontakt/">
             <NavLink open={open} {...props}>
               Kontakt
             </NavLink>

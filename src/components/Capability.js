@@ -78,7 +78,7 @@ class Capability extends Component {
           <Text dark>{text}</Text>
           </Item>
           <Item>
-          <Link to="/contact/#contact-form">
+          <Link to="/kontakt/#contact-form">
             <Button primary>{buttonText}</Button>
           </Link>
           </Item>

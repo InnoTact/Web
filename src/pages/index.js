@@ -271,7 +271,7 @@ class Index extends Component {
                 header="Vi bokar ett möte."
                 text={[
                   `Tryck `,
-                  <ClickMe italic url="/contact/">
+                  <ClickMe italic url="/kontakt/">
                     här
                   </ClickMe>,
                   " för att boka ett möte där vi kan diskutera dina behov och möjligheter.",

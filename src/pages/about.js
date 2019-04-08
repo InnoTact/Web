@@ -150,7 +150,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    HeroBackgroundImage: file(relativePath: { eq: "development1.jpg" }) {
+    HeroBackgroundImage: file(relativePath: { eq: "development7.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid

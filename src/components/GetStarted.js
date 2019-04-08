@@ -12,7 +12,7 @@ export default () =>
     <ContentWrapper>
     <SectionTop dark header={`Redo för att sätta igång?`}>Vi är här för att hjälpa dig. Klicka på knappen nedan för att nå oss. Tillsammans gör vi din idé till verklighet.</SectionTop>
     <CenterContainer>
-        <Link to='/contact/#contact-form'>
+        <Link to='/kontakt/#contact-form'>
             <Button style={{marginTop: 25}} primary>Starta projekt</Button>
         </Link>
     </CenterContainer>

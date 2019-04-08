@@ -280,7 +280,7 @@ class Contact extends Component {
 
 export const pageQuery = graphql`
   query {
-    HeroBackgroundImage: file(relativePath: { eq: "development1.jpg" }) {
+    HeroBackgroundImage: file(relativePath: { eq: "development9.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
