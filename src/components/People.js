@@ -21,8 +21,10 @@ export default ({ peopleImagesData }) => {
       <ContentWrapper>
         <SectionTop
           dark
-          header="The Team"
-        >Meet the team that consits of a group of close friens with years of experience of working together.  </SectionTop>
+          header="Teamet"
+        >
+        Möt teamet som består av ett gäng nära vänner med flera års erfarenhet av att jobba tillsammans.
+          </SectionTop>
         
         <PeopleContainer>
           <PeopleCard
@@ -32,12 +34,9 @@ export default ({ peopleImagesData }) => {
                 ? peopleImagesData.NiklasImage.childImageSharp.fixed
                 : ""
             }
-            position="CEO &amp; Developer"
-            town="Göteborg, Sweden"
-            text="Being the CEO of the company Niklas makes sure we will reach our goal of being the best AR company in the country. As an
-            Industrial engineering student he is an expert in business strategy and marketing. He is responsible for contact with our
-            customers and that our team is always feeling good. If there are any questions about our business or customers, Niklas is 
-            the man to ask. "
+            position="Grundare &amp; VD "
+            town="Göteborg, Sverige"
+            text="Som bolagets VD ser Niklas till att vi når vårt mål om att bli det bästa AR-företaget i landet. Då han studerar industriell ekonomi är han expert inom företagsstrategi och kundrelationer. Han ansvarar för att teamet alltid mår bra och presterar på toppen av sin förmåga. Vid frågor om företagets strategi och kunder är Niklas rätt person att fråga."
             email="niklas@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/niklas-gustafsson-93025a12a/"
           />
@@ -47,12 +46,9 @@ export default ({ peopleImagesData }) => {
                 peopleImagesData
                   ? peopleImagesData.JoelImage.childImageSharp.fixed
                   : ""
-              }            position="Co-Founder &amp; Developer"
-            town="Göteborg, Sweden"
-            text="Since Joel is our project manager he is often in close contact with our customers. He is responsible for keeping our
-        customers satisfied, which he seems to accomplish every single time. After a year of software engineering studies in the US
-        Joel in now studying the same subject in Chalmers. If there are any questions about specific projects or our coding, Joel is
-        the man to ask. "
+              }            position="Grundare &amp; Utvecklare"
+            town="Göteborg, Sverige"
+            text="Som projektledare är Joel ofta i nära kontakt med våra kunder. Han ansvarar för att kunderna är nöjda med produkterna vi skapar, vilket han verkar lyckas med varje gång. Efter att ha studerat Software Engineering i USA under ett år håller Joel nu till på IT-programmet på Chalmers. Vid frågor om specifika projekt är Joel rätt person att fråga."
             email="joel@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/joel-rudsberg/"
           />
@@ -62,11 +58,9 @@ export default ({ peopleImagesData }) => {
                 peopleImagesData
                   ? peopleImagesData.AntonImage.childImageSharp.fixed
                   : ""
-              }            position="Co-Founder &amp; Developer"
-            town="Mölnlycke, Sweden"
-            text={`Anton's artistic mind makes him the perfect man to be responsible for our design and users experience. Anton makes
-        sure our products always are aesthetic and easy to use. Anton is now studying automation and mechatronics. If there are any questions about the user 
-        experience or visuals of our products, Anton is the man to ask. `}
+              }            position="Grundare &amp; Utvecklare"
+            town="Mölnlycke, Sverige"
+            text={`Antons öga för design gör honom i högsta grad lämplig för att ansvara för våra produkters utseende. Anton ser till att det vi utvecklar alltid är snyggt och enkelt att förstå och använda. Anton pluggar just nu automation och mekatronik på Chalmers. Vid frågor om våra produkters användarupplevelse eller design är Anton rätt person att fråga.`}
             email="anton@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/anton-claesson/"
           />
@@ -76,11 +70,9 @@ export default ({ peopleImagesData }) => {
                 peopleImagesData
                   ? peopleImagesData.CasperImage.childImageSharp.fixed
                   : ""
-              }            position="Co-Founder, CTO &amp; Developer"
-            town="Göteborg, Sweden"
-            text="Being the CTO of the company, Casper is charge of our technical strategy. As a skilled programmer and Electrical engineering student, Casper is
-        an expert at adapting to and learning new technologies. To make sure that the right tools and technologies are used efficienctly in our company, Casper
-        is in responsible of our work structure. If there are any questions about new technologies or our work structure, Casper is the man to ask."
+              }            position="Grundare, CTO &amp; utvecklare"
+            town="Göteborg, Sverige"
+            text="Som företagets CTO ansvarar Casper för företagets tekniska strategi. Som erfaren programmerare och blivande elektroingenjör är Casper expert på att snabbt lära sig och anpassa sig till nya teknologier. Casper ser till att vårt arbetssätt är effektivt och anpassat till de senaste teknologierna. Vid tekniska frågor är Casper rätt person att fråga."
             email="casper@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/casperlindberg1997/"
           />
@@ -90,11 +82,9 @@ export default ({ peopleImagesData }) => {
                 peopleImagesData
                   ? peopleImagesData.CarlImage.childImageSharp.fixed
                   : ""
-              }            position="Co-Founder, CFO &amp; Developer"
-            town="Mölnlycke, Sweden"
-            text="Besides being our CFO Carl provides a lot of structure to the company. As a physics student Carl knows the importance of
-        hard work and dedication. He makes sure all of us stays on top of our game at every given moment. If there are any questions 
-        about our financials or work scheduling, Carl is the man to ask. "
+              }            position="Grundare, CFO &amp; utvecklare"
+            town="Mölnlycke, Sverige"
+            text="Förutom att vara företagets CFO bidrar Carl med mycket struktur till företaget. Som teknisk fysikstudent vet Carl betydelsen av hårt jobb och dedikation. Något som han sprider till alla i teamet. Han ser till att alla presterar sitt yttersta vid varje given tidpunkt. Vid frågor om vår ekonomi eller arbetskapacitet är Carl rätt person att fråga. "
             email="carl@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/carl-claesson-29145a16a/"
           />

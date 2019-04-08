@@ -8,7 +8,7 @@ import ContentBlob from "./../components/ContentBlob"
 import colors from "../styles/colors"
 import Footer from "../components/Footer"
 import Hero from "../components/Hero"
-import { FaCubes } from "react-icons/fa"
+import { FaFire, FaExpandArrowsAlt, FaUsers } from "react-icons/fa"
 import styles from "../styles/styles"
 import People from "../components/People"
 import GetStarted from "../components/GetStarted"
@@ -19,11 +19,25 @@ const BlobContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 5rem;
 
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
     flex-direction: column;
     justify-content: space-around;
+  }
+`
+
+const ContentBlobCustom = styled(ContentBlob)`
+  width: 350px;
+  margin: 0 2rem 0 0;
+  
+  @media (max-width: ${styles.breakpoints.lg + "px"}) {
+    width: 320px;
+  }
+
+  @media (max-width: ${styles.breakpoints.lg + "px"}) {
+    width: unset;
   }
 `
 
@@ -39,9 +53,9 @@ class About extends Component {
           <ContentWrapper>
             <SectionTop
               light
-              header="The Company"
-              bottomText="Read More"
-            >InnoTact Software AB consists of a team of high-performance and dedicated engineers from Chalmers University of Technology, located in Gothenburg, Sweden. Our number one priority is always customer satisfaction. We love to create ideas together with our customers to improve and simplify their businesses. 
+              header="Företaget"
+              bottomText="Läs mer"
+            > TheSpark består av ett team högpresterande ingenjörsstudenter från Chalmers Tekniska Högskola, i Göteborg. Vår högsta prioritet är alltid att göra våra kunder nöjda. Vi älskar att skapa idéer tillsammans med våra kunder för att förbättra och förenkla processerna i deras företag.
             </SectionTop>
           </ContentWrapper>
         </Hero>
@@ -49,28 +63,28 @@ class About extends Component {
         <Section backgroundColor={colors.lightgrey}>
           <ContentWrapper>
             <Img
-              alt="Team photo of Innotact Software"
+              alt="Team photo of TheSpark"
               fluid={data.TeamImage.childImageSharp.fluid}
             />
             <BlobContainer>
-              <ContentBlob
-                heading="Trait i teamet 1"
-                text="Ullamco dolore labore fugiat sit qui. Tempor amet ullamco laborum ullamco elit est cillum ullamco anim ut. Occaecat culpa sint esse ea tempor irure eu eiusmod."
+              <ContentBlobCustom
+                heading="Ungdomligt driv"
+                text="Vår unga ålder, som av vissa kan ses som en svaghet, är en av våra största styrkor. Vi har ett driv och en gnista som inte finns hos många andra företag. Välj oss för att få en partner som kommer göra allt för att göra dig nöjd."
               >
-                <FaCubes style={styles.icon} />
-              </ContentBlob>
-              <ContentBlob
-                heading="Trait i teamet 2"
-                text="Ullamco dolore labore fugiat sit qui. Tempor amet ullamco laborum ullamco elit est cillum ullamco anim ut. Occaecat culpa sint esse ea tempor irure eu eiusmod."
+                <FaFire style={styles.icon} />
+              </ContentBlobCustom>
+              <ContentBlobCustom
+                heading="Flexibilitet"
+                text="Gällande anpassning till nya tekniker, arbetstider och krav från kunder är flexibiliteten genomlysande i TheSpark. Vi gör vad som krävs för att uppnå våra mål."
               >
-                <FaCubes style={styles.icon} />
-              </ContentBlob>
-              <ContentBlob
-                heading="Trait i teamet 3"
-                text="Ullamco dolore labore fugiat sit qui. Tempor amet ullamco laborum ullamco elit est cillum ullamco anim ut. Occaecat culpa sint esse ea tempor irure eu eiusmod."
+                <FaExpandArrowsAlt style={styles.icon} />
+              </ContentBlobCustom>
+              <ContentBlobCustom
+                heading="Vårat team"
+                text="Vi tror på ett team-baserat arbetssätt. Som ett team kommer vi kunna producera mycket mer än summan av vad vi hade producerat som enskillda individer."
               >
-                <FaCubes style={styles.icon} />
-              </ContentBlob>
+                <FaUsers style={styles.icon} />
+              </ContentBlobCustom>
             </BlobContainer>
           </ContentWrapper>
         </Section>

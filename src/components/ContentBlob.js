@@ -9,30 +9,24 @@ import PropTypes from 'prop-types';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: ${({ left }) => left ? 'flex-start' : 'center'};
   max-width: 550px;
   width: ${({width}) => width ? width + 'px' : 'unset'};
   margin: 2rem auto 0 auto;
   text-align: center;
 `
 
-const Item = styled.div`
+const Heading = styled(SubHeading)`
+  white-space: nowrap;
 `
 
-const ContentBlob = ({ children, heading, text, small = false, width, buttonText, buttonLink, ...props }) => (
-  <Wrapper {...props} width={width}>
-    <Item>
+const ContentBlob = ({ className, left, children, heading, text, small = false, width, buttonText, buttonLink, ...props }) => (
+  <Wrapper className={className} {...props} left={left} width={width}>
       {children}
-    </Item>
-    <Item>
-      <SubHeading small={small} dark>{heading}</SubHeading>
-    </Item>
-    <Item>
-      <Text dark>{text}</Text>
-    </Item>
-    <Item>
-      {buttonText && <Link to={buttonLink}><Button primary>{buttonText}</Button></Link>}
-    </Item>
+      <Heading small={small} dark>{heading}</Heading>
+      <Text style={{textAlign: left ? 'left' : 'center'}} dark>{text}</Text>
+      {buttonText && <Link to={buttonLink}><Button style={{marginTop: 'auto'}} primary>{buttonText}</Button></Link>}
   </Wrapper>
 )
 

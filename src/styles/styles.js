@@ -5,7 +5,7 @@ const styles = {
         fontSize: '5rem', 
         color: colors.dark, 
         position: 'relative', 
-        bottom: -30
+        bottom: -35
     },
     breakpoints: {
         xs: 520,

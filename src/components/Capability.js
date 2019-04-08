@@ -14,13 +14,14 @@ const Container = styled.div`
 `
 
 const Header = styled(SubHeading)`
-  @media (min-width: ${styles.breakpoints.md + "px"}) and (max-width: ${styles.breakpoints.lg + "px"}) {
+  margin-bottom: -0.25rem;
+  @media (min-width: ${styles.breakpoints.md + "px"}) {
     margin-top: 0;
   }
 `
 
 const InfoContainer = styled.div`
-  padding: 1rem 4rem 4rem 4rem;
+  padding: 8rem 3rem 8rem 3rem;
   text-align: left;
   width: 50vw;
   margin-left: ${({ textLeft }) => (textLeft ? 0 : "50%")};
@@ -30,6 +31,14 @@ const InfoContainer = styled.div`
     padding: 0 0 4rem 0;
     margin-left: unset;
   }
+`
+
+const Wrapper = styled(ContentWrapper)`
+  max-width: 496px;
+`
+
+const Item = styled.div`
+  margin-bottom: 2rem;
 `
 
 const ImageContainer = styled.div`
@@ -61,13 +70,19 @@ class Capability extends Component {
 
     let info = (
       <InfoContainer {...props} textLeft={textLeft}>
-        <ContentWrapper>
+        <Wrapper>
+          <Item>
           <Header dark>{header}</Header>
+          </Item>
+          <Item>
           <Text dark>{text}</Text>
+          </Item>
+          <Item>
           <Link to="/contact/#contact-form">
             <Button primary>{buttonText}</Button>
           </Link>
-        </ContentWrapper>
+          </Item>
+        </Wrapper>
       </InfoContainer>
     )
 

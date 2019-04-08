@@ -23,6 +23,7 @@
     "gatsby-plugin-typography": "^2.2.8",
     "gatsby-source-filesystem": "^2.0.27",
     "gatsby-transformer-sharp": "^2.1.17",
+    "object-fit-images": "^3.2.4",
     "polished": "^3.0.3",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",

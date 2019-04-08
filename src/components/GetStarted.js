@@ -10,10 +10,10 @@ import { Link } from 'gatsby'
 export default () => 
 <Section backgroundColor={colors.white}>
     <ContentWrapper>
-    <SectionTop dark header={`Ready to Get Started?`}>We are here to help you. Press the button below to get in contact with us.<br/>Together we will make your ideas come true.</SectionTop>
+    <SectionTop dark header={`Redo för att sätta igång?`}>Vi är här för att hjälpa dig. Klicka på knappen nedan för att nå oss. Tillsammans gör vi din idé till verklighet.</SectionTop>
     <CenterContainer>
         <Link to='/contact/#contact-form'>
-            <Button style={{marginTop: 25}} primary>Start a project</Button>
+            <Button style={{marginTop: 25}} primary>Starta projekt</Button>
         </Link>
     </CenterContainer>
     </ContentWrapper>

@@ -5,12 +5,21 @@ import Text from "./Text"
 import colors from "../styles/colors"
 import ColorFadeSection from "./ColorFadeSection"
 import Card from "./Card"
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
+import styles from '../styles/styles'
 
 const Container = styled.div`
   position: relative;
   max-width: 740px;
   margin-top: 65px;
+`
+
+const CustomCard = styled(Card)`
+  width: 742px;
+   @media (max-width: ${styles.breakpoints.md + "px"}) {
+      width: unset;
+      min-width: 80%;
+  }
 `
 
 const Number = styled.div`
@@ -29,7 +38,7 @@ const Number = styled.div`
 
 const TextCard = ({ header, text, number, ...props }) => (
   <Container>
-    <Card {...props}>
+    <CustomCard {...props}>
       <React.Fragment>
         <SubHeader dark >{header}</SubHeader>
         <Text style={{marginBottom: 0}} dark>{text}</Text>
@@ -46,7 +55,7 @@ const TextCard = ({ header, text, number, ...props }) => (
           </Number>
         )}
       </React.Fragment>
-    </Card>
+    </CustomCard>
   </Container>
 )
 
