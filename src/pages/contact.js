@@ -110,15 +110,17 @@ class Contact extends Component {
     name: "",
     email: "",
     message: "",
-    emailValid: false
+    emailValid: false,
+    nameValid: false
   }
 
   updateState = (type, event) => {
     const newState = { ...this.state }
     newState[type] = event.target.value
     newState['emailValid'] = this.validateEmail(newState['email'])
+    newState['nameValid'] = this.validateName(newState['name'])
 
-    if (newState.name && newState.email && newState.emailValid) {
+    if (newState.name && newState.email && newState.emailValid && newState.nameValid) {
       newState.formFilled = true
     } else {
       newState.formFilled = false
@@ -128,8 +130,13 @@ class Contact extends Component {
   }
 
   validateEmail = (email) => {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
+  }
+
+  validateName(name) {
+    const re = /^[a-ö ,.'-]+$/i
+    return re.test(String(name).toLowerCase());
   }
 
   handleSubmit = e => {
@@ -138,18 +145,27 @@ class Contact extends Component {
     navigateTo(form.getAttribute("action"))
   }
 
+  getBorderColor = (text, validCheck) => {
+    let borderColor
+    if (text === '') {
+      borderColor = colors.mediumGrey
+    } else if (validCheck) {
+      borderColor = colors.green
+    } else {
+      borderColor = colors.red
+    }
+    return borderColor
+  }
+
   render() {
-    const { formFilled, emailValid, email } = this.state
+    const { formFilled, emailValid, email, nameValid, name, message } = this.state
     const { data } = this.props
 
-    let emailInputColor
-    if (email === '') {
-      emailInputColor = colors.mediumGrey
-    } else if (emailValid) {
-      emailInputColor = colors.green
-    } else {
-      emailInputColor = colors.red
-    }
+    let emailBorderColor, nameBorderColor, messageBorderColor
+    emailBorderColor = this.getBorderColor(email, emailValid)
+    nameBorderColor = this.getBorderColor(name, nameValid)
+    messageBorderColor = this.getBorderColor(message, true)
+    console.log(message)
 
     return (
       <React.Fragment>
@@ -191,6 +207,7 @@ class Contact extends Component {
                     <ContactItem>
                       <ContactText dark>Vad heter du?*</ContactText>
                       <Input
+                        style={{ borderColor: nameBorderColor }}
                         placeholder="Ditt namn"
                         required
                         type="text"
@@ -203,7 +220,7 @@ class Contact extends Component {
                         Vad är din email-address?*
                       </ContactText>
                       <Input
-                        style={{ borderColor: emailInputColor }}
+                        style={{ borderColor: emailBorderColor }}
                         placeholder="dinmail@gmail.com"
                         required
                         type="email"
@@ -212,12 +229,13 @@ class Contact extends Component {
                       />
                     </ContactItem>
                     <ContactItem>
-                      <ContactText dark>Berätta om din idé*</ContactText>
+                      <ContactText dark>Berätta om din idé</ContactText>
                       <TextArea
+                        style={{ borderColor: messageBorderColor }}
                         as="textarea"
                         placeholder={`Vad vill du skapa? Vad är din idé? När ska det vara klart?`}
                         name="message"
-                        disabled={!formFilled}
+                        onChange={event => this.updateState("message", event)}
                       />
                     </ContactItem>
                     <ContactItem
