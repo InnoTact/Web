@@ -6,20 +6,28 @@ import ContentWrapper from "./../components/ContentWrapper"
 import colors from "../styles/colors"
 import Footer from "../components/Footer"
 import Hero from "../components/Hero"
+import BackgroundImage from "../components/BackgroundImage"
 
 class Success extends Component {
   render() {
+    const { data } = this.props
+
     return (
       <React.Fragment>
         <Navbar />
-    
-        <Hero>
-          <ContentWrapper>
-            <SectionTop
-              light
-              header="Possibilites ahead!"
-            >We will get back to you soon... bla bla</SectionTop>
-          </ContentWrapper>
+
+        <Hero
+          header="Possibilites ahead!"
+          subHeader="We will get back to you soon... bla bla"
+        >
+          <BackgroundImage
+            alt="Augmented Reality"
+            fluid={data.HeroBackgroundImage.childImageSharp.fluid}
+            fit="contain"
+            height="100%"
+            width="100%"
+            style={{ bottom: 0, right: 0, position: "absolute" }}
+          />
         </Hero>
     
         <Section backgroundColor={colors.lightgrey}>
@@ -36,5 +44,17 @@ class Success extends Component {
     )    
   }
 }
+
+export const pageQuery = graphql`
+  query {
+    HeroBackgroundImage: file(relativePath: { eq: "development1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default Success

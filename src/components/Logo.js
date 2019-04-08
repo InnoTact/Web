@@ -14,6 +14,7 @@ const LogoText = styled.h1`
   padding: 0;
   margin-left: 1.1rem;
   font-weight: 400;
+  letter-spacing: 0.1;
   color: ${props => props.dark ? colors.dark : colors.white};
   
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
@@ -28,6 +29,6 @@ export default ({...props}) =>
       <FaCube style={{ fontSize: '2.3rem', color: 'black' }} />
     </Link>
     <Link to='/'>
-      <LogoText {...props}>TheSpark</LogoText>
+      <LogoText {...props}>The Spark</LogoText>
     </Link>
 </CenterContainer>
