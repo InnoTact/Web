@@ -156,7 +156,7 @@ class Index extends Component {
                 heading="Realisera din idé"
                 text="Har du redan en idé inom Augmented Reality? Har du en produkt du vill förverkliga? Låt oss verkställa den tillsammans."
                 buttonText="Vad vi erbjuder"
-                buttonLink="/Lösningar/"
+                buttonLink="/lösningar/"
               >
                 <FaCubes style={styles.icon} />
               </ContentBlobCustom>
@@ -164,7 +164,7 @@ class Index extends Component {
                 heading="Vi skapar en idé tillsammans"
                 text="Är du osäker på hur Augmented Reality kan implementeras i ditt företag? Låt oss utvärdera dina möjligheter tillsammans."
                 buttonText="Läs mer"
-                buttonLink="/Lösningar/"
+                buttonLink="/lösningar/"
               >
                 <FaCreativeCommonsShare style={styles.icon} />
               </ContentBlobCustom>
