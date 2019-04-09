@@ -14,7 +14,7 @@ import Button from "../components/Button"
 import { navigateTo } from "gatsby-link"
 import styles from "../styles/styles"
 import SubHeader from "../components/SubHeader"
-import { FaMobileAlt, FaCheck, FaCross } from "react-icons/fa"
+import { FaMobileAlt, FaCheck, FaTimes } from "react-icons/fa"
 import { graphql } from "gatsby"
 import BackgroundImage from "../components/BackgroundImage"
 
@@ -244,7 +244,7 @@ class Contact extends Component {
                             style={{fontSize: 14, color: colors.green, display: colors.green == nameBorderColor ? 'block' : 'none'}} />
                         </Status>
                         <Status>
-                          <FaCross
+                          <FaTimes
                             style={{fontSize: 14, color: colors.red, display: colors.red == nameBorderColor ? 'block' : 'none'}} />
                         </Status>
                       </div>
