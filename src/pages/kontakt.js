@@ -14,7 +14,7 @@ import Button from "../components/Button"
 import { navigateTo } from "gatsby-link"
 import styles from "../styles/styles"
 import SubHeader from "../components/SubHeader"
-import { FaMobileAlt } from "react-icons/fa"
+import { FaMobileAlt, FaCheck, FaCross } from "react-icons/fa"
 import { graphql } from "gatsby"
 import BackgroundImage from "../components/BackgroundImage"
 
@@ -104,6 +104,18 @@ const ContactText = styled(Text)`
   }
 `
 
+const Status = styled.div`
+  position: absolute;
+  right: 1.5rem;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 class Contact extends Component {
   state = {
     formFilled: false,
@@ -111,16 +123,21 @@ class Contact extends Component {
     email: "",
     message: "",
     emailValid: false,
-    nameValid: false
+    nameValid: false,
   }
 
   updateState = (type, event) => {
     const newState = { ...this.state }
     newState[type] = event.target.value
-    newState['emailValid'] = this.validateEmail(newState['email'])
-    newState['nameValid'] = this.validateName(newState['name'])
+    newState["emailValid"] = this.validateEmail(newState["email"])
+    newState["nameValid"] = this.validateName(newState["name"])
 
-    if (newState.name && newState.email && newState.emailValid && newState.nameValid) {
+    if (
+      newState.name &&
+      newState.email &&
+      newState.emailValid &&
+      newState.nameValid
+    ) {
       newState.formFilled = true
     } else {
       newState.formFilled = false
@@ -129,14 +146,14 @@ class Contact extends Component {
     this.setState(newState)
   }
 
-  validateEmail = (email) => {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+  validateEmail = email => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(String(email).toLowerCase())
   }
 
   validateName(name) {
     const re = /^[a-ö ,.'-]+$/i
-    return re.test(String(name).toLowerCase());
+    return re.test(String(name).toLowerCase())
   }
 
   handleSubmit = e => {
@@ -147,7 +164,7 @@ class Contact extends Component {
 
   getBorderColor = (text, validCheck) => {
     let borderColor
-    if (text === '') {
+    if (text === "") {
       borderColor = colors.mediumGrey
     } else if (validCheck) {
       borderColor = colors.green
@@ -158,7 +175,14 @@ class Contact extends Component {
   }
 
   render() {
-    const { formFilled, emailValid, email, nameValid, name, message } = this.state
+    const {
+      formFilled,
+      emailValid,
+      email,
+      nameValid,
+      name,
+      message,
+    } = this.state
     const { data } = this.props
 
     let emailBorderColor, nameBorderColor, messageBorderColor
@@ -206,14 +230,24 @@ class Contact extends Component {
                   >
                     <ContactItem>
                       <ContactText dark>Vad heter du?*</ContactText>
-                      <Input
-                        style={{ borderColor: nameBorderColor }}
-                        placeholder="Ditt namn"
-                        required
-                        type="text"
-                        name="name"
-                        onChange={event => this.updateState("name", event)}
-                      />
+                      <div style={{ position: "relative" }}>
+                        <Input
+                          style={{ borderColor: nameBorderColor }}
+                          placeholder="Ditt namn"
+                          required
+                          type="text"
+                          name="name"
+                          onChange={event => this.updateState("name", event)}
+                        />
+                        <Status>
+                          <FaCheck
+                            style={{fontSize: 14, color: colors.green, display: colors.green == nameBorderColor ? 'block' : 'none'}} />
+                        </Status>
+                        <Status>
+                          <FaCross
+                            style={{fontSize: 14, color: colors.red, display: colors.red == nameBorderColor ? 'block' : 'none'}} />
+                        </Status>
+                      </div>
                     </ContactItem>
                     <ContactItem>
                       <ContactText margi dark>
