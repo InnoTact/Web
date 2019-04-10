@@ -1,6 +1,6 @@
 import { lighten } from 'polished'
 
-const primary = '#ff7400'
+const primary = '#fd6a02' /*'#ff7400'*/
 const primaryHigher = '#ff9a00'
 const primaryLower = '#ff4d00'
 

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import colors from './../styles/colors'
 import PropTypes from 'prop-types'
+import styles from '../styles/styles'
 
 const Button = styled.button`
   position: relative;
@@ -19,6 +20,12 @@ const Button = styled.button`
   border: 2px solid ${props => (props.primary ? colors.primary : colors.white)};
   transition: all 0.3s ease 0s;
   font-weight: 500;
+
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    padding: 0 32px;
+    height: 46px;
+    font-size: 14px;
+  }
 
   :hover {
     cursor: pointer;

@@ -253,6 +253,7 @@ class Contact extends Component {
                       <ContactText margi dark>
                         Vad är din email-address?*
                       </ContactText>
+                      <div style={{position: 'relative'}}>
                       <Input
                         style={{ borderColor: emailBorderColor }}
                         placeholder="dinmail@gmail.com"
@@ -261,6 +262,15 @@ class Contact extends Component {
                         name="email"
                         onChange={event => this.updateState("email", event)}
                       />
+                      <Status>
+                          <FaCheck
+                            style={{fontSize: 14, color: colors.green, display: colors.green == emailBorderColor ? 'block' : 'none'}} />
+                        </Status>
+                        <Status>
+                          <FaTimes
+                            style={{fontSize: 14, color: colors.red, display: colors.red == emailBorderColor ? 'block' : 'none'}} />
+                        </Status>
+                      </div>
                     </ContactItem>
                     <ContactItem>
                       <ContactText dark>Berätta om din idé</ContactText>
