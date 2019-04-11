@@ -22,8 +22,8 @@ const DarkOverlay = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    /*background: rgba(0,0,0,0.75);*/
-    background: linear-gradient(to right, rgba(255,154,0, 0.675), rgba(255,77,0, 0.675));  /* rgb(255,116,0) */
+    background: rgba(0,0,0,0.7);
+    /*background: linear-gradient(to right, rgba(255,154,0, 0.675), rgba(255,77,0, 0.675));*/  /* rgb(255,116,0) */
     /*background: linear-gradient(to right, rgba(255,154,0, 0.7), rgba(255,116,0,0.7));*/
     /*background: linear-gradient(to right, rgba(240,94,35, 0.7), rgba(239,114,21, 0.7));*/
   }

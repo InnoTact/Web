@@ -32,6 +32,10 @@ const LinkContainer = styled.div`
 
 const NavItem = styled.div`
   margin-left: 2.3rem;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out 0.1s, opacity 0.2s ease-in-out 0.1s,
+        color 0.2s ease-in-out;
 
   ${({ open }) =>
     open &&
@@ -41,12 +45,8 @@ const NavItem = styled.div`
       font-size: 3rem;
       opacity: 1;
       transform: translate(-16px);
-      transition: all 0.2s ease-in-out;
-      transition-delay: 0.1s 0.1s 0;
-      transition: transform 0.2s ease-in-out 0.1s, opacity 0.2s ease-in-out 0.1s,
-        color 0.2s ease-in-out;
     `}
-`
+`   
 
 const NavLink = styled.div`
   text-decoration: none;
@@ -93,14 +93,14 @@ class NavItems extends Component {
 
     const navItems = (
       <Fragment>
-        <NavItem open={open}>
+        <NavItem style={{ transitionDelay: '0.1s 0.1s 0' }} open={open}>
           <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/">
             <NavLink open={open} {...props}>
               Hem
             </NavLink>
           </Link>
         </NavItem>
-        <NavItem open={open}>
+        <NavItem style={{ transitionDelay: '0.3s 0.3s 0' }} open={open}>
           <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/lösningar/">
             <NavLink open={open} {...props}>
               Lösningar

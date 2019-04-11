@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   top: ${({ isVisible }) => (isVisible ? 0 : `-${navHeight}rem`)};
   left: 0;
   right: 0;
-  background-color: ${({ scrollPos }) => scrollPos > 150 ? colors.primary : 'transparent'};
+  background-color: ${({ scrollPos }) => scrollPos > 150 ? colors.darkgrey : 'transparent'};
   z-index: 10;
   transition: all 0.4s;
 `

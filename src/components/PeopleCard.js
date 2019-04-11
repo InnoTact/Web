@@ -103,9 +103,6 @@ const PeopleCard = ({ name, image, position, town, text, email, linkedin }) => {
           <FaLinkedin style={{ fontSize: 20, color: colors.primary }} />
         </SocialLogo>
       </LogosContainer>
-      <ColorFadeSection
-        style={{ position: "absolute", bottom: 0, left: 0, right: 0 }}
-      />
     </Container>
   )
 }
