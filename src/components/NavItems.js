@@ -88,7 +88,7 @@ class NavItems extends Component {
   render() {
     const { windowWidth, dark, ...props } = this.props
     const { open } = this.state
-    const linkColor = dark ? colors.mediumGrey : colors.mediumGrey
+    const linkColor = dark ? colors.mediumGrey : colors.lightgrey
     const activeLinkColor = dark ? colors.mediumGreyLighten : colors.white
 
     const navItems = (

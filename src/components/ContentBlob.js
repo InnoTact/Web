@@ -5,6 +5,7 @@ import Text from './Text'
 import Button from './Button';
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types';
+import styles from '../styles/styles'
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,6 +20,10 @@ const Wrapper = styled.div`
 
 const Heading = styled(SubHeading)`
   white-space: nowrap;
+
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    white-space: unset;
+  }
 `
 
 const ContentBlob = ({ className, left, children, heading, text, small = false, width, buttonText, buttonLink, ...props }) => (

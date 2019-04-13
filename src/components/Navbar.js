@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { AppContext } from "./RootWrapper"
 import styled from "styled-components"
 import Logo from "./Logo"
 import NavItems from "./NavItems"
@@ -84,7 +85,7 @@ class Navbar extends Component {
       <Wrapper isVisible={visible} scrollPos={currentScrollPos}>
         <Container>
           <Logo light />  
-          <NavItems dark />
+          <NavItems light />
         </Container>
       </Wrapper>
     )
