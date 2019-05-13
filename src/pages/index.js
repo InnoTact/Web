@@ -20,6 +20,9 @@ import Text from "../components/Text"
 import Anchor from "../components/Anchor"
 import SubHeading from "../components/SubHeading"
 import BackgroundImage from '../components/BackgroundImage'
+import favicon16 from "../img/favicon16.png"
+import favicon32 from "../img/favicon32.png"
+import favicon64 from "../img/favicon64.png"
 
 const ServiceContainer = styled.div`
   display: flex;
@@ -122,6 +125,11 @@ class Index extends Component {
           <meta
             name="description"
             content="InnoTact website. We build amazing Augmented Reality (AR) experiences and mobile applications"
+            link={[
+              { rel: "icon", type: "imge/png", sizes: "16x16", href: `${favicon16}` },
+              { rel: "icon", type: "imge/png", sizes: "32x32", href: `${favicon32}` },
+              { rel: "shortcut icon", type: "img/png", href: `${favicon64}` },
+            ]}
           />
         </Helmet>
 

@@ -32,7 +32,7 @@ const LinkContainer = styled.div`
 
 const NavItem = styled.div`
   margin-left: 2.3rem;
-  opacity: 0;
+  opacity: 1;
   transition: all 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out 0.1s, opacity 0.2s ease-in-out 0.1s,
         color 0.2s ease-in-out;
@@ -51,6 +51,7 @@ const NavItem = styled.div`
 const NavLink = styled.div`
   text-decoration: none;
   font-size: 1rem;
+  color: ${({ dark }) => (dark ? colors.darkgrey : colors.white)};
 
   :hover {
     color: ${({ dark }) => (dark ? colors.mediumGreyLighten : colors.white)};

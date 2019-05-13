@@ -29,6 +29,6 @@ export default ({...props}) =>
       <FaCube style={{ fontSize: '2.3rem', color: colors.white }} />
     </Link>
     <Link to='/'>
-      <LogoText {...props}>The Spark</LogoText>
+      <LogoText {...props}>InnoTact</LogoText>
     </Link>
 </CenterContainer>

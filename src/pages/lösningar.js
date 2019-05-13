@@ -162,7 +162,7 @@ class Solutions extends Component {
                 left
                 width={360}
                 small
-                heading="AR för Internetförsäljning"
+                heading="AR för internetförsäljning"
                 text="När du köper artiklar via Internet finns det så mycket mer att se av produkten än bara bilder på en skärm. Genom AR kan du visualisera hur produkten ser ut i verklig form och storlek i den miljön du vill använda den i."
               />
             </SolutionsContainer>

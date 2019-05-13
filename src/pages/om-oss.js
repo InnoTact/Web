@@ -52,7 +52,7 @@ class About extends Component {
 
         <Hero
           header="Företaget"
-          subHeader="The Spark består av ett team högpresterande ingenjörsstudenter från
+          subHeader="InnoTact består av ett team högpresterande ingenjörsstudenter från
           Chalmers Tekniska Högskola, i Göteborg. Vår högsta prioritet är
           alltid att göra våra kunder nöjda. Vi älskar att skapa idéer
           tillsammans med våra kunder för att förbättra och förenkla
