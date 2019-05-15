@@ -18,7 +18,7 @@ class Success extends Component {
 
         <Hero
           header="Possibilites ahead!"
-          subHeader="We will get back to you soon... bla bla"
+          subHeader="We will get back to you soon."
         >
           <BackgroundImage
             alt="Augmented Reality"
@@ -29,16 +29,7 @@ class Success extends Component {
             style={{ bottom: 0, right: 0, position: "absolute" }}
           />
         </Hero>
-    
-        <Section backgroundColor={colors.lightgrey}>
-          <ContentWrapper>
-            <SectionTop
-              dark
-              header={`Lorem ipsum dolor`}
-            >Id tempor ullamco cupidatat cillum eiusmod. Labore aliquip laboris enim incididunt laboris ad velit. Consequat sit nulla consectetur amet enim commodo cillum nulla Lorem qui magna.</SectionTop>
-          </ContentWrapper>
-        </Section>
-    
+
         <Footer />
       </React.Fragment>
     )    

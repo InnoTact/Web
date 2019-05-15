@@ -30,7 +30,7 @@ module.exports = {
         display: 'standalone',
         icon: 'src/img/favicon512.png',
       },
-    },
+    },  
     `gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`
