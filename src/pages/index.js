@@ -126,9 +126,9 @@ class Index extends Component {
             name="description"
             content="InnoTact website. We build amazing Augmented Reality (AR) experiences and mobile applications"
             link={[
-              { rel: "icon", type: "imge/png", sizes: "16x16", href: `${favicon16}` },
-              { rel: "icon", type: "imge/png", sizes: "32x32", href: `${favicon32}` },
-              { rel: "shortcut icon", type: "img/png", href: `${favicon64}` },
+              { rel: "icon", type: "image/png", sizes: "16x16", href: `${favicon16}` },
+              { rel: "icon", type: "image/png", sizes: "32x32", href: `${favicon32}` },
+              { rel: "shortcut icon", type: "image/png", href: `${favicon64}` },
             ]}
           />
         </Helmet>
