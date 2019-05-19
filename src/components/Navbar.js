@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { AppContext } from "./RootWrapper"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import Logo from "./Logo"
 import NavItems from "./NavItems"
 import colors from "../styles/colors"
@@ -20,6 +20,14 @@ const Wrapper = styled.div`
   background-color: ${({ scrollPos }) => scrollPos > 150 ? colors.darkgrey : 'transparent'};
   z-index: 10;
   transition: all 0.4s;
+
+  ${({ isMobile }) =>
+    isMobile &&
+    css`
+      position: absolute;
+      transition: none;
+      background-color: 'transparent';
+    `}
 `
 
 const Container = styled.div`
@@ -84,12 +92,22 @@ class Navbar extends Component {
     const currentScrollPos = prevScrollpos[prevScrollpos.length - 1]
 
     return (
-      <Wrapper isVisible={visible} scrollPos={currentScrollPos}>
-        <Container>
-          <Logo light />  
-          <NavItems light />
-        </Container>
-      </Wrapper>
+      <AppContext.Consumer>
+        {value => {
+          if (!value) {
+            return null;
+          } else {
+            return (
+            <Wrapper isMobile={value.isMobile} isVisible={visible} scrollPos={currentScrollPos}>
+              <Container>
+                <Logo light />  
+                <NavItems light />
+              </Container>
+            </Wrapper>
+            )
+          }
+        }}
+      </AppContext.Consumer>
     )
   }
 }

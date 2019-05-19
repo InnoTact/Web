@@ -140,9 +140,9 @@ class NavItems extends Component {
                     <HamburgerContainer isOpen={open}>
                       <HamburgerMenu
                         isOpen={open}
-                        width={32}
+                        width={30}
                         height={18}
-                        strokeWidth={1}
+                        strokeWidth={2}
                         rotate={0}
                         color={open ? colors.primary : colors.white}
                         borderRadius={0}
