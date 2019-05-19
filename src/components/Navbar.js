@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Logo from "./Logo"
 import NavItems from "./NavItems"
 import colors from "../styles/colors"
+import styles from '../styles/styles'
 
 const navHeight = 5.4
 
@@ -13,13 +14,13 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   top: ${({ isVisible }) => (isVisible ? 0 : `-${navHeight}rem`)};
   left: 0;
   right: 0;
-  background-color: ${({ scrollPos }) => scrollPos > 150 ? colors.darkgrey : 'transparent'};
+  background-color: transparent;
   z-index: 10;
-  transition: all 0.4s;
+  transition: initial;
 `
 
 const Container = styled.div`
