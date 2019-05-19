@@ -221,7 +221,7 @@ class Contact extends Component {
                 <Card>
                   <SubHeader dark>Fyll i formuläret</SubHeader>
                   <form
-                    name="contact" 
+                    name="kontakt" 
                     method="post" 
                     action="/success/" 
                     data-netlify="true" 
