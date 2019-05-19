@@ -71,10 +71,12 @@ class About extends Component {
 
         <Section backgroundColor={colors.lightgrey}>
           <ContentWrapper>
-            <Img
-              alt="Team photo of TheSpark"
-              fluid={data.TeamImage.childImageSharp.fluid}
-            />
+            <div style={{ boxShadow: colors.normalBoxShadow }}>
+              <Img
+                alt="Team photo of InnoTact"
+                fluid={data.TeamImage.childImageSharp.fluid}
+              />
+            </div>
             <BlobContainer>
               <ContentBlobCustom
                 heading="Ungdomligt driv"
@@ -84,7 +86,7 @@ class About extends Component {
               </ContentBlobCustom>
               <ContentBlobCustom
                 heading="Flexibilitet"
-                text="Gällande anpassning till nya tekniker, arbetstider och krav från kunder är flexibiliteten genomlysande i TheSpark. Vi gör vad som krävs för att uppnå våra mål."
+                text="Gällande anpassning till nya tekniker, arbetstider och krav från kunder är flexibiliteten genomlysande i InnoTact. Vi gör vad som krävs för att uppnå våra mål."
               >
                 <FaExpandArrowsAlt style={styles.icon} />
               </ContentBlobCustom>

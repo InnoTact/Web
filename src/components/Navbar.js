@@ -1,10 +1,7 @@
 import React, { Component } from "react"
-import { AppContext } from "./RootWrapper"
 import styled from "styled-components"
 import Logo from "./Logo"
 import NavItems from "./NavItems"
-import colors from "../styles/colors"
-import styles from '../styles/styles'
 
 const navHeight = 5.4
 
@@ -15,7 +12,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: ${({ isVisible }) => (isVisible ? 0 : `-${navHeight}rem`)};
+  top: 0;
   left: 0;
   right: 0;
   background-color: transparent;
@@ -86,11 +83,11 @@ class Navbar extends Component {
 
     return (
       <Wrapper isVisible={visible} scrollPos={currentScrollPos}>
-        <Container>
-          <Logo light />  
-          <NavItems light />
-        </Container>
-      </Wrapper>
+              <Container>
+                <Logo light />  
+                <NavItems light />
+              </Container>
+            </Wrapper>
     )
   }
 }
