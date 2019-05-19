@@ -108,7 +108,7 @@ class About extends Component {
 
 export const pageQuery = graphql`
   query {
-    TeamImage: file(relativePath: { eq: "team.jpg" }) {
+    TeamImage: file(relativePath: { eq: "Gruppbild_InnoTact.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1400) {
           ...GatsbyImageSharpFluid
