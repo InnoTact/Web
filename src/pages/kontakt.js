@@ -221,13 +221,14 @@ class Contact extends Component {
                 <Card>
                   <SubHeader dark>Fyll i formuläret</SubHeader>
                   <form
-                    onSubmit={this.handleSubmit}
-                    action="/success/"
-                    name="contact"
-                    method="POST"
-                    data-netlify="true"
+                    name="contact" 
+                    method="post" 
+                    action="/success" 
+                    data-netlify="true" 
+                    data-netlify-honeypot="bot-field"
                     style={{ marginTop: -45 }}
                   >
+                    <input type="hidden" name="bot-field" />
                     <ContactItem>
                       <ContactText dark>Vad heter du?*</ContactText>
                       <div style={{ position: "relative" }}>
