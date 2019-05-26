@@ -13,6 +13,7 @@ import BackgroundImage from "../components/BackgroundImage"
 import styled from "styled-components"
 import styles from "../styles/styles"
 import ContentBlob from "../components/ContentBlob"
+import VideoShowcase from '../components/VideoShowcase'
 
 const ExtraMargin = styled.div`
   margin-top: 60px;
@@ -76,8 +77,8 @@ class Solutions extends Component {
                 <BackgroundImage
                   alt="Augmented Reality"
                   fluid={data.AugmentedRealityImage1.childImageSharp.fluid}
-                  fit='contain'
-                  height='100%'
+                  fit="contain"
+                  height="100%"
                   style={{ zIndex: 1 }}
                 />
               </Capability>
@@ -88,12 +89,12 @@ class Solutions extends Component {
               text="Vad som tidigare krävt fysiska knappar eller en navigation via en smart mobilskärm kan nu ske genom bildigenkänning och maskininlärning i realtid via AR. Användarupplevelsen av digitala lösningar kan förändras helt när AR-glasögon möjliggör att kunna ha båda händerna fria samtidigt som du får all information du behöver."
             >
               <BackgroundImage
-                  alt="Augmented Reality"
-                  fluid={data.AugmentedRealityImage2.childImageSharp.fluid}
-                  fit='contain'
-                  height='100%'
-                  style={{ zIndex: 1 }}
-                />
+                alt="Augmented Reality"
+                fluid={data.AugmentedRealityImage2.childImageSharp.fluid}
+                fit="contain"
+                height="100%"
+                style={{ zIndex: 1 }}
+              />
             </Capability>
             <Capability
               buttonText="Kontakta oss"
@@ -102,12 +103,12 @@ class Solutions extends Component {
               text="Genom AR kan du få tydliga instruktioner i realtid för att hjälpa dig med olika problem som uppstår. Du kan få tillgång till detaljerad information som annars hade hämtats via Internet eller en manual. Du kan även få support via en extern part i realtid. Detta kan hjälpa både dig som privatperson som vill förenkla reparationer eller dig som arbetar med avancerad support."
             >
               <BackgroundImage
-                  alt="Augmented Reality"
-                  fluid={data.AugmentedRealityImage3.childImageSharp.fluid}
-                  fit='contain'
-                  height='100%'
-                  style={{ zIndex: 1 }}
-                />
+                alt="Augmented Reality"
+                fluid={data.AugmentedRealityImage3.childImageSharp.fluid}
+                fit="contain"
+                height="100%"
+                style={{ zIndex: 1 }}
+              />
             </Capability>
           </React.Fragment>
         </Section>
