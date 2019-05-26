@@ -14,7 +14,7 @@ import Button from "../components/Button"
 import { navigateTo } from "gatsby-link"
 import styles from "../styles/styles"
 import SubHeader from "../components/SubHeader"
-import { FaMobileAlt, FaCheck, FaTimes } from "react-icons/fa"
+import { FaMobileAlt, FaEnvelope } from "react-icons/fa"
 import { graphql } from "gatsby"
 import BackgroundImage from "../components/BackgroundImage"
 
@@ -30,13 +30,20 @@ const ContactUsWrapper = styled.div`
   }
 `
 
-const CallContainer = styled.div`
-  width: 30%;
+const ContactContainer = styled.div`
+  width: 45%;
 
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
     order: 1;
     width: 100%;
     margin-bottom: 4rem;
+  }
+`
+
+const PhoneContainer = styled(ContactContainer)`
+  @media (max-width: ${styles.breakpoints.sm + "px"}) {
+    width: 100%;
+    order: 2;
   }
 `
 
@@ -60,60 +67,6 @@ const Anchor = styled.a`
   @media (max-width: ${styles.breakpoints.sm + "px"}) {
     font-size: 1rem;
   }
-`
-
-const ContactFormContainer = styled.div`
-  width: 65%;
-  margin-left: auto;
-  margin-right: auto;
-
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    width: 100%;
-    order: 2;
-  }
-`
-
-const ContactItem = styled.div`
-  margin-top: 3rem;
-`
-
-const Input = styled.input`
-  padding: 1.3rem 2rem;
-  border: 1px solid ${colors.mediumGrey};
-  border-radius: 6px;
-  color: ${colors.darkgrey};
-  background-color: ${colors.white};
-  width: 100%;
-
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    padding: 0.8rem 1.2rem;
-  }
-`
-
-const TextArea = styled(Input)`
-  min-height: 140px;
-  line-height: 1.55;
-`
-
-const ContactText = styled(Text)`
-  font-size: 1rem;
-  margin-bottom: 0.35rem;
-
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    font-size: 0.95rem;
-  }
-`
-
-const Status = styled.div`
-  position: absolute;
-  right: 1.5rem;
-  top: 0;
-  bottom: 0;
-  margin-top: auto;
-  margin-bottom: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `
 
 class Contact extends Component {
@@ -162,21 +115,8 @@ class Contact extends Component {
     navigateTo(form.getAttribute("action"))
   }
 
-  getBorderColor = (text, validCheck) => {
-    let borderColor
-    if (text === "") {
-      borderColor = colors.mediumGrey
-    } else if (validCheck) {
-      borderColor = colors.green
-    } else {
-      borderColor = colors.red
-    }
-    return borderColor
-  }
-
   render() {
     const {
-      formFilled,
       emailValid,
       email,
       nameValid,
@@ -184,12 +124,6 @@ class Contact extends Component {
       message,
     } = this.state
     const { data } = this.props
-
-    let emailBorderColor, nameBorderColor, messageBorderColor
-    emailBorderColor = this.getBorderColor(email, emailValid)
-    nameBorderColor = this.getBorderColor(name, nameValid)
-    messageBorderColor = this.getBorderColor(message, true)
-    console.log(message)
 
     return (
       <React.Fragment>
@@ -213,87 +147,10 @@ class Contact extends Component {
         <Section id="contact-form" backgroundColor={colors.lightgrey}>
           <ContentWrapper>
             <SectionTop dark header={`Låt oss skapa något grymt tillsammans.`}>
-              Ring oss eller fyll i formuläret så att vi får en större
-              förståelse för dina behov.
+              Ring eller maila oss. Vi ser fram emot att få en ökad förståelse för dina behov och att tillsammans hitta innovativa lösningar.
             </SectionTop>
             <ContactUsWrapper>
-              <ContactFormContainer>
-                <Card>
-                  <SubHeader dark>Fyll i formuläret</SubHeader>
-                  <form
-                    name="kontakt" 
-                    method="post" 
-                    action="/success/" 
-                    data-netlify="true" 
-                    data-netlify-honeypot="bot-field"
-                    style={{ marginTop: -45 }}
-                  >
-                    <input type="hidden" name="bot-field" />
-                    <ContactItem>
-                      <ContactText dark>Vad heter du?*</ContactText>
-                      <div style={{ position: "relative" }}>
-                        <Input
-                          style={{ borderColor: nameBorderColor }}
-                          placeholder="Ditt namn"
-                          required
-                          type="text"
-                          name="name"
-                          onChange={event => this.updateState("name", event)}
-                        />
-                        <Status>
-                          <FaCheck
-                            style={{fontSize: 14, color: colors.green, display: colors.green == nameBorderColor ? 'block' : 'none'}} />
-                        </Status>
-                        <Status>
-                          <FaTimes
-                            style={{fontSize: 14, color: colors.red, display: colors.red == nameBorderColor ? 'block' : 'none'}} />
-                        </Status>
-                      </div>
-                    </ContactItem>
-                    <ContactItem>
-                      <ContactText margi dark>
-                        Vad är din email-address?*
-                      </ContactText>
-                      <div style={{position: 'relative'}}>
-                      <Input
-                        style={{ borderColor: emailBorderColor }}
-                        placeholder="dinmail@gmail.com"
-                        required
-                        type="email"
-                        name="email"
-                        onChange={event => this.updateState("email", event)}
-                      />
-                      <Status>
-                          <FaCheck
-                            style={{fontSize: 14, color: colors.green, display: colors.green == emailBorderColor ? 'block' : 'none'}} />
-                        </Status>
-                        <Status>
-                          <FaTimes
-                            style={{fontSize: 14, color: colors.red, display: colors.red == emailBorderColor ? 'block' : 'none'}} />
-                        </Status>
-                      </div>
-                    </ContactItem>
-                    <ContactItem>
-                      <ContactText dark>Berätta om din idé</ContactText>
-                      <TextArea
-                        style={{ borderColor: messageBorderColor }}
-                        as="textarea"
-                        placeholder={`Vad vill du skapa? Vad är din idé? När ska det vara klart?`}
-                        name="message"
-                        onChange={event => this.updateState("message", event)}
-                      />
-                    </ContactItem>
-                    <ContactItem
-                      style={{ marginTop: "2rem", textAlign: "left" }}
-                    >
-                      <Button type="submit" disabled={!formFilled} primary>
-                        Skicka
-                      </Button>
-                    </ContactItem>
-                  </form>
-                </Card>
-              </ContactFormContainer>
-              <CallContainer>
+              <PhoneContainer>
                 <Card>
                   <SubHeader dark>Ring oss</SubHeader>
                   <CallUsContent>
@@ -312,7 +169,27 @@ class Contact extends Component {
                     </CenterContainer>
                   </CallUsContent>
                 </Card>
-              </CallContainer>
+              </PhoneContainer>
+              <ContactContainer>
+                <Card>
+                  <SubHeader dark>Maila oss</SubHeader>
+                  <CallUsContent>
+                    <CenterContainer>
+                      <FaEnvelope
+                        style={{ fontSize: 30, color: colors.dark }}
+                      />
+                    </CenterContainer>
+                    <CenterContainer>
+                      <Anchor
+                        style={{ marginLeft: 10 }}
+                        href="mailto:contact@innotactsoftware.com"
+                      >
+                        contact@innotactsoftware.com
+                      </Anchor>
+                    </CenterContainer>
+                  </CallUsContent>
+                </Card>
+              </ContactContainer>
             </ContactUsWrapper>
           </ContentWrapper>
         </Section>
