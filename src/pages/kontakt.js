@@ -14,7 +14,7 @@ import Button from "../components/Button"
 import { navigateTo } from "gatsby-link"
 import styles from "../styles/styles"
 import SubHeader from "../components/SubHeader"
-import { FaMobileAlt, FaEnvelope } from "react-icons/fa"
+import { FaPhone, FaEnvelope } from "react-icons/fa"
 import { graphql } from "gatsby"
 import BackgroundImage from "../components/BackgroundImage"
 
@@ -155,7 +155,7 @@ class Contact extends Component {
                   <SubHeader dark>Ring oss</SubHeader>
                   <CallUsContent>
                     <CenterContainer>
-                      <FaMobileAlt
+                      <FaPhone
                         style={{ fontSize: 30, color: colors.dark }}
                       />
                     </CenterContainer>

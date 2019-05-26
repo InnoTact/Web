@@ -5,7 +5,7 @@ import colors from "../styles/colors"
 import Logo from "./Logo"
 import NavItems from "./NavItems"
 import Text from "./Text"
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa"
 import ContentWrapper from "./ContentWrapper"   
 import styles from "../styles/styles"
 import { AppContext } from "./RootWrapper"
@@ -159,8 +159,8 @@ class Footer extends Component {
                           contact@innotactsoftware.com
                         </Anchor>
                         <SocialLogos>
-                          <SocialLogoAnchor href="https://github.com/">
-                            <FaGithub
+                          <SocialLogoAnchor href="https://www.linkedin.com/company/innotact-software-ab/om-oss/">
+                            <FaLinkedin
                               style={
                                 value.isTablet || value.isMobile
                                   ? socialLogoStyleLarge
@@ -168,8 +168,8 @@ class Footer extends Component {
                               }
                             />
                           </SocialLogoAnchor>
-                          <SocialLogoAnchor href="https://www.linkedin.com/company/innotact-software-ab/om-oss/">
-                            <FaLinkedin
+                          <SocialLogoAnchor href="tel:+46737303797">
+                            <FaPhone
                               style={
                                 value.isTablet || value.isMobile
                                   ? socialLogoStyleLarge
