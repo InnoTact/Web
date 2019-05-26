@@ -26,6 +26,7 @@ const BlobContainer = styled.div`
   @media (max-width: ${styles.breakpoints.md + "px"}) {
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
   }
 `
 
@@ -39,6 +40,10 @@ const ContentBlobCustom = styled(ContentBlob)`
 
   @media (max-width: ${styles.breakpoints.lg + "px"}) {
     width: unset;
+  }
+
+  @media (max-width: ${styles.breakpoints.md + "px"}) {
+    margin-right: 0;
   }
 `
 
