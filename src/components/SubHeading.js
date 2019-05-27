@@ -21,4 +21,4 @@ SubHeading.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default ({ children, small, dark, light, className }) => <SubHeading className={className} small={small} dark={dark} light={light}>{children}</SubHeading>
+export default ({ children, small, dark, light, className, ...props }) => <SubHeading {...props} className={className} small={small} dark={dark} light={light}>{children}</SubHeading>

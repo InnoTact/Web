@@ -7,6 +7,7 @@ import colors from "../styles/colors"
 import Footer from "../components/Footer"
 import Hero from "../components/Hero"
 import BackgroundImage from "../components/BackgroundImage"
+import CustomHelmet from '../components/CustomHelmet'
 
 class Success extends Component {
   render() {
@@ -14,6 +15,7 @@ class Success extends Component {
 
     return (
       <React.Fragment>
+        <CustomHelmet />
         <Navbar />
 
         <Hero

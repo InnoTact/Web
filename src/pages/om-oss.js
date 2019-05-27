@@ -15,6 +15,7 @@ import GetStarted from "../components/GetStarted"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundImage from "../components/BackgroundImage"
+import CustomHelmet from '../components/CustomHelmet'
 
 const BlobContainer = styled.div`
   display: flex;
@@ -53,6 +54,7 @@ class About extends Component {
 
     return (
       <React.Fragment>
+        <CustomHelmet page='Om ' />
         <Navbar />
 
         <Hero

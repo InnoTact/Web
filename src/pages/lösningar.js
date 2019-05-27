@@ -14,6 +14,7 @@ import styled from "styled-components"
 import styles from "../styles/styles"
 import ContentBlob from "../components/ContentBlob"
 import VideoShowcase from '../components/VideoShowcase'
+import CustomHelmet from '../components/CustomHelmet'
 
 const ExtraMargin = styled.div`
   margin-top: 60px;
@@ -33,6 +34,7 @@ class Solutions extends Component {
 
     return (
       <React.Fragment>
+        <CustomHelmet page='Lösningar ' />
         <Navbar />
 
         <Hero
@@ -53,6 +55,19 @@ class Solutions extends Component {
             style={{ bottom: 0, right: 0, position: "absolute" }}
           />
         </Hero>
+
+        <Section
+          backgroundColor={colors.lightgrey}
+        >
+          <React.Fragment>
+            <ContentWrapper>
+              <SectionTop style={{marginBottom: 40}} dark header={`Exempel på lösningar`}>
+                För att förstå vilken typ av lösningar vi skapar kan du kolla på videoklippen nedan som visar två korta demon.
+              </SectionTop>
+              <VideoShowcase />
+            </ContentWrapper>
+          </React.Fragment>
+        </Section>
 
         <Section
           style={{ marginBottom: 0, paddingBottom: 0 }}

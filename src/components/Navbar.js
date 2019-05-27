@@ -40,7 +40,6 @@ class Navbar extends Component {
     }
   }
 
-
   componentDidMount() {
     const { prevScrollpos } = this.state
     let newPrevScrollPos = prevScrollpos.slice()
@@ -57,18 +56,21 @@ class Navbar extends Component {
     const { prevScrollpos } = this.state
 
     const scrollOffset = 50
-  
-    let visible = true, newPrevScrollPos
+
+    let visible = true,
+      newPrevScrollPos
     const currentScrollPos = window.pageYOffset
 
     if (currentScrollPos < scrollOffset) {
-      visible = true;
+      visible = true
     } else if (prevScrollpos.length > scrollOffset) {
-      visible = prevScrollpos[prevScrollpos.length - (scrollOffset - 1)] > currentScrollPos
+      visible =
+        prevScrollpos[prevScrollpos.length - (scrollOffset - 1)] >
+        currentScrollPos
     } else if (prevScrollpos.length > 10) {
       visible = false
     }
-    
+
     newPrevScrollPos = prevScrollpos.slice()
     newPrevScrollPos.push(currentScrollPos)
     this.setState({
@@ -83,11 +85,11 @@ class Navbar extends Component {
 
     return (
       <Wrapper isVisible={visible} scrollPos={currentScrollPos}>
-              <Container>
-                <Logo light />  
-                <NavItems light />
-              </Container>
-            </Wrapper>
+        <Container>
+          <Logo light />
+          <NavItems light />
+        </Container>
+      </Wrapper>
     )
   }
 }

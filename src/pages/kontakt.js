@@ -17,6 +17,7 @@ import SubHeader from "../components/SubHeader"
 import { FaPhone, FaEnvelope } from "react-icons/fa"
 import { graphql } from "gatsby"
 import BackgroundImage from "../components/BackgroundImage"
+import CustomHelmet from '../components/CustomHelmet'
 
 const ContactUsWrapper = styled.div`
   display: flex;
@@ -127,6 +128,7 @@ class Contact extends Component {
 
     return (
       <React.Fragment>
+        <CustomHelmet page='Kontakta ' />
         <Navbar />
 
         <Hero

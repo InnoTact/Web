@@ -20,9 +20,7 @@ import Text from "../components/Text"
 import Anchor from "../components/Anchor"
 import SubHeading from "../components/SubHeading"
 import BackgroundImage from '../components/BackgroundImage'
-import favicon16 from "../img/favicon16.png"
-import favicon32 from "../img/favicon32.png"
-import favicon64 from "../img/favicon64.png"
+import CustomHelmet from '../components/CustomHelmet'
 
 const ServiceContainer = styled.div`
   display: flex;
@@ -121,17 +119,7 @@ class Index extends Component {
 
     return (
       <React.Fragment>
-        <Helmet>
-          <meta
-            name="description"
-            content="InnoTact website. We build amazing Augmented Reality (AR) experiences and mobile applications"
-            link={[
-              { rel: "icon", type: "image/png", sizes: "16x16", href: `${favicon16}` },
-              { rel: "icon", type: "image/png", sizes: "32x32", href: `${favicon32}` },
-              { rel: "shortcut icon", type: "image/png", href: `${favicon64}` },
-            ]}
-          />
-        </Helmet>
+        <CustomHelmet />
 
         <Navbar />
 
