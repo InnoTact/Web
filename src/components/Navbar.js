@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import Logo from "./Logo"
 import NavItems from "./NavItems"
+import { AppContext } from "./RootWrapper"
 
 const navHeight = 5.4
 
@@ -85,10 +86,20 @@ class Navbar extends Component {
 
     return (
       <Wrapper isVisible={visible} scrollPos={currentScrollPos}>
-        <Container>
-          <Logo light />
-          <NavItems light />
-        </Container>
+        <AppContext.Consumer>
+          {value => {
+            if (!value) {
+              return null
+            }
+
+            return (
+              <Container>
+                <Logo light />
+                <NavItems light />
+              </Container>
+            )
+          }}
+        </AppContext.Consumer>
       </Wrapper>
     )
   }
