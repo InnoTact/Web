@@ -57,19 +57,6 @@ class Solutions extends Component {
         </Hero>
 
         <Section
-          backgroundColor={colors.lightgrey}
-        >
-          <React.Fragment>
-            <ContentWrapper>
-              <SectionTop style={{marginBottom: 40}} dark header={`Exempel på lösningar`}>
-                För att förstå vilken typ av lösningar vi skapar kan du kolla på videoklippen nedan som visar två korta demon.
-              </SectionTop>
-              <VideoShowcase />
-            </ContentWrapper>
-          </React.Fragment>
-        </Section>
-
-        <Section
           style={{ marginBottom: 0, paddingBottom: 0 }}
           backgroundColor={colors.white}
         >
@@ -247,3 +234,20 @@ export const pageQuery = graphql`
 `
 
 export default Solutions
+
+/*
+
+<Section
+          backgroundColor={colors.lightgrey}
+        >
+          <React.Fragment>
+            <ContentWrapper>
+              <SectionTop style={{marginBottom: 40}} dark header={`Exempel på lösningar`}>
+                För att förstå vilken typ av lösningar vi skapar kan du kolla på videoklippen nedan som visar två korta demon.
+              </SectionTop>
+              <VideoShowcase />
+            </ContentWrapper>
+          </React.Fragment>
+        </Section>
+
+*/
