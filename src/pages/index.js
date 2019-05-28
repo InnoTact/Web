@@ -214,17 +214,16 @@ class Index extends Component {
                 style={{ marginBottom: "0.7rem", textAlign: "center" }}
                 dark
               >
-                Augmented Reality headsets will have an estimated 1 Billion
-                users by 2020.
+                By 2020 103 million automobiles will contain AR technology.
               </Text>
               <Anchor
                 small
                 italic
                 dark
                 target="_blank"
-                href="https://www.statista.com/topics/3286/augmented-reality-ar/"
+                href="https://semico.com/content/augmented-reality-envision-more-intelligent-world"
               >
-                Statista
+                SEMICO
               </Anchor>
             </FactItem>
           </FactContainer>
