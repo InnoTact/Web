@@ -96,9 +96,11 @@ const PeopleCard = ({ name, image, position, town, text, email, linkedin }) => {
         {text}
       </Text>
       <LogosContainer>
-        <SocialLogo href={`mailto:${email}`}>
-          <FaEnvelope style={{ fontSize: 20, color: colors.primary }} />
-        </SocialLogo>
+        {email && (
+          <SocialLogo href={`mailto:${email}`}>
+            <FaEnvelope style={{ fontSize: 20, color: colors.primary }} />
+          </SocialLogo>
+        )}
         <SocialLogo href={linkedin}>
           <FaLinkedin style={{ fontSize: 20, color: colors.primary }} />
         </SocialLogo>

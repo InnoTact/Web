@@ -58,9 +58,9 @@ export default ({ peopleImagesData }) => {
                 peopleImagesData
                   ? peopleImagesData.AntonImage.childImageSharp.fixed
                   : ""
-              }            position="Grundare &amp; Utvecklare"
+              }            position="Grundare &amp; AR-specialist"
             town="Mölnlycke, Sverige"
-            text={`Antons öga för design gör honom i högsta grad lämplig för att ansvara för våra produkters utseende. Anton ser till att det vi utvecklar alltid är snyggt och enkelt att förstå och använda. Anton pluggar just nu automation och mekatronik på Chalmers. Vid frågor om våra produkters användarupplevelse eller design är Anton rätt person att fråga.`}
+            text={`Som företagets AR-specialist ansvarar Anton för att innovativa AR-lösningar tas fram efter kundens behov. Antons problemlösningsförmåga och tävlingsinstinkt gör att han ger allt för att lösa kundernas utmaningar. Vid sidan om InnoTact studerar Anton Automation och Mekatronik med master i Data Science och AI på Chalmers. Vid frågor om vad som är möjligt att göra med augmented reality är Anton rätt person att fråga.`}
             email="anton@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/anton-claesson/"
           />
@@ -72,7 +72,7 @@ export default ({ peopleImagesData }) => {
                   : ""
               }            position="Grundare, CTO &amp; utvecklare"
             town="Göteborg, Sverige"
-            text="Som företagets CTO ansvarar Casper för företagets tekniska strategi. Som erfaren programmerare och blivande elektroingenjör är Casper expert på att snabbt lära sig och anpassa sig till nya teknologier. Casper ser till att vårt arbetssätt är effektivt och anpassat till de senaste teknologierna. Vid tekniska frågor är Casper rätt person att fråga."
+            text="Som företagets CTO ansvarar Casper för företagets tekniska strategi. Som erfaren programmerare och blivande data scientist är Casper expert på att snabbt lära sig och anpassa sig till nya teknologier. Casper ser till att vårt arbetssätt är effektivt och anpassat till de senaste teknologierna. Vid tekniska frågor är Casper rätt person att fråga."
             email="casper@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/casperlindberg1997/"
           />
@@ -84,9 +84,20 @@ export default ({ peopleImagesData }) => {
                   : ""
               }            position="Grundare, CFO &amp; utvecklare"
             town="Mölnlycke, Sverige"
-            text="Förutom att vara företagets CFO bidrar Carl med mycket struktur till företaget. Som teknisk fysikstudent vet Carl betydelsen av hårt jobb och dedikation. Något som han sprider till alla i teamet. Han ser till att alla presterar sitt yttersta vid varje given tidpunkt. Vid frågor om vår ekonomi eller arbetskapacitet är Carl rätt person att fråga. "
+            text="Som företagets CFO har Carl det yttersta ansvaret vid ekonomiska beslut. Carl studerar Teknisk Fysik och bidrar med sin problemlösningsförmåga och programmeringskunskaper till företaget. Carls problemlösningsförmåga har lett till flera nya innovationer som banat för nya appar. Vid frågor om företagets ekonomi är Carl rätt person att fråga."
             email="carl@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/carl-claesson-29145a16a/"
+          />
+          <PeopleCard
+            name="Fredrik Hernqvist"
+            image={
+                peopleImagesData
+                  ? peopleImagesData.FredrikImage.childImageSharp.fixed
+                  : ""
+              }            position="IT-arkitekt, utvecklare &amp; rådgivare"
+            town="Mölnlycke, Sverige"
+            text="Som IT-arkitekt, utvecklare och rådgivare ansvarar Fredrik för att kvalitetssäkra koden samt höja kompetensen i teamet. Fredrik har jobbat på Google i London, Microsoft i Seattle och Google i Stockholm. Fredrik pluggar datateknik på KTH, har gjort utbyte i Kina på det prestigefulla universitetet Tsinghua, känt som ”the Harvard of China”. Dessutom är Fredrik tävlingsprogrammerare på elitnivå och har även tävlat och presterat på elitnivå i matematiktävlingar."
+            linkedin="https://www.linkedin.com/in/fredrik-hernqvist-529479104/"
           />
         </PeopleContainer>
       </ContentWrapper>
