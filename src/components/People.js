@@ -46,9 +46,9 @@ export default ({ peopleImagesData }) => {
                 peopleImagesData
                   ? peopleImagesData.JoelImage.childImageSharp.fixed
                   : ""
-              }            position="Grundare &amp; Utvecklare"
+              }            position="Grundare, projektledare &amp; utvecklare"
             town="Göteborg, Sverige"
-            text="Som projektledare är Joel ofta i nära kontakt med våra kunder. Han ansvarar för att kunderna är nöjda med produkterna vi skapar, vilket han verkar lyckas med varje gång. Efter att ha studerat Software Engineering i USA under ett år håller Joel nu till på IT-programmet på Chalmers. Vid frågor om specifika projekt är Joel rätt person att fråga."
+            text="Som projektledare är Joel ofta i nära kontakt med våra kunder. Han ansvarar för att kunderna är nöjda med produkterna vi skapar, vilket han verkar lyckas med varje gång. Efter att ha studerat Software Engineering i USA håller Joel nu till på IT-programmet på Chalmers. Vid frågor om specifika projekt är Joel rätt person att fråga."
             email="joel@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/joel-rudsberg/"
           />
