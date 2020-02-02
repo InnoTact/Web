@@ -25,9 +25,6 @@ const LogoText = styled.h1`
 
 export default ({...props}) => 
 <CenterContainer>
-    <Link style={{width: '2.3rem', height: '2.3rem'}} to='/'>
-      <FaCube style={{ fontSize: '2.3rem', color: colors.white }} />
-    </Link>
     <Link to='/'>
       <LogoText {...props}>InnoTact</LogoText>
     </Link>
