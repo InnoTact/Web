@@ -159,6 +159,13 @@ export const pageQuery = graphql`
         }
       }
     }
+    FredrikImage: file(relativePath: { eq: "Fredrik_Hernqvist.jpg" }) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     HeroBackgroundImage: file(relativePath: { eq: "development7.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
