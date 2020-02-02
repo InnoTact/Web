@@ -178,17 +178,16 @@ class Index extends Component {
                 style={{ marginBottom: "0.7rem", textAlign: "center" }}
                 dark
               >
-                Augmented Reality revenue is expected to hit $120 billion by
-                2020
+                Augmented Reality revenue is expected to hit US$198 billion by 2025
               </Text>
               <Anchor
                 small
                 italic
                 dark
                 target="_blank"
-                href="https://www.digi-capital.com/news/2016/01/augmentedvirtual-reality-revenue-forecast-revised-to-hit-120-billion-by-2020/"
+                href="https://www.statista.com/statistics/897587/world-augmented-reality-market-value/"
               >
-                Digi-Capital
+                Statista
               </Anchor>
             </FactItem>
             <FactItem style={{ backgroundColor: colors.lightdarkerGrey }}>
@@ -214,16 +213,16 @@ class Index extends Component {
                 style={{ marginBottom: "0.7rem", textAlign: "center" }}
                 dark
               >
-                By 2020 103 million automobiles will contain AR technology.
+                40% of people are willing to pay more for a product if they can experience it first through AR.
               </Text>
               <Anchor
                 small
                 italic
                 dark
                 target="_blank"
-                href="https://semico.com/content/augmented-reality-envision-more-intelligent-world"
+                href="https://www.clickz.com/how-is-ar-revolutionizing-the-in-store-experience-for-retailers/112696/"
               >
-                SEMICO
+                Retail Perceptions
               </Anchor>
             </FactItem>
           </FactContainer>

@@ -134,13 +134,6 @@ class Footer extends Component {
                       <NavItems light />
                     </Item>
                     <Item style={{ minWidth: 300 }}>
-                      <AdressText
-                        small
-                        borderBottom={!(value.isTablet || value.isMobile)}
-                        light
-                      >
-                        Kungsportsavenyn 10, Göteborg
-                      </AdressText>
                       <InfoIconsContainer>
                         <div style={{ marginBottom: 6 }}>
                           <Anchor
