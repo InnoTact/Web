@@ -95,7 +95,7 @@ export default ({ peopleImagesData }) => {
                   ? peopleImagesData.FredrikImage.childImageSharp.fixed
                   : ""
               }            position="IT-arkitekt, utvecklare &amp; rådgivare"
-            town="Mölnlycke, Sverige"
+            town="Stockholm, Sverige"
             text="Som IT-arkitekt, utvecklare och rådgivare ansvarar Fredrik för att kvalitetssäkra koden samt höja kompetensen i teamet. Fredrik har jobbat på Google i London, Microsoft i Seattle och Google i Stockholm. Fredrik pluggar datateknik på KTH, har gjort utbyte i Kina på det prestigefulla universitetet Tsinghua, känt som ”the Harvard of China”. Dessutom är Fredrik tävlingsprogrammerare på elitnivå och har även tävlat och presterat på elitnivå i matematiktävlingar."
             linkedin="https://www.linkedin.com/in/fredrik-hernqvist-529479104/"
           />
