@@ -26,7 +26,7 @@ module.exports = {
       options: {
         name: "InnoTact Software AB",
         short_name: "InnoTact",
-        start_url: '/',
+        start_url: '/',  
         display: 'standalone',
         icon: 'src/img/favicon512.png',
       },
