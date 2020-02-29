@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+	{
+            "appID": "N3QW3RP8Y5.InnoTact.Borastapeter",
+            "paths": ["/wallpapers/*", "/tapeter/*"]
+	}
+	]
+    }
+}
