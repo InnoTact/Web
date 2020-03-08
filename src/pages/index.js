@@ -359,6 +359,13 @@ export const pageQuery = graphql`
         }
       }
     }
+    OskarImage: file(relativePath: { eq: "Oskar_Gronqvist.jpg" }) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     HeroBackgroundImage: file(relativePath: { eq: "development1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {

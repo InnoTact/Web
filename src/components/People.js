@@ -48,7 +48,7 @@ export default ({ peopleImagesData }) => {
                   : ""
               }            position="Grundare, projektledare &amp; utvecklare"
             town="Göteborg, Sverige"
-            text="Som projektledare är Joel ofta i nära kontakt med våra kunder. Han ansvarar för att kunderna är nöjda med produkterna vi skapar, vilket han verkar lyckas med varje gång. Efter att ha studerat Software Engineering i USA håller Joel nu till på IT-programmet på Chalmers. Vid frågor om specifika projekt är Joel rätt person att fråga."
+            text="Som projektledare ansvarar Joel för att InnoTacts projekt blir klara i tid och uppfyller alla kundens krav. Exempelvis är Joel projektledare för Boråstapeters revolutionerande nya app, Wonderwall. Joel studerar IT-programmet på Chalmers och har studerat Software Engineering i USA. Joels IT-kunskaper är ovärderliga för företaget och han lägger stor tid på att fortsatt personlig utveckling. Vid frågor om specifika projekt är Joel rätt person att fråga."
             email="joel@innotactsoftware.se"
             linkedin="https://www.linkedin.com/in/joel-rudsberg/"
           />
@@ -98,6 +98,17 @@ export default ({ peopleImagesData }) => {
             town="Stockholm, Sverige"
             text="Som IT-arkitekt, utvecklare och rådgivare ansvarar Fredrik för att kvalitetssäkra koden samt höja kompetensen i teamet. Fredrik har jobbat på Google i London, Microsoft i Seattle och Google i Stockholm. Fredrik pluggar datateknik på KTH, har gjort utbyte i Kina på det prestigefulla universitetet Tsinghua, känt som ”the Harvard of China”. Dessutom är Fredrik tävlingsprogrammerare på elitnivå och har även tävlat och presterat på elitnivå i matematiktävlingar."
             linkedin="https://www.linkedin.com/in/fredrik-hernqvist-529479104/"
+          />
+          <PeopleCard
+            name="Oskar Grönqvist"
+            image={
+                peopleImagesData
+                  ? peopleImagesData.OskarImage.childImageSharp.fixed
+                  : ""
+              }            position="Androidutvecklare med specialisering inom augmented reality"
+            town="Göteborg, Sverige"
+            text="Som androidutvecklare med specialisering inom augmented reality ansvarar Oskar för att utveckla appar med väl utvalda arkitektur-mönster och de senaste augmented reality- teknikerna. Oskar studerar till civilingenjör i datateknik på Chalmers och går nu första året på IT-mastern Software Engineering and Technology. Oskar har därför den senaste kunskapen som Chalmers undervisar färskt i minnet och är redo att revolutionera framtidens augmented reality-appar."
+            linkedin="https://www.linkedin.com/in/oskar-gr%C3%B6nqvist-54a35b182/"
           />
         </PeopleContainer>
       </ContentWrapper>

@@ -44,6 +44,7 @@ const Position = styled.p`
   color: ${colors.darkgrey};
   margin-top: 0.8rem;
   margin-bottom: 0.4rem;
+  text-align: center;
 `
 
 const LogosContainer = styled.div`
