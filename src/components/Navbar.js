@@ -82,7 +82,6 @@ class Navbar extends Component {
 
   render() {
     const { visible, prevScrollpos } = this.state
-    const { logoData } = this.props
     const currentScrollPos = prevScrollpos[prevScrollpos.length - 1]
 
     return (
@@ -95,7 +94,7 @@ class Navbar extends Component {
 
             return (
               <Container>
-                <Logo logo={logoData ? logoData.Logo.childImageSharp.fixed : ""} light />
+                <Logo light />
                 <NavItems light />
               </Container>
             )
