@@ -110,6 +110,17 @@ export default ({ peopleImagesData }) => {
             text="Som androidutvecklare med specialisering inom augmented reality ansvarar Oskar för att utveckla appar med väl utvalda arkitektur-mönster och de senaste augmented reality- teknikerna. Oskar studerar till civilingenjör i datateknik på Chalmers och går nu första året på IT-mastern Software Engineering and Technology. Oskar har därför den senaste kunskapen som Chalmers undervisar färskt i minnet och är redo att revolutionera framtidens augmented reality-appar."
             linkedin="https://www.linkedin.com/in/oskar-gr%C3%B6nqvist-54a35b182/"
           />
+          <PeopleCard
+            name="Melker Veltman"
+            image={
+                peopleImagesData
+                  ? peopleImagesData.MelkerImage.childImageSharp.fixed
+                  : ""
+              }            position="Backend-utvecklare"
+            town="Göteborg, Sverige"
+            text="Som företagets främsta backend-ansvarig lägger Melker den tekniska grunden för att InnoTact ska fortsätta revolutionera befintliga och nya branscher. Med sin IT kandidat från Chalmers och flera års erfarenhet som backendutvecklare har Melker det som krävs för att axla det ansvaret."
+            linkedin="https://www.linkedin.com/in/melker-veltman/"
+          />
         </PeopleContainer>
       </ContentWrapper>
     </Section>

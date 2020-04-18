@@ -366,6 +366,13 @@ export const pageQuery = graphql`
         }
       }
     }
+    MelkerImage: file(relativePath: { eq: "Melker_Veltman.jpg" }) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     HeroBackgroundImage: file(relativePath: { eq: "development1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
