@@ -121,7 +121,7 @@ class Index extends Component {
       <React.Fragment>
         <CustomHelmet />
 
-        <Navbar />
+        <Navbar logoData={data} />
 
         <Hero
           header="Vi utvecklar Augmented Reality-applikationer"
@@ -377,6 +377,13 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    Logo: file(relativePath: { eq: "Logo.png" }) {
+      childImageSharp {
+        fixed(width: 190, height: 95) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

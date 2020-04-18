@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FaCube } from 'react-icons/fa'
 import CenterContainer from '../components/CenterContainer'
 import { Link } from 'gatsby'
+import Img from "gatsby-image"
 import colors from "../styles/colors"
 import styles from '../styles/styles'
 
@@ -23,9 +24,15 @@ const LogoText = styled.h1`
   }
 `
 
-export default ({...props}) => 
+const LogoStyle = {
+  width: 120,
+  height: 60,
+  margin: 0
+}
+
+export default ({ logo }) => 
 <CenterContainer>
     <Link to='/'>
-      <LogoText {...props}>InnoTact</LogoText>
+      {logo && <Img style={LogoStyle} fixed={logo} />}
     </Link>
 </CenterContainer>
