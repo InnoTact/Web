@@ -28,7 +28,7 @@ module.exports = {
         short_name: "InnoTact",
         start_url: '/',  
         display: 'standalone',
-        icon: 'src/img/favicon512.png',
+        icon: 'src/img/favicon-32x32.png',
       },
     },  
     `gatsby-transformer-sharp`, `gatsby-plugin-sharp`,
