@@ -19,8 +19,9 @@ import ClickMe from "../components/ClickMe"
 import Text from "../components/Text"
 import Anchor from "../components/Anchor"
 import SubHeading from "../components/SubHeading"
-import BackgroundImage from '../components/BackgroundImage'
-import CustomHelmet from '../components/CustomHelmet'
+import BackgroundImage from "../components/BackgroundImage"
+import CustomHelmet from "../components/CustomHelmet"
+import LocalizedStrings from "react-localization"
 
 const ServiceContainer = styled.div`
   display: flex;
@@ -108,35 +109,51 @@ const QuoteName = styled(Anchor)`
 `
 
 const imageStyle = {
-  objectFit: 'contain',
-  fontFamily: 'object-fit: contain;',
-  height: '100%'
+  objectFit: "contain",
+  fontFamily: "object-fit: contain;",
+  height: "100%",
 }
 
 class Index extends Component {
   render() {
     const { data } = this.props
+    const strings = new LocalizedStrings({
+      en: {
+        hero: {
+          title: "We Develop Augmented Reality Apps",
+          subTitle: "We help people and companies save time and make better decisions by closing the gap between the digital and physical world.",
+          button: "START A PROJECT",
+          readMore: "Read more"
+        },
+      },
+      sv: {
+        hero: {
+          title: "Vi utvecklar Augmented Reality-applikationer",
+          subTitle: "Vi hjälper människor och företag att spara tid och fatta bättre beslut genom att förena den digitala och fysiska världen.",
+          button: "STARTA ETT PROJEKT",
+          readMore: "Läs mer"
+        },
+      },
+    })
 
     return (
       <React.Fragment>
         <CustomHelmet />
-
         <Navbar />
-
         <Hero
-          header="Vi utvecklar Augmented Reality-applikationer"
-          subHeader="Vi tar ditt företag till nästa nivå genom att implementera innovativa lösningar baserade på Augmented Reality."
-          buttonText="STARTA ETT PROJEKT"
-          bottomText="Läs mer"
+          header={strings.hero.title}
+          subHeader={strings.hero.subTitle}
+          buttonText={strings.hero.button}
+          bottomText={strings.hero.readMore}
         >
           <BackgroundImage
-                  alt="Augmented Reality"
-                  fluid={data.HeroBackgroundImage.childImageSharp.fluid}
-                  fit='contain'
-                  height='100%'
-                  width='100%'
-                  style={{bottom: 0, right: 0, position: 'absolute'}}
-                />
+            alt="Augmented Reality"
+            fluid={data.HeroBackgroundImage.childImageSharp.fluid}
+            fit="contain"
+            height="100%"
+            width="100%"
+            style={{ bottom: 0, right: 0, position: "absolute" }}
+          />
         </Hero>
 
         <Section backgroundColor={colors.white}>
@@ -178,7 +195,8 @@ class Index extends Component {
                 style={{ marginBottom: "0.7rem", textAlign: "center" }}
                 dark
               >
-                Augmented Reality revenue is expected to hit US$198 billion by 2025
+                Augmented Reality revenue is expected to hit US$198 billion by
+                2025
               </Text>
               <Anchor
                 small
@@ -213,7 +231,8 @@ class Index extends Component {
                 style={{ marginBottom: "0.7rem", textAlign: "center" }}
                 dark
               >
-                40% of people are willing to pay more for a product if they can experience it first through AR.
+                40% of people are willing to pay more for a product if they can
+                experience it first through AR.
               </Text>
               <Anchor
                 small
