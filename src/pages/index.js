@@ -22,31 +22,7 @@ import SubHeading from "../components/SubHeading"
 import BackgroundImage from "../components/BackgroundImage"
 import CustomHelmet from "../components/CustomHelmet"
 import LocalizedStrings from "react-localization"
-
-const ServiceContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  @media (max-width: ${styles.breakpoints.md + "px"}) {
-    flex-direction: column;
-    justify-content: space-around;
-  }
-`
-
-const ContentBlobCustom = styled(ContentBlob)`
-  min-height: 340px;
-  max-width: 47%;
-
-  @media (max-width: ${styles.breakpoints.lg + "px"}) {
-    max-width: 45%;
-  }
-
-  @media (max-width: ${styles.breakpoints.md + "px"}) {
-    max-width: unset;
-  }
-`
+import StartProjectSection from "../page_components/index/StartProjectSection"
 
 const StepsWrapper = styled.div`
   position: relative;
@@ -156,34 +132,7 @@ class Index extends Component {
           />
         </Hero>
 
-        <Section backgroundColor={colors.white}>
-          <ContentWrapper>
-            <SectionTop dark header={`Starta projekt`}>
-              Vårt team, som består av motiverade och drivna utvecklare, strävar
-              alltid efter att hjälpa ditt företag till nästa nivå. Vi arbetar
-              med nära kundrelationer för att garantera att vi uppyller alla
-              dina behov.{" "}
-            </SectionTop>
-            <ServiceContainer>
-              <ContentBlobCustom
-                heading="Realisera din idé"
-                text="Har du redan en idé inom Augmented Reality? Har du en produkt du vill förverkliga? Låt oss verkställa den tillsammans."
-                buttonText="Vad vi erbjuder"
-                buttonLink="/lösningar/"
-              >
-                <FaCubes style={styles.icon} />
-              </ContentBlobCustom>
-              <ContentBlobCustom
-                heading="Vi skapar en idé tillsammans"
-                text="Är du osäker på hur Augmented Reality kan implementeras i ditt företag? Låt oss utvärdera dina möjligheter tillsammans."
-                buttonText="Läs mer"
-                buttonLink="/lösningar/"
-              >
-                <FaCreativeCommonsShare style={styles.icon} />
-              </ContentBlobCustom>
-            </ServiceContainer>
-          </ContentWrapper>
-        </Section>
+        <StartProjectSection />
 
         <Section
           style={{ paddingBottom: 0, paddingTop: 0 }}
