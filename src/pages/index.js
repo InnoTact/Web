@@ -22,7 +22,7 @@ import SubHeading from "../components/SubHeading"
 import BackgroundImage from "../components/BackgroundImage"
 import CustomHelmet from "../components/CustomHelmet"
 import LocalizedStrings from "react-localization"
-import StartProjectSection from "../page_components/index/StartProjectSection"
+import StartProjectSection from "../components/StartProjectSection"
 
 const StepsWrapper = styled.div`
   position: relative;

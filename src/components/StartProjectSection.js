@@ -1,14 +1,14 @@
 import React from "react"
-import Section from "../../components/Section"
-import ContentWrapper from "../../components/ContentWrapper"
-import SectionTop from "../../components/SectionTop"
+import Section from "./Section"
+import ContentWrapper from "./ContentWrapper"
+import SectionTop from "./SectionTop"
 import { FaCubes, FaCreativeCommonsShare } from "react-icons/fa"
 import styled from "styled-components"
-import colors from "../../styles/colors"
-import styles from "../../styles/styles"
-import ContentBlob from "../../components/ContentBlob"
+import colors from "../styles/colors"
+import styles from "../styles/styles"
+import ContentBlob from "./ContentBlob"
 import LocalizedStrings from "react-localization"
-import translation from "../../translations/start-project-section"
+import translation from "../translations/start-project-section"
 
 const ServiceContainer = styled.div`
   display: flex;

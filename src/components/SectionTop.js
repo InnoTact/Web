@@ -9,7 +9,7 @@ import { Link } from 'gatsby'
 import styles from '../styles/styles'
 import { animateScroll as scroll } from 'react-scroll'
 import PropTypes from 'prop-types';
-import Section from './Section';
+import LocalizedStrings from "react-localization"
 
 const Container = styled.div`
   margin-top: 2rem;
@@ -57,18 +57,29 @@ function vh(v) {
   return (v * h) / 100;
 }
 
-const SectionTop = ({ header, children, buttonText = '', dark, bottomText, zIndexHigh, ...props }) => (
+const SectionTop = ({ header, children, buttonText = '', dark, bottomText, zIndexHigh, ...props }) => {
+  const strings = new LocalizedStrings({
+    en: {
+      button: "Start a project"
+    },
+    sv: {
+      button: "Starta ett projekt"
+    }
+  })
+
+  return (
   <Container {...props}>
     <React.Fragment>
       <Header text={header} styles={{ color: dark ? colors.dark : colors.white, zIndex: zIndexHigh ? 1 : 'unset' }} />
       {children && <SubHeader style={{ color: dark ? colors.dark : colors.lightgrey, fontStyle: 'italic', zIndex: zIndexHigh ? 1 : 'unset' }}>{children}</SubHeader>}
-      {buttonText && <Link to='/kontakt/#contact-form'><Button style={{zIndex: zIndexHigh ? 1 : 'unset'}} secondary>Starta ett projekt</Button></Link>}
+      {buttonText && <Link to='/kontakt/#contact-form'><Button style={{zIndex: zIndexHigh ? 1 : 'unset'}} secondary>{strings.button}</Button></Link>}
       {bottomText && <ReadMore style={{zIndex: zIndexHigh ? 1 : 'unset'}} onClick={() => scroll.scrollTo(vh(82))}>
         {bottomText}
       </ReadMore>}
     </React.Fragment>
   </Container>
-)
+  )
+}
 
 SectionTop.propTypes = {
   header: PropTypes.string.isRequired,
