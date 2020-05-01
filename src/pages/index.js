@@ -1,50 +1,22 @@
 import React, { Component } from "react"
-import styles from "../styles/styles"
-import SectionTop from "./../components/SectionTop"
 import Navbar from "./../components/Navbar"
-import Section from "./../components/Section"
-import ContentWrapper from "./../components/ContentWrapper"
-import ContentBlob from "./../components/ContentBlob"
-import colors from "../styles/colors"
-import TextCard from "../components/TextCard"
 import Footer from "../components/Footer"
 import People from "../components/People"
 import Hero from "../components/Hero"
 import GetStarted from "../components/GetStarted"
 import { graphql } from "gatsby"
-import { FaCubes, FaCreativeCommonsShare } from "react-icons/fa"
-import { Helmet } from "react-helmet"
-import ClickMe from "../components/ClickMe"
-import Text from "../components/Text"
-import Anchor from "../components/Anchor"
-import SubHeading from "../components/SubHeading"
-import BackgroundImage from "../components/BackgroundImage"
 import CustomHelmet from "../components/CustomHelmet"
 import LocalizedStrings from "react-localization"
 import StartProjectSection from "../components/StartProjectSection"
 import FactSection from "../components/FactSection"
 import QuoteSection from "../components/QuoteSection"
 import MethodologySection from "../components/MethodologySection"
+import translation from "../translations/home"
 
 class Index extends Component {
   render() {
     const { data } = this.props
-    const strings = new LocalizedStrings({
-      en: {
-        hero: {
-          title: "We Develop Augmented Reality Apps",
-          subTitle: "We help people and companies save time and make better decisions by closing the gap between the digital and physical world.",
-          action: "Read more"
-        },
-      },
-      sv: {
-        hero: {
-          title: "Vi utvecklar Augmented Reality-applikationer",
-          subTitle: "Vi hjälper människor och företag att spara tid och fatta bättre beslut genom att förena den digitala och fysiska världen.",
-          action: "Läs mer"
-        },
-      },
-    })
+    const strings = new LocalizedStrings(translation)
 
     return (
       <React.Fragment>
