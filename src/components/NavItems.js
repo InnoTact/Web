@@ -4,6 +4,8 @@ import styled, { css } from "styled-components"
 import colors from "../styles/colors"
 import HamburgerMenu from "react-hamburger-menu"
 import { AppContext } from "./RootWrapper"
+import LocalizedStrings from "react-localization"
+import translation from "../translations/pages"
 
 const LinkContainer = styled.div`
   display: flex;
@@ -35,7 +37,7 @@ const NavItem = styled.div`
   opacity: 1;
   transition: all 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out 0.1s, opacity 0.2s ease-in-out 0.1s,
-        color 0.2s ease-in-out;
+    color 0.2s ease-in-out;
 
   ${({ open }) =>
     open &&
@@ -46,7 +48,7 @@ const NavItem = styled.div`
       opacity: 1;
       transform: translate(-16px);
     `}
-`   
+`
 
 const NavLink = styled.div`
   text-decoration: none;
@@ -72,7 +74,7 @@ const NavLink = styled.div`
 
 const HamburgerContainer = styled.div`
   position: absolute;
-  top: ${({isOpen}) => isOpen ? '4.65rem' : '2.2rem'};
+  top: ${({ isOpen }) => (isOpen ? "4.65rem" : "2.2rem")};
   right: 2.2rem;
 `
 
@@ -91,34 +93,51 @@ class NavItems extends Component {
     const { open } = this.state
     const linkColor = dark ? colors.mediumGrey : colors.lightgrey
     const activeLinkColor = dark ? colors.mediumGreyLighten : colors.white
+    const strings = new LocalizedStrings(translation)
 
     const navItems = (
       <Fragment>
-        <NavItem style={{ transitionDelay: '0.1s 0.1s 0' }} open={open}>
-          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/">
+        <NavItem style={{ transitionDelay: "0.1s 0.1s 0" }} open={open}>
+          <Link
+            style={{ color: linkColor }}
+            activeStyle={{ color: activeLinkColor, fontWeight: 600 }}
+            to="/"
+          >
             <NavLink open={open} {...props}>
-              Hem
+              {strings.home}
             </NavLink>
           </Link>
         </NavItem>
-        <NavItem style={{ transitionDelay: '0.3s 0.3s 0' }} open={open}>
-          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/lösningar/">
+        <NavItem style={{ transitionDelay: "0.3s 0.3s 0" }} open={open}>
+          <Link
+            style={{ color: linkColor }}
+            activeStyle={{ color: activeLinkColor, fontWeight: 600 }}
+            to="/lösningar/"
+          >
             <NavLink open={open} {...props}>
-              Lösningar
+              {strings.solutions}
             </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/om-oss/">
+          <Link
+            style={{ color: linkColor }}
+            activeStyle={{ color: activeLinkColor, fontWeight: 600 }}
+            to="/om-oss/"
+          >
             <NavLink open={open} {...props}>
-              Om oss
+              {strings.about}
             </NavLink>
           </Link>
         </NavItem>
         <NavItem open={open}>
-          <Link style={{color: linkColor}} activeStyle={{color: activeLinkColor, fontWeight: 600}} to="/kontakt/">
+          <Link
+            style={{ color: linkColor }}
+            activeStyle={{ color: activeLinkColor, fontWeight: 600 }}
+            to="/kontakt/"
+          >
             <NavLink open={open} {...props}>
-              Kontakt
+              {strings.contact}
             </NavLink>
           </Link>
         </NavItem>
@@ -134,29 +153,29 @@ class NavItems extends Component {
               return null
             }
 
-              if (value.isMobile) {
-                output = (
-                  <Fragment>
-                    <HamburgerContainer isOpen={open}>
-                      <HamburgerMenu
-                        isOpen={open}
-                        width={30}
-                        height={18}
-                        strokeWidth={2}
-                        rotate={0}
-                        color={open ? colors.primary : colors.white}
-                        borderRadius={0}
-                        animationDuration={0.5}
-                        menuClicked={this.menuClicked}
-                      />
-                    </HamburgerContainer>
-                    {open && navItems}
-                  </Fragment>
-                )
-              } else {
-                output = navItems
-              }
-            
+            if (value.isMobile) {
+              output = (
+                <Fragment>
+                  <HamburgerContainer isOpen={open}>
+                    <HamburgerMenu
+                      isOpen={open}
+                      width={30}
+                      height={18}
+                      strokeWidth={2}
+                      rotate={0}
+                      color={open ? colors.primary : colors.white}
+                      borderRadius={0}
+                      animationDuration={0.5}
+                      menuClicked={this.menuClicked}
+                    />
+                  </HamburgerContainer>
+                  {open && navItems}
+                </Fragment>
+              )
+            } else {
+              output = navItems
+            }
+
             return output
           }}
         </AppContext.Consumer>
