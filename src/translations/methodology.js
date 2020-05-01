@@ -38,7 +38,7 @@ export default {
     },
   },
   sv: {
-    title: "How we turn your idea into reality",
+    title: "Hur vi realiserar din idé",
     subTitle:
       "Vår metodik för att maximera nytta och uppfylla dina behov delas in i följande sex steg.",
     step1: {
