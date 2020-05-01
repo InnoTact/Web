@@ -57,37 +57,37 @@ export default {
     subTitle:
       "Möt teamet som består av ett gäng nära vänner med flera års erfarenhet av att jobba tillsammans.",
     niklas: {
-      position: "Grundare &amp; VD",
+      position: "Grundare & VD",
       city: "Göteborg, Sverige",
       description:
         "Som bolagets VD ser Niklas till att vi når vårt mål om att bli det bästa AR-företaget i landet. Då han studerar industriell ekonomi är han expert inom företagsstrategi och kundrelationer. Han ansvarar för att teamet alltid mår bra och presterar på toppen av sin förmåga. Vid frågor om företagets strategi och kunder är Niklas rätt person att fråga.",
     },
     joel: {
-      position: "Grundare, projektledare &amp; utvecklare",
+      position: "Grundare, projektledare & utvecklare",
       city: "Göteborg, Sverige",
       description:
         "Som projektledare ansvarar Joel för att InnoTacts projekt blir klara i tid och uppfyller alla kundens krav. Exempelvis är Joel projektledare för Boråstapeters revolutionerande nya app, Wonderwall. Joel studerar IT-programmet på Chalmers och har studerat Software Engineering i USA. Joels IT-kunskaper är ovärderliga för företaget och han lägger stor tid på att fortsatt personlig utveckling. Vid frågor om specifika projekt är Joel rätt person att fråga.",
     },
     anton: {
-      position: "Grundare &amp; AR-specialist",
+      position: "Grundare & AR-specialist",
       city: "Göteborg, Sverige",
       description:
         "Som företagets AR-specialist ansvarar Anton för att innovativa AR-lösningar tas fram efter kundens behov. Antons problemlösningsförmåga och tävlingsinstinkt gör att han ger allt för att lösa kundernas utmaningar. Vid sidan om InnoTact studerar Anton Automation och Mekatronik med master i Data Science och AI på Chalmers. Vid frågor om vad som är möjligt att göra med augmented reality är Anton rätt person att fråga.",
     },
     casper: {
-      position: "Grundare, CTO &amp; utvecklare",
+      position: "Grundare, CTO & utvecklare",
       city: "Göteborg, Sverige",
       description:
         "Som företagets CTO ansvarar Casper för företagets tekniska strategi. Som erfaren programmerare och blivande data scientist är Casper expert på att snabbt lära sig och anpassa sig till nya teknologier. Casper ser till att vårt arbetssätt är effektivt och anpassat till de senaste teknologierna. Vid tekniska frågor är Casper rätt person att fråga.",
     },
     carl: {
-      position: "Grundare &amp; VD",
+      position: "Grundare & VD",
       city: "Göteborg, Sverige",
       description:
         "Som företagets CFO har Carl det yttersta ansvaret vid ekonomiska beslut. Carl studerar Teknisk Fysik och bidrar med sin problemlösningsförmåga och programmeringskunskaper till företaget. Carls problemlösningsförmåga har lett till flera nya innovationer som banat för nya appar. Vid frågor om företagets ekonomi är Carl rätt person att fråga.",
     },
     fredrik: {
-      position: "IT-arkitekt, utvecklare &amp; rådgivare",
+      position: "IT-arkitekt, utvecklare & rådgivare",
       city: "Göteborg, Sverige",
       description:
         "Som IT-arkitekt, utvecklare och rådgivare ansvarar Fredrik för att kvalitetssäkra koden samt höja kompetensen i teamet. Fredrik har jobbat på Google i London, Microsoft i Seattle och Google i Stockholm. Fredrik pluggar datateknik på KTH, har gjort utbyte i Kina på det prestigefulla universitetet Tsinghua, känt som ”the Harvard of China”. Dessutom är Fredrik tävlingsprogrammerare på elitnivå och har även tävlat och presterat på elitnivå i matematiktävlingar.",
@@ -99,7 +99,7 @@ export default {
         "Som androidutvecklare med specialisering inom augmented reality ansvarar Oskar för att utveckla appar med väl utvalda arkitektur-mönster och de senaste augmented reality- teknikerna. Oskar studerar till civilingenjör i datateknik på Chalmers och går nu första året på IT-mastern Software Engineering and Technology. Oskar har därför den senaste kunskapen som Chalmers undervisar färskt i minnet och är redo att revolutionera framtidens augmented reality-appar.",
     },
     melker: {
-      position: "Grundare &amp; VD",
+      position: "Grundare & VD",
       city: "Göteborg, Sverige",
       description:
         "Som företagets främsta backend-ansvarig lägger Melker den tekniska grunden för att InnoTact ska fortsätta revolutionera befintliga och nya branscher. Med sin IT kandidat från Chalmers och flera års erfarenhet som backendutvecklare har Melker det som krävs för att axla det ansvaret.",
