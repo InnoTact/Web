@@ -6,23 +6,15 @@ import ContentWrapper from "../components/ContentWrapper"
 import colors from "../styles/colors"
 import Footer from "../components/Footer"
 import Hero from "../components/Hero"
-import Capability from "../components/Capability"
 import GetStarted from "../components/GetStarted"
 import { graphql } from "gatsby"
-import BackgroundImage from "../components/BackgroundImage"
 import styled from "styled-components"
-import styles from "../styles/styles"
 import ContentBlob from "../components/ContentBlob"
 import CustomHelmet from '../components/CustomHelmet'
 import LocalizedStrings from "react-localization"
+import ARAreasSection from "../components/ARAreasSection"
 import translation from "../translations/solutions"
 
-const ExtraMargin = styled.div`
-  margin-top: 60px;
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    margin-top: -15px;
-  }
-`
 const SolutionsContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
@@ -43,65 +35,8 @@ class Solutions extends Component {
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}
         />
 
-        <Section
-          style={{ marginBottom: 0, paddingBottom: 0 }}
-          backgroundColor={colors.white}
-        >
-          <React.Fragment>
-            <ContentWrapper>
-              <SectionTop dark header={`Hur AR kommer förbättra ditt företag`}>
-                Våra lösningar syftar alltid till att förbättra sättet våra
-                kunder arbetar på. Alla företag kan förbättras genom att
-                implementera AR på något sätt. Det finns framförallt tre områden
-                där AR är särskilt effektivt.
-              </SectionTop>
-            </ContentWrapper>
-            <ExtraMargin>
-              <Capability
-                buttonText="Kom igång"
-                textLeft
-                header="Visualisering"
-                text="AR är den effektivaste teknologin för att visualisera objekt i din miljö och omgivning. Du kan exempelvis se hur en ny tavla hade sett ut i ditt vardagsrum eller hur ditt kontor hade sett ut om du inredde det med nya möbler. Visualisering är viktigt inför köpbeslut för att ge dig all information du behöver inom några få sekunder."
-              >
-                <BackgroundImage
-                  alt="Augmented Reality"
-                  fluid={data.AugmentedRealityImage1.childImageSharp.fluid}
-                  fit="contain"
-                  height="100%"
-                  style={{ zIndex: 1 }}
-                />
-              </Capability>
-            </ExtraMargin>
-            <Capability
-              buttonText="Starta ett projekt"
-              header="Interaktion"
-              text="Vad som tidigare krävt fysiska knappar eller en navigation via en smart mobilskärm kan nu ske genom bildigenkänning och maskininlärning i realtid via AR. Användarupplevelsen av digitala lösningar kan förändras helt när AR-glasögon möjliggör att kunna ha båda händerna fria samtidigt som du får all information du behöver."
-            >
-              <BackgroundImage
-                alt="Augmented Reality"
-                fluid={data.AugmentedRealityImage2.childImageSharp.fluid}
-                fit="contain"
-                height="100%"
-                style={{ zIndex: 1 }}
-              />
-            </Capability>
-            <Capability
-              buttonText="Kontakta oss"
-              textLeft
-              header="Instruktioner &amp; vägledning"
-              text="Genom AR kan du få tydliga instruktioner i realtid för att hjälpa dig med olika problem som uppstår. Du kan få tillgång till detaljerad information som annars hade hämtats via Internet eller en manual. Du kan även få support via en extern part i realtid. Detta kan hjälpa både dig som privatperson som vill förenkla reparationer eller dig som arbetar med avancerad support."
-            >
-              <BackgroundImage
-                alt="Augmented Reality"
-                fluid={data.AugmentedRealityImage3.childImageSharp.fluid}
-                fit="contain"
-                height="100%"
-                style={{ zIndex: 1 }}
-              />
-            </Capability>
-          </React.Fragment>
-        </Section>
-
+        <ARAreasSection data={data} />
+ 
         <Section backgroundColor={colors.lightgrey}>
           <ContentWrapper>
             <SectionTop dark header="Lösningar vi erbjuder">
