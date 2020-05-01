@@ -16,6 +16,8 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import BackgroundImage from "../components/BackgroundImage"
 import CustomHelmet from '../components/CustomHelmet'
+import LocalizedStrings from "react-localization"
+import translation from "../translations/about"
 
 const BlobContainer = styled.div`
   display: flex;
@@ -51,6 +53,7 @@ const ContentBlobCustom = styled(ContentBlob)`
 class About extends Component {
   render() {
     const { data } = this.props
+    const strings = new LocalizedStrings(translation)
 
     return (
       <React.Fragment>
@@ -58,23 +61,9 @@ class About extends Component {
         <Navbar />
 
         <Hero
-          header="Företaget"
-          subHeader="InnoTact består av ett team högpresterande ingenjörsstudenter från
-          Chalmers Tekniska Högskola, i Göteborg. Vår högsta prioritet är
-          alltid att göra våra kunder nöjda. Vi älskar att skapa idéer
-          tillsammans med våra kunder för att förbättra och förenkla
-          processerna i deras företag."
-          bottomText="Läs mer"
-        >
-          <BackgroundImage
-            alt="Augmented Reality"
-            fluid={data.HeroBackgroundImage.childImageSharp.fluid}
-            fit="contain"
-            height="100%"
-            width="100%"
-            style={{ bottom: 0, right: 0, position: "absolute" }}
-          />
-        </Hero>
+          text={strings.hero}
+          imageData={data.HeroBackgroundImage.childImageSharp.fluid}
+        />
 
         <Section backgroundColor={colors.lightgrey}>
           <ContentWrapper>

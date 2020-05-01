@@ -7,8 +7,7 @@ import Hero from "../components/Hero"
 import { navigateTo } from "gatsby-link"
 import styles from "../styles/styles"
 import { graphql } from "gatsby"
-import BackgroundImage from "../components/BackgroundImage"
-import CustomHelmet from '../components/CustomHelmet'
+import CustomHelmet from "../components/CustomHelmet"
 import ContactUsSection from "../components/ContactUsSection"
 import LocalizedStrings from "react-localization"
 import translation from "../translations/contact-us"
@@ -30,26 +29,13 @@ class Contact extends Component {
 
     return (
       <React.Fragment>
-        <CustomHelmet page='Kontakta ' />
+        <CustomHelmet page="Kontakta " />
         <Navbar />
-
         <Hero
-          header={strings.hero.title}
-          subHeader={strings.hero.subTitle}
-          bottomText={strings.hero.title}
-        >
-          <BackgroundImage
-            alt="Augmented Reality"
-            fluid={data.HeroBackgroundImage.childImageSharp.fluid}
-            fit="contain"
-            height="100%"
-            width="100%"
-            style={{ bottom: 0, right: 0, position: "absolute" }}
-          />
-        </Hero>
-
+          text={strings.hero}
+          imageData={data.HeroBackgroundImage.childImageSharp.fluid}
+        />
         <ContactUsSection />
-        
         <Footer />
       </React.Fragment>
     )

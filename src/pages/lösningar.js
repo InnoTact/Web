@@ -13,8 +13,9 @@ import BackgroundImage from "../components/BackgroundImage"
 import styled from "styled-components"
 import styles from "../styles/styles"
 import ContentBlob from "../components/ContentBlob"
-import VideoShowcase from '../components/VideoShowcase'
 import CustomHelmet from '../components/CustomHelmet'
+import LocalizedStrings from "react-localization"
+import translation from "../translations/solutions"
 
 const ExtraMargin = styled.div`
   margin-top: 60px;
@@ -31,30 +32,16 @@ const SolutionsContainer = styled.div`
 class Solutions extends Component {
   render() {
     const { data } = this.props
+    const strings = new LocalizedStrings(translation)
 
     return (
       <React.Fragment>
         <CustomHelmet page='Lösningar ' />
         <Navbar />
-
         <Hero
-          header="Våra lösningar"
-          subHeader="En av våra största styrkor är att snabbt kunna anpassa oss till
-          nya utmaningar och ny teknologi. Därför kan vi skapa lösningar
-          till dig oavsett om du vill använda Android, iOS eller
-          AR-glasögon. Våra produkter skapas alltid med framtiden i åtanke
-          och underhåll är en stor del av det vi gör."
-          bottomText="Läs mer"
-        >
-          <BackgroundImage
-            alt="Augmented Reality"
-            fluid={data.HeroBackgroundImage.childImageSharp.fluid}
-            fit="contain"
-            height="100%"
-            width="100%"
-            style={{ bottom: 0, right: 0, position: "absolute" }}
-          />
-        </Hero>
+          text={strings.hero}
+          imageData={data.HeroBackgroundImage.childImageSharp.fluid}
+        />
 
         <Section
           style={{ marginBottom: 0, paddingBottom: 0 }}
