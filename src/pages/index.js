@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import styled from "styled-components"
 import styles from "../styles/styles"
 import SectionTop from "./../components/SectionTop"
 import Navbar from "./../components/Navbar"
@@ -23,72 +22,9 @@ import BackgroundImage from "../components/BackgroundImage"
 import CustomHelmet from "../components/CustomHelmet"
 import LocalizedStrings from "react-localization"
 import StartProjectSection from "../components/StartProjectSection"
-
-const StepsWrapper = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-const FactContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 250px;
-
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    flex-direction: column;
-    height: auto;
-  }
-`
-
-const FactItem = styled.div`
-  padding: 3rem;
-  text-align: center;
-  width: 33%;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    width: 100%;
-    height: auto;
-  }
-`
-
-const QuoteSection = styled(Section)`
-  @media (max-width: ${styles.breakpoints.md + "px"}) {
-    display: none;
-  }
-`
-
-const QuoteContainer = styled.div`
-  padding: 4rem 0 5rem 0;
-`
-
-const Quote = styled(SubHeading)`
-  text-align: center;
-  line-height: 2.2;
-  font-style: italic;
-`
-
-const QuoteName = styled(Anchor)`
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin-top: 1rem;
-  display: block;
-`
-
-const imageStyle = {
-  objectFit: "contain",
-  fontFamily: "object-fit: contain;",
-  height: "100%",
-}
+import FactSection from "../components/FactSection"
+import QuoteSection from "../components/QuoteSection"
+import MethodologySection from "../components/MethodologySection"
 
 class Index extends Component {
   render() {
@@ -118,152 +54,12 @@ class Index extends Component {
           text={strings.hero}
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}
         />
-
         <StartProjectSection />
-
-        <Section
-          style={{ paddingBottom: 0, paddingTop: 0 }}
-          backgroundColor={colors.lightgrey}
-        >
-          <FactContainer>
-            <FactItem style={{ backgroundColor: colors.lightgrey }}>
-              <Text
-                style={{ marginBottom: "0.7rem", textAlign: "center" }}
-                dark
-              >
-                Augmented Reality revenue is expected to hit US$198 billion by
-                2025
-              </Text>
-              <Anchor
-                small
-                italic
-                dark
-                target="_blank"
-                href="https://www.statista.com/statistics/897587/world-augmented-reality-market-value/"
-              >
-                Statista
-              </Anchor>
-            </FactItem>
-            <FactItem style={{ backgroundColor: colors.lightdarkerGrey }}>
-              <Text
-                style={{ marginBottom: "0.7rem", textAlign: "center" }}
-                dark
-              >
-                60% to 70% of consumers see clear benefits in using AR and IoT
-                devices in their daily life and at work
-              </Text>
-              <Anchor
-                small
-                italic
-                dark
-                target="_blank"
-                href="http://www.isaca.org/About-ISACA/Press-room/News-Releases/2016/Pages/2016-IT-RRB-News-Release-US.aspx"
-              >
-                Isaca
-              </Anchor>
-            </FactItem>
-            <FactItem style={{ backgroundColor: colors.mediumGrey }}>
-              <Text
-                style={{ marginBottom: "0.7rem", textAlign: "center" }}
-                dark
-              >
-                40% of people are willing to pay more for a product if they can
-                experience it first through AR.
-              </Text>
-              <Anchor
-                small
-                italic
-                dark
-                target="_blank"
-                href="https://www.clickz.com/how-is-ar-revolutionizing-the-in-store-experience-for-retailers/112696/"
-              >
-                Retail Perceptions
-              </Anchor>
-            </FactItem>
-          </FactContainer>
-        </Section>
-
-        <QuoteSection
-          style={{ paddingBottom: 0, paddingTop: 0 }}
-          backgroundColor={colors.lightgrey}
-        >
-          <ContentWrapper>
-            <QuoteContainer>
-              <Quote dark>
-                "I do think that a significant portion of the population of
-                developed countries, and eventually all countries, will have AR
-                experiences every day, almost like eating three meals a day, it
-                will become that much a part of you."
-              </Quote>
-              <QuoteName
-                target="_blank"
-                href="https://nordic.businessinsider.com/apple-ceo-tim-cook-explains-augmented-reality-2016-10?r=US&IR=T"
-                center
-                dark
-              >
-                Tim Cook CEO Apple
-              </QuoteName>
-            </QuoteContainer>
-          </ContentWrapper>
-        </QuoteSection>
-
+        <FactSection />
+        <QuoteSection />
         <People peopleImagesData={data} />
-
-        <Section backgroundColor={colors.lightgrey}>
-          <ContentWrapper>
-            <SectionTop dark header={`Hur vi realiserar din idé`}>
-              Vår metodik för att maximera nytta och uppfylla dina behov delas
-              in i följande sex steg.
-            </SectionTop>
-            <StepsWrapper>
-              <TextCard
-                header="Vi bokar ett möte."
-                text={[
-                  `Tryck `,
-                  <ClickMe italic url="/kontakt/">
-                    här
-                  </ClickMe>,
-                  " för att boka ett möte där vi kan diskutera dina behov och möjligheter.",
-                ]}
-                number={"1"}
-                dark
-              />
-              <TextCard
-                header=" Vi skapar en plan baserad på dina behov."
-                text="Efter att ha identifierat den bästa lösningen till dina problem skapar vi en plan tillsammans för att se till att du får den lösning du behöver."
-                number={"2"}
-                dark
-              />
-              <TextCard
-                header="Samtidigt som vi håller en nära kontakt börjar vi utveckla lösningen."
-                text="Under hela utvecklingsfasen uppdaterar vi dig kontinuerligt för att säkerställa att vi utvecklar något du blir nöjd med."
-                number={"3"}
-                dark
-              />
-              <TextCard
-                header="Vi fortsätter arbeta tills du är nöjd."
-                text="Vår lösning är inte färdig förrän du är helt nöjd med resultatet."
-                number={"4"}
-                dark
-              />
-              <TextCard
-                header="Vi avslutar och integrerar lösningen."
-                text="När lösningen är klar ser vi till att den kan integreras i ditt företag."
-                number={"5"}
-                dark
-              />
-              <TextCard
-                header="Kontinuerliga förbättringar för dina framtida behov."
-                text="Även när lösningen är lanserad fortsätter vi arbeta på förbättringar efter dina önskemål."
-                number={"6"}
-                dark
-              />
-            </StepsWrapper>
-          </ContentWrapper>
-        </Section>
-
+        <MethodologySection />
         <GetStarted />
-
         <Footer />
       </React.Fragment>
     )
