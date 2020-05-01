@@ -6,6 +6,8 @@ import ClickMe from "./ClickMe"
 import styled from "styled-components"
 import colors from "../styles/colors"
 import SectionTop from "./SectionTop"
+import LocalizedStrings from "react-localization"
+import translation from "../translations/methodology" 
 
 export default function MethodologySection() {
   const StepsWrapper = styled.div`
@@ -14,54 +16,54 @@ export default function MethodologySection() {
     flex-direction: column;
     align-items: center;
   `
+  const strings = new LocalizedStrings(translation)
 
   return (
     <Section backgroundColor={colors.lightgrey}>
       <ContentWrapper>
-        <SectionTop dark header={`Hur vi realiserar din idé`}>
-          Vår metodik för att maximera nytta och uppfylla dina behov delas in i
-          följande sex steg.
+        <SectionTop dark header={strings.title}>
+          {strings.subTitle}
         </SectionTop>
         <StepsWrapper>
           <TextCard
-            header="Vi bokar ett möte."
+            header={strings.step1.title}
             text={[
-              `Tryck `,
+              `${strings.step1.press} `,
               <ClickMe italic url="/kontakt/">
-                här
+                {strings.step1.here}
               </ClickMe>,
-              " för att boka ett möte där vi kan diskutera dina behov och möjligheter.",
+              ` ${strings.step1.description}`,
             ]}
             number={"1"}
             dark
           />
           <TextCard
-            header=" Vi skapar en plan baserad på dina behov."
-            text="Efter att ha identifierat den bästa lösningen till dina problem skapar vi en plan tillsammans för att se till att du får den lösning du behöver."
+            header={strings.step2.title}
+            text={strings.step2.description}
             number={"2"}
             dark
           />
           <TextCard
-            header="Samtidigt som vi håller en nära kontakt börjar vi utveckla lösningen."
-            text="Under hela utvecklingsfasen uppdaterar vi dig kontinuerligt för att säkerställa att vi utvecklar något du blir nöjd med."
+            header={strings.step3.title}
+            text={strings.step3.description}
             number={"3"}
             dark
           />
           <TextCard
-            header="Vi fortsätter arbeta tills du är nöjd."
-            text="Vår lösning är inte färdig förrän du är helt nöjd med resultatet."
+            header={strings.step4.title}
+            text={strings.step4.description}
             number={"4"}
             dark
           />
           <TextCard
-            header="Vi avslutar och integrerar lösningen."
-            text="När lösningen är klar ser vi till att den kan integreras i ditt företag."
+            header={strings.step5.title}
+            text={strings.step5.description}
             number={"5"}
             dark
           />
           <TextCard
-            header="Kontinuerliga förbättringar för dina framtida behov."
-            text="Även när lösningen är lanserad fortsätter vi arbeta på förbättringar efter dina önskemål."
+            header={strings.step6.title}
+            text={strings.step6.description}
             number={"6"}
             dark
           />
