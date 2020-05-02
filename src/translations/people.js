@@ -81,7 +81,7 @@ export default {
         "Som företagets CTO ansvarar Casper för företagets tekniska strategi. Som erfaren programmerare och blivande data scientist är Casper expert på att snabbt lära sig och anpassa sig till nya teknologier. Casper ser till att vårt arbetssätt är effektivt och anpassat till de senaste teknologierna. Vid tekniska frågor är Casper rätt person att fråga.",
     },
     carl: {
-      position: "Grundare & VD",
+      position: "Founder, CFO and Developer",
       city: "Göteborg, Sverige",
       description:
         "Som företagets CFO har Carl det yttersta ansvaret vid ekonomiska beslut. Carl studerar Teknisk Fysik och bidrar med sin problemlösningsförmåga och programmeringskunskaper till företaget. Carls problemlösningsförmåga har lett till flera nya innovationer som banat för nya appar. Vid frågor om företagets ekonomi är Carl rätt person att fråga.",
@@ -99,7 +99,7 @@ export default {
         "Som androidutvecklare med specialisering inom augmented reality ansvarar Oskar för att utveckla appar med väl utvalda arkitektur-mönster och de senaste augmented reality- teknikerna. Oskar studerar till civilingenjör i datateknik på Chalmers och går nu första året på IT-mastern Software Engineering and Technology. Oskar har därför den senaste kunskapen som Chalmers undervisar färskt i minnet och är redo att revolutionera framtidens augmented reality-appar.",
     },
     melker: {
-      position: "Grundare & VD",
+      position: "Back-end utvecklare",
       city: "Göteborg, Sverige",
       description:
         "Som företagets främsta backend-ansvarig lägger Melker den tekniska grunden för att InnoTact ska fortsätta revolutionera befintliga och nya branscher. Med sin IT kandidat från Chalmers och flera års erfarenhet som backendutvecklare har Melker det som krävs för att axla det ansvaret.",
