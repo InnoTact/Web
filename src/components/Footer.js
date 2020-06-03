@@ -152,7 +152,7 @@ class Footer extends Component {
                           contact@innotactsoftware.com
                         </Anchor>
                         <SocialLogos>
-                          <SocialLogoAnchor href="https://www.linkedin.com/company/innotact-software-ab/om-oss/">
+                          <SocialLogoAnchor href="https://www.linkedin.com/company/18905374/">
                             <FaLinkedin
                               style={
                                 value.isTablet || value.isMobile
