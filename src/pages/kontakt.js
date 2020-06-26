@@ -1,26 +1,12 @@
 import React, { Component } from "react"
-import styled from "styled-components"
 import Navbar from "./../components/Navbar"
-import colors from "../styles/colors"
 import Footer from "../components/Footer"
 import Hero from "../components/Hero"
-import { navigateTo } from "gatsby-link"
-import styles from "../styles/styles"
 import { graphql } from "gatsby"
 import CustomHelmet from "../components/CustomHelmet"
 import ContactUsSection from "../components/ContactUsSection"
 import LocalizedStrings from "react-localization"
 import translation from "../translations/contact-us"
-
-const ContactContainer = styled.div`
-  width: 45%;
-
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    order: 1;
-    width: 100%;
-    margin-bottom: 4rem;
-  }
-`
 
 class Contact extends Component {
   render() {

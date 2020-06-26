@@ -4,8 +4,7 @@ import Section from "./Section"
 import colors from "../styles/colors"
 import Logo from "./Logo"
 import NavItems from "./NavItems"
-import Text from "./Text"
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa"
+import { FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa"
 import ContentWrapper from "./ContentWrapper"   
 import styles from "../styles/styles"
 import { AppContext } from "./RootWrapper"
@@ -91,15 +90,6 @@ const InfoIconsContainer = styled.div`
     text-align: center;
   }
 `
-
-const AdressText = styled(Text)`
-  @media (max-width: ${styles.breakpoints.md + "px"}) {
-    margin-bottom: -20px;
-    margin-top: 20px; 
-    text-align: center;
-  }
-`
-
 const Wrapper = styled(ContentWrapper)`
   @media (max-width: ${styles.breakpoints.lg + "px"}) and (min-width: ${styles.breakpoints.md + "px"}) {
     width: 95%;

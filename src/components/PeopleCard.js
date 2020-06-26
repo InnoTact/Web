@@ -3,7 +3,6 @@ import styled from "styled-components"
 import colors from "../styles/colors"
 import Text from "./Text"
 import { FaMapMarker, FaEnvelope, FaLinkedin } from "react-icons/fa"
-import ColorFadeSection from "./ColorFadeSection"
 import Img from "gatsby-image"
 import PropTypes from 'prop-types';
 

@@ -9,7 +9,6 @@ import CustomHelmet from '../components/CustomHelmet'
 
 class PrivacyPolicy extends Component {
     render() {
-        const { data } = this.props
 
         return (
             <React.Fragment>
