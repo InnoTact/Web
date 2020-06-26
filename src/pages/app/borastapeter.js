@@ -21,10 +21,11 @@ const Borastapeter = () => {
     const os = getMobileOperatingSystem()
     if (os === "iOS") {
         window.location.href = APP_STORE_LINK;
+        setTimeout(() => history.back(), 1000);
     }
   }, [])
 
-  return <div>This should not be visible</div>
+  return <div></div>
 }
 
 export default Borastapeter
