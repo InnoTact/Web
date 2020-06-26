@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 const getMobileOperatingSystem = () => {
@@ -21,7 +21,11 @@ const getMobileOperatingSystem = () => {
       return "unknown";
   }
 const Borastapeter = () => {
-    const os = getMobileOperatingSystem();
+    const [os, setOS] = useState('');
+    useEffect(() => {
+        setOS(getMobileOperatingSystem());
+    }, []);
+    
     return <div>This should not be visible. You are viewing this from {os}</div>;
 }
 
