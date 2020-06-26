@@ -12,7 +12,7 @@ export default {
       title: "Våra lösningar",
       subTitle:
         "En av våra största styrkor är att snabbt kunna anpassa oss till nya utmaningar och ny teknologi. Därför kan vi skapa lösningar till dig oavsett om du vill använda Android, iOS eller AR-glasögon. Våra produkter skapas alltid med framtiden i åtanke.",
-      action: "Read oss",
+      action: "Läs vidare",
     },
   },
 }

@@ -16,7 +16,7 @@ export default {
     hero: {
         title: "Kontakta oss",
         subTitle: "När du vill komma i kontakt med oss kan ni antingen fylla i formuläret nedan eller nå oss via telefon. Vi är alltid beredda att diskutera dina behov och möjliga lösningar.",
-        action: "Kontakt oss"
+        action: "Kontakta oss"
       },
       main: {
           title: "Låt oss skapa något grymt tillsammans.",

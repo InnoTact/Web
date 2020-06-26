@@ -12,7 +12,7 @@ export default {
       title: "Om oss",
       subTitle:
         "InnoTact består av ett team högpresterande ingenjörsstudenter. Vår högsta prioritet är alltid att göra våra kunder nöjda. Vi älskar att skapa idéer tillsammans med våra kunder för att förbättra och förenkla processerna i deras företag.",
-      action: "Kontakt oss",
+      action: "Kontakta oss",
     },
   },
 }
