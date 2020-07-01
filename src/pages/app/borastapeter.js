@@ -16,12 +16,17 @@ const getMobileOperatingSystem = () => {
 }
 
 const APP_STORE_LINK = 'https://apps.apple.com/se/app/wonderwall-ar-by-bor%C3%A5stapeter/id1478853508';
+const PLAY_STORE_LINK = 'https://play.google.com/store/apps/details?id=com.innotactsoftware.wonderwallar.borastapeter';
 const Borastapeter = () => {
   useEffect(() => {
     const os = getMobileOperatingSystem()
     if (os === "iOS") {
         window.location.href = APP_STORE_LINK;
         setTimeout(() => history.back(), 1000);
+    }
+    if (os === 'Android') {
+      window.location.href = PLAY_STORE_LINK;
+      setTimeout(() => history.back(), 1000);
     }
   }, [])
 
