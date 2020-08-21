@@ -7,6 +7,12 @@
                 "paths": [
                     "/app/borastapeter"
                 ]
+            },
+            {
+                "appID": "N3QW3RP8Y5.InnoTact.ARt-InnoTact",
+                "paths": [
+                    "/app/art-visualizer"
+                ]
             }
         ]
     }
