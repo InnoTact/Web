@@ -9,6 +9,7 @@ import LocalizedStrings from "react-localization"
 import ARAreasSection from "../components/ARAreasSection"
 import translation from "../translations/solutions"
 import SolutionsSection from "../components/SolutionsSection"
+import { Products } from "../components/Products"
 
 class Solutions extends Component {
   render() {
@@ -23,9 +24,10 @@ class Solutions extends Component {
           text={strings.hero}
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}
         />
-        <ARAreasSection data={data} />
+        <Products imageData={data} />
         <SolutionsSection />
-        <GetStarted />
+        <ARAreasSection data={data} />
+        <GetStarted dark />
         <Footer />
       </React.Fragment>
     )
@@ -34,6 +36,15 @@ class Solutions extends Component {
 
 export const pageQuery = graphql`
   query {
+    WallpaperVisualizer: file(
+      relativePath: { eq: "augmented-reality1.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     AugmentedRealityImage1: file(
       relativePath: { eq: "augmented-reality1.jpg" }
     ) {

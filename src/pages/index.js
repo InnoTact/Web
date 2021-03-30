@@ -10,8 +10,9 @@ import LocalizedStrings from "react-localization"
 import StartProjectSection from "../components/StartProjectSection"
 import FactSection from "../components/FactSection"
 import QuoteSection from "../components/QuoteSection"
-import MethodologySection from "../components/MethodologySection"
 import translation from "../translations/home"
+import { Products } from "../components/Products"
+import SolutionsSection from "../components/SolutionsSection"
 
 class Index extends Component {
   render() {
@@ -29,8 +30,8 @@ class Index extends Component {
         <StartProjectSection />
         <FactSection />
         <QuoteSection />
-        <People peopleImagesData={data} />
-        <MethodologySection />
+        <Products imageData={data} />
+        <SolutionsSection />
         <GetStarted />
         <Footer />
       </React.Fragment>
@@ -40,59 +41,12 @@ class Index extends Component {
 
 export const pageQuery = graphql`
   query {
-    JoelImage: file(relativePath: { eq: "Joel_Rudsberg.jpg" }) {
+    WallpaperVisualizer: file(
+      relativePath: { eq: "augmented-reality1.jpg" }
+    ) {
       childImageSharp {
-        fixed(width: 300, height: 300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    NiklasImage: file(relativePath: { eq: "Niklas_Gustafsson.jpg" }) {
-      childImageSharp {
-        fixed(width: 300, height: 300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    AntonImage: file(relativePath: { eq: "Anton_Claesson.jpg" }) {
-      childImageSharp {
-        fixed(width: 300, height: 300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    CasperImage: file(relativePath: { eq: "Casper_Lindberg.jpg" }) {
-      childImageSharp {
-        fixed(width: 300, height: 300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    CarlImage: file(relativePath: { eq: "Carl_Claesson.jpg" }) {
-      childImageSharp {
-        fixed(width: 300, height: 300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    FredrikImage: file(relativePath: { eq: "Fredrik_Hernqvist.jpg" }) {
-      childImageSharp {
-        fixed(width: 300, height: 300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    OskarImage: file(relativePath: { eq: "Oskar_Gronqvist.jpg" }) {
-      childImageSharp {
-        fixed(width: 300, height: 300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    MelkerImage: file(relativePath: { eq: "Melker_Veltman.jpg" }) {
-      childImageSharp {
-        fixed(width: 300, height: 300) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

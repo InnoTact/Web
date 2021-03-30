@@ -9,11 +9,11 @@ import { Link } from "gatsby"
 import LocalizedStrings from "react-localization"
 import translation from "../translations/get-started"
 
-export default () => {
+export default ({ dark }) => {
   const strings = new LocalizedStrings(translation)
 
   return (
-    <Section backgroundColor={colors.white}>
+    <Section backgroundColor={dark ? colors.lightgrey : colors.white}>
       <ContentWrapper>
         <SectionTop dark header={strings.title}>
           {strings.description}
