@@ -37,7 +37,7 @@ class Solutions extends Component {
 export const pageQuery = graphql`
   query {
     WallpaperVisualizer: file(
-      relativePath: { eq: "augmented-reality1.jpg" }
+      relativePath: { eq: "development1.jpg" }
     ) {
       childImageSharp {
         fluid(maxWidth: 1000) {

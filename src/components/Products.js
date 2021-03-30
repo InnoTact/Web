@@ -23,6 +23,7 @@ export const Products = ({ imageData }) => {
           "Allow your customers to visualise your wallpapers onto their walls in their own homes. Ensuring the perfect fit between wallpaper and interior design will reduce the customer uncertainty. By doing so you will increase your sales while making your customers happier. It’s a win-win!"
         }
         buttonText={"Read More"}
+        destination={"/wallpaper-visualizer"}
       >
         <BackgroundImage
           alt="Augmented Reality"
