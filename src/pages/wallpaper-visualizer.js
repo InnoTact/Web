@@ -7,6 +7,8 @@ import CustomHelmet from "../components/CustomHelmet"
 import WallpaperCompaniesLovingUs from "../components/WallpaperCompaniesLovingUs"
 import LocalizedStrings from "react-localization"
 import translation from "../translations/wallpaper-visualizer"
+import { VideoPitch } from "../components/VideoPitch"
+import QuoteSection from "../components/QuoteSection"
 
 class WallpaperVisualizer extends Component {
   render() {
@@ -22,6 +24,12 @@ class WallpaperVisualizer extends Component {
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}
         />
         <WallpaperCompaniesLovingUs imageData={data} />
+        <VideoPitch />
+        <QuoteSection
+          quote="Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter"
+          saidBy="Oskar Gissberg, Head of Digital Wallvision"
+          url={`https://www.di.se/pressreleaser/2020/02/04/borastapeter-ar-teknik-gor-det-mojligt-att-tapetsera-virtuellt-i-ny-app/`}
+        />
         <Footer />
       </React.Fragment>
     )

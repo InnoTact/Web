@@ -15,7 +15,11 @@ export default function WallpaperCompaniesLovingUs({ imageData }) {
     justify-content: space-evenly;
     flex-wrap: wrap;
   `
-  
+  const Logo = {
+    width: 160,
+    height: 65,
+    objectFit: 'contain'
+  }
   const data = useStaticQuery(graphql`
     {
       WallvisionLogo: file(relativePath: { eq: "Logo.png" }) {
@@ -35,37 +39,48 @@ export default function WallpaperCompaniesLovingUs({ imageData }) {
         <Container>
           <CompanyBlob
             text={
-              "Typ en mening som ger galen tyngd. Largest manufacturing company in Scandinavia..."
+              "Typ en mening som ger galen tyngd. Largest company in Scandinavia..."
             }
           >
-            <Img
+            {/* <Img
               imgStyle={{
                 objectFit: "contain",
                 width: '100%',
                 objectPosition: "50% 50%",
               }}
               fixed={data.WallvisionLogo.childImageSharp.fixed}
-            />
+            /> */}
+            <img style={Logo} src="https://www.wallvision.com/sites/wallvision.com/files/wallvision_0_2.png" />
+
           </CompanyBlob>
-          <ContentBlob width={360} small heading={"Wallvision"} text={""} />
-          <ContentBlob
-            left
-            width={360}
-            small
-            heading={"Grandeco"}
+          <CompanyBlob
             text={
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
             }
-          />
-          <ContentBlob
-            left
-            width={360}
-            small
-            heading={"Phillip Jeffries"}
+          >
+            <img style={Logo} src="https://www.borastapeter.com/sites/borastapeter.com/themes/borastapeter/dist/images/logo.svg" />
+          </CompanyBlob>
+          <CompanyBlob
             text={
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
             }
-          />
+          >
+            <img style={Logo} src="https://www.grandecogroup.com/frontend/corporateWebsiteBundle/img/general/logo-grandeco--b-on-w.svg" />
+          </CompanyBlob>
+          {/* <CompanyBlob
+            text={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+            }
+          >
+            <img style={Logo} src="http://www.maison-deco.info/wp-content/uploads/2018/10/phillip-jeffries-logo.png" />
+          </CompanyBlob>
+          <CompanyBlob
+            text={
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"
+            }
+          >
+            <img style={Logo} src="https://cdn.shopify.com/s/files/1/1231/4680/t/8/assets/logo.png?v=7867674794526171326" />
+          </CompanyBlob> */}
         </Container>
       </ContentWrapper>
     </Section>

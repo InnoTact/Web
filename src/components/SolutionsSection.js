@@ -5,67 +5,33 @@ import ContentWrapper from "../components/ContentWrapper"
 import colors from "../styles/colors"
 import styled from "styled-components"
 import ContentBlob from "../components/ContentBlob"
-import LocalizedStrings from "react-localization"
-import translation from "../translations/ar-solutions"
 
-export default function SolutionsSection() {
+export default function SolutionsSection({ title, blobCells }) {
   const SolutionsContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
   `
 
-  const strings = new LocalizedStrings(translation)
-
   return (
     <Section backgroundColor={colors.lightgrey}>
       <ContentWrapper>
-        <SectionTop dark header={strings.title} />
+        <SectionTop dark header={title} />
         <SolutionsContainer>
-          <ContentBlob
-            left
-            width={360}
-            small
-            heading={strings.teaching.title}
-            text={strings.teaching.description}
-          />
-          <ContentBlob
-            left
-            width={360}
-            small
-            heading={strings.marketing.title}
-            text={strings.marketing.description}
-          />
-          <ContentBlob
-            left
-            width={360}
-            small
-            heading={strings.modelling.title}
-            text={strings.modelling.description}
-          />
-          <ContentBlob
-            left
-            width={360}
-            small
-            heading={strings.navigation.title}
-            text={strings.navigation.description}
-          />
-          <ContentBlob
-            left
-            width={360}
-            small
-            heading={strings.AI.title}
-            text={strings.AI.description}
-          />
-          <ContentBlob
-            left
-            width={360}
-            small
-            heading={strings.commerce.title}
-            text={strings.commerce.description}
-          />
+          {blobCells.map(cell => {
+            return (
+              <ContentBlob
+                left
+                width={360}
+                small
+                heading={cell.title}
+                text={cell.text}
+              />
+            )
+          })}
         </SolutionsContainer>
       </ContentWrapper>
     </Section>
   )
 }
+

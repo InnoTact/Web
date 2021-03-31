@@ -7,7 +7,7 @@ import Section from "./Section"
 import styles from "../styles/styles"
 import colors from "../styles/colors"
 
-export default function QuoteSection() {
+export default function QuoteSection({ quote, saidBy, url }) {
   const QuoteSection = styled(Section)`
     @media (max-width: ${styles.breakpoints.md + "px"}) {
       display: none;
@@ -40,18 +40,15 @@ export default function QuoteSection() {
       <ContentWrapper>
         <QuoteContainer>
           <Quote dark>
-            "I do think that a significant portion of the population of
-            developed countries, and eventually all countries, will have AR
-            experiences every day, almost like eating three meals a day, it will
-            become that much a part of you."
+            {"\"" + quote + "\""}
           </Quote>
           <QuoteName
             target="_blank"
-            href="https://nordic.businessinsider.com/apple-ceo-tim-cook-explains-augmented-reality-2016-10?r=US&IR=T"
+            href={url}
             center
             dark
           >
-            Tim Cook CEO Apple
+            {saidBy}
           </QuoteName>
         </QuoteContainer>
       </ContentWrapper>
