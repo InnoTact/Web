@@ -1,12 +1,12 @@
 import React from "react"
-import SectionTop from "../components/SectionTop"
-import Section from "../components/Section"
-import ContentWrapper from "../components/ContentWrapper"
+import SectionTop from "./SectionTop"
+import Section from "./Section"
+import ContentWrapper from "./ContentWrapper"
 import colors from "../styles/colors"
 import styled from "styled-components"
-import ContentBlob from "../components/ContentBlob"
+import ContentBlob from "./ContentBlob"
 
-export default function SolutionsSection({ title, blobCells }) {
+export default function InfoGrid({ title, infoCells, light }) {
   const SolutionsContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
@@ -14,11 +14,11 @@ export default function SolutionsSection({ title, blobCells }) {
   `
 
   return (
-    <Section backgroundColor={colors.lightgrey}>
+    <Section backgroundColor={light ? colors.white : colors.lightgrey}>
       <ContentWrapper>
         <SectionTop dark header={title} />
         <SolutionsContainer>
-          {blobCells.map(cell => {
+          {infoCells.map(cell => {
             return (
               <ContentBlob
                 left

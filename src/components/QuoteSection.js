@@ -7,7 +7,7 @@ import Section from "./Section"
 import styles from "../styles/styles"
 import colors from "../styles/colors"
 
-export default function QuoteSection({ quote, saidBy, url }) {
+export default function QuoteSection({ quote, saidBy, url, ...props }) {
   const QuoteSection = styled(Section)`
     @media (max-width: ${styles.breakpoints.md + "px"}) {
       display: none;
@@ -36,6 +36,7 @@ export default function QuoteSection({ quote, saidBy, url }) {
     <QuoteSection
       style={{ paddingBottom: 0, paddingTop: 0 }}
       backgroundColor={colors.lightgrey}
+      {...props}
     >
       <ContentWrapper>
         <QuoteContainer>

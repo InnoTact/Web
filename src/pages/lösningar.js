@@ -7,8 +7,8 @@ import { graphql } from "gatsby"
 import CustomHelmet from '../components/CustomHelmet'
 import LocalizedStrings from "react-localization"
 import ARAreasSection from "../components/ARAreasSection"
+import SolutionSection from "../components/SolutionSection"
 import translation from "../translations/solutions"
-import SolutionsSection from "../components/SolutionsSection"
 import { Products } from "../components/Products"
 
 class Solutions extends Component {
@@ -25,7 +25,7 @@ class Solutions extends Component {
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}
         />
         <Products imageData={data} />
-        <SolutionsSection />
+        <SolutionSection />
         <ARAreasSection data={data} />
         <GetStarted dark />
         <Footer />
