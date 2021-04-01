@@ -9,9 +9,7 @@ import colors from "../styles/colors"
 
 export default function QuoteSection({ quote, saidBy, url, ...props }) {
   const QuoteSection = styled(Section)`
-    @media (max-width: ${styles.breakpoints.md + "px"}) {
-      display: none;
-    }
+    
   `
 
   const QuoteContainer = styled.div`

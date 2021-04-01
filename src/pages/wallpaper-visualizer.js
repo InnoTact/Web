@@ -14,6 +14,8 @@ import InfoCell from "../classes/InfoCell"
 import colors from "../styles/colors"
 import IconInfoGrid from "../components/IconInfoGrid"
 import IconCell from "../classes/IconCell"
+import MultipleQuoteSection from "../components/MultipleQuoteSection"
+import Quote from "../classes/Quote"
 
 class WallpaperVisualizer extends Component {
   render() {
@@ -57,6 +59,11 @@ class WallpaperVisualizer extends Component {
           new IconCell("+10,000 active users per month"),
           new IconCell("+30,000 papered walls per month"),
           new IconCell("+150,000 impressions on AppStore"),
+        ]} />
+        <MultipleQuoteSection title="Here's what our end-users say" quotes={[
+          new Quote("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.", "Joe Doe"),
+          new Quote("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.", "Joe Doe"),
+          new Quote("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.", "Joe Doe"),
         ]} />
         <Footer />
       </React.Fragment>
