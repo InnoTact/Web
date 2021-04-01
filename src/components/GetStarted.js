@@ -1,31 +1,19 @@
 import React from "react"
-import SectionTop from "./../components/SectionTop"
-import ContentWrapper from "./../components/ContentWrapper"
-import Section from "./../components/Section"
-import CenterContainer from "./../components/CenterContainer"
-import colors from "../styles/colors"
-import Button from "../components/Button"
-import { Link } from "gatsby"
 import LocalizedStrings from "react-localization"
 import translation from "../translations/get-started"
+import ActionSection from "./ActionSection"
 
-export default ({ dark }) => {
+export default ({ dark, ...props }) => {
   const strings = new LocalizedStrings(translation)
 
   return (
-    <Section backgroundColor={dark ? colors.lightgrey : colors.white}>
-      <ContentWrapper>
-        <SectionTop dark header={strings.title}>
-          {strings.description}
-        </SectionTop>
-        <CenterContainer>
-          <Link to="/kontakt/#contact-form">
-            <Button style={{ marginTop: 25 }} primary>
-              {strings.button}
-            </Button>
-          </Link>
-        </CenterContainer>
-      </ContentWrapper>
-    </Section>
+    <ActionSection
+      dark={dark}
+      title={strings.title}
+      description={strings.description}
+      btnText={strings.button}
+      link={"/kontakt/#contact-form"}
+      {...props}
+    />
   )
 }

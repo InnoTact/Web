@@ -32,7 +32,7 @@ export default function MultipleQuoteSection({
           {quotes.map(q => {
             return (
               <ContentBlobWrapper style={{ paddingTop: '0.5rem' }} width={300}>
-                <Text style={{ textAlign: 'center', fontStyle:'italic' }} dark>{'"' + q.quote + '"'}</Text>
+                <Text style={{ textAlign: 'center', fontStyle: 'italic' }} dark>{'"' + q.quote + '"'}</Text>
                 <Text style={{ textAlign: 'center', marginTop: '-0.5rem' }} dark>{"— " + q.saidBy}</Text>
               </ContentBlobWrapper>
             )

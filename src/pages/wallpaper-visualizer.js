@@ -16,6 +16,7 @@ import IconInfoGrid from "../components/IconInfoGrid"
 import IconCell from "../classes/IconCell"
 import MultipleQuoteSection from "../components/MultipleQuoteSection"
 import Quote from "../classes/Quote"
+import ActionSection from "../components/ActionSection"
 
 class WallpaperVisualizer extends Component {
   render() {
@@ -65,6 +66,7 @@ class WallpaperVisualizer extends Component {
           new Quote("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.", "Joe Doe"),
           new Quote("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.", "Joe Doe"),
         ]} />
+        <ActionSection title="Ready to innovate the wallpaper industry?" description="Sista ord som får de att faktiskt kontakta oss. Ändra titeln. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua." btnText={"Contact Us"} link={"/kontakt/#contact-form"} />
         <Footer />
       </React.Fragment>
     )
