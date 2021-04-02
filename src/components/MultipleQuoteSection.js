@@ -47,12 +47,12 @@ export default function MultipleQuoteSection({
         <ContentContainer>
           {quotes.map(q => {
             return (
-              <ContentBlobWrapper style={{ paddingTop: '0.5rem', justifyContent: 'space-around', height: '130%' }} width={300}>
-                <Text style={{ textAlign: 'center', fontStyle: 'italic', marginBottom: 0, paddingTop: innerSpacing }} dark>{'"' + q.quote + '"'}</Text>
+              <ContentBlobWrapper style={{ minWidth: '30%', paddingTop: '0.5rem', justifyContent: 'space-around', height: '130%' }} width={300}>
+                <Text style={{ textAlign: 'center', marginBottom: 0, paddingTop: innerSpacing }} dark>{'"' + q.quote + '"'}</Text>
                 <StarContainer style={{ paddingTop: innerSpacing }}>
                   {stars.map(star => star)}
                 </StarContainer>
-                <Text style={{ textAlign: 'center', marginBottom: '0', paddingTop: innerSpacing }} dark>{"— " + q.saidBy}</Text>
+                <Text small style={{ textAlign: 'center', marginBottom: '0', paddingTop: innerSpacing }} dark>{"— " + q.saidBy}</Text>
               </ContentBlobWrapper>
             )
           })}

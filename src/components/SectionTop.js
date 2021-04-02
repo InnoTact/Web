@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 import LocalizedStrings from "react-localization"
 
 const Container = styled.div`
-  margin-top: 2rem;
+  margin-top: 0rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

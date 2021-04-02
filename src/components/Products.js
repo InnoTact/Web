@@ -9,7 +9,7 @@ import BackgroundImage from "../components/BackgroundImage"
 
 export const Products = ({ imageData }) => {
   return (
-    <Section backgroundColor={colors.white}>
+    <Section style={{ paddingBottom: 0 }} backgroundColor={colors.white}>
       <ContentWrapper>
         <SectionTop dark header="Our Products">
           Förklara övergripande om våra produkter. Idé: att vi licensierar

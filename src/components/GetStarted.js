@@ -3,7 +3,7 @@ import LocalizedStrings from "react-localization"
 import translation from "../translations/get-started"
 import ActionSection from "./ActionSection"
 
-export default ({ dark, ...props }) => {
+export default ({ dark }) => {
   const strings = new LocalizedStrings(translation)
 
   return (
@@ -13,7 +13,6 @@ export default ({ dark, ...props }) => {
       description={strings.description}
       btnText={strings.button}
       link={"/kontakt/#contact-form"}
-      {...props}
     />
   )
 }

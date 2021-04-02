@@ -6,7 +6,7 @@ export default {
       action: "Contact Us"
     },
     main: {
-        title: "Let's create something awesome together.",
+        title: "Let's create something awesome together",
         subTitle: "Call or email us. We look forward to get a better understanding of your needs and to find innovative solutions together.",
         callUs: "Call us",
         emailUs: "Send an email"

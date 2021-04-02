@@ -9,13 +9,13 @@ import colors from "../styles/colors"
 import SectionTop from "./SectionTop"
 import Header from "./Header"
 
-export default function QuoteSection({ title, quote, saidBy, url, ...props }) {
+export default function QuoteSection({ title, quote, saidBy, url, light, ...props }) {
   const QuoteSection = styled(Section)`
     
   `
 
   const QuoteContainer = styled.div`
-    padding: 4rem 0 4rem 0;
+    padding: 5rem 0 5rem 0;
   `
 
   const Quote = styled(SubHeading)`
@@ -36,7 +36,7 @@ export default function QuoteSection({ title, quote, saidBy, url, ...props }) {
   return (
     <QuoteSection
       style={{ paddingBottom: 0, paddingTop: 0 }}
-      backgroundColor={colors.lightgrey}
+      backgroundColor={light ? colors.white :colors.lightgrey}
       {...props}
     >
       <ContentWrapper>

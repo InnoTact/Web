@@ -18,6 +18,7 @@ import MultipleQuoteSection from "../components/MultipleQuoteSection"
 import Quote from "../classes/Quote"
 import ActionSection from "../components/ActionSection"
 import DetailedInfoSection from "../components/DetailedInfoSection"
+import FeatureGrid from "../components/FeatureGrid"
 
 class WallpaperVisualizer extends Component {
   render() {
@@ -28,34 +29,63 @@ class WallpaperVisualizer extends Component {
       <React.Fragment>
         <CustomHelmet page="Wallpaper-Visualizer " />
         <Navbar light={false} />
-        <VideoPitch
-          style={{ position: "relative", top: "3rem" }}
-          light={false}
-        />
+        <VideoPitch style={{ marginTop: "3rem" }} light={false} />
         <WallpaperCompaniesLovingUs imageData={data} />
         <DetailedInfoSection light={true} />
-        <InfoGrid
-          title="Popular Features"
-          light={false}
-          infoCells={[
-            new InfoCell(
-              "In App Purchases",
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+        <FeatureGrid title="Popular Features" light={false} />
+        <MultipleQuoteSection
+          light={true}
+          title="What our end-users say"
+          quotes={[
+            new Quote(
+              "Wow! Så fantastiskt att få testa färg och mönster på rummets väggar, och ett direkt resultat - imponerande 🌟🌟🌟",
+              "Sonja Wing"
             ),
-            new InfoCell(
-              "Link to your website",
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+            new Quote(
+              "Att beställa tapetprover känns onödigt och krångligt när detta alternativ finns! Snygg design, lätt att använda och riktigt kul! Fina resultat och grymt att man kan se antal rullar och priser!",
+              "Ebba J"
             ),
-            new InfoCell(
-              "Multi Language Support",
-              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+            new Quote(
+              "Appen fungerar perfekt, jättekul att kunna se tapetseringsresultat så direkt! Sparar en så mycket tid!",
+              "Ogge"
+            ),
+            new Quote(
+              "Woow! Vilket bra hjälpmedel när man ska tapetsera. Enkelt, snyggt och verklighetstroget. Ett måste för alla hemmafixare!",
+              "Nödis"
+            ),
+            new Quote(
+              "Använde denna appen innan jag gjorde om hemma och det blev verkligen som det såg ut i appen! Så lätt att använda men ändå så verklighetstroget resultat! Kommer absolut använda igen!",
+              "Vanli123"
+            ),
+            new Quote(
+              "Grymt bra app! Smidigt och enkelt att se vilka tapeter man ska ha, slipp ta hem massa prover.. love it! 👏🏼",
+              "Stefan Trailovic"
+            ),
+            new Quote(
+              "Smidigt!! Mycket lättare att välja tapet när man får hjälp att föreställa sig resultatet.",
+              "Mymlosovic"
+            ),
+            new Quote(
+              "Arbetar med inredning av lägenheter, ett sådant suveränt verktyg för mig! Spar massor av arbetstimmar.",
+              "Aretravel"
+            ),
+            new Quote(
+              "Mycket flexibel och hjälpsam! Ger en perfekt och snabb överblick på hur resultatet kommer att bli! Suverän.",
+              "Victor Olsson"
             ),
           ]}
+        />
+        <QuoteSection
+          title={"What our business owners say"}
+          quote="Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter"
+          saidBy="Oskar Gissberg, Head of Digital Wallvision"
+          url={`https://www.di.se/pressreleaser/2020/02/04/borastapeter-ar-teknik-gor-det-mojligt-att-tapetsera-virtuellt-i-ny-app/`}
+          light={false}
         />
         <IconInfoGrid
           light={true}
           style={{ backgroundColor: colors.white }}
-          title="Use Case Boråstapeter"
+          title="Business Use Case: Boråstapeter"
           iconCells={[
             new IconCell("+60,000 users"), // TODO: icons
             new IconCell("1,200 new users per week"),
@@ -64,31 +94,6 @@ class WallpaperVisualizer extends Component {
             new IconCell("+30,000 papered walls per month"),
             new IconCell("+150,000 impressions on AppStore"),
           ]}
-        />
-        <MultipleQuoteSection
-          light={false}
-          title="What our end-users say"
-          quotes={[
-            new Quote(
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.",
-              "Joe Doe"
-            ),
-            new Quote(
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.",
-              "Joe Doe"
-            ),
-            new Quote(
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.",
-              "Joe Doe"
-            ),
-          ]}
-        />
-        <QuoteSection
-          title={"What one business owner say"}
-          style={{ backgroundColor: colors.white }}
-          quote="Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter"
-          saidBy="Oskar Gissberg, Head of Digital Wallvision"
-          url={`https://www.di.se/pressreleaser/2020/02/04/borastapeter-ar-teknik-gor-det-mojligt-att-tapetsera-virtuellt-i-ny-app/`}
         />
         <ActionSection
           title="Ready to innovate the wallpaper industry?"
