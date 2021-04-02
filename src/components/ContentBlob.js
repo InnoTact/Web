@@ -18,11 +18,11 @@ const Heading = styled(SubHeading)`
   }
 `
 
-const ContentBlob = ({ className, left, children, heading, text, small = false, width, buttonText, buttonLink, ...props }) => (
+const ContentBlob = ({ className, left, children, heading, text, textStyle, small = false, width, buttonText, buttonLink, ...props }) => (
   <ContentBlobWrapper className={className} left={left} width={width} {...props}>
       {children}
       <Heading small={small} dark>{heading}</Heading>
-      <Text style={{textAlign: left ? 'left' : 'center'}} dark>{text}</Text>
+      <Text style={{textAlign: left ? 'left' : 'center', ...textStyle }} dark>{text}</Text>
       {buttonText && <Link to={buttonLink}><Button style={{marginTop: 'auto'}} primary>{buttonText}</Button></Link>}
   </ContentBlobWrapper>
 )

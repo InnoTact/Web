@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types';
 
 const StyledContainer = styled.div`
-  padding: 3rem 0 6rem 0;
+  padding: 4rem 0 4rem 0;
   margin: 0 auto;
   background-color: ${props => props.backgroundColor ? props.backgroundColor : '#fff'};
 `

@@ -28,16 +28,29 @@ class WallpaperVisualizer extends Component {
       <React.Fragment>
         <CustomHelmet page="Wallpaper-Visualizer " />
         <Navbar light={false} />
-        <VideoPitch style={{ position: 'relative', top: '3rem' }} light={false} />
-        <DetailedInfoSection />
-        <WallpaperCompaniesLovingUs imageData={data} />
-        <QuoteSection
-          style={{ backgroundColor: colors.white }}
-          quote="Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter"
-          saidBy="Oskar Gissberg, Head of Digital Wallvision"
-          url={`https://www.di.se/pressreleaser/2020/02/04/borastapeter-ar-teknik-gor-det-mojligt-att-tapetsera-virtuellt-i-ny-app/`}
+        <VideoPitch
+          style={{ position: "relative", top: "3rem" }}
+          light={false}
         />
-        <InfoGrid title="Key Features" light={false} infoCells={[
+        <WallpaperCompaniesLovingUs imageData={data} />
+        <IconInfoGrid
+          light
+          style={{ backgroundColor: colors.white }}
+          title="Use Case Boråstapeter"
+          iconCells={[
+            new IconCell("+60,000 users"), // TODO: icons
+            new IconCell("1,200 new users per week"),
+            new IconCell("Top Rank of #4 in Sweden"),
+            new IconCell("+10,000 active users per month"),
+            new IconCell("+30,000 papered walls per month"),
+            new IconCell("+150,000 impressions on AppStore"),
+          ]}
+        />
+        <DetailedInfoSection />
+        <InfoGrid
+          title="Popular Features"
+          light={true}
+          infoCells={[
             new InfoCell(
               "In App Purchases",
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
@@ -50,21 +63,39 @@ class WallpaperVisualizer extends Component {
               "Multi Language Support",
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
             ),
-        ]} />
-        <IconInfoGrid light style={{ backgroundColor: colors.white }} title="Use Case: Stats from Boråstapeter" iconCells={[
-          new IconCell("+60,000 users"), // TODO: icons
-          new IconCell("1,200 new users per week"),
-          new IconCell("Top Rank of #4 in Sweden"),
-          new IconCell("+10,000 active users per month"),
-          new IconCell("+30,000 papered walls per month"),
-          new IconCell("+150,000 impressions on AppStore"),
-        ]} />
-        <MultipleQuoteSection title="Here's what our end-users say" quotes={[
-          new Quote("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.", "Joe Doe"),
-          new Quote("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.", "Joe Doe"),
-          new Quote("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.", "Joe Doe"),
-        ]} />
-        <ActionSection title="Ready to innovate the wallpaper industry?" description="Sista ord som får de att faktiskt kontakta oss. Ändra titeln. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua." btnText={"Contact Us"} link={"/kontakt/#contact-form"} />
+          ]}
+        />
+        <MultipleQuoteSection
+          title="What our end-users say"
+          quotes={[
+            new Quote(
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.",
+              "Joe Doe"
+            ),
+            new Quote(
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.",
+              "Joe Doe"
+            ),
+            new Quote(
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.",
+              "Joe Doe"
+            ),
+          ]}
+        />
+        <QuoteSection
+          title={"What our business owners say"}
+          style={{ backgroundColor: colors.white }}
+          quote="Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter"
+          saidBy="Oskar Gissberg, Head of Digital Wallvision"
+          url={`https://www.di.se/pressreleaser/2020/02/04/borastapeter-ar-teknik-gor-det-mojligt-att-tapetsera-virtuellt-i-ny-app/`}
+        />
+        <ActionSection
+          title="Ready to innovate the wallpaper industry?"
+          description="Sista ord som får de att faktiskt kontakta oss. Ändra titeln. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua."
+          btnText={"Contact Us"}
+          link={"/kontakt/#contact-form"}
+          dark={true}
+        />
         <Footer />
       </React.Fragment>
     )

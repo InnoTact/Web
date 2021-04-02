@@ -6,20 +6,23 @@ import Anchor from "./Anchor"
 import Section from "./Section"
 import styles from "../styles/styles"
 import colors from "../styles/colors"
+import SectionTop from "./SectionTop"
+import Header from "./Header"
 
-export default function QuoteSection({ quote, saidBy, url, ...props }) {
+export default function QuoteSection({ title, quote, saidBy, url, ...props }) {
   const QuoteSection = styled(Section)`
     
   `
 
   const QuoteContainer = styled.div`
-    padding: 4rem 0 5rem 0;
+    padding: 4rem 0 4rem 0;
   `
 
   const Quote = styled(SubHeading)`
     text-align: center;
     line-height: 2.2;
     font-style: italic;
+    margin: 2rem 0;
   `
 
   const QuoteName = styled(Anchor)`
@@ -38,6 +41,7 @@ export default function QuoteSection({ quote, saidBy, url, ...props }) {
     >
       <ContentWrapper>
         <QuoteContainer>
+          {title && <Header style={{ marginBottom: 0, display: 'block' }} dark text={title} />}
           <Quote dark>
             {"\"" + quote + "\""}
           </Quote>

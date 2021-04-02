@@ -24,6 +24,7 @@ export default function IconInfoGrid({ title, iconCells, light }) {
             return (
               <ImageContentBlob
                 text={cell.title}
+                textStyle={{ fontSize: '1.3rem' }}
               >
                 <div style={{ marginBottom: '-1.5rem' }}>
                 <FaFire style={styles.icon} />
