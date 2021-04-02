@@ -91,7 +91,7 @@ class NavItems extends Component {
   render() {
     const { windowWidth, dark, ...props } = this.props
     const { open } = this.state
-    const linkColor = dark ? "black" : colors.lightgrey
+    const linkColor = dark ? colors.dark : colors.lightgrey
     const activeLinkColor = dark ? colors.mediumGreyLighten : colors.white
     const strings = new LocalizedStrings(translation)
 
@@ -162,7 +162,7 @@ class NavItems extends Component {
                       height={18}
                       strokeWidth={2}
                       rotate={0}
-                      color={open ? colors.primary : colors.white}
+                      color={open ? colors.primary : (dark ? colors.dark : colors.white)}
                       borderRadius={0}
                       animationDuration={0.5}
                       menuClicked={this.menuClicked}
