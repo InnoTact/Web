@@ -78,6 +78,13 @@ const HamburgerContainer = styled.div`
   right: 2.2rem;
 `
 
+class LinkData {
+  constructor(text, url) {
+    this.text = text
+    this.url = url
+  }
+}
+
 class NavItems extends Component {
   state = {
     open: false,
@@ -91,57 +98,32 @@ class NavItems extends Component {
   render() {
     const { windowWidth, dark, ...props } = this.props
     const { open } = this.state
-    const linkColor = dark ? colors.dark : colors.lightgrey
+    const darkLinkColor = colors.dark
+    const linkColor = dark ? darkLinkColor : colors.lightgrey
     const activeLinkColor = dark ? colors.mediumGreyLighten : colors.white
     const strings = new LocalizedStrings(translation)
-
-    const navItems = (
-      <Fragment>
-        <NavItem style={{ transitionDelay: "0.1s 0.1s 0" }} open={open}>
-          <Link
-            style={{ color: linkColor }}
-            activeStyle={{ color: activeLinkColor, fontWeight: 600 }}
-            to="/"
-          >
-            <NavLink style={{ color: linkColor }} open={open} {...props}>
-              {strings.home}
-            </NavLink>
-          </Link>
-        </NavItem>
-        <NavItem style={{ transitionDelay: "0.3s 0.3s 0" }} open={open}>
-          <Link
-            activeStyle={{ color: activeLinkColor, fontWeight: 600 }}
-            to="/lösningar/"
-          >
-            <NavLink style={{ color: linkColor }} open={open} {...props}>
-              {strings.solutions}
-            </NavLink>
-          </Link>
-        </NavItem>
+    const links = [
+      new LinkData(strings.home, "/"),
+      new LinkData(strings.solutions, "/lösningar"),
+      new LinkData(strings.about, "/om-oss/"),
+      new LinkData(strings.contact, "/kontakt"),
+      new LinkData(strings.home, "/"),
+    ]
+    const navItems = links.map(l => {
+      return (
         <NavItem open={open}>
           <Link
             style={{ color: linkColor }}
             activeStyle={{ color: activeLinkColor, fontWeight: 600 }}
-            to="/om-oss/"
+            to={l.url}
           >
-            <NavLink style={{ color: linkColor }} open={open} {...props}>
-              {strings.about}
+            <NavLink style={{ color: open ? darkLinkColor : linkColor }} open={open} {...props}>
+              {l.text}
             </NavLink>
           </Link>
         </NavItem>
-        <NavItem open={open}>
-          <Link
-            style={{ color: linkColor }}
-            activeStyle={{ color: activeLinkColor, fontWeight: 600 }}
-            to="/kontakt/"
-          >
-            <NavLink style={{ color: linkColor }} open={open} {...props}>
-              {strings.contact}
-            </NavLink>
-          </Link>
-        </NavItem>
-      </Fragment>
-    )
+      )
+    })
 
     return (
       <LinkContainer open={open} {...props}>
