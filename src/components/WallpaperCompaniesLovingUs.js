@@ -35,7 +35,7 @@ export default function WallpaperCompaniesLovingUs({ imageData }) {
   return (
     <Section backgroundColor={colors.lightgrey}>
       <ContentWrapper>
-        <SectionTop dark header={"Used By Industry Leaders"} />
+        <SectionTop dark header={"Trusted By Industry Leaders"} />
         <Container>
           <CompanyBlob
             text={

@@ -33,23 +33,10 @@ class WallpaperVisualizer extends Component {
           light={false}
         />
         <WallpaperCompaniesLovingUs imageData={data} />
-        <IconInfoGrid
-          light
-          style={{ backgroundColor: colors.white }}
-          title="Use Case Boråstapeter"
-          iconCells={[
-            new IconCell("+60,000 users"), // TODO: icons
-            new IconCell("1,200 new users per week"),
-            new IconCell("Top Rank of #4 in Sweden"),
-            new IconCell("+10,000 active users per month"),
-            new IconCell("+30,000 papered walls per month"),
-            new IconCell("+150,000 impressions on AppStore"),
-          ]}
-        />
-        <DetailedInfoSection />
+        <DetailedInfoSection light={true} />
         <InfoGrid
           title="Popular Features"
-          light={true}
+          light={false}
           infoCells={[
             new InfoCell(
               "In App Purchases",
@@ -65,7 +52,21 @@ class WallpaperVisualizer extends Component {
             ),
           ]}
         />
+        <IconInfoGrid
+          light={true}
+          style={{ backgroundColor: colors.white }}
+          title="Use Case Boråstapeter"
+          iconCells={[
+            new IconCell("+60,000 users"), // TODO: icons
+            new IconCell("1,200 new users per week"),
+            new IconCell("Top Rank of #4 in Sweden"),
+            new IconCell("+10,000 active users per month"),
+            new IconCell("+30,000 papered walls per month"),
+            new IconCell("+150,000 impressions on AppStore"),
+          ]}
+        />
         <MultipleQuoteSection
+          light={false}
           title="What our end-users say"
           quotes={[
             new Quote(
@@ -83,7 +84,7 @@ class WallpaperVisualizer extends Component {
           ]}
         />
         <QuoteSection
-          title={"What our business owners say"}
+          title={"What one business owner say"}
           style={{ backgroundColor: colors.white }}
           quote="Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter"
           saidBy="Oskar Gissberg, Head of Digital Wallvision"

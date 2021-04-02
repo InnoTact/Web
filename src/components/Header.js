@@ -6,7 +6,7 @@ import colors from '../styles/colors';
 
 const StyledHeader = styled.h1`
   color: ${props => props.dark ? colors.dark : colors.white};
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
   display: inline-block;
   margin: 0 auto 30px;
   font-size: 2.6rem;

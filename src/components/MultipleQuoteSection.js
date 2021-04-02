@@ -8,6 +8,7 @@ import colors from "../styles/colors"
 import Text from "./Text"
 import SectionTop from "./SectionTop"
 import ContentBlobWrapper from "./ContentBlobWrapper"
+import { FaStar } from "react-icons/fa"
 
 export default function MultipleQuoteSection({
   title,
@@ -20,6 +21,21 @@ export default function MultipleQuoteSection({
     justify-content: space-evenly;
     flex-wrap: wrap;
   `
+  const StarContainer = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  `
+  let stars = []
+  for (let i = 0; i < 5; i++) {
+    stars.push(
+      <FaStar style={{
+        fontSize: 18,
+        color: "gold"
+      }} />
+    )
+  }
+  const innerSpacing = 8
 
   return (
     <Section
@@ -31,9 +47,12 @@ export default function MultipleQuoteSection({
         <ContentContainer>
           {quotes.map(q => {
             return (
-              <ContentBlobWrapper style={{ paddingTop: '0.5rem' }} width={300}>
-                <Text style={{ textAlign: 'center', fontStyle: 'italic' }} dark>{'"' + q.quote + '"'}</Text>
-                <Text style={{ textAlign: 'center', marginTop: '-0.5rem' }} dark>{"— " + q.saidBy}</Text>
+              <ContentBlobWrapper style={{ paddingTop: '0.5rem', justifyContent: 'space-around', height: '130%' }} width={300}>
+                <Text style={{ textAlign: 'center', fontStyle: 'italic', marginBottom: 0, paddingTop: innerSpacing }} dark>{'"' + q.quote + '"'}</Text>
+                <StarContainer style={{ paddingTop: innerSpacing }}>
+                  {stars.map(star => star)}
+                </StarContainer>
+                <Text style={{ textAlign: 'center', marginBottom: '0', paddingTop: innerSpacing }} dark>{"— " + q.saidBy}</Text>
               </ContentBlobWrapper>
             )
           })}

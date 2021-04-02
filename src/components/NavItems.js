@@ -107,7 +107,6 @@ class NavItems extends Component {
       new LinkData(strings.solutions, "/lösningar"),
       new LinkData(strings.about, "/om-oss/"),
       new LinkData(strings.contact, "/kontakt"),
-      new LinkData(strings.home, "/"),
     ]
     const navItems = links.map(l => {
       return (

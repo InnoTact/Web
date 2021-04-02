@@ -47,6 +47,8 @@ export default function IconInfoGrid({ title, iconCells, light }) {
       }
     }
   `)
+  var lang = navigator.language || navigator.userLanguage
+  const sweUser = lang == "sv"
 
   return (
     <Section backgroundColor={light ? colors.white : colors.lightgrey}>
@@ -67,18 +69,36 @@ export default function IconInfoGrid({ title, iconCells, light }) {
           })}
         </SolutionsContainer>
         <BadgeContainer>
-          <Img
-            style={{ marginRight: '1.5rem',  ...BadgeStyle }}
-            imgStyle={BadgeStyle}
-            fluid={data.AppStoreBadge.childImageSharp.fluid}
-            alt={"Try AR Wallpaper Visualizer on AppStore (iOS)"}
-          />
-          <Img
-            style={{ marginLeft: '1.5rem', ...BadgeStyle }}
-            imgStyle={BadgeStyle}
-            fluid={data.GooglePlayStoreBadge.childImageSharp.fluid}
-            alt={"Try AR Wallpaper Visualizer on Google Play Store (Android)"}
-          />
+          <a
+            target="_blank"
+            href={
+              sweUser
+                ? "https://apps.apple.com/se/app/wonderwall-ar-by-boråstapeter/id1478853508"
+                : "https://apps.apple.com/us/app/wonderwall-ar-by-boråstapeter/id1478853508"
+            }
+          >
+            <Img
+              style={{ marginRight: "1.5rem", ...BadgeStyle }}
+              imgStyle={BadgeStyle}
+              fluid={data.AppStoreBadge.childImageSharp.fluid}
+              alt={"Try AR Wallpaper Visualizer on AppStore (iOS)"}
+            />
+          </a>
+          <a
+            target="_blank"
+            href={
+              sweUser
+                ? "https://play.google.com/store/apps/details?id=com.innotactsoftware.wonderwallar.borastapeter&hl=sv&gl=US"
+                : "https://play.google.com/store/apps/details?id=com.innotactsoftware.wonderwallar.borastapeter&hl=en_US&gl=US"
+            }
+          >
+            <Img
+              style={{ marginLeft: "1.5rem", ...BadgeStyle }}
+              imgStyle={BadgeStyle}
+              fluid={data.GooglePlayStoreBadge.childImageSharp.fluid}
+              alt={"Try AR Wallpaper Visualizer on Google Play Store (Android)"}
+            />
+          </a>
         </BadgeContainer>
       </ContentWrapper>
     </Section>
