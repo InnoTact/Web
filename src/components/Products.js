@@ -18,7 +18,7 @@ export const Products = ({ imageData }) => {
       </ContentWrapper>
       <Capability
         textLeft
-        header={"The Wallpaper Visualizer"}
+        header={"Wallpaper Visualizer"}
         text={
           "Allow your customers to visualise your wallpapers onto their walls in their own homes. Ensuring the perfect fit between wallpaper and interior design will reduce the customer uncertainty. By doing so you will increase your sales while making your customers happier. It’s a win-win!"
         }

@@ -17,6 +17,7 @@ import IconCell from "../classes/IconCell"
 import MultipleQuoteSection from "../components/MultipleQuoteSection"
 import Quote from "../classes/Quote"
 import ActionSection from "../components/ActionSection"
+import DetailedInfoSection from "../components/DetailedInfoSection"
 
 class WallpaperVisualizer extends Component {
   render() {
@@ -31,6 +32,7 @@ class WallpaperVisualizer extends Component {
           text={strings.hero}
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}
         />
+        <DetailedInfoSection />
         <VideoPitch />
         <WallpaperCompaniesLovingUs imageData={data} />
         <QuoteSection
