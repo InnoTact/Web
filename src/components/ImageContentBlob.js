@@ -4,6 +4,7 @@ import styles from "../styles/styles"
 
 const ImageContentBlob = styled(ContentBlob)`
 width: 350px;
+min-width: 300px;
 margin: 0 2rem 0 0;
 
 @media (max-width: ${styles.breakpoints.lg + "px"}) {

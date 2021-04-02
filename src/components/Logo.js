@@ -15,36 +15,20 @@ const Logo = ({ light }) => {
     query {
       LogoDark: file(relativePath: { eq: "InnoTactLogoDark.png" }) {
         childImageSharp {
-          # Specify a fluid image and fragment
-          # The default maxWidth is 800 pixels
-          fluid {
+          fluid(maxWidth: 120) {
             ...GatsbyImageSharpFluid
           }
         }
       },
       LogoLight: file(relativePath: { eq: "InnoTactLogoLight.png" }) {
         childImageSharp {
-          # Specify a fluid image and fragment
-          # The default maxWidth is 800 pixels
-          fluid {
+          fluid(maxWidth: 120) {
             ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
-
-  // const data = useStaticQuery(graphql`
-  //   {
-  //     LogoDark: file(relativePath: { eq: "InnoTactLogoDark.png" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 130) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
 
   return (
     <CenterContainer>
@@ -53,7 +37,7 @@ const Logo = ({ light }) => {
           style={LogoStyle}
           imgStyle={LogoStyle}
           fluid={light ? data.LogoLight.childImageSharp.fluid : data.LogoDark.childImageSharp.fluid }
-          alt="Gatsby Docs are awesome"
+          alt="InnoTact Logo"
         />
         {/* {data ? <Img fluid={data.file.childImageSharp.fluid} /> : null} */}
       </Link>
