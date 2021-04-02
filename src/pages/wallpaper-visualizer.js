@@ -27,13 +27,9 @@ class WallpaperVisualizer extends Component {
     return (
       <React.Fragment>
         <CustomHelmet page="Wallpaper-Visualizer " />
-        <Navbar />
-        <Hero
-          text={strings.hero}
-          imageData={data.HeroBackgroundImage.childImageSharp.fluid}
-        />
+        <Navbar light={false} />
+        <VideoPitch style={{ position: 'relative', top: '3rem' }} light={false} />
         <DetailedInfoSection />
-        <VideoPitch />
         <WallpaperCompaniesLovingUs imageData={data} />
         <QuoteSection
           style={{ backgroundColor: colors.white }}

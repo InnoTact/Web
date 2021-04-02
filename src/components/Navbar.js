@@ -82,6 +82,7 @@ class Navbar extends Component {
 
   render() {
     const { visible, prevScrollpos } = this.state
+    const { light } = this.props
     const currentScrollPos = prevScrollpos[prevScrollpos.length - 1]
 
     return (
@@ -94,8 +95,8 @@ class Navbar extends Component {
 
             return (
               <Container>
-                <Logo light />
-                <NavItems light />
+                <Logo light={light} />
+                <NavItems dark={!light} />
               </Container>
             )
           }}

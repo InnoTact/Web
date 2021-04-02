@@ -19,7 +19,7 @@ class About extends Component {
     return (
       <React.Fragment>
         <CustomHelmet page='Om ' />
-        <Navbar />
+        <Navbar light={true} />
         <Hero
           text={strings.hero}
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}

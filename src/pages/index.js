@@ -22,7 +22,7 @@ class Index extends Component {
     return (
       <React.Fragment>
         <CustomHelmet />
-        <Navbar />
+        <Navbar light={true} />
         <Hero
           text={strings.hero}
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}

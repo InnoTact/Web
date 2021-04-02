@@ -91,7 +91,7 @@ class NavItems extends Component {
   render() {
     const { windowWidth, dark, ...props } = this.props
     const { open } = this.state
-    const linkColor = dark ? colors.mediumGrey : colors.lightgrey
+    const linkColor = dark ? "black" : colors.lightgrey
     const activeLinkColor = dark ? colors.mediumGreyLighten : colors.white
     const strings = new LocalizedStrings(translation)
 
@@ -103,18 +103,17 @@ class NavItems extends Component {
             activeStyle={{ color: activeLinkColor, fontWeight: 600 }}
             to="/"
           >
-            <NavLink open={open} {...props}>
+            <NavLink style={{ color: linkColor }} open={open} {...props}>
               {strings.home}
             </NavLink>
           </Link>
         </NavItem>
         <NavItem style={{ transitionDelay: "0.3s 0.3s 0" }} open={open}>
           <Link
-            style={{ color: linkColor }}
             activeStyle={{ color: activeLinkColor, fontWeight: 600 }}
             to="/lösningar/"
           >
-            <NavLink open={open} {...props}>
+            <NavLink style={{ color: linkColor }} open={open} {...props}>
               {strings.solutions}
             </NavLink>
           </Link>
@@ -125,7 +124,7 @@ class NavItems extends Component {
             activeStyle={{ color: activeLinkColor, fontWeight: 600 }}
             to="/om-oss/"
           >
-            <NavLink open={open} {...props}>
+            <NavLink style={{ color: linkColor }} open={open} {...props}>
               {strings.about}
             </NavLink>
           </Link>
@@ -136,7 +135,7 @@ class NavItems extends Component {
             activeStyle={{ color: activeLinkColor, fontWeight: 600 }}
             to="/kontakt/"
           >
-            <NavLink open={open} {...props}>
+            <NavLink style={{ color: linkColor }} open={open} {...props}>
               {strings.contact}
             </NavLink>
           </Link>

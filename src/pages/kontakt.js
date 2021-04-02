@@ -16,7 +16,7 @@ class Contact extends Component {
     return (
       <React.Fragment>
         <CustomHelmet page="Kontakta " />
-        <Navbar />
+        <Navbar light={true} />
         <Hero
           text={strings.hero}
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}

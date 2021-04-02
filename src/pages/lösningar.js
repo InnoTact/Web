@@ -19,7 +19,7 @@ class Solutions extends Component {
     return (
       <React.Fragment>
         <CustomHelmet page='Lösningar ' />
-        <Navbar />
+        <Navbar light={true} />
         <Hero
           text={strings.hero}
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}

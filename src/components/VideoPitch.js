@@ -5,11 +5,11 @@ import Section from "./Section"
 import SectionTop from "./SectionTop"
 import Video from "./Video"
 
-export const VideoPitch = () => {
+export const VideoPitch = ({ ...props }) => {
   return (
-    <Section backgroundColor={colors.white}>
+    <Section backgroundColor={colors.white} {...props}>
       <ContentWrapper>
-        <SectionTop style={{ marginBottom: '2rem' }} dark header="Visualize Wallpapers Instantly">
+        <SectionTop style={{ marginBottom: '2rem' }} dark header="Wallpaper Visualizer">
           En stark övergripande pitch om produkten. Lorem ipsum dolor sit amet,
           consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
           labore et dolore magna aliqua.
