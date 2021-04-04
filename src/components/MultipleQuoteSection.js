@@ -52,7 +52,7 @@ export default function MultipleQuoteSection({
                 <StarContainer style={{ paddingTop: innerSpacing }}>
                   {stars.map(star => star)}
                 </StarContainer>
-                <Text small style={{ textAlign: 'center', marginBottom: '0', paddingTop: innerSpacing }} dark>{"— " + q.saidBy}</Text>
+                <Text small style={{ textAlign: 'center', marginBottom: '0', paddingTop: innerSpacing }} dark>{"— " + q.name}</Text>
               </ContentBlobWrapper>
             )
           })}

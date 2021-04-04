@@ -15,7 +15,6 @@ import colors from "../styles/colors"
 import IconInfoGrid from "../components/IconInfoGrid"
 import IconCell from "../classes/IconCell"
 import MultipleQuoteSection from "../components/MultipleQuoteSection"
-import Quote from "../classes/Quote"
 import ActionSection from "../components/ActionSection"
 import DetailedInfoSection from "../components/DetailedInfoSection"
 import FeatureGrid from "../components/FeatureGrid"
@@ -65,58 +64,11 @@ class WallpaperVisualizer extends Component {
           }
           light={true}
         />
-        <FeatureGrid title="Popular Features" light={false} features={[
-          { ...s.features.measure },
-          { ...s.features.menu },
-          { ...s.features.websiteIntegration },
-          { ...s.features.murals },
-          { ...s.features.statistics },
-          { ...s.features.brandedApp },
-          { ...s.features.buyInApp },
-          { ...s.features.languages },
-          { ...s.features.pushNotifications },
-        ]} />
+        <FeatureGrid title={s.featureSection.title} light={false} features={s.featureSection.features} />
         <MultipleQuoteSection
           light={true}
           title="What our end-users say"
-          quotes={[
-            new Quote(
-              "Wow! Så fantastiskt att få testa färg och mönster på rummets väggar, och ett direkt resultat - imponerande 🌟🌟🌟",
-              "Sonja Wing"
-            ),
-            new Quote(
-              "Att beställa tapetprover känns onödigt och krångligt när detta alternativ finns! Snygg design, lätt att använda och riktigt kul! Fina resultat och grymt att man kan se antal rullar och priser!",
-              "Ebba J"
-            ),
-            new Quote(
-              "Appen fungerar perfekt, jättekul att kunna se tapetseringsresultat så direkt! Sparar en så mycket tid!",
-              "Ogge"
-            ),
-            new Quote(
-              "Woow! Vilket bra hjälpmedel när man ska tapetsera. Enkelt, snyggt och verklighetstroget. Ett måste för alla hemmafixare!",
-              "Nödis"
-            ),
-            new Quote(
-              "Använde denna appen innan jag gjorde om hemma och det blev verkligen som det såg ut i appen! Så lätt att använda men ändå så verklighetstroget resultat! Kommer absolut använda igen!",
-              "Vanli123"
-            ),
-            new Quote(
-              "Grymt bra app! Smidigt och enkelt att se vilka tapeter man ska ha, slipp ta hem massa prover.. love it! 👏🏼",
-              "Stefan Trailovic"
-            ),
-            new Quote(
-              "Smidigt!! Mycket lättare att välja tapet när man får hjälp att föreställa sig resultatet.",
-              "Mymlosovic"
-            ),
-            new Quote(
-              "Arbetar med inredning av lägenheter, ett sådant suveränt verktyg för mig! Spar massor av arbetstimmar.",
-              "Aretravel"
-            ),
-            new Quote(
-              "Mycket flexibel och hjälpsam! Ger en perfekt och snabb överblick på hur resultatet kommer att bli! Suverän.",
-              "Victor Olsson"
-            ),
-          ]}
+          quotes={s.endUserQuotes}
         />
         <QuoteSection
           title={"What our business owners say"}
