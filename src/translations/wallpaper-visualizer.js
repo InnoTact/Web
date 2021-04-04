@@ -129,8 +129,8 @@ export default {
     businessQuote: {
       title: "What our business owners say",
       quote:
-        "Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter",
-      saidBy: "Oskar Gissberg, Head of Digital Wallvision",
+        "It can be hard to imagine how ones bedroom, living room or kitchen will look like with a new wallpaper when you only have a wallpaper sample. With the app you see how a certain wallpaper fits into your own home directly. And on top of that it is very fun to use. It's easy to get immersed in it and to walk around at home and see the rooms change tone with new wallpapers.",
+      saidBy: "Oskar Gissberg, Head of Digital at Wallvision",
     },
     statsUseCase: {
       title: "Business Use Case: Boråstapeter",

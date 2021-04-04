@@ -3,12 +3,14 @@ import InfoCell from "../classes/InfoCell"
 import solutionTranslation from "../translations/ar-solutions"
 import InfoGrid from "./InfoGrid"
 import LocalizedStrings from "react-localization"
+import colors from "../styles/colors"
 
-export default function SolutionSection() {
+export default function SolutionSection({ light }) {
   const s = new LocalizedStrings(solutionTranslation)
 
   return (
     <InfoGrid
+      light={light}
       title={s.title}
       infoCells={[
         new InfoCell(

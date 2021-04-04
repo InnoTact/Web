@@ -28,6 +28,8 @@ class Index extends Component {
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}
         />
         <StartProjectSection />
+        <Products light={false} imageData={data} />
+        <SolutionSection light={true} />
         <FactSection />
         <QuoteSection
           quote="I do think that a significant portion of the population of
@@ -37,8 +39,6 @@ class Index extends Component {
           saidBy="Tim Cook CEO Apple"
           url={`https://nordic.businessinsider.com/apple-ceo-tim-cook-explains-augmented-reality-2016-10?r=US&IR=T`}
         />
-        <Products imageData={data} />
-        <SolutionSection />
         <GetStarted />
         <Footer />
       </React.Fragment>

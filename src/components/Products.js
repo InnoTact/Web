@@ -8,7 +8,7 @@ import BackgroundImage from "../components/BackgroundImage"
 import LocalizedStrings from "react-localization"
 import translation from "../translations/products"
 
-export const Products = ({ imageData }) => {
+export const Products = ({ light, imageData }) => {
   const s = new LocalizedStrings(translation)
   const products = [
     {
@@ -35,7 +35,7 @@ export const Products = ({ imageData }) => {
   ]
 
   return (
-    <Section style={{ paddingBottom: 0 }} backgroundColor={colors.white}>
+    <Section style={{ paddingBottom: 0 }} backgroundColor={light ? colors.white : colors.lightgrey}>
       <ContentWrapper>
         <SectionTop dark header={s.title}>
           {s.description}
