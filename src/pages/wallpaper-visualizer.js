@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import Navbar from "./../components/Navbar"
 import Footer from "../components/Footer"
-import Hero from "../components/Hero"
 import { graphql } from "gatsby"
 import CustomHelmet from "../components/CustomHelmet"
 import WallpaperCompaniesLovingUs from "../components/WallpaperCompaniesLovingUs"
@@ -9,11 +8,8 @@ import LocalizedStrings from "react-localization"
 import translation from "../translations/wallpaper-visualizer"
 import { VideoPitch } from "../components/VideoPitch"
 import QuoteSection from "../components/QuoteSection"
-import InfoGrid from "../components/InfoGrid"
-import InfoCell from "../classes/InfoCell"
 import colors from "../styles/colors"
 import IconInfoGrid from "../components/IconInfoGrid"
-import IconCell from "../classes/IconCell"
 import MultipleQuoteSection from "../components/MultipleQuoteSection"
 import ActionSection from "../components/ActionSection"
 import DetailedInfoSection from "../components/DetailedInfoSection"
@@ -80,20 +76,13 @@ class WallpaperVisualizer extends Component {
         <IconInfoGrid
           light={true}
           style={{ backgroundColor: colors.white }}
-          title="Business Use Case: Boråstapeter"
-          iconCells={[
-            new IconCell("+60,000 users"), // TODO: icons
-            new IconCell("1,200 new users per week"),
-            new IconCell("Top Rank of #4 in Sweden"),
-            new IconCell("+10,000 active users per month"),
-            new IconCell("+30,000 papered walls per month"),
-            new IconCell("+150,000 impressions on AppStore"),
-          ]}
+          title={s.statsUseCase.title}
+          iconCells={s.statsUseCase.stats}
         />
         <ActionSection
-          title="Ready to innovate the wallpaper industry?"
-          description="Sista ord som får de att faktiskt kontakta oss. Ändra titeln. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua."
-          btnText={"Contact Us"}
+          title={s.takeAction.title}
+          description={s.takeAction.description}
+          btnText={s.takeAction.btnText}
           link={"/kontakt/#contact-form"}
           dark={true}
         />

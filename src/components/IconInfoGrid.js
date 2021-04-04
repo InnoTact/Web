@@ -58,7 +58,7 @@ export default function IconInfoGrid({ title, iconCells, light }) {
           {iconCells.map(cell => {
             return (
               <ImageContentBlob
-                text={cell.title}
+                text={cell.text}
                 textStyle={{ fontSize: "1.3rem" }}
               >
                 <div style={{ marginBottom: "-1.5rem" }}>

@@ -8,7 +8,7 @@ export default {
     },
     companies: {
       wallvision:
-        "Typ en mening som ger galen tyngd. Largest company in Scandinavia...",
+        "WallVision/Embellence Group, is the largest company in Scandinavia with a focus on premium wallpapers.",
       borastapeter:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
       grandeco:
@@ -22,7 +22,7 @@ export default {
         "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     },
     featureSection: {
-      title: 'Popular Features',
+      title: "Popular Features",
       features: [
         {
           title: "Measure tool",
@@ -69,10 +69,10 @@ export default {
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
-      ]
+      ],
     },
     multipleQuoteSection: {
-      title: 'What our end-users say',
+      title: "What our end-users say",
       quotes: [
         {
           quote:
@@ -119,15 +119,32 @@ export default {
             "Mycket flexibel och hjälpsam! Ger en perfekt och snabb överblick på hur resultatet kommer att bli! Suverän.",
           name: "Victor Olsson",
         },
-      ]
+      ],
     },
     businessQuote: {
       title: "What our business owners say",
-      quote: "Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter",
-      saidBy: "Oskar Gissberg, Head of Digital Wallvision"
+      quote:
+        "Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter",
+      saidBy: "Oskar Gissberg, Head of Digital Wallvision",
+    },
+    statsUseCase: {
+      title: "Business Use Case: Boråstapeter",
+      stats: [
+        { text: "+60,000 users" },
+        { text: "1,200 new users per week" },
+        { text: "Top Rank of #4 in Sweden" },
+        { text: "+10,000 active users per month" },
+        { text: "+30,000 papered walls per month" },
+        { text: "+150,000 impressions on AppStore" },
+      ],
+    },
+    takeAction: {
+      title: "Ready to innovate the wallpaper industry?",
+      description: "Sista ord som får de att faktiskt kontakta oss. Ändra titeln. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.",
+      btnText: "Contact Us"
     }
   },
-  en: {
+  se: {
     landing: {
       productName: "Wallpaper Visualizer",
       shortPitch:
@@ -150,7 +167,7 @@ export default {
         "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     },
     featureSection: {
-      title: 'Popular Features',
+      title: "Popular Features",
       features: [
         {
           title: "Measure tool",
@@ -197,10 +214,10 @@ export default {
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
-      ]
+      ],
     },
     multipleQuoteSection: {
-      title: 'What our end-users say',
+      title: "What our end-users say",
       quotes: [
         {
           quote:
@@ -247,12 +264,29 @@ export default {
             "Mycket flexibel och hjälpsam! Ger en perfekt och snabb överblick på hur resultatet kommer att bli! Suverän.",
           name: "Victor Olsson",
         },
-      ]
+      ],
     },
     businessQuote: {
       title: "What our business owners say",
-      quote: "Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter",
-      saidBy: "Oskar Gissberg, Head of Digital Wallvision"
+      quote:
+        "Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter",
+      saidBy: "Oskar Gissberg, Head of Digital Wallvision",
+    },
+    statsUseCase: {
+      title: "Business Use Case: Boråstapeter",
+      stats: [
+        { text: "+60,000 users" },
+        { text: "1,200 new users per week" },
+        { text: "Top Rank of #4 in Sweden" },
+        { text: "+10,000 active users per month" },
+        { text: "+30,000 papered walls per month" },
+        { text: "+150,000 impressions on AppStore" },
+      ],
+    },
+    takeAction: {
+      title: "Ready to innovate the wallpaper industry?",
+      description: "Sista ord som får de att faktiskt kontakta oss. Ändra titeln. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.",
+      btnText: "Contact Us"
     }
   },
 }
