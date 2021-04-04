@@ -76,8 +76,7 @@ const SectionTop = ({ header, children, buttonText = '', dark, bottomText, zInde
   return (
   <Container {...props}>
     <React.Fragment>
-      <CenterOverflowText style={{  }}>
-      </CenterOverflowText>
+      <Header text={header} styles={{ color: dark ? colors.dark : colors.white, zIndex: zIndexHigh ? 1 : 'unset' }} />
       {children && <SubHeader style={{ color: dark ? colors.dark : colors.lightgrey, fontStyle: 'italic', zIndex: zIndexHigh ? 1 : 'unset' }}>{children}</SubHeader>}
       {buttonText && <Link to='/contact/#contact-form'><Button style={{zIndex: zIndexHigh ? 1 : 'unset'}} secondary>{strings.button}</Button></Link>}
       {bottomText && <ReadMore style={{zIndex: zIndexHigh ? 1 : 'unset'}} onClick={() => scroll.scrollTo(vh(82))}>

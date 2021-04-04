@@ -6,6 +6,7 @@ import SectionTop from "../components/SectionTop"
 import BackgroundImage from "../components/BackgroundImage"
 import Header from "./Header"
 import colors from "../styles/colors"
+import styles from "../styles/styles"
 
 const Container = styled.div`
   width: 100vw;
@@ -31,6 +32,18 @@ const DarkOverlay = styled.div`
     /*background: linear-gradient(to right, rgba(240,94,35, 0.7), rgba(239,114,21, 0.7));*/
   }
 `
+const Head = styled(Header)`
+  color: ${colors.white};
+  z-index: 1;
+  text-align: center;
+  display: block;
+  max-width: unset;
+  margin: 0 auto;
+  @media (max-width: ${styles.breakpoints.lg + "px"}) {
+    max-width: 1080px;
+    width: 90%
+}
+`
 
 const Hero = ({ text, imageData }) => (
   <Container>
@@ -43,7 +56,8 @@ const Hero = ({ text, imageData }) => (
         width="100%"
         style={{ bottom: 0, right: 0, position: "absolute" }}
       />
-      <Header text={text.title} styles={{ color: colors.white, zIndex: 1, textAlign: 'center', display: 'block' }} />
+      <Head text={text.title} />
+      {/* <Header text={text.title} styles={{ color: colors.white, zIndex: 1, textAlign: 'center', display: 'block', wordWrap: 'wrap' }} /> */}
       <ContentWrapper>
         <SectionTop light bottomText={text.action} zIndexHigh>
           {text.subTitle}

@@ -30,9 +30,9 @@ export default {
       title: "Popular Features",
       features: [
         {
-          title: "Measure tool",
+          title: "Measure tool and sharing functionality",
           description:
-            "Using the AR wallpaper covering data, the estimated dimensions, number of rolls and price can be presented to the customer directly.",
+            "Using the AR wallpaper covering data, the estimated dimensions, number of rolls and price can be presented to the customer directly. Users can capture images of their AR-wallpaperings and directly share with friends and family.",
         },
         {
           title: "Advanced Menu",
@@ -161,14 +161,14 @@ export default {
     },
     landing: {
       productName: "Wallpaper Visualizer",
-      shortPitch: "Med Wallpaper Visualizer kan dina kunder visualisera och uppleva era tapeter i sina hem, innan köp och utan att behöva beställa tapetprover. Det är det snabbaste sättet att uppleva era kollektioner av tapeter och hjälpa era kunder hitta tapeterna de söker.",
+      shortPitch: "Med Wallpaper Visualizer kan era kunder visualisera och uppleva era tapeter i sina hem, innan köp och utan att behöva beställa tapetprover. Det är det snabbaste sättet att uppleva ert fulla tapetutbud, vilket hjälper era kunder att hitta tapeterna de söker.",
       videoAlt: "AR Wallpaper Visualizer använder Augmented Reality",
     },
     companies: {
       wallvision:
-        "WallVision/Embellence Group är det största företaget i Skandinavien inom tapetbranchen.",
+        "WallVision/Embellence Group är det största företaget i Skandinavien inom tapetbranchen, med ett fokus på premiumtapeter och annan hemindredning.",
       borastapeter:
-        "Boråstapeter är en del av Wallvision/Embellence Group och var det första företaget att börja använda Wallpaper Visualizer.",
+        "Boråstapeter är en del av Wallvision/Embellence Group och var det första företaget att börja använda Wallpaper Visualizer med appen vi utvecklade för dem.",
       grandeco:
         "Grandeco är baserat i Beligen och är en av världens ledande producenter av vinyltapeter.",
     },
@@ -177,53 +177,53 @@ export default {
       subTitle:
         "Bläddra bland alla dina tapeter, testa de i ditt rum, dela dina favoriter, få väggmått och antal rullar och gör din beställning. Allt i en app.",
       description:
-        "Wallpaper Visualizer låter era kunder bläddra bland alla era kollektioner av tapeter i en snabb och intuitiv iPhone eller Android app. Efter en snabb, enkel och guidad process kan tapeterna visualiseras i era kunders rum. De kan enkelt jämföra olika tapeter med varandra för att hitta det som passar till just deras rum.",
+        "Wallpaper Visualizer låter era kunder bläddra bland alla ert utbud av tapeter i en snabb och intuitiv iPhone eller Android app. Efter en snabb, enkel och guidad process kan tapeterna visualiseras i era kunders rum. De kan enkelt jämföra olika tapeter med varandra för att hitta det som passar till just deras rum.",
     },
     featureSection: {
       title: "Populära features",
       features: [
         {
-          title: "Mätverktyg",
+          title: "Mätverktyg och delningsfunktioner",
           description:
-            "Med hjälp av AR data kan antalet rullar som krävs för tapetseringen och vad det skulle kosta visas direkt för kunden.",
+            "Med hjälp av AR data kan antalet rullar som krävs för tapetseringen och vad det skulle kosta visas direkt för kunden. Användare kan ta kort på sina AR-tapetersingar och direkt dela med sig till vänner och familj.",
         },
         {
-          title: "Avancerad meny",
+          title: "Avancerad meny och admin-gränssnitt",
           description:
-            "Vi erbjuder både native iOS och Android lösningar, vilket betyder att appen kommer vara både snabb och responsiv. Alla texter och data associerad med tapeterna ändras enkelt i vårt enkla admin gränssnitt och uppdateras direkt i apparna.",
+            "Vi erbjuder både native iOS och Android lösningar, vilket betyder att appen kommer vara både snabb och responsiv. Alla texter och data associerad med tapeterna ändras enkelt i vårt enkla admin-gränssnitt och uppdateras direkt i apparna.",
         },
         {
           title: "Integration med hemsida",
           description:
-            "Vi integrerar apparna med er existerande hemsida. Kunden kan från hemsidan snabbt öppna AR-upplevelsen och testa tapeten i sitt rum. App användare kan också med ett klick öppna en specifik tapet på hemsidan.",
+            "Vi integrerar apparna med er existerande hemsida. Kunden kan från hemsidan snabbt öppna AR-upplevelsen och testa tapeten i sitt rum. Appanvändare kan också med ett klick öppna en specifik tapet på hemsidan.",
         },
         {
-          title: "Custom fit murals",
+          title: "Anpassade muraler",
           description:
-            "We handle all types of wallpapers, not just repeating patterns. Using our mural feature, the customer can with a swipe of their finger select the part of the mural they prefer in the AR wallpaper covering.",
+            "Vi hanterar alla typer av tapeter, inte bara repeterande mönster. Med vår muralfunktion kan kunden med ett enkelt fingersvep välja den delen av muralen de föredrar att se i AR-tapetseringen.",
         },
         {
-          title: "Rich user statistics",
+          title: "Utförlig användardata",
           description:
-            "We collect anonymous user data regarding actions your customers take in the app, and other user statistics. This data is presented in a dashboard which you can use to guide your business decisions.",
+            "Vi samlar in anonym användardata om hur kunden beter sig i appen, tillsammans med annan användardata. Datan presenteras i en enkel instrumentbräda du kan använda dig av för att guida dina affärsbeslut.",
         },
         {
-          title: "Custom branded app",
+          title: "Anpassad till varumärket",
           description:
-            "We make sure that the app you obtain is highly personalized, matching the design you have on your website. After starting an inquiry with us, we make a design proposal where you have the possibility of proposing new ideas and making changes.",
+            "Vi försäkrar att appen är personaliserad, och att den matchar designen på er hemsida. Efter att ha påbörjat ett samarbete med oss skapar vi ett designförslag som ni sedan kan påverka med nya idéer utifrån er vision.",
         },
         {
-          title: "Buy wallpapers in-app",
+          title: "Köp tapeter i appen",
           description:
-            "The fastest integration option is to re-route the customer to the checkout page on your website when they are interested in ordering, but we also offer the possibility of making purchases in-app depending on what you prefer.",
+            "Det snabbaste integrations-tillvägagångssättet är att omdirigera kunderna till betalning på er hemsida när de är intresserade av att beställa, men vi erbjuder också möjligheten att betala i appen beroende på vad ni föredrar.",
         },
         {
-          title: "Multi-language support",
+          title: "Stöd för flera språk",
           description:
-            "The app we create for you can support any number of languages you want. Use our backend admin interface to instantly update text fields and translations in your app.",
+            "Appen vi skapar för er kan stödja alla språk ni vill. Använd vårt admin-gränssnitt för att direkt uppdatera texter och översättningar i er app.",
         },
         {
-          title: "Push notifications",
+          title: "Pushnotifikationer",
           description:
             "Keep your customers updated with new collections, new wallpapers or other exiting information using push notifications. Using an admin interface, you will be able to easily create and send the push notifications yourself any time you want.",
         },
