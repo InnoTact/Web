@@ -81,47 +81,47 @@ export default {
       quotes: [
         {
           quote:
-            "Wow! Så fantastiskt att få testa färg och mönster på rummets väggar, och ett direkt resultat - imponerande 🌟🌟🌟",
+            "Wow! So fantastic to be able to try out colors and patterns on the walls of the room, and a direct result - impressive🌟🌟🌟",
           name: "Sonja",
         },
         {
           quote:
-            "Att beställa tapetprover känns onödigt och krångligt när detta alternativ finns! Snygg design, lätt att använda och riktigt kul! Fina resultat och grymt att man kan se antal rullar och priser!",
+            "To order wallpaper samples feels unecessary and troublesome when this alternative is an option! Neat design, easy to use and very fun! Nice results and awesome that you are able to see number of rolls and prices!",
           name: "Ebba J",
         },
         {
           quote:
-            "Appen fungerar perfekt, jättekul att kunna se tapetseringsresultat så direkt! Sparar en så mycket tid!",
+            "The app works perfectly, very fun to be able to see the wallpapering results directly! It saves you so much time!",
           name: "Ogge",
         },
         {
           quote:
-            "Woow! Vilket bra hjälpmedel när man ska tapetsera. Enkelt, snyggt och verklighetstroget. Ett måste för alla hemmafixare!",
+            "Woow! What a great tool when you are about to put up wallpaper. Simple, neat and realistic. A must for all home-fixers!",
           name: "Nödis",
         },
         {
           quote:
-            "Använde denna appen innan jag gjorde om hemma och det blev verkligen som det såg ut i appen! Så lätt att använda men ändå så verklighetstroget resultat! Kommer absolut använda igen!",
+            "Used this app before I redecorated at home and it really turned out as it looked in the app! So easy to use but still such a realistic result! Will definitely use again!",
           name: "Vanli123",
         },
         {
           quote:
-            "Grymt bra app! Smidigt och enkelt att se vilka tapeter man ska ha, slipp ta hem massa prover.. love it! 👏🏼",
+            "Great app! Simple and easy to see which wallpapers you should have, no need to get loads of samples home.. love it!👏🏼",
           name: "Stefan Trailovic",
         },
         {
           quote:
-            "Smidigt!! Mycket lättare att välja tapet när man får hjälp att föreställa sig resultatet.",
+            "Neat!! It's much easier to choose a wallpaper when you get help with visualizing the results.",
           name: "Mymlosovic",
         },
         {
           quote:
-            "Arbetar med inredning av lägenheter, ett sådant suveränt verktyg för mig! Spar massor av arbetstimmar.",
+            "Working with furnishing apartments, such a great tool for me! Saves me lots of work hours.",
           name: "Aretravel",
         },
         {
           quote:
-            "Mycket flexibel och hjälpsam! Ger en perfekt och snabb överblick på hur resultatet kommer att bli! Suverän.",
+            "Very flexible and helpful! Gives a perfect overview of how the result will turn out! Fantastic.",
           name: "Victor Olsson",
         },
       ],
