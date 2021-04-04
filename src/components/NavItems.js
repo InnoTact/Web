@@ -104,9 +104,9 @@ class NavItems extends Component {
     const strings = new LocalizedStrings(translation)
     const links = [
       new LinkData(strings.home, "/"),
-      new LinkData(strings.solutions, "/lösningar"),
-      new LinkData(strings.about, "/om-oss/"),
-      new LinkData(strings.contact, "/kontakt"),
+      new LinkData(strings.solutions, "/solutions"),
+      new LinkData(strings.about, "/about-us/"),
+      new LinkData(strings.contact, "/contact"),
     ]
     const navItems = links.map(l => {
       return (

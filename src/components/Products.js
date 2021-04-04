@@ -19,14 +19,14 @@ export const Products = ({ imageData }) => {
       ...s.wallpaper,
     },
     {
-      destination: "/kontakt",
+      destination: "/contact",
       imgAlt: "Augmented Reality",
       img: imageData.WallpaperVisualizer.childImageSharp.fluid,
       isLeft: false,
       ...s.art,
     },
     {
-      destination: "/kontakt",
+      destination: "/contact",
       imgAlt: "Augmented Reality",
       img: imageData.WallpaperVisualizer.childImageSharp.fluid,
       isLeft: true,

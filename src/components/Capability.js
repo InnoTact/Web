@@ -79,7 +79,7 @@ class Capability extends Component {
           <Text dark>{text}</Text>
           </Item>
           <Item>
-          <Link to={destination ? destination : "/kontakt/#contact-form"}>
+          <Link to={destination ? destination : "/contact/#contact-form"}>
             <Button primary>{buttonText}</Button>
           </Link>
           </Item>

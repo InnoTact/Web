@@ -12,7 +12,7 @@ export default ({ dark }) => {
       title={strings.title}
       description={strings.description}
       btnText={strings.button}
-      link={"/kontakt/#contact-form"}
+      link={"/contact/#contact-form"}
     />
   )
 }

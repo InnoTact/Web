@@ -49,7 +49,7 @@ export default function StartProjectSection() {
             heading={strings.left.title}
             text={strings.left.text}
             buttonText={strings.left.button}
-            buttonLink="/kontakt/"
+            buttonLink="/contact/"
           >
             <FaCubes style={styles.icon} />
           </ContentBlobCustom>
@@ -57,7 +57,7 @@ export default function StartProjectSection() {
             heading={strings.right.title}
             text={strings.right.text}
             buttonText={strings.right.button}
-            buttonLink="/lösningar/"
+            buttonLink="/solutions/"
           >
             <FaCreativeCommonsShare style={styles.icon} />
           </ContentBlobCustom>

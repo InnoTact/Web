@@ -2,7 +2,7 @@ export default {
   en: {
     seo: {
       title: `Wallpaper Visualizer `, // max 60 character
-      description: `With our Wallpaper Visualizer technology your customers can visualize and experience your wallpapers inside their homes, before buying and without ordering any samples.` // max 160
+      description: `With our Wallpaper Visualizer AR technology your customers can visualize and experience your wallpapers inside their homes, before buying and without ordering any samples.` // max 160
     },
     landing: {
       productName: "Wallpaper Visualizer",
@@ -67,7 +67,7 @@ export default {
         {
           title: "Multi-language support",
           description:
-            "The app we create for you can support any number of languages you want. Use our backend admin interface to update text fields or other information in your app instantly.",
+            "The app we create for you can support any number of languages you want. Use our backend admin interface to instantly update text fields and translations in your app.",
         },
         {
           title: "Push notifications",

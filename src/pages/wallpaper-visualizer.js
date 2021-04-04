@@ -83,7 +83,7 @@ class WallpaperVisualizer extends Component {
           title={s.takeAction.title}
           description={s.takeAction.description}
           btnText={s.takeAction.btnText}
-          link={"/kontakt/#contact-form"}
+          link={"/contact/#contact-form"}
           dark={true}
         />
         <Footer />

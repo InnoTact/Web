@@ -72,7 +72,7 @@ class ContactForm extends Component {
       <Card>
         <SubHeader dark>Fyll i formuläret</SubHeader>
         <form
-          name="kontakt"
+          name="contact"
           method="post"
           action="/success/"
           data-netlify="true"

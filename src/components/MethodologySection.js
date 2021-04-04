@@ -29,7 +29,7 @@ export default function MethodologySection() {
             header={strings.step1.title}
             text={[
               `${strings.step1.press} `,
-              <ClickMe italic url="/kontakt/">
+              <ClickMe italic url="/contact/">
                 {strings.step1.here}
               </ClickMe>,
               ` ${strings.step1.description}`,
