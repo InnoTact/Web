@@ -130,7 +130,7 @@ export default {
       title: "What our business owners say",
       quote:
         "It can be hard to imagine how ones bedroom, living room or kitchen will look like with a new wallpaper when you only have a wallpaper sample. With the app you see how a certain wallpaper fits into your own home directly. And on top of that it is very fun to use. It's easy to get immersed in it and to walk around at home and see the rooms change tone with new wallpapers.",
-      saidBy: "Oskar Gissberg, Head of Digital at Wallvision",
+      saidBy: "Oskar Gissberg, Head of Digital at Boråstapeter",
     },
     statsUseCase: {
       title: "Business Use Case: Boråstapeter",
@@ -180,7 +180,7 @@ export default {
         "Wallpaper Visualizer låter era kunder bläddra bland alla ert utbud av tapeter i en snabb och intuitiv iPhone eller Android app. Efter en snabb, enkel och guidad process kan tapeterna visualiseras i era kunders rum. De kan enkelt jämföra olika tapeter med varandra för att hitta det som passar till just deras rum.",
     },
     featureSection: {
-      title: "Populära features",
+      title: "Populära funktioner",
       features: [
         {
           title: "Mätverktyg och delningsfunktioner",
@@ -225,12 +225,12 @@ export default {
         {
           title: "Pushnotifikationer",
           description:
-            "Keep your customers updated with new collections, new wallpapers or other exiting information using push notifications. Using an admin interface, you will be able to easily create and send the push notifications yourself any time you want.",
+            "Håll era kunder uppdaterade med de senaste kollektionerna, nya tapeter eller annan spännande information. Med ett admin-gränssnitt kan ni enkelt skapa och skicka pushnotifikationer närhelst ni vill.",
         },
       ],
     },
     multipleQuoteSection: {
-      title: "What our end-users say",
+      title: "Vad våra slutanvändare säger",
       quotes: [
         {
           quote:
@@ -280,25 +280,25 @@ export default {
       ],
     },
     businessQuote: {
-      title: "What our business owners say",
+      title: "Vad våra produktägare säger",
       quote:
-        "It can be hard to imagine how ones bedroom, living room or kitchen will look like with a new wallpaper when you only have a wallpaper sample. With the app you see how a certain wallpaper fits into your own home directly. And on top of that it is very fun to use. It's easy to get immersed in it and to walk around at home and see the rooms change tone with new wallpapers.",
-      saidBy: "Oskar Gissberg, Head of Digital at Wallvision",
+        "Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter.",
+      saidBy: "Oskar Gissberg, Head of Digital på Boråstapeter",
     },
     statsUseCase: {
-      title: "Business Use Case: Boråstapeter",
+      title: "Ett Use Case: Boråstapeter",
       stats: [
-        { number: "+60,000", text: "users on iOS alone" },
-        { number: "1200", text: "new users per week" },
-        { number: "+10,000", text: "active users per month" },
-        { number: "+30,000", text: "papered walls per month" },
-        { number: "+150,000", text: "impressions on AppStore" },
-        { number: "#4", text: "top tank in Sweden" },
+        { number: "+60,000", text: "användare enbart på iOS" },
+        { number: "1200", text: "nya användare per vecka" },
+        { number: "+10,000", text: "aktiva användare per månad" },
+        { number: "+30,000", text: "tapetserade väggar per månad" },
+        { number: "+150,000", text: "intryck på AppStore" },
+        { number: "#4", text: "högsta ranking i Sverige" },
       ],
     },
     takeAction: {
       title: "Redo att förnya tapetindustrin?",
-      description: "I takt med att Augmented Reality-teknologin förbättras anser vi att verktyg för att visualisera era tapetprodukter kommer vara väsentliga inom snar framtid. Kontakta oss och boka ett möte, så svarar vi på alla era frågor. Låt oss förändra industrin tillsammans.",
+      description: "I takt med att Augmented Reality-teknologin förbättras anser vi att verktyg för att visualisera era tapetprodukter med AR kommer vara väsentliga inom snar framtid. Kontakta oss och boka ett möte, så svarar vi på alla era frågor. Låt oss förändra industrin tillsammans.",
       btnText: "Kontakta oss"
     }
   },
