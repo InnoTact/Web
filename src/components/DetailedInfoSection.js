@@ -62,7 +62,7 @@ export default function DetailedInfoSection({
                   dark
                   styles={{
                     color: colors.dark,
-                    textAlign: "left",
+                    textAlign: "left",  
                     marginLeft: 0,
                   }}
                   text={title}
