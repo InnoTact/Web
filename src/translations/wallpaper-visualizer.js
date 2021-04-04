@@ -52,7 +52,7 @@ export default {
         {
           title: "Rich user statistics",
           description:
-            "We collect anonymous user data regarding actions your customer takes in the app, and other user statistics. This data is presented in a dashboard which you can use to guide your business decisions.",
+            "We collect anonymous user data regarding actions your customers take in the app, and other user statistics. This data is presented in a dashboard which you can use to guide your business decisions.",
         },
         {
           title: "Custom branded app",
@@ -67,7 +67,7 @@ export default {
         {
           title: "Multi-language support",
           description:
-            "The app we create for you can support any number of languages you want.",
+            "The app we create for you can support any number of languages you want. Use our backend admin interface to update text fields or other information in your app instantly.",
         },
         {
           title: "Push notifications",
