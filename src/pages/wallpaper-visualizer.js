@@ -67,13 +67,13 @@ class WallpaperVisualizer extends Component {
         <FeatureGrid title={s.featureSection.title} light={false} features={s.featureSection.features} />
         <MultipleQuoteSection
           light={true}
-          title="What our end-users say"
-          quotes={s.endUserQuotes}
+          title={s.multipleQuoteSection.title}
+          quotes={s.multipleQuoteSection.quotes}
         />
         <QuoteSection
-          title={"What our business owners say"}
-          quote="Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter"
-          saidBy="Oskar Gissberg, Head of Digital Wallvision"
+          title={s.businessQuote.title}
+          quote={s.businessQuote.quote}
+          saidBy={s.businessQuote.saidBy}
           url={`https://www.di.se/pressreleaser/2020/02/04/borastapeter-ar-teknik-gor-det-mojligt-att-tapetsera-virtuellt-i-ny-app/`}
           light={false}
         />
