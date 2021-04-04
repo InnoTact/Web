@@ -154,8 +154,6 @@ export default {
       btnText: "Contact Us"
     }
   },
-  
-  
   se: {
     seo: {
       title: `Wallpaper Visualizer - Visualisera tapeter i AR`, // max 60 character
