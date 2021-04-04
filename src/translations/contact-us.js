@@ -1,5 +1,9 @@
 export default {
   en: {
+    seo: {
+      title: `Contact Us`,
+      description: `Interested in one of our products, or do you have an idea of your own? We would love to talk with you. Don't hesitate to call or email'`
+    },
     hero: {
       title: "Contact Us",
       subTitle: "When you want to get in touch with us, you can either fill out the form below or reach out to us by phone. We are always ready to discuss your needs and possible solutions.",
@@ -13,6 +17,10 @@ export default {
     }
   },
   sv: {
+    seo: {
+      title: 'Kontakta oss',
+      description: `Intresserad i några av våra produkter eller har du en egen idé du vill realisera? Vi vill höra från dig.`
+    },
     hero: {
         title: "Kontakta oss",
         subTitle: "När du vill komma i kontakt med oss kan ni antingen fylla i formuläret nedan eller nå oss via telefon. Vi är alltid beredda att diskutera dina behov och möjliga lösningar.",

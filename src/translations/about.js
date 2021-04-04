@@ -1,5 +1,9 @@
 export default {
   en: {
+    seo: {
+      title: 'About Us',
+      description: 'Our highest priority is always to make our customers happy. We love creating ideas with our customers to improve and simplify the processes in their businesses.'
+    },
     hero: {
       title: "About us",
       subTitle:
@@ -8,6 +12,10 @@ export default {
     },
   },
   sv: {
+    seo: {
+      title: 'Om oss',
+      description: 'Vår högsta prioritet är att göra våra kunder nöjda. Vi älskar att skapa idéer tillsammans med våra kunder för att förbättra och förenkla processerna i deras företag.'
+    },
     hero: {
       title: "Om oss",
       subTitle:

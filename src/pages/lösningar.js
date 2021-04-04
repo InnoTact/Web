@@ -18,7 +18,7 @@ class Solutions extends Component {
 
     return (
       <React.Fragment>
-        <CustomHelmet page='Lösningar ' />
+        <CustomHelmet seo={strings.seo} />
         <Navbar light={true} />
         <Hero
           text={strings.hero}

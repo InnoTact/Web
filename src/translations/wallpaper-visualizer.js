@@ -1,5 +1,9 @@
 export default {
   en: {
+    seo: {
+      title: `Wallpaper Visualizer `, // max 60 character
+      description: `With our Wallpaper Visualizer technology your customers can visualize and experience your wallpapers inside their homes, before buying and without ordering any samples.` // max 160
+    },
     landing: {
       productName: "Wallpaper Visualizer",
       shortPitch:
@@ -17,9 +21,10 @@ export default {
     detailedInfo: {
       title: "Everything in one place",
       subTitle:
-        "Browse wallpapers, test them in your room, share your favorite wallpaper and how they look, obtain measurements and place your order. All in one app.",
+        "Browse wallpapers, test them in your room, share your favorite wallpapers, obtain measurements and place your order. All in one app.",
       description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "The Wallpaper Visualizer AR solution allows your customer to browse your full collection of wallpapers in a fast and intuitive native app. With a quick, automatically guided setup process the wallpapers can be visualized in your customers room, also allowing them to instantaneously switch between different wallpapers.",
+
     },
     featureSection: {
       title: "Popular Features",
@@ -27,47 +32,47 @@ export default {
         {
           title: "Measure tool",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Using the AR wallpaper covering data, the estimated dimensions, number of rolls and price can be presented to the customer directly.",
         },
         {
-          title: "Advanced Menu",
+          title: "Advanced Menu and Admin Interface",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "We offer both native iOS and Android solutions, meaning the app will be fast and responsive. Each text field, translation and required wallpaper data is easily changed using our backend admin interface.",
         },
         {
           title: "Website integration",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "We integrate the app towards your existing website, allowing customers browsing your website to open the AR experience and test the wallpaper they are interested in directly in their room. App users can easily open any wallpaper on your website by clicking links in the app.",
         },
         {
           title: "Custom fit murals",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "We handle all types of wallpapers, not just repeating patterns. Using our mural feature, the customer can with a swipe of their finger select the part of the mural they prefer in the AR wallpaper covering.",
         },
         {
           title: "Rich user statistics",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "We collect anonymous user data regarding actions your customer takes in the app, and other user statistics. This data is presented in a dashboard which you can use to guide your business decisions.",
         },
         {
           title: "Custom branded app",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "We make sure that the app you obtain is highly personalized, matching the design you have on your website. After starting an inquiry with us, we make a design proposal where you have the possibility of proposing new ideas and making changes.",
         },
         {
           title: "Buy wallpapers in-app",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "The fastest integration option is to re-route the customer to the checkout page on your website when they are interested in ordering, but we also offer the possibility of making purchases in-app depending on what you prefer.",
         },
         {
           title: "Multi-language support",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "The app we create for you can support any number of languages you want.",
         },
         {
           title: "Push notifications",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Keep your customers updated with new collections, new wallpapers or other exiting information using push notifications. Using an admin interface, you will be able to easily create and send the push notifications yourself any time you want.",
         },
       ],
     },
@@ -144,7 +149,13 @@ export default {
       btnText: "Contact Us"
     }
   },
+  
+  
   se: {
+    seo: {
+      title: `Wallpaper Visualizer`, // max 60 character
+      description: `With our Wallpaper Visualizer technology your customers can visualize and experience your wallpapers inside their homes, before buying and without ordering any samples.` // max 160
+    },
     landing: {
       productName: "Wallpaper Visualizer",
       shortPitch:

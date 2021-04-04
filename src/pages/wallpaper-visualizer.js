@@ -22,7 +22,7 @@ class WallpaperVisualizer extends Component {
 
     return (
       <React.Fragment>
-        <CustomHelmet page="Wallpaper-Visualizer " />
+        <CustomHelmet seo={s.seo} />
         <Navbar light={false} />
         <VideoPitch
           title={s.landing.productName}

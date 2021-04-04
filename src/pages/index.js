@@ -21,7 +21,7 @@ class Index extends Component {
 
     return (
       <React.Fragment>
-        <CustomHelmet />
+        <CustomHelmet overrideTitle seo={strings.seo} />
         <Navbar light={true} />
         <Hero
           text={strings.hero}

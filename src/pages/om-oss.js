@@ -18,7 +18,7 @@ class About extends Component {
 
     return (
       <React.Fragment>
-        <CustomHelmet page='Om ' />
+        <CustomHelmet seo={strings.seo} />
         <Navbar light={true} />
         <Hero
           text={strings.hero}

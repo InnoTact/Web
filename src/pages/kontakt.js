@@ -15,7 +15,7 @@ class Contact extends Component {
 
     return (
       <React.Fragment>
-        <CustomHelmet page="Kontakta " />
+        <CustomHelmet seo={strings.seo} />
         <Navbar light={true} />
         <Hero
           text={strings.hero}
