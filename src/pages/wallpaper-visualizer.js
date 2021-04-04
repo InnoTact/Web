@@ -23,14 +23,39 @@ import FeatureGrid from "../components/FeatureGrid"
 class WallpaperVisualizer extends Component {
   render() {
     const { data } = this.props
-    const strings = new LocalizedStrings(translation)
+    const s = new LocalizedStrings(translation)
 
     return (
       <React.Fragment>
         <CustomHelmet page="Wallpaper-Visualizer " />
         <Navbar light={false} />
-        <VideoPitch style={{ marginTop: "3rem" }} light={false} />
-        <WallpaperCompaniesLovingUs imageData={data} />
+        <VideoPitch
+          title={s.landing.productName}
+          description={s.landing.shortPitch}
+          videoUrl={`https://www.youtube.com/embed/wG-pAblEw5I`}
+          videoAlt={"Wallpaper Visualizer using Augmented Reality"}
+          style={{ marginTop: "3rem" }}
+          light={false}
+        />
+        <WallpaperCompaniesLovingUs
+          companies={[
+            {
+              text: s.companies.wallvision,
+              url:
+                "https://www.wallvision.com/sites/wallvision.com/files/wallvision_0_2.png",
+            },
+            {
+              text: s.companies.borastapeter,
+              url:
+                "https://www.borastapeter.com/sites/borastapeter.com/themes/borastapeter/dist/images/logo.svg",
+            },
+            {
+              text: s.companies.grandeco,
+              url:
+                "https://www.grandecogroup.com/frontend/corporateWebsiteBundle/img/general/logo-grandeco--b-on-w.svg",
+            },
+          ]}
+        />
         <DetailedInfoSection light={true} />
         <FeatureGrid title="Popular Features" light={false} />
         <MultipleQuoteSection
