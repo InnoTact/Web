@@ -4,6 +4,7 @@ export default {
       productName: "Wallpaper Visualizer",
       shortPitch:
       "En stark övergripande pitch om produkten. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      videoAlt: "Wallpaper Visualizer using Augmented Reality"
     },
     companies: {
       wallvision:
@@ -27,42 +28,42 @@ export default {
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
-      measure: {
+      menu: {
         title: "Advanced Menu",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
-      measure: {
+      websiteIntegration: {
         title: "Website integration",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
-      measure: {
+      murals: {
         title: "Custom fit murals",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
-      measure: {
+      statistics: {
         title: "Rich user statistics",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
-      measure: {
+      brandedApp: {
         title: "Custom branded app",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
-      measure: {
+      buyInApp: {
         title: "Buy wallpapers in-app",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
-      measure: {
+      languages: {
         title: "Multi-language support",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       },
-      measure: {
+      pushNotifications: {
         title: "Push notifications",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -74,6 +75,7 @@ export default {
       productName: "Wallpaper Visualizer",
       shortPitch:
       "En stark övergripande pitch om produkten. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      videoAlt: "Wallpaper Visualizer using Augmented Reality"
     },
     companies: {
       wallvision:

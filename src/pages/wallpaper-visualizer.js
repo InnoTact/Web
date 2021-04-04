@@ -33,7 +33,7 @@ class WallpaperVisualizer extends Component {
           title={s.landing.productName}
           description={s.landing.shortPitch}
           videoUrl={`https://www.youtube.com/embed/wG-pAblEw5I`}
-          videoAlt={"Wallpaper Visualizer using Augmented Reality"}
+          videoAlt={s.landing.videoAlt}
           style={{ marginTop: "3rem" }}
           light={false}
         />
@@ -56,8 +56,26 @@ class WallpaperVisualizer extends Component {
             },
           ]}
         />
-        <DetailedInfoSection light={true} />
-        <FeatureGrid title="Popular Features" light={false} />
+        <DetailedInfoSection
+          title={s.detailedInfo.title}
+          subTitle={s.detailedInfo.subTitle}
+          description={s.detailedInfo.description}
+          imgSrc={
+            "https://www.borastapeter.com/sites/borastapeter.com/files/styles/paragraph_image_l_2x/public/2001_bt_nl_app2_en.jpg?itok=T0Gp1mxI&timestamp=1583573101"
+          }
+          light={true}
+        />
+        <FeatureGrid title="Popular Features" light={false} features={[
+          { ...s.features.measure },
+          { ...s.features.menu },
+          { ...s.features.websiteIntegration },
+          { ...s.features.murals },
+          { ...s.features.statistics },
+          { ...s.features.brandedApp },
+          { ...s.features.buyInApp },
+          { ...s.features.languages },
+          { ...s.features.pushNotifications },
+        ]} />
         <MultipleQuoteSection
           light={true}
           title="What our end-users say"
