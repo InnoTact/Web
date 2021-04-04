@@ -8,16 +8,16 @@ export default {
     },
     companies: {
       wallvision:
-        "WallVision/Embellence Group, is the largest company in Scandinavia with a focus on premium wallpapers.",
+        "WallVision/Embellence Group, is the largest company in Scandinavia with a focus on premium wallpapers and other home decor.",
       borastapeter:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+        "Boråstapeter is part of Embellence Group, and the first wallpaper company to utilize our Wallpaper Visualizer AR technology within the app we developed for them.",
       grandeco:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+        "Grandeco is one of the globally leading producers of vinyl wallcoverings, based in Belgium.",
     },
     detailedInfo: {
       title: "Everything in one place",
       subTitle:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Browse wallpapers, test them in your room, share your favorite wallpaper and how they look, obtain measurements and place your order. All in one app.",
       description:
         "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     },
