@@ -55,7 +55,7 @@ export default function DetailedInfoSection({
               <SideContainer
                 style={{
                   paddingRight:
-                    value.isTablet || value.isMobile ? 0 : halfInnerMargin,
+                    value ? value.isTablet || value.isMobile ? 0 : halfInnerMargin : 0,
                 }}
               >
                 <Header
@@ -77,7 +77,7 @@ export default function DetailedInfoSection({
                 style={{
                   textAlign: "center",
                   paddingLeft:
-                    value.isTablet || value.isMobile ? 0 : halfInnerMargin,
+                    value ? value.isTablet || value.isMobile ? 0 : halfInnerMargin : 0,
                 }}
               >
                 <Image src={imgSrc} />

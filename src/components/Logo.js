@@ -4,8 +4,8 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 const LogoStyle = {
-  width: 120,
-  height: 60,
+  width: 140,
+  height: 70,
   margin: 0,
   objectFit: "contain",
 }
@@ -15,14 +15,14 @@ const Logo = ({ light }) => {
     query {
       LogoDark: file(relativePath: { eq: "InnoTactLogoDark.png" }) {
         childImageSharp {
-          fluid(maxWidth: 120) {
+          fluid(maxWidth: 140) {
             ...GatsbyImageSharpFluid
           }
         }
       },
       LogoLight: file(relativePath: { eq: "InnoTactLogoLight.png" }) {
         childImageSharp {
-          fluid(maxWidth: 120) {
+          fluid(maxWidth: 140) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -39,7 +39,6 @@ const Logo = ({ light }) => {
           fluid={light ? data.LogoLight.childImageSharp.fluid : data.LogoDark.childImageSharp.fluid }
           alt="InnoTact Logo"
         />
-        {/* {data ? <Img fluid={data.file.childImageSharp.fluid} /> : null} */}
       </Link>
     </CenterContainer>
   )

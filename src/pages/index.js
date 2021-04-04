@@ -27,16 +27,16 @@ class Index extends Component {
           text={strings.hero}
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}
         />
-        <StartProjectSection />
-        <Products light={false} imageData={data} />
-        <SolutionSection light={true} />
+        <StartProjectSection light={false} />
+        <Products light={true} imageData={data} />
+        <SolutionSection light={false} />
         <FactSection />
         <QuoteSection
           quote="I do think that a significant portion of the population of
             developed countries, and eventually all countries, will have AR
             experiences every day, almost like eating three meals a day, it will
             become that much a part of you."
-          saidBy="Tim Cook CEO Apple"
+          saidBy="Tim Cook, CEO Apple"
           url={`https://nordic.businessinsider.com/apple-ceo-tim-cook-explains-augmented-reality-2016-10?r=US&IR=T`}
         />
         <GetStarted />

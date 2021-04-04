@@ -35,11 +35,11 @@ const ContentBlobCustom = styled(ContentBlob)`
   }
 `
 
-export default function StartProjectSection() {
+export default function StartProjectSection({ light }) {
   const strings = new LocalizedStrings(translation)
 
   return (
-    <Section backgroundColor={colors.white}>
+    <Section backgroundColor={light ? colors.white : colors.lightgrey}>
       <ContentWrapper>
         <SectionTop dark header={strings.title}>
           {strings.topSection}

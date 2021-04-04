@@ -1,7 +1,7 @@
 export default {
   en: {
     seo: {
-      title: `Wallpaper Visualizer `, // max 60 character
+      title: `Wallpaper Visualizer: Visualize Wallpapers in AR`, // max 60 character
       description: `With our Wallpaper Visualizer AR technology your customers can visualize and experience your wallpapers inside their homes, before buying and without ordering any samples.` // max 160
     },
     landing: {
@@ -35,7 +35,7 @@ export default {
             "Using the AR wallpaper covering data, the estimated dimensions, number of rolls and price can be presented to the customer directly.",
         },
         {
-          title: "Advanced Menu and Admin Interface",
+          title: "Advanced Menu",
           description:
             "We offer both native iOS and Android solutions, meaning the app will be fast and responsive. Each text field, translation and required wallpaper data is easily changed using our backend admin interface.",
         },
@@ -135,17 +135,22 @@ export default {
     statsUseCase: {
       title: "Business Use Case: Boråstapeter",
       stats: [
-        { text: "+60,000 users" },
-        { text: "1,200 new users per week" },
-        { text: "Top Rank of #4 in Sweden" },
-        { text: "+10,000 active users per month" },
-        { text: "+30,000 papered walls per month" },
-        { text: "+150,000 impressions on AppStore" },
+        { number: "+60,000", text: "users on iOS alone" },
+        { number: "1200", text: "new users per week" },
+        { number: "+10,000", text: "active users per month" },
+        { number: "+30,000", text: "papered walls per month" },
+        { number: "+150,000", text: "impressions on AppStore" },
+        { number: "#4", text: "top tank in Sweden" },
+        // { text: "1,200 new users per week" },
+        // { text: "Top Rank of #4 in Sweden" },
+        // { text: "+10,000 active users per month" },
+        // { text: "+30,000 papered walls per month" },
+        // { text: "+150,000 impressions on AppStore" },
       ],
     },
     takeAction: {
       title: "Ready to innovate the wallpaper industry?",
-      description: "Sista ord som får de att faktiskt kontakta oss. Ändra titeln. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.",
+      description: "As augmented reality technology progresses we believe that tools for visualizing your wallpaper products will be essential in the near future. Contact us, and we will setup a meeting and explain all further questions you might have. Let us change the industry together.",
       btnText: "Contact Us"
     }
   },
@@ -153,77 +158,76 @@ export default {
   
   se: {
     seo: {
-      title: `Wallpaper Visualizer`, // max 60 character
-      description: `With our Wallpaper Visualizer technology your customers can visualize and experience your wallpapers inside their homes, before buying and without ordering any samples.` // max 160
+      title: `Wallpaper Visualizer - Visualisera tapeter i AR`, // max 60 character
+      description: `Wallpaper Visualizer använder den senaste AR tekniken för att era kunder ska kunna visualisera och uppleva era tapeter i sina hem innan de beställt och utan att behöva beställa tapetprover.` // max 160
     },
     landing: {
       productName: "Wallpaper Visualizer",
-      shortPitch:
-        "With our Wallpaper Visualizer technology you can see and experience the look ",
-      videoAlt: "Wallpaper Visualizer using Augmented Reality",
+      shortPitch: "Med Wallpaper Visualizer kan dina kunder visualisera och uppleva era tapeter i sina hem, innan köp och utan att behöva beställa tapetprover. Det är det snabbaste sättet att uppleva era kollektioner av tapeter och hjälpa era kunder hitta tapeterna de söker.",
+      videoAlt: "AR Wallpaper Visualizer använder Augmented Reality",
     },
     companies: {
       wallvision:
-        "Typ en mening som ger galen tyngd. Largest company in Scandinavia...",
+        "WallVision/Embellence Group är det största företaget i Skandinavien inom tapetbranchen.",
       borastapeter:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+        "Boråstapeter är en del av Wallvision/Embellence Group och var det första företaget att börja använda Wallpaper Visualizer.",
       grandeco:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+        "Grandeco är baserat i Beligen och är en av världens ledande producenter av vinyltapeter.",
     },
     detailedInfo: {
-      title: "Everything in one place",
+      title: "Allt på ett ställe",
       subTitle:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Bläddra bland alla dina tapeter, testa de i ditt rum, dela dina favoriter, få väggmått och antal rullar och gör din beställning. Allt i en app.",
       description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Wallpaper Visualizer låter era kunder bläddra bland alla era kollektioner av tapeter i en snabb och intuitiv iPhone eller Android app. Efter en snabb, enkel och guidad process kan tapeterna visualiseras i era kunders rum. De kan enkelt jämföra olika tapeter med varandra för att hitta det som passar till just deras rum.",
     },
     featureSection: {
-      title: "Popular Features",
+      title: "Populära features",
       features: [
         {
-          title: "Measure tool",
+          title: "Mätverktyg",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Med hjälp av AR data kan antalet rullar som krävs för tapetseringen och vad det skulle kosta visas direkt för kunden.",
         },
         {
-          title: "Advanced Menu",
+          title: "Avancerad meny",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Vi erbjuder både native iOS och Android lösningar, vilket betyder att appen kommer vara både snabb och responsiv. Alla texter och data associerad med tapeterna ändras enkelt i vårt enkla admin gränssnitt och uppdateras direkt i apparna.",
         },
         {
-          title: "Website integration",
+          title: "Integration med hemsida",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Vi integrerar apparna med er existerande hemsida. Kunden kan från hemsidan snabbt öppna AR-upplevelsen och testa tapeten i sitt rum. App användare kan också med ett klick öppna en specifik tapet på hemsidan.",
         },
         {
           title: "Custom fit murals",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "We handle all types of wallpapers, not just repeating patterns. Using our mural feature, the customer can with a swipe of their finger select the part of the mural they prefer in the AR wallpaper covering.",
         },
         {
           title: "Rich user statistics",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "We collect anonymous user data regarding actions your customers take in the app, and other user statistics. This data is presented in a dashboard which you can use to guide your business decisions.",
         },
         {
           title: "Custom branded app",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "We make sure that the app you obtain is highly personalized, matching the design you have on your website. After starting an inquiry with us, we make a design proposal where you have the possibility of proposing new ideas and making changes.",
         },
         {
           title: "Buy wallpapers in-app",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "The fastest integration option is to re-route the customer to the checkout page on your website when they are interested in ordering, but we also offer the possibility of making purchases in-app depending on what you prefer.",
         },
         {
           title: "Multi-language support",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "The app we create for you can support any number of languages you want. Use our backend admin interface to instantly update text fields and translations in your app.",
         },
         {
           title: "Push notifications",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "Keep your customers updated with new collections, new wallpapers or other exiting information using push notifications. Using an admin interface, you will be able to easily create and send the push notifications yourself any time you want.",
         },
       ],
     },
@@ -280,24 +284,24 @@ export default {
     businessQuote: {
       title: "What our business owners say",
       quote:
-        "Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter",
-      saidBy: "Oskar Gissberg, Head of Digital Wallvision",
+        "It can be hard to imagine how ones bedroom, living room or kitchen will look like with a new wallpaper when you only have a wallpaper sample. With the app you see how a certain wallpaper fits into your own home directly. And on top of that it is very fun to use. It's easy to get immersed in it and to walk around at home and see the rooms change tone with new wallpapers.",
+      saidBy: "Oskar Gissberg, Head of Digital at Wallvision",
     },
     statsUseCase: {
       title: "Business Use Case: Boråstapeter",
       stats: [
-        { text: "+60,000 users" },
-        { text: "1,200 new users per week" },
-        { text: "Top Rank of #4 in Sweden" },
-        { text: "+10,000 active users per month" },
-        { text: "+30,000 papered walls per month" },
-        { text: "+150,000 impressions on AppStore" },
+        { number: "+60,000", text: "users on iOS alone" },
+        { number: "1200", text: "new users per week" },
+        { number: "+10,000", text: "active users per month" },
+        { number: "+30,000", text: "papered walls per month" },
+        { number: "+150,000", text: "impressions on AppStore" },
+        { number: "#4", text: "top tank in Sweden" },
       ],
     },
     takeAction: {
-      title: "Ready to innovate the wallpaper industry?",
-      description: "Sista ord som får de att faktiskt kontakta oss. Ändra titeln. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et aliqua.",
-      btnText: "Contact Us"
+      title: "Redo att förnya tapetindustrin?",
+      description: "I takt med att Augmented Reality-teknologin förbättras anser vi att verktyg för att visualisera era tapetprodukter kommer vara väsentliga inom snar framtid. Kontakta oss och boka ett möte, så svarar vi på alla era frågor. Låt oss förändra industrin tillsammans.",
+      btnText: "Kontakta oss"
     }
   },
 }

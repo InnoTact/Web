@@ -37,7 +37,7 @@ export default function FeatureGrid({ features, title, light, ...props }) {
     <Section backgroundColor={light ? colors.white : colors.lightgrey} {...props}>
       <ContentWrapper>
         <SectionTop dark header={title} />
-        <Container>
+        <Container>a
           {features.map(f => {
             return (
                 <ContentBlobWrapper style={{ minWidth: '30%', paddingTop: '0', justifyContent: 'space-around' }} width={300}>
