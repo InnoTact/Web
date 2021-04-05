@@ -33,7 +33,7 @@ export default function IconInfoGrid({ title, iconCells, light }) {
   `
   const BadgeStyle = {
     width: 140,
-    height: 50,
+    height: 40,
     margin: 0,
     objectFit: "contain",
     display: "inline-block",
@@ -47,7 +47,7 @@ export default function IconInfoGrid({ title, iconCells, light }) {
           }
         }
       }
-      GooglePlayStoreBadge: file(relativePath: { eq: "playstore.png" }) {
+      GooglePlayStoreBadge: file(relativePath: { eq: "googleplaystore.png" }) {
         childImageSharp {
           fluid(maxWidth: 200) {
             ...GatsbyImageSharpFluid
@@ -67,7 +67,7 @@ export default function IconInfoGrid({ title, iconCells, light }) {
           {iconCells.map(cell => {
             return (
               <ContentBlobWrapper style={{ minWidth: '30%' }}>
-                <Heading dark style={{ fontSize: "2.35rem", marginBottom: 0 }}>{cell.number}</Heading>
+                <Heading dark style={{ fontSize: "2.9rem", marginBottom: 0 }}>{cell.number}</Heading>
                 <Text dark>{cell.text}</Text>
               </ContentBlobWrapper>
             )
