@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import styles from "../styles/styles"
 
 const ContentBlobWrapper = styled.div`
   display: flex;
@@ -9,6 +10,10 @@ const ContentBlobWrapper = styled.div`
   width: ${({ width }) => (width ? width + "px" : "unset")};
   margin: 2rem auto 0 auto;
   text-align: center;
+  min-width: 30%;
+  @media (max-width: ${styles.breakpoints.xs + "px"}) {
+    min-width: 51%;
+}
 `
 
 export default ContentBlobWrapper

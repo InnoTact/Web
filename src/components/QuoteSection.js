@@ -16,6 +16,10 @@ export default function QuoteSection({ title, quote, saidBy, url, light, ...prop
 
   const QuoteContainer = styled.div`
     padding: 5rem 0 5rem 0;
+
+    @media (max-width: ${styles.breakpoints.sm + "px"}) {
+      padding: 2rem 0 3rem 0;
+    }
   `
 
   const Quote = styled(SubHeading)`
@@ -23,6 +27,11 @@ export default function QuoteSection({ title, quote, saidBy, url, light, ...prop
     line-height: 2.2;
     font-style: italic;
     margin: 2rem 0;
+
+    @media (max-width: ${styles.breakpoints.sm + "px"}) {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
   `
 
   const QuoteName = styled(Anchor)`
@@ -31,6 +40,9 @@ export default function QuoteSection({ title, quote, saidBy, url, light, ...prop
     font-size: 1rem;
     margin-top: 1rem;
     display: block;
+    @media (max-width: ${styles.breakpoints.sm + "px"}) {
+      font-size: 0.9rem;
+    }
   `
 
   return (

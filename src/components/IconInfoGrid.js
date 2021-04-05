@@ -69,7 +69,7 @@ export default function IconInfoGrid({ title, iconCells, light }) {
         <SolutionsContainer>
           {iconCells.map(cell => {
             return (
-              <ContentBlobWrapper style={{ minWidth: '30%' }}>
+              <ContentBlobWrapper>
                 <Heading dark style={{ fontSize: "2.9rem", marginBottom: 0 }}>{cell.number}</Heading>
                 <Text dark>{cell.text}</Text>
               </ContentBlobWrapper>

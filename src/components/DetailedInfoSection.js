@@ -17,6 +17,13 @@ export default function DetailedInfoSection({
   light,
   ...props
 }) {
+  const CustomSection = styled(Section)`
+    padding: 6rem 0 6rem 0;
+    @media (max-width: ${styles.breakpoints.md + "px"}) {
+      padding-top: 4rem;
+    }
+  `
+
   const Container = styled.div`
     display: flex;
     justify-content: space-evenly;
@@ -43,49 +50,56 @@ export default function DetailedInfoSection({
   const halfInnerMargin = 20
 
   return (
-    <Section
-      style={{ padding: "6rem 0 6rem 0" }}
+    <CustomSection
       backgroundColor={light ? colors.white : colors.lightgrey}
       {...props}
     >
       <AppContext.Consumer>
         {value => {
-          return (<ContentWrapper>
-            <Container>
-              <SideContainer
-                style={{
-                  paddingRight:
-                    value ? value.isTablet || value.isMobile ? 0 : halfInnerMargin : 0,
-                }}
-              >
-                <Header
-                  dark
-                  styles={{
-                    color: colors.dark,
-                    textAlign: "left",  
-                    marginLeft: 0,
+          return (
+            <ContentWrapper>
+              <Container>
+                <SideContainer
+                  style={{
+                    paddingRight: value
+                      ? value.isTablet || value.isMobile
+                        ? 0
+                        : halfInnerMargin
+                      : 0,
                   }}
-                  text={title}
-                />
-                <SubHeader style={{ textAlign: "left" }} dark>
-                  {subTitle}
-                </SubHeader>
-                <Text dark>{description}</Text>
-                <DownloadAppContainer></DownloadAppContainer>
-              </SideContainer>
-              <SideContainer
-                style={{
-                  textAlign: "center",
-                  paddingLeft:
-                    value ? value.isTablet || value.isMobile ? 0 : halfInnerMargin : 0,
-                }}
-              >
-                <Image src={imgSrc} />
-              </SideContainer>
-            </Container>
-          </ContentWrapper>)
+                >
+                  <Header
+                    dark
+                    styles={{
+                      color: colors.dark,
+                      textAlign: "left",
+                      marginLeft: 0,
+                    }}
+                    text={title}
+                  />
+                  <SubHeader style={{ textAlign: "left" }} dark>
+                    {subTitle}
+                  </SubHeader>
+                  <Text dark>{description}</Text>
+                  <DownloadAppContainer></DownloadAppContainer>
+                </SideContainer>
+                <SideContainer
+                  style={{
+                    textAlign: "center",
+                    paddingLeft: value
+                      ? value.isTablet || value.isMobile
+                        ? 0
+                        : halfInnerMargin
+                      : 0,
+                  }}
+                >
+                  <Image src={imgSrc} />
+                </SideContainer>
+              </Container>
+            </ContentWrapper>
+          )
         }}
       </AppContext.Consumer>
-    </Section>
+    </CustomSection>
   )
 }
