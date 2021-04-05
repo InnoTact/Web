@@ -51,6 +51,7 @@ export default function FactSection() {
             italic
             dark
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.statista.com/statistics/897587/world-augmented-reality-market-value/"
           >
             Statista
@@ -66,6 +67,7 @@ export default function FactSection() {
             italic
             dark
             target="_blank"
+            rel="noopener noreferrer"
             href="http://www.isaca.org/About-ISACA/Press-room/News-Releases/2016/Pages/2016-IT-RRB-News-Release-US.aspx"
           >
             Isaca
@@ -81,6 +83,7 @@ export default function FactSection() {
             italic
             dark
             target="_blank"
+            rel="noopener noreferrer"
             href="https://www.clickz.com/how-is-ar-revolutionizing-the-in-store-experience-for-retailers/112696/"
           >
             Retail Perceptions

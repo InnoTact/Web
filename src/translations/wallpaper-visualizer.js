@@ -149,7 +149,7 @@ export default {
       btnText: "Contact Us"
     }
   },
-  se: {
+  sv: {
     seo: {
       title: `Wallpaper Visualizer - Visualisera tapeter i AR`, // max 60 character
       description: `Wallpaper Visualizer använder den senaste AR tekniken för att era kunder ska kunna visualisera och uppleva era tapeter i sina hem innan de beställt och utan att behöva beställa tapetprover.` // max 160

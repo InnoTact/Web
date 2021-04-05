@@ -76,6 +76,7 @@ export default function IconInfoGrid({ title, iconCells, light }) {
         <BadgeContainer>
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href={
               sweUser
                 ? "https://apps.apple.com/se/app/wonderwall-ar-by-boråstapeter/id1478853508"
@@ -92,6 +93,7 @@ export default function IconInfoGrid({ title, iconCells, light }) {
           </a>
           <a
             target="_blank"
+            rel="noopener noreferrer"
             href={
               sweUser
                 ? "https://play.google.com/store/apps/details?id=com.innotactsoftware.wonderwallar.borastapeter&hl=sv&gl=US"

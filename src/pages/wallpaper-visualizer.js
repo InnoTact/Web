@@ -19,7 +19,8 @@ class WallpaperVisualizer extends Component {
   render() {
     const { data } = this.props
     const s = new LocalizedStrings(translation)
-
+    console.log("wallpaper language")
+    console.log(s)
     return (
       <React.Fragment>
         <CustomHelmet seo={s.seo} />
