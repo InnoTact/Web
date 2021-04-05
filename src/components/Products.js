@@ -7,36 +7,48 @@ import SectionTop from "./SectionTop"
 import BackgroundImage from "../components/BackgroundImage"
 import LocalizedStrings from "react-localization"
 import translation from "../translations/products"
+import { useStaticQuery, graphql } from "gatsby"
 
-export const Products = ({ light, imageData }) => {
+export const Products = ({ light }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      WallpaperVisualizer: file(relativePath: { eq: "wallart.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   const s = new LocalizedStrings(translation)
   const products = [
     {
       destination: "/wallpaper-visualizer",
       imgAlt: "Augmented Reality",
-      img: imageData.WallpaperVisualizer.childImageSharp.fluid,
-      isLeft: true,
+      img: data.WallpaperVisualizer.childImageSharp.fluid,
+      isLeft: false,
       ...s.wallpaper,
     },
     {
       destination: "/contact",
       imgAlt: "Augmented Reality",
-      img: imageData.WallpaperVisualizer.childImageSharp.fluid,
-      isLeft: false,
+      img: data.WallpaperVisualizer.childImageSharp.fluid,
+      isLeft: true,
       ...s.art,
     },
-    {
-      destination: "/contact",
-      imgAlt: "Augmented Reality",
-      img: imageData.WallpaperVisualizer.childImageSharp.fluid,
-      isLeft: true,
-      ...s.furniture,
-    },
+    // {
+    //   destination: "/contact",
+    //   imgAlt: "Augmented Reality",
+    //   img: data.WallpaperVisualizer.childImageSharp.fluid,
+    //   isLeft: false,
+    //   ...s.furniture,
+    // },
   ]
 
   return (
     <Section style={{ paddingBottom: 0 }} backgroundColor={light ? colors.white : colors.lightgrey}>
-      <ContentWrapper>
+      <ContentWrapper style={{ paddingBottom: '2rem' }}>
         <SectionTop dark header={s.title}>
           {s.description}
         </SectionTop>
@@ -53,7 +65,7 @@ export const Products = ({ light, imageData }) => {
             <BackgroundImage
               alt={p.imgAlt}
               fluid={p.img}
-              fit="contain"
+              fit="scale-down"
               height="100%"
               style={{ zIndex: 1 }}
             />

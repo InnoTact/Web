@@ -28,7 +28,7 @@ class Index extends Component {
           text={strings.hero}
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}
         />
-        <Products light={true} imageData={data} />
+        <Products light={true} />
         <SolutionSection light={false} />
         <FactSection />
         <QuoteSection

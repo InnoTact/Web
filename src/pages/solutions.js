@@ -24,7 +24,7 @@ class Solutions extends Component {
           text={strings.hero}
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}
         />
-        <Products imageData={data} />
+        <Products />
         <SolutionSection />
         <ARAreasSection data={data} />
         <GetStarted dark />
