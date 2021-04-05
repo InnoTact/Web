@@ -12,7 +12,14 @@ import { useStaticQuery, graphql } from "gatsby"
 export const Products = ({ light }) => {
   const data = useStaticQuery(graphql`
     query {
-      WallpaperVisualizer: file(relativePath: { eq: "wallart.png" }) {
+      WallArtVisualizer: file(relativePath: { eq: "wallart.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      WallpaperVisualizer: file(relativePath: { eq: "wallpaper.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
@@ -33,7 +40,7 @@ export const Products = ({ light }) => {
     {
       destination: "/contact",
       imgAlt: "Augmented Reality",
-      img: data.WallpaperVisualizer.childImageSharp.fluid,
+      img: data.WallArtVisualizer.childImageSharp.fluid,
       isLeft: true,
       ...s.art,
     },
