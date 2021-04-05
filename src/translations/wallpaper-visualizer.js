@@ -30,7 +30,7 @@ export default {
       title: "Popular Features",
       features: [
         {
-          title: "Measure tool and sharing functionality",
+          title: "Measure tool and sharing",
           description:
             "Using the AR wallpaper covering data, the estimated dimensions, number of rolls and price can be presented to the customer directly. Users can capture images of their AR-wallpaperings and directly share with friends and family.",
         },
@@ -140,12 +140,7 @@ export default {
         { number: "+10,000", text: "active users per month" },
         { number: "+30,000", text: "papered walls per month" },
         { number: "+150,000", text: "impressions on AppStore" },
-        { number: "#4", text: "top tank in Sweden" },
-        // { text: "1,200 new users per week" },
-        // { text: "Top Rank of #4 in Sweden" },
-        // { text: "+10,000 active users per month" },
-        // { text: "+30,000 papered walls per month" },
-        // { text: "+150,000 impressions on AppStore" },
+        { number: "#4", text: "top rank in Sweden" },
       ],
     },
     takeAction: {
@@ -183,7 +178,7 @@ export default {
       title: "Populära funktioner",
       features: [
         {
-          title: "Mätverktyg och delningsfunktioner",
+          title: "Mätverktyg och delning",
           description:
             "Med hjälp av AR data kan antalet rullar som krävs för tapetseringen och vad det skulle kosta visas direkt för kunden. Användare kan ta kort på sina AR-tapetersingar och direkt dela med sig till vänner och familj.",
         },
