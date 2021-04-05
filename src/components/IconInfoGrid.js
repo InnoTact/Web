@@ -57,7 +57,7 @@ export default function IconInfoGrid({ title, iconCells, light }) {
     }
   `)
   var lang = "en"
-  if (window != null) {
+  if (typeof window !== 'undefined' && window.navigator) {
     lang = window.navigator.language || window.navigator.userLanguage
   }
   const sweUser = lang == "sv"

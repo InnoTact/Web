@@ -18,8 +18,6 @@ class Index extends Component {
   render() {
     const { data } = this.props
     const strings = new LocalizedStrings(translation)
-    console.log("language index")
-    console.log(strings)
     return (
       <React.Fragment>
         <CustomHelmet overrideTitle seo={strings.seo} />
