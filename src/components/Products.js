@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 export const Products = ({ light }) => {
   const data = useStaticQuery(graphql`
     query {
-      WallArtVisualizer: file(relativePath: { eq: "wallart.png" }) {
+      WallArtVisualizer: file(relativePath: { eq: "wallart-visualizer.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid

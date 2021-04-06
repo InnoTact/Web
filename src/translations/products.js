@@ -10,7 +10,7 @@ export default {
       btnText: "Read More",
     },
     art: {
-      name: "Wall-art Visualizer",
+      name: "Wall-Art Visualizer",
       description:
         "You customers will not only be able to find the perfect wall-art for their home but also what size and frame would fit best on their walls. Easily have your customers try out your art pieces in their home to help them find a pice that would make their home a more beautiful place.",
       btnText: "Contact us",
@@ -33,7 +33,7 @@ export default {
       btnText: "Läs mer",
     },
     art: {
-      name: "Wall-art Visualizer",
+      name: "Wall-Art Visualizer",
       description:
         "Dina kunder kommer inte enbart kunna hitta den perfekta väggkonsten för sina hem, men också vilken storlek och ram som passar bäst. Låt dem enkelt testa dina tavlor och posters för att hjälpa dem att hitta ett konstverk som gör deras hem vackrare.",
       btnText: "Kontakta oss",

@@ -5,7 +5,7 @@ export default {
       description: 'We help people and companies save time and make better decisions by closing the gap between the digital and physical world.'
     },
     hero: {
-      title: "We are an Augmented Reality company based in Sweden",
+      title: "The Augmented Reality Experts", // "We are an Augmented Reality company based in Sweden",
       subTitle:
         "We help people and companies save time and make better decisions by closing the gap between the digital and physical world.",
       action: "Read more",
