@@ -32,6 +32,7 @@ class WallpaperVisualizer extends Component {
           light={false}
         />
         <WallpaperCompaniesLovingUs
+          title={s.companies.title}
           companies={[
             {
               text: s.companies.wallvision,

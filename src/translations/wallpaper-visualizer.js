@@ -11,6 +11,7 @@ export default {
       videoAlt: "Wallpaper Visualizer using Augmented Reality",
     },
     companies: {
+      title: "Trusted By Industry Leaders",
       wallvision:
         "WallVision/Embellence Group is the largest wallpaper company in Scandinavia.",
       borastapeter:
@@ -160,6 +161,7 @@ export default {
       videoAlt: "AR Wallpaper Visualizer använder Augmented Reality",
     },
     companies: {
+      title: "Förtroende från branschledare",
       wallvision:
         "WallVision/Embellence Group är det största företaget i Skandinavien inom tapetbranchen, med ett fokus på premiumtapeter och annan hemindredning.",
       borastapeter:

@@ -7,7 +7,7 @@ import styled from "styled-components"
 import Text from "./Text"
 import { useStaticQuery, graphql } from "gatsby"
 
-export default function WallpaperCompaniesLovingUs({ companies }) {
+export default function WallpaperCompaniesLovingUs({ companies, title }) {
   const Container = styled.div`
     display: flex;
     justify-content: space-evenly;
@@ -33,7 +33,7 @@ export default function WallpaperCompaniesLovingUs({ companies }) {
   return (
     <Section backgroundColor={colors.lightgrey}>
       <ContentWrapper>
-        <SectionTop dark header={"Trusted By Industry Leaders"} />
+        <SectionTop dark header={title} />
         <Container>
           {companies.map(c => {
             return (

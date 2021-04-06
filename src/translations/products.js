@@ -2,17 +2,17 @@ export default {
   en: {
     title: "Our Products",
     description:
-      "Although we accept offers for any AR solution you might want for your company, we also licence our existing products. We create a neat, intuitive, personalized app design with your input, and then connect your physical products to our AR solutions in both iOS and Android environments.",
+      "Although we can help you develop any AR solution you might want for your company, we also license our existing products. We create a neat, intuitive, personalized app design with your input and then connect your physical products to our AR solutions in both iOS and Android environments.",
     wallpaper: {
       name: "Wallpaper Visualizer",
       description:
-        "Allow your customers to visualize your wallpapers onto their walls in their own homes. Ensuring the perfect fit between wallpaper and interior design will reduce the customer uncertainty. By doing so you will increase your sales while making your customers happier. It’s a win-win!",
+        "Allow your customers to visualize your wallpapers onto their walls in their own homes. Ensuring the perfect fit between wallpaper and interior design will reduce customer uncertainty. By doing so, you will increase your sales while making your customers happier. It’s a win-win!",
       btnText: "Read More",
     },
     art: {
       name: "Wall-Art Visualizer",
       description:
-        "You customers will not only be able to find the perfect wall-art for their home but also what size and frame would fit best on their walls. Easily have your customers try out your art pieces in their home to help them find a pice that would make their home a more beautiful place.",
+        "Allow your customers to find the perfect wall art for their home. Size and frame can also be changed to find the best fit on their walls. Easily have your customers try out your art pieces in their home to help them find a piece that would make their home a more beautiful place.",
       btnText: "Contact us",
     },
     furniture: {
