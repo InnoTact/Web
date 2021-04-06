@@ -1,13 +1,6 @@
 const path = require(`path`)
 
 module.exports = {
-  // siteMetadata: {
-  //   title: "Severus Snape",
-  //   titleTemplate: "%s – InnoTact", // 'InnoTact: Augmented Reality (AR) Utvecklare, Göteborg'",
-  //   description:
-  //     "Sweden's leading Augmented Reality Company - We build ",
-  //   url: "https://www.innotactsoftware.com",
-  // },
   plugins: [
     {
       resolve: `gatsby-plugin-typography`,
@@ -35,7 +28,7 @@ module.exports = {
         short_name: "InnoTact",
         start_url: "/",
         display: "standalone",
-        icon: "src/img/favicon-32x32.png",
+        icon: "src/img/favicon.png",
       },
     },
     `gatsby-transformer-sharp`,
