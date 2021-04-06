@@ -19,7 +19,7 @@ export const Products = ({ light }) => {
           }
         }
       }
-      WallpaperVisualizer: file(relativePath: { eq: "wallpaper.png" }) {
+      WallpaperVisualizer: file(relativePath: { eq: "wallpaper-visualizer.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
