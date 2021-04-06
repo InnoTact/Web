@@ -7,72 +7,72 @@ export default {
     landing: {
       productName: "Wallpaper Visualizer",
       shortPitch:
-        "With our Wallpaper Visualizer technology your customers can visualize and experience your wallpapers inside their homes, before buying and without ordering any samples. It is the fastest way to experience your full collection of wallpapers, helping the customer find the wallpaper they want.",
+        "With the Wallpaper Visualizer your customers can visualize and experience your wallpapers inside their homes before buying and without ordering any samples. It is the fastest way to experience all your collections of wallpapers, helping the customer find the wallpaper they want.",
       videoAlt: "Wallpaper Visualizer using Augmented Reality",
     },
     companies: {
       wallvision:
-        "WallVision/Embellence Group, is the largest company in Scandinavia with a focus on premium wallpapers and other home decor.",
+        "WallVision/Embellence Group is the largest wallpaper company in Scandinavia.",
       borastapeter:
-        "Boråstapeter is part of Embellence Group, and the first wallpaper company to utilize our Wallpaper Visualizer AR technology within the app we developed for them.",
+        "Boråstapeter is part of Embellence Group and is the first company to utilize the Wallpaper Visualizer.",
       grandeco:
-        "Grandeco is one of the globally leading producers of vinyl wallcoverings, based in Belgium.",
+        "Grandeco is one of the globally leading producers of vinyl wallcoverings.",
     },
     detailedInfo: {
       title: "Everything in one place",
       subTitle:
         "Browse wallpapers, test them in your room, share your favorite wallpapers, obtain measurements and place your order. All in one app.",
       description:
-        "The Wallpaper Visualizer AR solution allows your customer to browse your full collection of wallpapers in a fast and intuitive native app. With a quick, automatically guided setup process the wallpapers can be visualized in your customers room, also allowing them to instantaneously switch between different wallpapers.",
+        "The Wallpaper Visualizer allows your customer to browse and experience all your collections of wallpapers in a fast and intuitive native app. Through the camera of the phone, the wallpapers are visualized in your customers' room while also allowing them to instantaneously switch between different wallpapers. The app will have your company name and be available as an iOS and Android app with your particular branding and feel.",
 
     },
     featureSection: {
       title: "Popular Features",
       features: [
         {
-          title: "Measure tool and sharing",
+          title: "Measure Tool and Sharing",
           description:
-            "Using the AR wallpaper covering data, the estimated dimensions, number of rolls and price can be presented to the customer directly. Users can capture images of their AR-wallpaperings and directly share with friends and family.",
+            "With exact AR wallpaper data, the number of rolls needed to paper the room is presented to the user. Users can also take an image of their papered room and share it with friends and family or on social media. ",
         },
         {
           title: "Advanced Menu",
           description:
-            "We offer both native iOS and Android solutions, meaning the app will be fast and responsive. Each text field, translation and required wallpaper data is easily changed using our backend admin interface.",
+            "Filter, search, and sort through your wallpapers in a lightning-fast native iOS and Android app. The product page shows any desired wallpaper meta-data and links to the specific wallpaper on your website. All texts in the app are changed using our backend admin interface.",
         },
         {
-          title: "Website integration",
+          title: "Website Integration",
           description:
-            "We integrate the app towards your existing website, allowing customers browsing your website to open the AR experience and test the wallpaper they are interested in directly in their room. App users can easily open any wallpaper on your website by clicking links in the app.",
+            "The app is integrated with your existing website to allow customers browsing your website to launch the AR experience to test the wallpaper directly in their room. App users can easily open any wallpaper on your website by clicking links in the app.",
         },
         {
-          title: "Custom fit murals",
+          title: "Custom Fit Murals",
           description:
-            "We handle all types of wallpapers, not just repeating patterns. Using our mural feature, the customer can with a swipe of their finger select the part of the mural they prefer in the AR wallpaper covering.",
+            "All types of wallpapers are handled, not just repeating patterns. With the mural feature, customers can swipe to select the part of the mural they prefer in the AR wallpaper covering.",
         },
         {
-          title: "Rich user statistics",
+          title: "Rich User Statistics",
           description:
-            "We collect anonymous user data regarding actions your customers take in the app, and other user statistics. This data is presented in a dashboard which you can use to guide your business decisions.",
+            "Anonymous user data are collected of actions your customers take in the app and other user statistics. This data is presented in a dashboard which you can use to guide your business decisions.",
         },
         {
-          title: "Custom branded app",
+          title: "Custom Branded App",
           description:
-            "We make sure that the app you obtain is highly personalized, matching the design you have on your website. After starting an inquiry with us, we make a design proposal where you have the possibility of proposing new ideas and making changes.",
+            "The app you obtain is highly personalized, matching your style guide and the design of your website. When kicking things off, we develop a design proposal where you have the possibility of suggesting new ideas and making changes.",
         },
         {
-          title: "Buy wallpapers in-app",
+          title: "Buy Wallpapers In-App",
           description:
-            "The fastest integration option is to re-route the customer to the checkout page on your website when they are interested in ordering, but we also offer the possibility of making purchases in-app depending on what you prefer.",
+            "The fastest integration option is to re-route the customer to the checkout page on your website when they want to order. But we also offer the fantastic possibility of making purchases in-app, which likely will create a surge in your sales.",
         },
         {
-          title: "Multi-language support",
+          title: "Multi-Language Support",
           description:
-            "The app we create for you can support any number of languages you want. Use our backend admin interface to instantly update text fields and translations in your app.",
+            "The apps support any number of languages you desire. With the admin interface, text changes and translations are instantly reflected on the users' apps. Prefer working in excel? We export to that too.",
         },
         {
-          title: "Push notifications",
+          title: "Push Notifications",
           description:
-            "Keep your customers updated with new collections, new wallpapers or other exiting information using push notifications. Using an admin interface, you will be able to easily create and send the push notifications yourself any time you want.",
+            "Keep your customers updated with new collections, wallpapers, or other exciting information using push notifications. Use our ready-made templates or create a custom one using simple drag and drop. Schedule them, or target a specific customer segment. No matter if you send tens of thousands per week, they are completely free.",
         },
       ],
     },
@@ -129,7 +129,7 @@ export default {
     businessQuote: {
       title: "What our business owners say",
       quote:
-        "It can be hard to imagine how ones bedroom, living room or kitchen will look like with a new wallpaper when you only have a wallpaper sample. With the app you see how a certain wallpaper fits into your own home directly. And on top of that it is very fun to use. It's easy to get immersed in it and to walk around at home and see the rooms change tone with new wallpapers.",
+        "It can be hard to imagine how one's bedroom, living room, or kitchen will look like with a new wallpaper when you only have a wallpaper sample. With the app, you see how a certain wallpaper fits into your own home directly. And on top of that, it is very fun to use. It's easy to get immersed in it and to walk around at home and see the rooms change tone with new wallpapers.",
       saidBy: "Oskar Gissberg, Head of Digital at Boråstapeter",
     },
     statsUseCase: {
@@ -144,8 +144,8 @@ export default {
       ],
     },
     takeAction: {
-      title: "Ready to innovate the wallpaper industry?",
-      description: "As augmented reality technology progresses we believe that tools for visualizing your wallpaper products will be essential in the near future. Contact us, and we will setup a meeting and explain all further questions you might have. Let us change the industry together.",
+      title: "Let's do this thing",
+      description: "Get ahead of your competition by joining the industry leaders to increase your customer experience, sales, and much more. Contact us and we will schedule a meeting. We would be thrilled to work with you.",
       btnText: "Contact Us"
     }
   },
