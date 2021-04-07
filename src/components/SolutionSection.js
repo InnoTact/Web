@@ -14,26 +14,26 @@ export default function SolutionSection({ light }) {
       title={s.title}
       infoCells={[
         new InfoCell(
-          s.teaching.title,
-          s.teaching.description
-        ),
-        new InfoCell(
-          s.marketing.title,
-          s.marketing.description
+          s.commerce.title,
+          s.commerce.description
         ),
         new InfoCell(
           s.modelling.title,
           s.modelling.description
         ),
         new InfoCell(
+          s.marketing.title,
+          s.marketing.description
+        ),
+        new InfoCell(
+          s.teaching.title,
+          s.teaching.description
+        ),
+        new InfoCell(
           s.navigation.title,
           s.marketing.description
         ),
         new InfoCell(s.AI.title, s.AI.description),
-        new InfoCell(
-          s.commerce.title,
-          s.commerce.description
-        ),
       ]}
     />
   )

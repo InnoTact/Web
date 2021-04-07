@@ -40,7 +40,7 @@ export default {
         'As an IT architect, developer and advisor, Fredrik is responsible for ensuring the quality of the code and increase the competence of the team. Fredrik has worked at Google in London, Microsoft in Seattle and Google in Stockholm. Fredrik is studying computer science at KTH, has made an exchange in China at the prestigious University of Tsinghua, known as "the Harvard of China". In addition, Fredrik has a history of being a competitive programmer at elite level and has also competed and performed at elite level in mathematics competitions.',
     },
     oskar: {
-      position: "Android Developer specializing in augmented reality",
+      position: "Android Developer",
       city: "Gothenburg, Sweden",
       description:
         "As an android developer specializing in augmented reality, Oskar is responsible for developing apps with the correct architecture and the latest AR techniques. Oskar is studying his masters degree in software engineering at Chalmers. With the latest knowledge that Chalmers teaches, he is ready to revolutionize the future of augmented reality apps.",
