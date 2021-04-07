@@ -22,11 +22,11 @@ const Borastapeter = () => {
     const os = getMobileOperatingSystem()
     if (os === "iOS") {
         window.location.href = APP_STORE_LINK;
-        setTimeout(() => history.back(), 1000);
+        setTimeout(() => window.history.back(), 1000);
     }
     if (os === 'Android') {
       window.location.href = PLAY_STORE_LINK;
-      setTimeout(() => history.back(), 1000);
+      setTimeout(() => window.history.back(), 1000);
     }
   }, [])
 

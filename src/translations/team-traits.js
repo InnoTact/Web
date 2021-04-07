@@ -3,7 +3,7 @@ export default {
     energy: {
       title: "Young and Ambitious",
       description:
-        "Our young age, which some may see as a weakness, is one of our greatest strengths. We have a drive and a spark that is not found in many other companies. Choose us to have a partner who will do everything to make you happy.",
+        "We have a drive and a spark that is not found in many other companies. Choose us to have a partner who will do everything to make you happy.",
     },
     flexibility: {
       title: "Flexibility",
@@ -20,7 +20,7 @@ export default {
     energy: {
       title: "Ungdomligt driv",
       description:
-        "Vår unga ålder, som av vissa kan ses som en svaghet, är en av våra största styrkor. Vi har ett driv och en gnista som inte finns hos många andra företag. Välj oss för att få en partner som kommer göra allt för att göra dig nöjd.",
+        "Vi har ett driv och en gnista som inte finns hos många andra företag. Välj oss för att få en partner som kommer göra allt för att göra dig nöjd.",
     },
     flexibility: {
       title: "Flexibilitet",

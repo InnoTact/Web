@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Navbar from "./../components/Navbar"
+import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Hero from "../components/Hero"
 import { graphql } from "gatsby"
@@ -15,8 +15,8 @@ class Contact extends Component {
 
     return (
       <React.Fragment>
-        <CustomHelmet page="Kontakta " />
-        <Navbar />
+        <CustomHelmet seo={strings.seo} />
+        <Navbar light={true} />
         <Hero
           text={strings.hero}
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}

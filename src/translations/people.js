@@ -19,7 +19,7 @@ export default {
       position: "Founder, Developer and AR specialist",
       city: "Gothenburg, Sweden",
       description:
-        "As the company's AR specialist, Anton is responsible for developing innovative AR solutions meeting our clients’ needs. Thanks to Anton's problem-solving ability and competition- oriented mind, he gives everything to solve our clients’ challenges. Alongside InnoTact, Anton is studying Automation and Mechatronics with a master’s in data science and AI at Chalmers. For questions about what is possible to do with augmented reality, Anton is the right person to ask.",
+        "As the company's AR specialist, Anton is responsible for developing innovative AR solutions meeting our clients’ needs. With the help of his problem-solving abilities he gives everything to solve our clients’ challenges. Alongside InnoTact, Anton is studying Automation and Mechatronics with a master’s in Data Science and AI at Chalmers. For questions about what is possible to do with augmented reality, Anton is the right person to ask.",
     },
     casper: {
       position: "Founder, CTO and Developer",
@@ -72,7 +72,7 @@ export default {
       position: "Grundare & AR-specialist",
       city: "Göteborg, Sverige",
       description:
-        "Som företagets AR-specialist ansvarar Anton för att innovativa AR-lösningar tas fram efter kundens behov. Antons problemlösningsförmåga och tävlingsinstinkt gör att han ger allt för att lösa kundernas utmaningar. Vid sidan om InnoTact studerar Anton Automation och Mekatronik med master i Data Science och AI på Chalmers. Vid frågor om vad som är möjligt att göra med augmented reality är Anton rätt person att fråga.",
+        "Som företagets AR-specialist ansvarar Anton för att innovativa AR-lösningar tas fram efter kundens behov. Med hjälp av sin problemlösningsförmåga ger han allt för att lösa kundernas utmaningar. Vid sidan om InnoTact studerar Anton Automation och Mekatronik med master i Data Science och AI på Chalmers. Vid frågor om vad som är möjligt att göra med augmented reality är Anton rätt person att fråga.",
     },
     casper: {
       position: "Grundare, CTO & utvecklare",
@@ -81,7 +81,7 @@ export default {
         "Som företagets CTO ansvarar Casper för företagets tekniska strategi. Som erfaren programmerare och blivande data scientist är Casper expert på att snabbt lära sig och anpassa sig till nya teknologier. Casper ser till att vårt arbetssätt är effektivt och anpassat till de senaste teknologierna. Vid tekniska frågor är Casper rätt person att fråga.",
     },
     carl: {
-      position: "Founder, CFO and Developer",
+      position: "Grundare, CFO & utvecklare",
       city: "Göteborg, Sverige",
       description:
         "Som företagets CFO har Carl det yttersta ansvaret vid ekonomiska beslut. Carl studerar Teknisk Fysik och bidrar med sin problemlösningsförmåga och programmeringskunskaper till företaget. Carls problemlösningsförmåga har lett till flera nya innovationer som banat för nya appar. Vid frågor om företagets ekonomi är Carl rätt person att fråga.",

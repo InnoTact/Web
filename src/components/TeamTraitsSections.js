@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Section from "../components/Section"
 import ContentWrapper from "../components/ContentWrapper"
-import ContentBlob from "../components/ContentBlob"
+import ImageContentBlob from "../components/ImageContentBlob"
 import colors from "../styles/colors"
 import { FaFire, FaExpandArrowsAlt, FaUsers } from "react-icons/fa"
 import styles from "../styles/styles"
@@ -24,23 +24,6 @@ const BlobContainer = styled.div`
   }
 `
 
-const ContentBlobCustom = styled(ContentBlob)`
-  width: 350px;
-  margin: 0 2rem 0 0;
-
-  @media (max-width: ${styles.breakpoints.lg + "px"}) {
-    width: 320px;
-  }
-
-  @media (max-width: ${styles.breakpoints.lg + "px"}) {
-    width: unset;
-  }
-
-  @media (max-width: ${styles.breakpoints.md + "px"}) {
-    margin-right: 0;
-  }
-`
-
 export default function TeamTraitsSections({ data }) {
   const strings = new LocalizedStrings(translation)
 
@@ -54,24 +37,24 @@ export default function TeamTraitsSections({ data }) {
           />
         </div>
         <BlobContainer>
-          <ContentBlobCustom
+          <ImageContentBlob
             heading={strings.energy.title}
             text={strings.energy.description}
           >
             <FaFire style={styles.icon} />
-          </ContentBlobCustom>
-          <ContentBlobCustom
+          </ImageContentBlob>
+          <ImageContentBlob
             heading={strings.flexibility.title}
             text={strings.flexibility.description}
           >
             <FaExpandArrowsAlt style={styles.icon} />
-          </ContentBlobCustom>
-          <ContentBlobCustom
+          </ImageContentBlob>
+          <ImageContentBlob
             heading={strings.team.title}
             text={strings.team.description}
           >
             <FaUsers style={styles.icon} />
-          </ContentBlobCustom>
+          </ImageContentBlob>
         </BlobContainer>
       </ContentWrapper>
     </Section>

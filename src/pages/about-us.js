@@ -9,6 +9,7 @@ import CustomHelmet from '../components/CustomHelmet'
 import LocalizedStrings from "react-localization"
 import translation from "../translations/about"
 import TeamTraitsSections from "../components/TeamTraitsSections"
+import MethodologySection from "../components/MethodologySection"
 
 class About extends Component {
   render() {
@@ -17,14 +18,15 @@ class About extends Component {
 
     return (
       <React.Fragment>
-        <CustomHelmet page='Om ' />
-        <Navbar />
+        <CustomHelmet seo={strings.seo} />
+        <Navbar light={true} />
         <Hero
           text={strings.hero}
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}
         />
         <TeamTraitsSections data={data} />
         <People peopleImagesData={data} />
+        <MethodologySection />
         <GetStarted />
         <Footer />
       </React.Fragment>

@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import styles from '../styles/styles'
 import PropTypes from 'prop-types';
+import colors from '../styles/colors';
 
 const StyledHeader = styled.h1`
-  color: white;
-  margin-bottom: 1.2rem;
+  color: ${props => props.dark ? colors.dark : colors.white};
+  margin-bottom: 0.8rem;
   display: inline-block;
   margin: 0 auto 30px;
   font-size: 2.6rem;
@@ -25,7 +26,7 @@ const StyledHeader = styled.h1`
   }
 `
 
-const Header = ({ text, styles = {} }) => <StyledHeader style={{ ...styles }}>{text}</StyledHeader>
+const Header = ({ text, dark, styles = {}, ...props }) => <StyledHeader dark={dark} style={{ ...styles }} {...props} >{text}</StyledHeader>
 
 Header.propTypes = {
   text: PropTypes.string.isRequired,

@@ -6,22 +6,32 @@ import Anchor from "./Anchor"
 import Section from "./Section"
 import styles from "../styles/styles"
 import colors from "../styles/colors"
+import SectionTop from "./SectionTop"
+import Header from "./Header"
 
-export default function QuoteSection() {
+export default function QuoteSection({ title, quote, saidBy, url, light, ...props }) {
   const QuoteSection = styled(Section)`
-    @media (max-width: ${styles.breakpoints.md + "px"}) {
-      display: none;
-    }
+    
   `
 
   const QuoteContainer = styled.div`
-    padding: 4rem 0 5rem 0;
+    padding: 5rem 0 5rem 0;
+
+    @media (max-width: ${styles.breakpoints.sm + "px"}) {
+      padding: 2rem 0 3rem 0;
+    }
   `
 
   const Quote = styled(SubHeading)`
     text-align: center;
     line-height: 2.2;
     font-style: italic;
+    margin: 2rem 0;
+
+    @media (max-width: ${styles.breakpoints.sm + "px"}) {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
   `
 
   const QuoteName = styled(Anchor)`
@@ -30,28 +40,30 @@ export default function QuoteSection() {
     font-size: 1rem;
     margin-top: 1rem;
     display: block;
+    @media (max-width: ${styles.breakpoints.sm + "px"}) {
+      font-size: 0.9rem;
+    }
   `
 
   return (
     <QuoteSection
       style={{ paddingBottom: 0, paddingTop: 0 }}
-      backgroundColor={colors.lightgrey}
+      backgroundColor={light ? colors.white :colors.lightgrey}
+      {...props}
     >
       <ContentWrapper>
         <QuoteContainer>
+          {title && <Header style={{ marginBottom: 0, display: 'block' }} dark text={title} />}
           <Quote dark>
-            "I do think that a significant portion of the population of
-            developed countries, and eventually all countries, will have AR
-            experiences every day, almost like eating three meals a day, it will
-            become that much a part of you."
+            {"\"" + quote + "\""}
           </Quote>
           <QuoteName
             target="_blank"
-            href="https://nordic.businessinsider.com/apple-ceo-tim-cook-explains-augmented-reality-2016-10?r=US&IR=T"
+            href={url}
             center
             dark
           >
-            Tim Cook CEO Apple
+            {saidBy}
           </QuoteName>
         </QuoteContainer>
       </ContentWrapper>

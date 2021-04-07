@@ -1,21 +1,29 @@
-import React from 'react'
-import CenterContainer from '../components/CenterContainer'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import React from "react"
+import CenterContainer from "../components/CenterContainer"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
 const LogoStyle = {
-  width: 120,
-  height: 60,
-  margin: 0
+  width: 140,
+  height: 70,
+  margin: 0,
+  objectFit: "contain",
 }
 
-const Logo = () => {
+const Logo = ({ light }) => {
   const data = useStaticQuery(graphql`
-    {
-      Logo: file(relativePath: { eq: "Logo.png" }) {
+    query {
+      LogoDark: file(relativePath: { eq: "InnoTactLogoDark.png" }) {
         childImageSharp {
-          fixed(width: 120, height: 60) {
-            ...GatsbyImageSharpFixed
+          fluid(maxWidth: 140) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      },
+      LogoLight: file(relativePath: { eq: "InnoTactLogoLight.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 140) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -24,8 +32,13 @@ const Logo = () => {
 
   return (
     <CenterContainer>
-      <Link to='/'>
-        {data ? <Img style={LogoStyle} fixed={data.Logo.childImageSharp.fixed} /> : null}
+      <Link to="/">
+        <Img
+          style={LogoStyle}
+          imgStyle={LogoStyle}
+          fluid={light ? data.LogoLight.childImageSharp.fluid : data.LogoDark.childImageSharp.fluid }
+          alt="InnoTact Logo"
+        />
       </Link>
     </CenterContainer>
   )

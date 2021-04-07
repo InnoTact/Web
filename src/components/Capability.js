@@ -65,6 +65,7 @@ class Capability extends Component {
       buttonText,
       children,
       windowWidth,
+      destination,
       ...props
     } = this.props
 
@@ -78,7 +79,7 @@ class Capability extends Component {
           <Text dark>{text}</Text>
           </Item>
           <Item>
-          <Link to="/kontakt/#contact-form">
+          <Link to={destination ? destination : "/contact/#contact-form"}>
             <Button primary>{buttonText}</Button>
           </Link>
           </Item>

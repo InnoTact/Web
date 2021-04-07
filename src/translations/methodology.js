@@ -8,7 +8,7 @@ export default {
       press: "Click",
       here: "here",
       description:
-        "Click here to book a meeting where we can discuss your needs and opportunities.",
+        " to book a meeting where we can discuss your needs and opportunities.",
     },
     step2: {
       title: "We create a plan based on your needs.",

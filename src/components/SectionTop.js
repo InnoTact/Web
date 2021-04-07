@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 import LocalizedStrings from "react-localization"
 
 const Container = styled.div`
-  margin-top: 2rem;
+  margin-top: 0rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -52,6 +52,12 @@ const ReadMore = styled(Text)`
   }
 `
 
+const CenterOverflowText = styled.span`
+  margin-left: -100%;
+  margin-right: -100%;
+  text-align: center;
+`
+
 function vh(v) {
   var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
   return (v * h) / 100;
@@ -72,7 +78,7 @@ const SectionTop = ({ header, children, buttonText = '', dark, bottomText, zInde
     <React.Fragment>
       <Header text={header} styles={{ color: dark ? colors.dark : colors.white, zIndex: zIndexHigh ? 1 : 'unset' }} />
       {children && <SubHeader style={{ color: dark ? colors.dark : colors.lightgrey, fontStyle: 'italic', zIndex: zIndexHigh ? 1 : 'unset' }}>{children}</SubHeader>}
-      {buttonText && <Link to='/kontakt/#contact-form'><Button style={{zIndex: zIndexHigh ? 1 : 'unset'}} secondary>{strings.button}</Button></Link>}
+      {buttonText && <Link to='/contact/#contact-form'><Button style={{zIndex: zIndexHigh ? 1 : 'unset'}} secondary>{strings.button}</Button></Link>}
       {bottomText && <ReadMore style={{zIndex: zIndexHigh ? 1 : 'unset'}} onClick={() => scroll.scrollTo(vh(82))}>
         {bottomText}
       </ReadMore>}

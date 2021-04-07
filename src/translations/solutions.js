@@ -1,5 +1,9 @@
 export default {
   en: {
+    seo: {
+      title: `Solutions: Wallpaper, Art Visualizer and more`,
+      description: `We use iOS and Android to build cutting-edge AR apps with the latest technologies. Explore our license solutions and our capabilities.`
+    },
     hero: {
       title: "Our solutions",
       subTitle:
@@ -8,6 +12,10 @@ export default {
     },
   },
   sv: {
+    seo: {
+      title: "Lösningar: Tapet-, tavelvisualisering och mer",
+      description: `Vi använder iOS och Android för att bygga revolutionerande AR appar med de senaste teknikerna. Utforska våra licenslösningar och övriga färdigheter.`
+    },
     hero: {
       title: "Våra lösningar",
       subTitle:

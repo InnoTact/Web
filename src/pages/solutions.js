@@ -7,8 +7,9 @@ import { graphql } from "gatsby"
 import CustomHelmet from '../components/CustomHelmet'
 import LocalizedStrings from "react-localization"
 import ARAreasSection from "../components/ARAreasSection"
+import SolutionSection from "../components/SolutionSection"
 import translation from "../translations/solutions"
-import SolutionsSection from "../components/SolutionsSection"
+import { Products } from "../components/Products"
 
 class Solutions extends Component {
   render() {
@@ -17,15 +18,16 @@ class Solutions extends Component {
 
     return (
       <React.Fragment>
-        <CustomHelmet page='Lösningar ' />
-        <Navbar />
+        <CustomHelmet seo={strings.seo} />
+        <Navbar light={true} />
         <Hero
           text={strings.hero}
           imageData={data.HeroBackgroundImage.childImageSharp.fluid}
         />
+        <Products />
+        <SolutionSection />
         <ARAreasSection data={data} />
-        <SolutionsSection />
-        <GetStarted />
+        <GetStarted dark />
         <Footer />
       </React.Fragment>
     )
@@ -34,6 +36,15 @@ class Solutions extends Component {
 
 export const pageQuery = graphql`
   query {
+    WallpaperVisualizer: file(
+      relativePath: { eq: "development1.jpg" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     AugmentedRealityImage1: file(
       relativePath: { eq: "augmented-reality1.jpg" }
     ) {
@@ -86,20 +97,3 @@ export const pageQuery = graphql`
 `
 
 export default Solutions
-
-/*
-
-<Section
-          backgroundColor={colors.lightgrey}
-        >
-          <React.Fragment>
-            <ContentWrapper>
-              <SectionTop style={{marginBottom: 40}} dark header={`Exempel på lösningar`}>
-                För att förstå vilken typ av lösningar vi skapar kan du kolla på videoklippen nedan som visar två korta demon.
-              </SectionTop>
-              <VideoShowcase />
-            </ContentWrapper>
-          </React.Fragment>
-        </Section>
-
-*/
