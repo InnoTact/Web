@@ -32,14 +32,14 @@ export const Products = ({ light }) => {
   const products = [
     {
       destination: "/wallpaper-visualizer",
-      imgAlt: "Augmented Reality",
+      imgAlt: "Visualize wallpapers in augmented reality with your phone",
       img: data.WallpaperVisualizer.childImageSharp.fluid,
       isLeft: false,
       ...s.wallpaper,
     },
     {
       destination: "/contact",
-      imgAlt: "Augmented Reality",
+      imgAlt: "Visualize art works and posters with your phone",
       img: data.WallArtVisualizer.childImageSharp.fluid,
       isLeft: true,
       ...s.art,
@@ -71,6 +71,7 @@ export const Products = ({ light }) => {
           >
             <BackgroundImage
               alt={p.imgAlt}
+              title={p.title}
               fluid={p.img}
               fit="scale-down"
               height="100%"
