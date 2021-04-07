@@ -7,7 +7,7 @@ export default {
     hero: {
       title: "The Augmented Reality Experts", // "We are an Augmented Reality company based in Sweden",
       subTitle:
-        "We help people and companies save time and make better decisions by closing the gap between the digital and physical world.",
+        "We help people and companies save time and make better decisions by closing the gap between the digital and physical world. We are based in Sweden, but we collaborate with leading international companies.",
       action: "Read more",
     },
   },

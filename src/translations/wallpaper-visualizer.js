@@ -36,7 +36,7 @@ export default {
             "With exact AR wallpaper data, the number of rolls needed to paper the room is presented to the user. Users can also take an image of their papered room and share it with friends and family or on social media. ",
         },
         {
-          title: "Advanced Menu",
+          title: "Filter, Search, and Sort",
           description:
             "Filter, search, and sort through your wallpapers in a lightning-fast native iOS and Android app. The product page shows any desired wallpaper meta-data and links to the specific wallpaper on your website. All texts in the app are changed using our backend admin interface.",
         },
@@ -56,7 +56,7 @@ export default {
             "Anonymous user data are collected of actions your customers take in the app and other user statistics. This data is presented in a dashboard which you can use to guide your business decisions.",
         },
         {
-          title: "Custom Branded App",
+          title: "Your Brand, Your App",
           description:
             "The app you obtain is highly personalized, matching your style guide and the design of your website. When kicking things off, we develop a design proposal where you have the possibility of suggesting new ideas and making changes.",
         },
@@ -128,7 +128,7 @@ export default {
       ],
     },
     businessQuote: {
-      title: "What our business owners say",
+      title: "What our partners say",
       quote:
         "It can be hard to imagine how one's bedroom, living room, or kitchen will look like with a new wallpaper when you only have a wallpaper sample. With the app, you see how a certain wallpaper fits into your own home directly. And on top of that, it is very fun to use. It's easy to get immersed in it and to walk around at home and see the rooms change tone with new wallpapers.",
       saidBy: "Oskar Gissberg, Head of Digital at Boråstapeter",
@@ -145,7 +145,7 @@ export default {
       ],
     },
     takeAction: {
-      title: "Let's do this thing",
+      title: "Let's do this together",
       description: "Get ahead of your competition by joining the industry leaders to increase your customer experience, sales, and much more. Contact us and we will schedule a meeting. We would be thrilled to work with you.",
       btnText: "Contact Us"
     }

@@ -5,7 +5,7 @@ export default {
       description: 'Our highest priority is always to make our customers happy. We love creating ideas with our customers to improve and simplify the processes in their businesses.'
     },
     hero: {
-      title: "About us",
+      title: "About Us",
       subTitle:
         "InnoTact consists of a team of high-performing engineers. Our highest priority is always to make our customers happy. We love creating ideas with our customers to improve and simplify the processes in their businesses.",
       action: "Contact us",

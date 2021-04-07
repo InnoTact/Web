@@ -6,7 +6,7 @@ export default {
     },
     hero: {
       title: "Contact Us",
-      subTitle: "When you want to get in touch with us, you can either email or reach out to us by phone. We are always ready to discuss your needs and possible solutions.",
+      subTitle: "When you want to get in touch with us, you can send us an email or call us. We are always ready to discuss your needs and possible solutions.",
       action: "Contact Us"
     },
     main: {
