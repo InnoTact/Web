@@ -16,7 +16,7 @@ const Container = styled.div`
 `
 
 const Video = ({ videoSrcURL, videoTitle, ...props }) => (
-  <Container>
+  <Container {...props}>
     <iframe
       src={videoSrcURL}
       title={videoTitle}

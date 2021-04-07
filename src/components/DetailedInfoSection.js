@@ -8,6 +8,7 @@ import SubHeader from "./SubHeader"
 import Text from "./Text"
 import styles from "../styles/styles"
 import { AppContext } from "./RootWrapper"
+import Video from "./Video"
 
 export default function DetailedInfoSection({
   title,
@@ -19,7 +20,7 @@ export default function DetailedInfoSection({
 }) {
   const CustomSection = styled(Section)`
     padding: 6rem 0 6rem 0;
-    @media (max-width: ${styles.breakpoints.md + "px"}) {
+    @media (max-width: ${styles.breakpoints.lg + "px"}) {
       padding-top: 4rem;
     }
   `
@@ -28,7 +29,7 @@ export default function DetailedInfoSection({
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    @media (max-width: ${styles.breakpoints.md + "px"}) {
+    @media (max-width: ${styles.breakpoints.lg + "px"}) {
       flex-direction: column;
     }
   `
@@ -38,8 +39,21 @@ export default function DetailedInfoSection({
     justify-content: center;
     max-width: 50%;
     margin: 0;
-    @media (max-width: ${styles.breakpoints.md + "px"}) {
+    @media (max-width: ${styles.breakpoints.lg + "px"}) {
       max-width: unset;
+    }
+  `
+  const VideoContainer = styled(SideContainer)`
+    width: 100%;
+    text-align: center;
+    @media (max-width: ${styles.breakpoints.lg + "px"}) {
+      padding-top: 1rem;
+      width: 100%;
+      margin-left: 0;
+    }
+    @media (max-width: ${styles.breakpoints.md + "px"}) {
+      width: 100vw;
+      margin-left: calc(-10vw/2);
     }
   `
   const Image = styled.img`
@@ -56,16 +70,17 @@ export default function DetailedInfoSection({
     >
       <AppContext.Consumer>
         {value => {
+          let lessThanLG = false 
+          if (typeof window !== 'undefined' && window.innerWidth) {
+            lessThanLG = window.innerWidth <= styles.breakpoints.lg
+          }
+          let innerMargin = lessThanLG ? 0 : halfInnerMargin
           return (
             <ContentWrapper>
               <Container>
                 <SideContainer
                   style={{
-                    paddingRight: value
-                      ? value.isTablet || value.isMobile
-                        ? 0
-                        : halfInnerMargin
-                      : 0,
+                    paddingRight: innerMargin
                   }}
                 >
                   <Header
@@ -83,18 +98,14 @@ export default function DetailedInfoSection({
                   <Text dark>{description}</Text>
                   <DownloadAppContainer></DownloadAppContainer>
                 </SideContainer>
-                <SideContainer
+                <VideoContainer
                   style={{
-                    textAlign: "center",
-                    paddingLeft: value
-                      ? value.isTablet || value.isMobile
-                        ? 0
-                        : halfInnerMargin
-                      : 0,
+                    paddingLeft: innerMargin
                   }}
                 >
-                  <Image src={imgSrc} />
-                </SideContainer>
+                  <Video style={{ width: '100%', height: 435 }} videoSrcURL={"https://www.youtube.com/embed/niRzkU6_Tpg?start=40&rel=0"} />
+                  {/* <Image src={imgSrc} /> */}
+                </VideoContainer>
               </Container>
             </ContentWrapper>
           )

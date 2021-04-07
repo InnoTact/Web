@@ -26,7 +26,7 @@ class WallpaperVisualizer extends Component {
         <VideoPitch
           title={s.landing.productName}
           description={s.landing.shortPitch}
-          videoUrl={`https://www.youtube.com/embed/wG-pAblEw5I`}
+          videoUrl={`https://www.youtube.com/embed/wG-pAblEw5I?rel=0`}
           videoAlt={s.landing.videoAlt}
           style={{ marginTop: "3rem" }}
           light={false}
