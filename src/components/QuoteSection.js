@@ -60,6 +60,7 @@ export default function QuoteSection({ title, quote, saidBy, url, light, ...prop
           <QuoteName
             target="_blank"
             href={url}
+            style={{ 'pointerEvents': url ? 'unset' : 'none' }}
             center
             dark
           >

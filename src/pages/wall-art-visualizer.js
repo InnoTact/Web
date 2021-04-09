@@ -38,6 +38,25 @@ class WallArtVisualizer extends Component {
           artPage
           light={false}
         />
+        <FeatureGrid
+          title={s.featureSection.title}
+          light={true}
+          features={s.featureSection.features}
+        />
+        <QuoteSection
+          title={s.businessQuote.title}
+          quote={s.businessQuote.quote}
+          saidBy={s.businessQuote.saidBy}
+          url={""}
+          light={false}
+        />
+        <ActionSection
+          title={s.takeAction.title}
+          description={s.takeAction.description}
+          btnText={s.takeAction.btnText}
+          link={"/contact/#contact-form"}
+          dark={false}
+        />
         <Footer />
       </React.Fragment>
     )
