@@ -17,8 +17,8 @@ import FeatureGrid from "../components/FeatureGrid"
 
 class WallArtVisualizer extends Component {
   render() {
-    const { data } = this.props
     const s = new LocalizedStrings(translation)
+
     return (
       <React.Fragment>
         <CustomHelmet seo={s.seo} />
@@ -29,9 +29,15 @@ class WallArtVisualizer extends Component {
           videoUrl={`https://www.youtube.com/embed/WK_XrfWbkc8?rel=0`}
           videoAlt={s.landing.videoAlt}
           style={{ marginTop: "3rem" }}
+          light={true}
+        />
+        <DetailedInfoSection
+          title={s.detailedInfo.title}
+          subTitle={s.detailedInfo.subTitle}
+          description={s.detailedInfo.description}
+          artPage
           light={false}
         />
-        
         <Footer />
       </React.Fragment>
     )
