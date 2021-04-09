@@ -70,7 +70,7 @@ export default function IconInfoGrid({ title, iconCells, light }) {
           {iconCells.map(cell => {
             return (
               <ContentBlobWrapper>
-                <Heading dark style={{ fontSize: "2.9rem", marginBottom: 0 }}>{cell.number}</Heading>
+                <Heading as="h5" dark style={{ fontSize: "2.9rem", marginBottom: 0, marginTop: '3.375rem', lineHeight: '1.5' }}>{cell.number}</Heading>
                 <Text dark>{cell.text}</Text>
               </ContentBlobWrapper>
             )
