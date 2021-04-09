@@ -29,18 +29,18 @@ export default {
         {
           title: "Change Frame and Color",
           description:
-            "If you also sell frames, we create realistic 3D ones that are paired with any artwork with different colors. Finding the perfect matching frame has never been easier.",
+            "If you also sell frames, we create realistic 3D models that are paired with any artwork with different colors. Finding the perfect matching frame has never been easier.",
         },
         {
           title: "Experiment with Sizes",
           description:
-            "Change the size of your artwork to any of the dimensions that you sell your artworks in, we match what you use on your website.",
+            "Change the size of your artwork to any of the dimensions that you sell your artworks in. We match the app to what you use on your website.",
         },
         {
-            title: "Position Artworks Freely",
-            description:
-              "With a simple swipe gesture, you can position your artwork easily on your wall. No need to get the hammer and nails, instead quickly iterate between different constellations to find what fits your room the best.",
-          },
+          title: "Position Artworks Freely",
+          description:
+            "With a simple swipe gesture, you can position your artwork easily on your wall. No need to get the hammer and nails, instead quickly iterate between different constellations to find what fits your room the best.",
+        },
         {
           title: "Buy Artworks In-App",
           description:
@@ -70,7 +70,7 @@ export default {
         {
           title: "Push Notifications",
           description:
-            "Keep your customers updated with new artworks and other exciting information using push notifications. Use our ready-made templates or create a custom one using simple drag and drop. Schedule them, or target a specific customer segment. No matter if you send tens of thousands per week, they are completely free.",
+            "Keep your customers updated with new artworks and other exciting information using push notifications. Use our ready-made templates or create a custom one using simple drag and drop. Schedule them and target specific customer segments. No matter if you send tens of thousands per week, they are completely free.",
         },
       ],
     },

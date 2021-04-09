@@ -2,13 +2,9 @@ import React from "react"
 import SectionTop from "./../components/SectionTop"
 import ContentWrapper from "./../components/ContentWrapper"
 import Section from "./../components/Section"
-import CenterContainer from "./../components/CenterContainer"
 import colors from "../styles/colors"
-import Button from "../components/Button"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import Text from "./Text"
-import Anchor from "./Anchor"
 import AnchorPrimary from "./AnchorPrimary"
 
 export default function TryItOut({ title, children, light, ...props }) {
@@ -27,7 +23,7 @@ export default function TryItOut({ title, children, light, ...props }) {
         <div style={{ textAlign: "center" }}>
           <DescText center dark>
             We have made a beta-version available for testing using TestFlight,
-            Apple's testing environment. This version uses some generic posters.
+            Apple's testing environment, that uses generic posters.
             Simply press{" "}
           </DescText>
           <AnchorPrimary

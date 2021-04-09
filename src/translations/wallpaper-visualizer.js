@@ -73,7 +73,7 @@ export default {
         {
           title: "Push Notifications",
           description:
-            "Keep your customers updated with new collections, wallpapers, or other exciting information using push notifications. Use our ready-made templates or create a custom one using simple drag and drop. Schedule them, or target a specific customer segment. No matter if you send tens of thousands per week, they are completely free.",
+            "Keep your customers updated with new collections, wallpapers, or other exciting information using push notifications. Use our ready-made templates or create a custom one using simple drag and drop. Schedule them and target specific customer segments. No matter if you send tens of thousands per week, they are completely free.",
         },
       ],
     },
