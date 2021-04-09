@@ -38,7 +38,7 @@ export const Products = ({ light }) => {
       ...s.wallpaper,
     },
     {
-      destination: "/contact",
+      destination: "/wall-art-visualizer",
       imgAlt: "Visualize art works and posters with your phone",
       img: data.WallArtVisualizer.childImageSharp.fluid,
       isLeft: true,
@@ -73,7 +73,6 @@ export const Products = ({ light }) => {
               alt={p.imgAlt}
               title={p.title}
               fluid={p.img}
-              fit="scale-down"
               height="100%"
               style={{ zIndex: 1 }}
             />
