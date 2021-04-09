@@ -2,7 +2,7 @@ export default {
   en: {
     seo: {
       title: `Wall Art Visualizer: Visualize Wall Art and Posters in AR`, // max 60 character
-      description: `The Wall Art Visualizer lets your customers visualize and experience your art and posters in their home in a simple, fun, and accurate way.`, // max 160
+      description: `The Wall Art Visualizer lets your customers visualize and experience your art and posters in their homes in a simple, fun, and accurate way.`, // max 160
     },
     landing: {
       productName: "Wall Art Visualizer",
@@ -14,32 +14,32 @@ export default {
     detailedInfo: {
       title: "All Artworks in Your Pocket",
       subTitle:
-        "Browse artworks and posters, test them in your room with different sizes and frames, build photo walls, and place your order. All in one app.",
+        "Browse artworks and posters, test them in your room with different sizes and frames, build gallery walls, and place your order. All in one app.",
       description:
-        "The Art Visualizer allows your customers to try your art in their home in a fast and intuitive native app. Through the camera of the phone, the artworks are visualized in your customers' room while also allowing them to instantaneously switch motives, experiment with multiple pieces to find the perfect combination, and change frames and try differernt sizes. The app will have your company name and be available as an iOS app with your particular branding and feel.",
+        "The Art Visualizer allows your customers to try your art in their home in a fast and intuitive native app. The artworks are visualized through the phone's camera in your customers' room while also allowing them to instantaneously switch motives, experiment with multiple pieces to find the perfect combination, change frames, and try different sizes. The app will have your company name and be available as an iOS app with your particular branding and feel. It's the perfect app for online retailers, museums, and art galleries.",
     },
     featureSection: {
-      title: "Popular Features",
+      title: "Our Favorite Features",
       features: [
         {
           title: "Combine Artworks",
           description:
-            "Create entire photo-walls with any number of arworks to find your favorite combination. Trying out a specific combination of artworks has never been easier.",
+            "Create entire gallery walls with any number of artworks to find your favorite combination. Trying out a specific poster collage with various motives, sizes, and styles has never been easier.",
         },
         {
           title: "Change Frame and Color",
           description:
-            "If you also sell frames, we create realistic 3D ones that can be applied to any artwork with different colors. Finding the perfect matching frame has never been easier.",
+            "If you also sell frames, we create realistic 3D ones that are paired with any artwork with different colors. Finding the perfect matching frame has never been easier.",
         },
         {
           title: "Experiment with Sizes",
           description:
-            "Change size of your artwork to any of the sizes that you sell your artworks in, we match what you use on your website.",
+            "Change the size of your artwork to any of the dimensions that you sell your artworks in, we match what you use on your website.",
         },
         {
             title: "Position Artworks Freely",
             description:
-              "With a simple swipe gesture, you can position your artworks easily on your wall. No need to get the hammer and nails, you can instead quickly iterate between different constelations to find what fits your room the best.",
+              "With a simple swipe gesture, you can position your artwork easily on your wall. No need to get the hammer and nails, instead quickly iterate between different constellations to find what fits your room the best.",
           },
         {
           title: "Buy Artworks In-App",
@@ -83,7 +83,7 @@ export default {
     takeAction: {
       title: "Let's do this together",
       description:
-        "This is an unique opportunity to get ahead of your competition by offering your customers a revolutionary way to experience your artworks from home. You will increase your sales, custom satisfaction, and much more. We are certain the future of selling art is deeply integrated in Augmented Reality. Contact us and we will schedule a meeting, we would be thrilled to work with you.",
+        "This is a unique opportunity to get ahead of your competition by offering your customers a revolutionary way to experience your artworks from home. You will increase your sales, customer satisfaction, and much more. We are certain the future of selling art is deeply integrated with Augmented Reality. Let's schedule a meeting, we would be thrilled to work with you.",
       btnText: "Contact Us",
     },
   },
