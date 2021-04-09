@@ -10,10 +10,6 @@ import SectionTop from "./SectionTop"
 import Header from "./Header"
 
 export default function QuoteSection({ title, quote, saidBy, url, light, ...props }) {
-  const QuoteSection = styled(Section)`
-    
-  `
-
   const QuoteContainer = styled.div`
     padding: 5rem 0 5rem 0;
 
@@ -22,11 +18,13 @@ export default function QuoteSection({ title, quote, saidBy, url, light, ...prop
     }
   `
 
-  const Quote = styled(SubHeading)`
+  const Quote = styled.p`
     text-align: center;
     line-height: 2.2;
     font-style: italic;
     margin: 2rem 0;
+    font-size: 1.8rem;
+    font-weight: bold;
 
     @media (max-width: ${styles.breakpoints.sm + "px"}) {
       font-size: 1.1rem;
@@ -46,7 +44,7 @@ export default function QuoteSection({ title, quote, saidBy, url, light, ...prop
   `
 
   return (
-    <QuoteSection
+    <Section
       style={{ paddingBottom: 0, paddingTop: 0 }}
       backgroundColor={light ? colors.white :colors.lightgrey}
       {...props}
@@ -68,6 +66,6 @@ export default function QuoteSection({ title, quote, saidBy, url, light, ...prop
           </QuoteName>
         </QuoteContainer>
       </ContentWrapper>
-    </QuoteSection>
+    </Section>
   )
 }

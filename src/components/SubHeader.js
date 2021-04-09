@@ -4,7 +4,7 @@ import colors from '../styles/colors'
 import styles from '../styles/styles'
 import PropTypes from 'prop-types';
 
-const SubHeader = styled.h2`
+const SubHeader = styled.p`
   color: ${props => props.dark ? colors.dark : colors.white};
   display: inline-block;
   margin-bottom: 1.2rem;
