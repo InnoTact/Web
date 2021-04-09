@@ -11,6 +11,7 @@ import SubHeader from "../components/SubHeader"
 import { FaPhone, FaEnvelope } from "react-icons/fa"
 import LocalizedStrings from "react-localization"
 import translation from "../translations/contact-us"
+import AnchorPrimary from "./AnchorPrimary"
 
 const ContactUsWrapper = styled.div`
   display: flex;
@@ -47,22 +48,6 @@ const CallUsContent = styled.div`
   justify-content: flex-start;
 `
 
-const Anchor = styled.a`
-  display: "inline";
-  margin-bottom: 0;
-  color: ${colors.primary};
-  font-size: 1.1rem;
-
-  :hover {
-    color: ${colors.primaryLowLighten};
-    cursor: pointer;
-  }
-
-  @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    font-size: 1rem;
-  }
-`
-
 export default function ContactUsSection() {
   const strings = new LocalizedStrings(translation)
   return (
@@ -81,9 +66,9 @@ export default function ContactUsSection() {
                     <FaPhone style={{ fontSize: 30, color: colors.dark }} />
                   </CenterContainer>
                   <CenterContainer>
-                    <Anchor style={{ marginLeft: 10 }} href="tel:+46737303797">
+                    <AnchorPrimary style={{ marginLeft: 10 }} href="tel:+46737303797">
                       +46737303797
-                    </Anchor>
+                    </AnchorPrimary>
                   </CenterContainer>
                 </CallUsContent>
               </Card>
@@ -96,12 +81,12 @@ export default function ContactUsSection() {
                     <FaEnvelope style={{ fontSize: 30, color: colors.dark }} />
                   </CenterContainer>
                   <CenterContainer>
-                    <Anchor
+                    <AnchorPrimary
                       style={{ marginLeft: 10 }}
                       href="mailto:contact@innotactsoftware.com"
                     >
                       contact@innotactsoftware.com
-                    </Anchor>
+                    </AnchorPrimary>
                   </CenterContainer>
                 </CallUsContent>
               </Card>

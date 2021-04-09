@@ -9,6 +9,7 @@ import QuoteSection from "../components/QuoteSection"
 import ActionSection from "../components/ActionSection"
 import DetailedInfoSection from "../components/DetailedInfoSection"
 import FeatureGrid from "../components/FeatureGrid"
+import TryItOut from "../components/TryItOut"
 
 class WallArtVisualizer extends Component {
   render() {
@@ -38,11 +39,14 @@ class WallArtVisualizer extends Component {
           light={true}
           features={s.featureSection.features}
         />
-        <QuoteSection
+        {/* <QuoteSection
           title={s.businessQuote.title}
           quote={s.businessQuote.quote}
           saidBy={s.businessQuote.saidBy}
           url={""}
+          light={false}
+        /> */}
+        <TryItOut
           light={false}
         />
         <ActionSection
