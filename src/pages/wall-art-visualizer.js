@@ -19,43 +19,43 @@ class WallArtVisualizer extends Component {
       <React.Fragment>
         <CustomHelmet seo={s.seo} />
         <Navbar light={false} />
-        <VideoPitch
-          title={s.landing.productName}
-          description={s.landing.shortPitch}
-          videoUrl={`https://www.youtube.com/embed/WK_XrfWbkc8?rel=0`}
-          videoAlt={s.landing.videoAlt}
-          style={{ marginTop: "3rem" }}
-          light={true}
-        />
-        <DetailedInfoSection
-          title={s.detailedInfo.title}
-          subTitle={s.detailedInfo.subTitle}
-          description={s.detailedInfo.description}
-          artPage
-          light={false}
-        />
-        <FeatureGrid
-          title={s.featureSection.title}
-          light={true}
-          features={s.featureSection.features}
-        />
-        {/* <QuoteSection
+        <span lang="en">
+          <VideoPitch
+            title={s.landing.productName}
+            description={s.landing.shortPitch}
+            videoUrl={`https://www.youtube.com/embed/WK_XrfWbkc8?rel=0`}
+            videoAlt={s.landing.videoAlt}
+            style={{ marginTop: "3rem" }}
+            light={true}
+          />
+          <DetailedInfoSection
+            title={s.detailedInfo.title}
+            subTitle={s.detailedInfo.subTitle}
+            description={s.detailedInfo.description}
+            artPage
+            light={false}
+          />
+          <FeatureGrid
+            title={s.featureSection.title}
+            light={true}
+            features={s.featureSection.features}
+          />
+          {/* <QuoteSection
           title={s.businessQuote.title}
           quote={s.businessQuote.quote}
           saidBy={s.businessQuote.saidBy}
           url={""}
           light={false}
         /> */}
-        <TryItOut
-          light={false}
-        />
-        <ActionSection
-          title={s.takeAction.title}
-          description={s.takeAction.description}
-          btnText={s.takeAction.btnText}
-          link={"/contact/#contact-form"}
-          dark={false}
-        />
+          <TryItOut light={false} />
+          <ActionSection
+            title={s.takeAction.title}
+            description={s.takeAction.description}
+            btnText={s.takeAction.btnText}
+            link={"/contact/#contact-form"}
+            dark={false}
+          />
+        </span>
         <Footer />
       </React.Fragment>
     )
