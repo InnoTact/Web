@@ -6,8 +6,10 @@ import translation from "../translations/home"
 export default ({ seo, overrideTitle = false }) => {
   const fallback = new LocalizedStrings(translation)
   seo = seo ? seo : fallback.seo
+  let lang = fallback._language ? fallback._language : "en"
+  
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: lang }}>
       <title>{overrideTitle ? seo.title : seo.title + " – InnoTact"}</title>
       <meta name="description" content={seo.description} />
       <meta

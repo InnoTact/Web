@@ -17,9 +17,9 @@ export default {
       description: 'Vi hjälper människor och företag att spara tid och fatta bättre beslut genom att förena den digitala och fysiska världen.'
     },
     hero: {
-      title: "Vi är ett Augmented Reality-bolag baserat i Sverige",
+      title: "Experterna inom Augmented Reality",
       subTitle:
-        "Vi hjälper människor och företag att spara tid och fatta bättre beslut genom att förena den digitala och fysiska världen.",
+        "Vi hjälper människor och företag att spara tid och fatta bättre beslut genom att förena den digitala och fysiska världen. Vi är baserade i Sverige, men vi samarbetar med ledande internationella företag.",
       action: "Läs mer",
     },
   },

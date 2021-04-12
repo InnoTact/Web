@@ -61,9 +61,7 @@ class WallpaperVisualizer extends Component {
           title={s.detailedInfo.title}
           subTitle={s.detailedInfo.subTitle}
           description={s.detailedInfo.description}
-          imgSrc={
-            "https://www.borastapeter.com/sites/borastapeter.com/files/styles/paragraph_image_l_2x/public/2001_bt_nl_app2_en.jpg?itok=T0Gp1mxI&timestamp=1583573101"
-          }
+          videoSrcURL={"https://www.youtube.com/embed/niRzkU6_Tpg?start=40&rel=0"}
           light={false}
         />
         <FeatureGrid

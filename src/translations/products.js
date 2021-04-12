@@ -13,7 +13,7 @@ export default {
       name: "Wall Art Visualizer",
       description:
         "Allow your customers to find the perfect wall art for their home. Size and frame can also be changed to find the best fit on their walls. Easily have your customers try out your art pieces in their home to help them find a piece that would make their home a more beautiful place.",
-      btnText: "Contact us",
+      btnText: "Read More",
     },
     furniture: {
       name: "Furniture Visualizer",
@@ -36,7 +36,7 @@ export default {
       name: "Wall Art Visualizer",
       description:
         "Dina kunder kommer inte enbart kunna hitta den perfekta väggkonsten för sina hem, men också vilken storlek och ram som passar bäst. Låt dem enkelt testa dina tavlor och posters för att hjälpa dem att hitta ett konstverk som gör deras hem vackrare.",
-      btnText: "Kontakta oss",
+      btnText: "Läs mer",
     },
     furniture: {
       name: "Furniture Visualizer",

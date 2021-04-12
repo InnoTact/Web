@@ -4,7 +4,7 @@ import styles from '../styles/styles'
 import PropTypes from 'prop-types';
 import colors from '../styles/colors';
 
-const StyledHeader = styled.h1`
+const StyledHeader = styled.h2`
   color: ${props => props.dark ? colors.dark : colors.white};
   margin-bottom: 0.8rem;
   display: inline-block;
@@ -26,7 +26,7 @@ const StyledHeader = styled.h1`
   }
 `
 
-const Header = ({ text, dark, styles = {}, ...props }) => <StyledHeader dark={dark} style={{ ...styles }} {...props} >{text}</StyledHeader>
+const Header = ({ text, dark, h1, styles = {}, ...props }) => <StyledHeader as={h1 ? "h1" : "h2"} dark={dark} style={{ ...styles }} {...props} >{text}</StyledHeader>
 
 Header.propTypes = {
   text: PropTypes.string.isRequired,

@@ -6,6 +6,7 @@ import colors from "../styles/colors"
 import styled from "styled-components"
 import Text from "./Text"
 import ContentBlobWrapper from "./ContentBlobWrapper"
+import SubHeading from "./SubHeading"
 
 export default function FeatureGrid({ features, title, light, ...props }) {
   const Container = styled.div`
@@ -23,7 +24,10 @@ export default function FeatureGrid({ features, title, light, ...props }) {
           {features.map(f => {
             return (
                 <ContentBlobWrapper style={{ minWidth: '30%', paddingTop: '0' }} width={300}>
-                    <Text style={{ fontSize: '1.3rem', width:'100%', textAlign: 'left', marginBottom: 0, paddingTop: innerSpacing }} dark>{f.title}</Text>
+                  {/* <SubHeading dark small style={{ paddingTop: innerSpacing, textAlign: 'left', width: '100%' }}>
+                    {f.title}
+                  </SubHeading> */}
+                    <Text as="h3" style={{ marginTop: '0.5rem', fontSize: '1.3rem', width:'100%', textAlign: 'left', marginBottom: 0, paddingTop: innerSpacing }} dark>{f.title}</Text>
                     <Text small style={{ fontSize: '0.9rem', textAlign: 'left', marginBottom: '0', paddingTop: innerSpacing }} dark>{f.description}</Text>
                 </ContentBlobWrapper>
             )
