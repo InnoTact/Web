@@ -30,7 +30,7 @@ export default function TryItOut({ title, children, light, ...props }) {
             target={"_blank"}
             dark
             rel="noopener noreferrer"
-            href={`https://apps.apple.com/us/app/wonderwall-ar-by-boråstapeter/id1478853508`}
+            href={`https://testflight.apple.com/join/zFpgNn86`}
           >
             this link
           </AnchorPrimary>
