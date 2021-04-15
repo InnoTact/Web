@@ -12,10 +12,6 @@ export default ({ seo, overrideTitle = false }) => {
     <Helmet htmlAttributes={{ lang: lang }}>
       <title>{overrideTitle ? seo.title : seo.title + " – InnoTact"}</title>
       <meta name="description" content={seo.description} />
-      <meta
-        name="keywords"
-        content="Augmented Reality, AR, ARKit, ARCore, Göteborg, Mobilapplikationer, 3D"
-      />
     </Helmet>
   )
 }
