@@ -9,27 +9,27 @@ export default {
     marketing: {
       title: "AR for marketing",
       description:
-        "Through AR, you can visualize information about your business right in front of potential customers without investing in hardware. This is a revolutionary step in the process of digitalisation and how the future will change the way we do marketing.",
+        "Through Augmented Reality, you can visualize information about your products right in front of potential customers without investing in hardware. AR is a revolutionary step in the process of digitalization and how the future will change the way we do marketing.",
     },
     modelling: {
       title: "AR for model visualization",
       description:
-        "AR enables you to study 3D models in real time to get insights into how a particular products, components or machines looks like and works. You can also interact with the object and select specific parts you want to study in more detail.",
+        "AR enables you to study 3D models in real-time to get insights into how products, components or, machines look like and works. You can also interact with the object and select specific parts you want to study in more detail.",
     },
     navigation: {
       title: "AR for navigation",
       description:
-        "Instead of translating information from a GPS on a screen to reality, navigation can take place right in front of your eyes. With AR-navigation you do not need to focus on a GPS and you can fully concentrate on driving or cycling.",
+        "Instead of translating information from a GPS on a screen to reality, navigation can take place right in front of your eyes. With AR-navigation, you do not need to focus on a GPS; instead, you can fully concentrate on driving or cycling.",
     },
     AI: {
       title: "AR and machine learning",
       description:
-        "By combining AR and machine learning, you can get real-time information about the world around you. Information will no longer need to be searched in Internet browsers or in user manuals. Information will be available right in front of your eyes when you need it.",
+        "By combining AR and machine learning, you can get real-time information about the world around you. Searching information in internet browsers or user manuals will no longer be needed. Information will be available right in front of your eyes when you need it.",
     },
     commerce: {
       title: "AR for E-commerce",
       description:
-        "When you buy products on the Internet, you don’t want to just rely on images on a screen. Through AR you can visualize how the product looks like in real shape and size in the environment you want to use it in.",
+        "When you buy products on the internet, you don’t want to only rely on images on a screen. Through AR, you can visualize how the product looks like in real shape and size in the environment you want to use it in.",
     },
   },
   sv: {
