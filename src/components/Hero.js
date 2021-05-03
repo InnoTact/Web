@@ -56,7 +56,7 @@ const Hero = ({ text, imageData }) => (
         width="100%"
         style={{ bottom: 0, right: 0, position: "absolute" }}
       />
-      <Head text={text.title} />
+      <Head h1 text={text.title} />
       <ContentWrapper>
         <SectionTop light bottomText={text.action} zIndexHigh>
           {text.subTitle}

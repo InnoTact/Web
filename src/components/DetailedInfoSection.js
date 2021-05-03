@@ -1,6 +1,7 @@
 import React from "react"
 import Section from "./Section"
 import ContentWrapper from "./ContentWrapper"
+import BackgroundImage from "./BackgroundImage"
 import colors from "../styles/colors"
 import styled from "styled-components"
 import Header from "./Header"
@@ -9,22 +10,34 @@ import Text from "./Text"
 import styles from "../styles/styles"
 import { AppContext } from "./RootWrapper"
 import Video from "./Video"
+import { useStaticQuery, graphql } from "gatsby"
 
 export default function DetailedInfoSection({
   title,
   subTitle,
   description,
-  imgSrc,
+  videoSrcURL,
+  artPage,
   light,
   ...props
 }) {
+  const data = useStaticQuery(graphql`
+    query {
+      WallArtVisualizer: file(relativePath: { eq: "wallart-visualizer.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
   const CustomSection = styled(Section)`
     padding: 6rem 0 6rem 0;
     @media (max-width: ${styles.breakpoints.lg + "px"}) {
       padding-top: 4rem;
     }
   `
-
   const Container = styled.div`
     display: flex;
     justify-content: space-evenly;
@@ -53,7 +66,7 @@ export default function DetailedInfoSection({
     }
     @media (max-width: ${styles.breakpoints.md + "px"}) {
       width: 100vw;
-      margin-left: calc(-10vw/2);
+      margin-left: calc(-10vw / 2);
     }
   `
   const Image = styled.img`
@@ -62,6 +75,23 @@ export default function DetailedInfoSection({
   `
   const DownloadAppContainer = styled.div``
   const halfInnerMargin = 20
+  
+  let mediaContent = null
+  if (videoSrcURL) {
+    mediaContent = (
+      <Video style={{ width: "100%", height: 435 }} videoSrcURL={videoSrcURL} />
+    )
+  } else if (artPage) {
+    mediaContent = (
+      <BackgroundImage
+        alt={""}
+        title={""}
+        fluid={data.WallArtVisualizer.childImageSharp.fluid}
+        height="100%"
+        style={{ zIndex: 1 }}
+      />
+    )
+  }
 
   return (
     <CustomSection
@@ -70,8 +100,8 @@ export default function DetailedInfoSection({
     >
       <AppContext.Consumer>
         {value => {
-          let lessThanLG = false 
-          if (typeof window !== 'undefined' && window.innerWidth) {
+          let lessThanLG = false
+          if (typeof window !== "undefined" && window.innerWidth) {
             lessThanLG = window.innerWidth <= styles.breakpoints.lg
           }
           let innerMargin = lessThanLG ? 0 : halfInnerMargin
@@ -80,7 +110,7 @@ export default function DetailedInfoSection({
               <Container>
                 <SideContainer
                   style={{
-                    paddingRight: innerMargin
+                    paddingRight: innerMargin,
                   }}
                 >
                   <Header
@@ -100,11 +130,10 @@ export default function DetailedInfoSection({
                 </SideContainer>
                 <VideoContainer
                   style={{
-                    paddingLeft: innerMargin
+                    paddingLeft: innerMargin,
                   }}
                 >
-                  <Video style={{ width: '100%', height: 435 }} videoSrcURL={"https://www.youtube.com/embed/niRzkU6_Tpg?start=40&rel=0"} />
-                  {/* <Image src={imgSrc} /> */}
+                  {mediaContent}
                 </VideoContainer>
               </Container>
             </ContentWrapper>

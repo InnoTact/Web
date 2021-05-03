@@ -15,7 +15,7 @@ export const VideoPitch = ({
   return (
     <Section backgroundColor={colors.white} {...props}>
       <ContentWrapper>
-        <SectionTop style={{ marginBottom: "2rem" }} dark header={title}>
+        <SectionTop style={{ marginBottom: "2rem" }} dark h1 header={title}>
           {description}
         </SectionTop>
       </ContentWrapper>
