@@ -8,11 +8,14 @@ import styled from "styled-components"
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: url("https://www.borastapeter.com/sites/borastapeter.com/files/styles/product_full_l_2x/public/content/paragraphs/alicia_image_roomshot_livingroom_item_2005.jpg?itok=XR5ndrIq&timestamp=1622038491");
+  background-image: url("https://www.borastapeter.com/sites/borastapeter.com/files/styles/card_teaser_lg_2x/public/borosan_image_roomshot_diningarea_item_38617_005_sr.jpg?itok=7n1UTLG_&timestamp=1602774200");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const DarkOverlay = styled.div`
@@ -21,16 +24,23 @@ const DarkOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: rgba(0, 0, 0, 0);
 `
 
 const ContentContainer = styled.div`
   padding: 2rem 0.6rem;
   max-width: 90%;
   background: rgba(91, 111, 94, 0.9);
+  position: relative;
+  top: -30px;
+`
+
+const Arrow = styled.img`
+  position: absolute;
+  top: 12px;
+  right: 40px;
+  width: 40px;
+  height: 100px;
 `
 
 function iOSversion() {
@@ -51,25 +61,30 @@ if (ver[0] >= 5) {
 export default function borastapeter() {
   return (
     <Container>
-      <DarkOverlay>
-        <Helmet>
-          <title>Wonderwall AR By Boråstapeter</title>
-          <meta
-            name="apple-itunes-app"
-            content="app-clip-bundle-id=InnoTact.Borastapeter.Clip, app-id=N3QW3RP8Y5"
-          ></meta>
-        </Helmet>
-        <ContentContainer>
-          <Header
-            styles={{ fontSize: "1.5rem", marginBottom: "0.5rem", textAlign: 'center', width: '100%' }}
-            h1
-            text={"View Wallpaper in AR"}
-          />
-          <Text light style={{ textAlign: "center", marginBottom: 0 }}>
-            Press the app banner above to view the wallpaper in your room.
-          </Text>
-        </ContentContainer>
-      </DarkOverlay>
+      <Helmet>
+        <title>Wonderwall AR By Boråstapeter</title>
+        <meta
+          name="apple-itunes-app"
+          content="app-clip-bundle-id=InnoTact.Borastapeter.Clip, app-id=N3QW3RP8Y5"
+        ></meta>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      </Helmet>
+      <i style={{ fontSize: 60, position: 'absolute', top: 20, right: 20, color: 'rgb(91, 111, 94)' }} class="fas fa-arrow-up"></i>
+      <ContentContainer>
+        <Header
+          styles={{
+            fontSize: "1.5rem",
+            marginBottom: "0.5rem",
+            textAlign: "center",
+            width: "100%",
+          }}
+          h1
+          text={"View Wallpaper in AR"}
+        />
+        <Text light style={{ textAlign: "center", marginBottom: 0 }}>
+          Press the app banner above to view the wallpaper in your room.
+        </Text>
+      </ContentContainer>
     </Container>
   )
 }
