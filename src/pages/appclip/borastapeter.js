@@ -8,7 +8,7 @@ import styled from "styled-components"
 const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background-image: url("https://www.borastapeter.com/sites/borastapeter.com/files/styles/card_teaser_lg_2x/public/borosan_image_roomshot_diningarea_item_38617_005_sr.jpg?itok=7n1UTLG_&timestamp=1602774200");
+  background-image: url("https://www.borastapeter.com/sites/borastapeter.com/files/mirage_image_roomshot_livingroom_item_7260.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,9 +30,9 @@ const DarkOverlay = styled.div`
 const ContentContainer = styled.div`
   padding: 2rem 0.6rem;
   max-width: 90%;
-  background: rgba(91, 111, 94, 0.9);
+  background: rgba(91, 111, 94, 0.95);
   position: relative;
-  top: -30px;
+  top: -60px;
 `
 
 const Arrow = styled.img`
@@ -69,7 +69,7 @@ export default function borastapeter() {
         ></meta>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       </Helmet>
-      <i style={{ fontSize: 60, position: 'absolute', top: 20, right: 20, color: 'rgb(91, 111, 94)' }} class="fas fa-arrow-up"></i>
+      <i style={{ fontSize: 68, position: 'absolute', top: 5, right: 25, color: 'rgb(91, 111, 94)' }} class="fas fa-arrow-up"></i>
       <ContentContainer>
         <Header
           styles={{
