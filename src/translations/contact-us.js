@@ -2,7 +2,7 @@ export default {
   en: {
     seo: {
       title: `Contact Us`,
-      description: `Interested in one of our products, or do you have an idea of your own? We would love to talk with you. Don't hesitate to call or email'`
+      description: `Interested in one of our products, or do you have an idea of your own? We would love to talk with you. Don't hesitate to call or email us.'`
     },
     hero: {
       title: "Contact Us",
@@ -11,7 +11,7 @@ export default {
     },
     main: {
         title: "Let's create something awesome together",
-        subTitle: "Call or email us. We look forward to get a better understanding of your needs and to find innovative solutions together.",
+        subTitle: "Call or email us. We look forward to getting a better understanding of your needs and creating innovative solutions together.",
         callUs: "Call us",
         emailUs: "Send an email"
     }

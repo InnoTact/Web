@@ -29,7 +29,7 @@ export default {
     step5: {
       title: "We integrate the solution.",
       description:
-        "When the solution is complete, we ensure that it can be integrated into your business.",
+        "When the solution is complete, we integrate it into your business.",
     },
     step6: {
       title: "Continuous improvements for your future needs.",

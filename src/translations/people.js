@@ -19,13 +19,13 @@ export default {
       position: "Founder, Developer and AR specialist",
       city: "Gothenburg, Sweden",
       description:
-        "As the company's AR specialist, Anton is responsible for developing innovative AR solutions meeting our clients’ needs. With the help of his problem-solving abilities he gives everything to solve our clients’ challenges. Alongside InnoTact, Anton is studying Automation and Mechatronics with a master’s in Data Science and AI at Chalmers. For questions about what is possible to do with augmented reality, Anton is the right person to ask.",
+        "As the company's AR specialist, Anton is responsible for developing innovative AR solutions meeting our clients' needs. With the help of his problem-solving abilities he gives everything to solve our clients' challenges. Alongside InnoTact, Anton is studying Automation and Mechatronics with a master's in Data Science and AI at Chalmers. For questions about what is possible to do with augmented reality, Anton is the right person to ask.",
     },
     casper: {
       position: "Founder, CTO and Developer",
       city: "Gothenburg, Sweden",
       description:
-        "As the company's CTO, Casper is responsible for the InnoTact’s technical strategy. As an experienced programmer, electrical engineer and a future data scientist, Casper is an expert at quickly learning and adapting to new technologies. Casper ensures that our working methods are effective and adapted to the latest technologies. For questions about the company's technical strategy or technical questions, Casper is the right person to ask.",
+        "As the company's CTO, Casper is responsible for the InnoTact's technical strategy. As an experienced programmer, electrical engineer and a future data scientist, Casper is an expert at quickly learning and adapting to new technologies. Casper ensures that our working methods are effective and adapted to the latest technologies. For questions about the company's technical strategy or technical questions, Casper is the right person to ask.",
     },
     carl: {
       position: "Founder, CFO and Developer",

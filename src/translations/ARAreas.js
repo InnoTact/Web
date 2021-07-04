@@ -12,13 +12,13 @@ export default {
     interaction: {
       title: "Interaction",
       description:
-        "What previously required physical buttons or navigation on a mobile screen can now be done in real time using AR. The user experience of digital solutions can change completely when AR glasses allow you to have both hands free at the same time as you get all the information you need.",
+        "What previously required physical buttons or navigation on a mobile screen can now be done in real-time using AR. The user experience of digital solutions can change completely when AR glasses allow you to have both hands free at the same time as you get all the information you need.",
       button: "START A PROJECT",
     },
     instruction: {
       title: "Instructions & guidance",
       description:
-        "Get clear instructions in AR. You can access detailed information which would otherwise need to be display in a document or in a manual. You can also get AR instructions from another person in real time, which can be useful for example when repairing a machine.",
+        "Get clear instructions in AR. Access detailed information which otherwise would need to be displayed in a document or a manual. You can also get AR instructions from another person in real-time, which can be useful, for example when repairing a machine.",
       button: "CONTACT US",
     },
   },
