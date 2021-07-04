@@ -15,7 +15,7 @@ export default {
       wallvision:
         "WallVision/Embellence Group is the largest wallpaper company in Scandinavia.",
       borastapeter:
-        "Boråstapeter is part of Embellence Group and is the first company to utilize the Wallpaper Visualizer.",
+        "Boråstapeter is part of Wallvision and is the first company to utilize the Wallpaper Visualizer.",
       grandeco:
         "Grandeco is one of the globally leading producers of vinyl wallcoverings.",
     },

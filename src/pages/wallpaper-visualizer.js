@@ -34,11 +34,11 @@ class WallpaperVisualizer extends Component {
         <WallpaperCompaniesLovingUs
           title={s.companies.title}
           companies={[
-            {
-              text: s.companies.wallvision,
-              url:
-                "https://www.wallvision.com/sites/wallvision.com/files/wallvision_0_2.png",
-            },
+            // {
+            //   text: s.companies.wallvision,
+            //   url:
+            //     "https://www.wallvision.com/sites/wallvision.com/files/wallvision_0_2.png",
+            // },
             {
               text: s.companies.borastapeter,
               url:
@@ -48,7 +48,11 @@ class WallpaperVisualizer extends Component {
               text: s.companies.grandeco,
               url:
                 "https://www.grandecogroup.com/frontend/corporateWebsiteBundle/img/general/logo-grandeco--b-on-w.svg",
-            },
+            }, 
+            {
+              text: "Phillip Jeffries is one of the world leaders in textured and specialty wallcoverings.",
+              url: `https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_880,h_414/https://lushluxuryng.com/wp-content/uploads/2019/08/output-onlinepngtools-2.png`
+            }
           ]}
         />
         <IconInfoGrid
