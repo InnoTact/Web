@@ -18,7 +18,7 @@ export default function SpokenPictures() {
     return (
         <Container>
             <h1>Spoken Pictures</h1>
-            <p>Press the link on your iPhone or iPad to sign in!</p>
+            <p>Press the link you recieved on your email using your iPhone or iPad to sign in!</p>
         </Container>
     )
 }
