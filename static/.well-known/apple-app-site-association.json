@@ -13,6 +13,12 @@
                 "paths": [
                     "/app/art-visualizer"
                 ]
+            },
+            {
+                "appID": "N3QW3RP8Y5.InnoTact.Spoken-Picture",
+                "paths": [
+                    "/app/spoken-picture"
+                ]
             }
         ]
     },
