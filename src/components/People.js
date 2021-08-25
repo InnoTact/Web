@@ -35,7 +35,7 @@ export default ({ peopleImagesData }) => {
             position={strings.niklas.position}
             town={strings.niklas.city}
             text={strings.niklas.description}
-            email="niklas@innotactsoftware.se"
+            email="niklas@innotactsoftware.com"
             linkedin="https://www.linkedin.com/in/niklas-gustafsson-93025a12a/"
           />
           <PeopleCard
@@ -48,7 +48,7 @@ export default ({ peopleImagesData }) => {
             position={strings.joel.position}
             town={strings.joel.city}
             text={strings.joel.description}
-            email="joel@innotactsoftware.se"
+            email="joel@innotactsoftware.com"
             linkedin="https://www.linkedin.com/in/joel-rudsberg/"
           />
           <PeopleCard
@@ -61,21 +61,8 @@ export default ({ peopleImagesData }) => {
             position={strings.anton.position}
             town={strings.anton.city}
             text={strings.anton.description}
-            email="anton@innotactsoftware.se"
+            email="anton@innotactsoftware.com"
             linkedin="https://www.linkedin.com/in/anton-claesson/"
-          />
-          <PeopleCard
-            name="Casper Lindberg"
-            image={
-              peopleImagesData
-                ? peopleImagesData.CasperImage.childImageSharp.fixed
-                : ""
-            }
-            position={strings.casper.position}
-            town={strings.casper.city}
-            text={strings.casper.description}
-            email="casper@innotactsoftware.se"
-            linkedin="https://www.linkedin.com/in/casperlindberg1997/"
           />
           <PeopleCard
             name="Carl Claesson"
@@ -87,8 +74,34 @@ export default ({ peopleImagesData }) => {
             position={strings.carl.position}
             town={strings.carl.city}
             text={strings.carl.description}
-            email="carl@innotactsoftware.se"
+            email="carl@innotactsoftware.com"
             linkedin="https://www.linkedin.com/in/carl-claesson-29145a16a/"
+          />
+          <PeopleCard
+            name="Melker Veltman"
+            image={
+              peopleImagesData
+                ? peopleImagesData.MelkerImage.childImageSharp.fixed
+                : ""
+            }
+            position={strings.melker.position}
+            town={strings.melker.city}
+            text={strings.melker.description}
+            email="melker@innotactsoftware.com"
+            linkedin="https://www.linkedin.com/in/melker-veltman/"
+          />
+          <PeopleCard
+            name="Casper Lindberg"
+            image={
+              peopleImagesData
+                ? peopleImagesData.CasperImage.childImageSharp.fixed
+                : ""
+            }
+            position={strings.casper.position}
+            town={strings.casper.city}
+            text={strings.casper.description}
+            email="casper@innotactsoftware.com"
+            linkedin="https://www.linkedin.com/in/casperlindberg1997/"
           />
           <PeopleCard
             name="Fredrik Hernqvist"
@@ -101,30 +114,6 @@ export default ({ peopleImagesData }) => {
             town={strings.fredrik.city}
             text={strings.fredrik.description}
             linkedin="https://www.linkedin.com/in/fredrik-hernqvist-529479104/"
-          />
-          <PeopleCard
-            name="Oskar Grönqvist"
-            image={
-              peopleImagesData
-                ? peopleImagesData.OskarImage.childImageSharp.fixed
-                : ""
-            }
-            position={strings.oskar.position}
-            town={strings.oskar.city}
-            text={strings.oskar.description}
-            linkedin="https://www.linkedin.com/in/oskar-gr%C3%B6nqvist-54a35b182/"
-          />
-          <PeopleCard
-            name="Melker Veltman"
-            image={
-              peopleImagesData
-                ? peopleImagesData.MelkerImage.childImageSharp.fixed
-                : ""
-            }
-            position={strings.melker.position}
-            town={strings.melker.city}
-            text={strings.melker.description}
-            linkedin="https://www.linkedin.com/in/melker-veltman/"
           />
         </PeopleContainer>
       </ContentWrapper>
