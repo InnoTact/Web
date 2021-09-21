@@ -17,7 +17,9 @@
             {
                 "appID": "N3QW3RP8Y5.InnoTact.Spoken-Picture",
                 "paths": [
-                    "/app/spoken-pictures"
+                    "/app/spoken-pictures",
+                    "/app/spoken-picture",
+                    "/spoken-pictures/*"
                 ]
             }
         ]
