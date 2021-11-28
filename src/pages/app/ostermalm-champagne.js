@@ -11,16 +11,17 @@ const Container = styled.div`
     flex-direction: column;
     background-color: black;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
 `
 
 const ImageStyle = {
     width: '100vw',
-    margin: '1.2rem 0'
+    margin: '1.2rem 0',
+    maxHeight: '70vh'
 }
 
 const InnerImgStyle = {
-    'object-fit': 'contain'
+    objectFit: 'contain'
 }
 export const pageQuery = graphql`
     query {
@@ -35,7 +36,6 @@ export const pageQuery = graphql`
 `
 
 export default function OstermalmChampagne({ data }) {
-    console.log(data);
     return <Container>
         <Img fluid={data.EtiquetteImage.childImageSharp.fluid} style={ImageStyle} imgStyle={InnerImgStyle} />
         <div>
