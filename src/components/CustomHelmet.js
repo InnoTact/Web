@@ -16,6 +16,8 @@ export default ({ seo, overrideTitle = false }) => {
         name="keywords"
         content="Augmented Reality, AR, ARKit, ARCore, Göteborg, Mobilapplikationer, 3D"
       />
+      <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
     </Helmet>
   )
 }
