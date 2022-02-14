@@ -110,7 +110,7 @@ class NavItems extends Component {
     ]
     const navItems = links.map(l => {
       return (
-        <NavItem open={open}>
+        <NavItem open={open} key={l.url}>
           <Link
             style={{ color: linkColor }}
             activeStyle={{ color: activeLinkColor, fontWeight: 600 }}
