@@ -21,7 +21,8 @@ export default {
                     description: "Visualize wall art in seconds with our Web Visualizer. Let your users experience your art in the size they want it, and with an accompanying frame.",
                     models: {
                         "30x40": "/3d/30x40_test.glb",
-                        "50x70": "/3d/50x70_test.glb"
+                        "50x70": "/3d/50x70_test.glb",
+                        "austronaut": "/3d/NeilArmstrong.glb"
                     }
                 }
             ]
