@@ -119,7 +119,20 @@ function DemoDisplayer({ demo }) {
       </select>)}
     </SideContainer>
     <SideContainer>
-      <model-viewer src={demo.models[selectedVersion]} ar-placement="wall" ar ar-modes="scene-viewer quick-look webxr" camera-controls alt="A 3D model of some wall art" ar-scale="fixed" style={{ minHeight: "400px" }}></model-viewer>
+      <model-viewer 
+        src={demo.models[selectedVersion]}
+        alt="A 3D model of some wall art"
+        camera-controls
+        ar
+        // ios-src="/3d/..." Is usdz file src needed for iOS AR?
+        // Note that the presence of an ios-src will enable quick-look by itself; specifying quick-look generates a USDZ on the fly rather than downloading a separate ios-src file.
+        // The url to a USDZ model which will be used on supported iOS 12+ devices via AR Quick Look on Safari. The presence of this attribute will automatically enable the quick-look ar-mode, however it is no longer necessary. If instead the quick-look ar-mode is specified and ios-src is not specified, then we will generate a USDZ on the fly when the AR button is pressed. This means modifications via the scene-graph API will now be reflected in Quick Look. Hoowever, USDZ generation is not perfect, for instance animations are not yet supported, so in some cases supplying ios-src may give better results.
+        ar-placement="wall" 
+        ar-modes="scene-viewer quick-look webxr"
+        ar-scale="fixed" 
+        interaction-prompt-threshold="2000"
+        style={{ minHeight: "400px" }}>
+        </model-viewer>
     </SideContainer>
   </>
 }
