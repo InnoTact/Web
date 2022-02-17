@@ -131,7 +131,7 @@ function DemoDisplayer({ demo }) {
         ar-modes="scene-viewer quick-look webxr"
         ar-scale="fixed" 
         interaction-prompt-threshold="2000"
-
+        ios-src="/3d/matisse.usdz"
         style={{ minHeight: "400px" }}>
         </model-viewer>
     </SideContainer>
