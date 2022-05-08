@@ -1,6 +1,12 @@
 {
     "applinks": {
-        "apps": ["N3QW3RP8Y5.InnoTact.Borastapeter", "N3QW3RP8Y5.InnoTact-Software-AB.ARt-InnoTact", "N3QW3RP8Y5.InnoTact.Spoken-Picture"],
+        "apps": [
+            "N3QW3RP8Y5.InnoTact.Borastapeter",
+            "N3QW3RP8Y5.InnoTact-Software-AB.ARt-InnoTact",
+            "N3QW3RP8Y5.InnoTact.Spoken-Picture",
+            "N3QW3RP8Y5.InnoTact.Wallpaper.BytTapet",
+            "N3QW3RP8Y5.InnoTact.Wallpaper.Roomblush"
+        ],
         "details": [
             {
                 "appID": "N3QW3RP8Y5.InnoTact.Borastapeter",
@@ -20,6 +26,18 @@
                     "/app/spoken-pictures",
                     "/app/spoken-picture",
                     "/spoken-pictures/*"
+                ]
+            },
+            {
+                "appID": "N3QW3RP8Y5.InnoTact.Wallpaper.BytTapet",
+                "paths": [
+                    "/app/byttapet"
+                ]
+            },
+            {
+                "appID": "N3QW3RP8Y5.InnoTact.Wallpaper.Roomblush",
+                "paths": [
+                    "/app/roomblush"
                 ]
             }
         ]
