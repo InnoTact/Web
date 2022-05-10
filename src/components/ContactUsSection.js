@@ -66,8 +66,8 @@ export default function ContactUsSection() {
                     <FaPhone style={{ fontSize: 30, color: colors.dark }} />
                   </CenterContainer>
                   <CenterContainer>
-                    <AnchorPrimary style={{ marginLeft: 10 }} href="tel:+46737303797">
-                      +46737303797
+                    <AnchorPrimary style={{ marginLeft: 10 }} href="tel:+41764687390">
+                      +41764687390
                     </AnchorPrimary>
                   </CenterContainer>
                 </CallUsContent>

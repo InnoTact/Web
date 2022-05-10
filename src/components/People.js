@@ -26,19 +26,6 @@ export default ({ peopleImagesData }) => {
         </SectionTop>
         <PeopleContainer>
           <PeopleCard
-            name="Niklas Gustafsson"
-            image={
-              peopleImagesData
-                ? peopleImagesData.NiklasImage.childImageSharp.fixed
-                : ""
-            }
-            position={strings.niklas.position}
-            town={strings.niklas.city}
-            text={strings.niklas.description}
-            email="niklas@innotactsoftware.com"
-            linkedin="https://www.linkedin.com/in/niklas-gustafsson-93025a12a/"
-          />
-          <PeopleCard
             name="Joel Rudsberg"
             image={
               peopleImagesData
@@ -89,19 +76,6 @@ export default ({ peopleImagesData }) => {
             text={strings.melker.description}
             email="melker@innotactsoftware.com"
             linkedin="https://www.linkedin.com/in/melker-veltman/"
-          />
-          <PeopleCard
-            name="Casper Lindberg"
-            image={
-              peopleImagesData
-                ? peopleImagesData.CasperImage.childImageSharp.fixed
-                : ""
-            }
-            position={strings.casper.position}
-            town={strings.casper.city}
-            text={strings.casper.description}
-            email="casper@innotactsoftware.com"
-            linkedin="https://www.linkedin.com/in/casperlindberg1997/"
           />
           <PeopleCard
             name="Fredrik Hernqvist"

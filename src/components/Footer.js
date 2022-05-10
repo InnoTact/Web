@@ -129,9 +129,9 @@ class Footer extends Component {
                           <Anchor
                             small
                             light
-                            href="tel:+46737303797"
+                            href="tel:+41764687390"
                           >
-                            +46737303797
+                            +41764687390
                           </Anchor>
                         </div>
                         <Anchor
@@ -151,7 +151,7 @@ class Footer extends Component {
                               }
                             />
                           </SocialLogoAnchor>
-                          <SocialLogoAnchor href="tel:+46737303797">
+                          <SocialLogoAnchor href="tel:+41764687390">
                             <FaPhone
                               style={
                                 value.isTablet || value.isMobile
