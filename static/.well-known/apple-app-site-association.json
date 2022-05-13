@@ -5,7 +5,8 @@
             "N3QW3RP8Y5.InnoTact-Software-AB.ARt-InnoTact",
             "N3QW3RP8Y5.InnoTact.Spoken-Picture",
             "N3QW3RP8Y5.InnoTact.Wallpaper.BytTapet",
-            "533CWYHDJ5.InnoTact.Wallpaper.Roomblush"
+            "533CWYHDJ5.InnoTact.Wallpaper.Roomblush",
+            "5X44972ZWQ.com.phillipjeffries.pjvision"
         ],
         "details": [
             {
@@ -38,6 +39,12 @@
                 "appID": "533CWYHDJ5.InnoTact.Wallpaper.Roomblush",
                 "paths": [
                     "/app/roomblush"
+                ]
+            },
+            {
+                "appID": "5X44972ZWQ.com.phillipjeffries.pjvision",
+                "paths": [
+                    "/app/pj-vision"
                 ]
             }
         ]
