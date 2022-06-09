@@ -29,7 +29,6 @@ export default function WallpaperCompaniesLovingUs({ companies, title }) {
       }
     }
   `)
-
   return (
     <Section backgroundColor={colors.lightgrey}>
       <ContentWrapper>

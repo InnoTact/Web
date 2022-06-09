@@ -12,12 +12,14 @@ export default {
     },
     companies: {
       title: "Trusted By Industry Leaders",
-      wallvision:
-        "WallVision/Embellence Group is the largest wallpaper company in Scandinavia.",
+      embellenceGroup:
+        "Embellence Group (formerly Wallvision) is one of the major players in the wallpaper industry with brands in Sweden, Italy and the UK.",
       borastapeter:
         "Boråstapeter is part of Embellence Group and is the first company to utilize the Wallpaper Visualizer.",
       grandeco:
-        "Grandeco is one of the globally leading producers of vinyl wallcoverings.",
+        "Grandeco is one of the globally leading producers of vinyl wallcoverings. Their brand Roomblush is using the Wallpaper Visualizer.",
+      pj: "USA-based world leader in natural, textured and specialty wallcoverings.",
+      bytTapet: "A newly created Swedish brand that also helps customers assemble wallpapers in their homes."
     },
     detailedInfo: {
       title: "Everything in one place",
@@ -162,12 +164,15 @@ export default {
     },
     companies: {
       title: "Förtroende från branschledare",
-      wallvision:
-        "WallVision/Embellence Group är det största företaget i Skandinavien inom tapetbranchen, med ett fokus på premiumtapeter och annan hemindredning.",
+      embellenceGroup:
+        "Embellence Group (tidigare Wallvision) är det största företaget i Skandinavien inom tapetbranchen, med ett fokus på premiumtapeter och annan hemindredning.",
       borastapeter:
         "Boråstapeter är en del av Wallvision/Embellence Group och var det första företaget att börja använda Wallpaper Visualizer med appen vi utvecklade för dem.",
       grandeco:
         "Grandeco är baserat i Beligen och är en av världens ledande producenter av vinyltapeter.",
+      pj: "USA-baserat världsledande bolag in naturliga, texturerade och specialtapeter.",
+      bytTapet:
+        "Ett nystartat svenskt bolag som hjälper kunder att beställa och montera tapeter i sina hem."
     },
     detailedInfo: {
       title: "Allt på ett ställe",

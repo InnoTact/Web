@@ -14,6 +14,9 @@ import MultipleQuoteSection from "../components/MultipleQuoteSection"
 import ActionSection from "../components/ActionSection"
 import DetailedInfoSection from "../components/DetailedInfoSection"
 import FeatureGrid from "../components/FeatureGrid"
+import BytTapetLogo from '../img/byttapet-logo.png';
+import EmbellenceGroupLogo from '../img/embellence-logo.png';
+import PJLogo from '../img/PJ_Logo_2.pdf';
 
 class WallpaperVisualizer extends Component {
   render() {
@@ -35,9 +38,9 @@ class WallpaperVisualizer extends Component {
           title={s.companies.title}
           companies={[
             {
-              text: s.companies.wallvision,
+              text: s.companies.embellenceGroup,
               url:
-                "https://www.wallvision.com/sites/wallvision.com/files/wallvision_0_2.png",
+                EmbellenceGroupLogo,
             },
             {
               text: s.companies.borastapeter,
@@ -47,7 +50,16 @@ class WallpaperVisualizer extends Component {
             {
               text: s.companies.grandeco,
               url:
-                "https://www.grandecogroup.com/frontend/corporateWebsiteBundle/img/general/logo-grandeco--b-on-w.svg",
+                "https://www.grandecogroup.com/img/logo-dark.svg",
+            },
+            {
+              text: s.companies.pj,
+              url:
+                PJLogo,
+            },
+            {
+              text: s.companies.bytTapet,
+              url: BytTapetLogo,
             },
           ]}
         />
@@ -93,5 +105,17 @@ class WallpaperVisualizer extends Component {
     )
   }
 }
+
+export const pageQuery = graphql`
+  query {
+    BytTapetLogo: file(relativePath: { eq: "byttapet-logo.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default WallpaperVisualizer
