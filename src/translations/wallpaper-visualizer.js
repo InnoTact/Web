@@ -27,7 +27,13 @@ export default {
         "Browse wallpapers, test them in your room, share your favorite wallpapers, obtain measurements and place your order. All in one app.",
       description:
         "The Wallpaper Visualizer allows your customer to browse and experience all your collections of wallpapers in a fast and intuitive native app. Through the camera of the phone, the wallpapers are visualized in your customers' room while also allowing them to instantaneously switch between different wallpapers. The app will have your company name and be available as an iOS and Android app with your particular branding and feel.",
-
+    },
+    lidarInfo: {
+      title: "Try wallpapers in seconds",
+      subTitle:
+        "Our new cutting-edge setup process for lidar-supported devices combined with advanced rendering techniques allows papering and experience your wallpapers within seconds.",
+      description:
+        "The new and improved wallpaper visualization setup for devices equipped with a lidar sensor reduces the setup process to a single button click, after which the virtual walls show up automatically. Additionally, automatic occlusion, ability to visualize non-rectangular walls, mural-support and high accuracy wall measurements is built in. This was launched in June 2022 and is one example of how we continously strive to improve the tool – and you'll get these updates included in the license fee.",
     },
     featureSection: {
       title: "Popular Features",

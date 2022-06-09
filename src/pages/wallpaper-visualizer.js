@@ -81,24 +81,31 @@ class WallpaperVisualizer extends Component {
           light={true}
           features={s.featureSection.features}
         />
-        <MultipleQuoteSection
+        <DetailedInfoSection
+          title={s.lidarInfo.title}
+          subTitle={s.lidarInfo.subTitle}
+          description={s.lidarInfo.description}
+          videoSrcURL={"https://www.youtube.com/embed/9rxQYIqx8lM"}
           light={false}
+        />
+        <MultipleQuoteSection
+          light={true}
           title={s.multipleQuoteSection.title}
           quotes={s.multipleQuoteSection.quotes}
         />
-        {s.businessQuote.quote != null ? <QuoteSection
+        <QuoteSection
           title={s.businessQuote.title}
           quote={s.businessQuote.quote}
           saidBy={s.businessQuote.saidBy}
           url={null}
-          light={true}
-        /> : null}
+          light={false}
+        />
         <ActionSection
           title={s.takeAction.title}
           description={s.takeAction.description}
           btnText={s.takeAction.btnText}
           link={"/contact/#contact-form"}
-          dark={true}
+          dark={false}
         />
         <Footer />
       </React.Fragment>
