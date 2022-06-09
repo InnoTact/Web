@@ -41,6 +41,24 @@ export default {
         },
       ]
     },
+    why: {
+      title: "How the Wallpaper Visualizer can help your Company",
+      subTitle: "With realistic rendering of all your wallpapers in the homes of your customers and in the hands of your designers, the benefits are plentiful. The tool seamlessly integrates in your existing customer journey by a quick connection to your website.",
+      reasons: [
+        {
+          title: "Increase conversions",
+          text: "Customers using the tool are more likely to purchase. Boråstapeter have seen increased conversions of 382% after using the tool."
+        },
+        {
+          title: "Reduce returns",
+          text: "Customers find what they want faster and with increased confident, which reduces the number of returns."
+        },
+        {
+          title: "Access to powerful tools",
+          text: "Insightful analytics to drive your business decisions and new marketing opportunities with your app in your customers pockets."
+        },
+      ]
+    },
     detailedInfo: {
       title: "Everything in one place",
       subTitle:
@@ -164,12 +182,12 @@ export default {
     statsUseCase: {
       title: "Business Use Case: Boråstapeter",
       stats: [
-        { number: "+110,000", text: "users on iOS and Android" },
-        { number: "1200", text: "new users per week" },
-        { number: "+10,000", text: "active users per month" },
-        { number: "+30,000", text: "papered walls per month" },
-        { number: "+150,000", text: "impressions on AppStore" },
-        { number: "#4", text: "top rank in Sweden" },
+        { number: "+110,000", text: "users on iOS and Android", highlight: false },
+        { number: "+382%", text: "increased conversion after using the tool", highlight: true },
+        { number: "+10,000", text: "active users per month", highlight: false },
+        { number: "+30,000", text: "papered walls per month", highlight: false },
+        { number: "+150,000", text: "impressions on AppStore", highlight: false },
+        { number: "#4", text: "top rank in Sweden", highlight: false },
       ],
     },
     takeAction: {
@@ -333,12 +351,12 @@ export default {
     statsUseCase: {
       title: "Ett Use Case: Boråstapeter",
       stats: [
-        { number: "+110,000", text: "användare på iOS och Android" },
-        { number: "1200", text: "nya användare per vecka" },
-        { number: "+10,000", text: "aktiva användare per månad" },
-        { number: "+30,000", text: "tapetserade väggar per månad" },
-        { number: "+150,000", text: "intryck på AppStore" },
-        { number: "#4", text: "högsta ranking i Sverige" },
+        { number: "+110,000", text: "användare på iOS och Android", hightlight: false },
+        { number: "382%", text: "ökad konverting efter användare använt appen", hightlight: true },
+        { number: "+10,000", text: "aktiva användare per månad", hightlight: false },
+        { number: "+30,000", text: "tapetserade väggar per månad", hightlight: false },
+        { number: "+150,000", text: "intryck på AppStore", hightlight: false },
+        { number: "#4", text: "högsta ranking i Sverige", hightlight: false },
       ],
     },
     takeAction: {
