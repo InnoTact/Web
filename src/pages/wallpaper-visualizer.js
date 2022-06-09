@@ -14,9 +14,6 @@ import MultipleQuoteSection from "../components/MultipleQuoteSection"
 import ActionSection from "../components/ActionSection"
 import DetailedInfoSection from "../components/DetailedInfoSection"
 import FeatureGrid from "../components/FeatureGrid"
-import BytTapetLogo from '../img/byttapet-logo.png';
-import EmbellenceGroupLogo from '../img/embellence-logo.png';
-import PJLogo from '../img/PJ_Logo_2.pdf';
 
 class WallpaperVisualizer extends Component {
   render() {
@@ -36,27 +33,7 @@ class WallpaperVisualizer extends Component {
         />
         <WallpaperCompaniesLovingUs
           title={s.companies.title}
-          companies={[
-            {
-              text: s.companies.borastapeter,
-              url:
-                "https://www.borastapeter.com/sites/borastapeter.com/themes/borastapeter/dist/images/logo.svg",
-            },
-            {
-              text: s.companies.grandeco,
-              url:
-                "https://www.grandecogroup.com/img/logo-dark.svg",
-            },
-            {
-              text: s.companies.pj,
-              url:
-                "http://www.maison-deco.info/wp-content/uploads/2018/10/phillip-jeffries-logo.png",
-            },
-            {
-              text: s.companies.bytTapet,
-              url: BytTapetLogo,
-            },
-          ]}
+          companies={s.companies.list}
         />
         <IconInfoGrid
           light={true}

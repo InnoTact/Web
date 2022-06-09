@@ -1,3 +1,5 @@
+import BytTapetLogo from '../img/byttapet-logo.png';
+
 export default {
   en: {
     seo: {
@@ -12,14 +14,32 @@ export default {
     },
     companies: {
       title: "Trusted By Industry Leaders",
-      embellenceGroup:
-        "Embellence Group (formerly Wallvision) is one of the major players in the wallpaper industry with brands in Sweden, Italy and the UK.",
-      borastapeter:
-        "Boråstapeter is part of Embellence Group and is the first company to utilize the Wallpaper Visualizer.",
-      grandeco:
-        "Grandeco is one of the globally leading producers of vinyl wallcoverings. Their brand Roomblush is using the Wallpaper Visualizer.",
-      pj: "USA-based world leader in natural, textured and specialty wallcoverings.",
-      bytTapet: "A newly created Swedish brand that also helps customers assemble wallpapers in their homes."
+      list: [
+        {
+          text: "Boråstapeter is part of Embellence Group and is the first company to utilize the Wallpaper Visualizer.",
+          imageUrl: "https://www.borastapeter.com/sites/borastapeter.com/themes/borastapeter/dist/images/logo.svg",
+          ios: "",
+          android: "",
+        },
+        {
+          text: "Grandeco is one of the globally leading producers of vinyl wallcoverings. Their brand Roomblush is using the Wallpaper Visualizer.",
+          imageUrl: "https://www.grandecogroup.com/img/logo-dark.svg",
+          ios: "",
+          android: "",
+        },
+        {
+          text: "US-based world leader in natural, textured and specialty wallcoverings.",
+          imageUrl: "http://www.maison-deco.info/wp-content/uploads/2018/10/phillip-jeffries-logo.png",
+          ios: "",
+          android: "",
+        },
+        {
+          text: "A newly created Swedish brand that also helps customers assemble wallpapers in their homes.",
+          imageUrl: BytTapetLogo,
+          ios: "",
+          android: "",
+        },
+      ]
     },
     detailedInfo: {
       title: "Everything in one place",
@@ -170,15 +190,32 @@ export default {
     },
     companies: {
       title: "Förtroende från branschledare",
-      embellenceGroup:
-        "Embellence Group (tidigare Wallvision) är det största företaget i Skandinavien inom tapetbranchen, med ett fokus på premiumtapeter och annan hemindredning.",
-      borastapeter:
-        "Boråstapeter är en del av Wallvision/Embellence Group och var det första företaget att börja använda Wallpaper Visualizer med appen vi utvecklade för dem.",
-      grandeco:
-        "Grandeco är baserat i Beligen och är en av världens ledande producenter av vinyltapeter.",
-      pj: "USA-baserat världsledande bolag in naturliga, texturerade och specialtapeter.",
-      bytTapet:
-        "Ett nystartat svenskt bolag som hjälper kunder att beställa och montera tapeter i sina hem."
+      list: [
+        {
+          text: "Boråstapeter är en del av Wallvision/Embellence Group och var det första företaget att börja använda Wallpaper Visualizer med appen vi utvecklade för dem.",
+          imageUrl: "https://www.borastapeter.com/sites/borastapeter.com/themes/borastapeter/dist/images/logo.svg",
+          ios: "",
+          android: "",
+        },
+        {
+          text: "Grandeco är baserat i Beligen och är en av världens ledande producenter av vinyltapeter. Deras bolag Roomblush använder Wallpaper Visualizer.",
+          imageUrl: "https://www.grandecogroup.com/img/logo-dark.svg",
+          ios: "",
+          android: "",
+        },
+        {
+          text: "USA-baserat världsledande bolag in naturliga, texturerade och specialtapeter.",
+          imageUrl: "http://www.maison-deco.info/wp-content/uploads/2018/10/phillip-jeffries-logo.png",
+          ios: "",
+          android: "",
+        },
+        {
+          text: "Ett nystartat svenskt bolag som hjälper kunder att beställa och montera tapeter i sina hem.",
+          imageUrl: BytTapetLogo,
+          ios: "",
+          android: "",
+        },
+      ]
     },
     detailedInfo: {
       title: "Allt på ett ställe",

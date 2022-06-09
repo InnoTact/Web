@@ -37,7 +37,7 @@ export default function WallpaperCompaniesLovingUs({ companies, title }) {
           {companies.map(c => {
             return (
               <CompanyBlob text={c.text}>
-                <img style={Logo} src={c.url} />
+                <img style={Logo} src={c.imageUrl} />
               </CompanyBlob>
             )
           })}
