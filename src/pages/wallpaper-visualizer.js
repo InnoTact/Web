@@ -86,19 +86,19 @@ class WallpaperVisualizer extends Component {
           title={s.multipleQuoteSection.title}
           quotes={s.multipleQuoteSection.quotes}
         />
-        {/* <QuoteSection
+        {s.businessQuote.quote != null ? <QuoteSection
           title={s.businessQuote.title}
           quote={s.businessQuote.quote}
           saidBy={s.businessQuote.saidBy}
-          url={`https://www.di.se/pressreleaser/2020/02/04/borastapeter-ar-teknik-gor-det-mojligt-att-tapetsera-virtuellt-i-ny-app/`}
+          url={null}
           light={true}
-        /> */}
+        /> : null}
         <ActionSection
           title={s.takeAction.title}
           description={s.takeAction.description}
           btnText={s.takeAction.btnText}
           link={"/contact/#contact-form"}
-          dark={false}
+          dark={true}
         />
         <Footer />
       </React.Fragment>

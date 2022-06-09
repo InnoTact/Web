@@ -132,13 +132,13 @@ export default {
     businessQuote: {
       title: "What our partners say",
       quote:
-        "It can be hard to imagine how one's bedroom, living room, or kitchen will look like with a new wallpaper when you only have a wallpaper sample. With the app, you see how a certain wallpaper fits into your own home directly. And on top of that, it is very fun to use. It's easy to get immersed in it and to walk around at home and see the rooms change tone with new wallpapers.",
-      saidBy: "Oskar Gissberg, Head of Digital at Boråstapeter",
+        "It can be hard to imagine how one's bedroom, living room, or kitchen will look with a new wallpaper when you only have a wallpaper sample. The app lets you see how a certain wallpaper fits into your home directly. And on top of that, it is very fun to use. It's easy to get immersed in it, walk around at home, and see the rooms change tone with new wallpapers.",
+      saidBy: "Oskar Gissberg, Head of Digital at Boråstapeter (Embellence Group)",
     },
     statsUseCase: {
       title: "Business Use Case: Boråstapeter",
       stats: [
-        { number: "+60,000", text: "users on iOS alone" },
+        { number: "+110,000", text: "users on iOS and Android" },
         { number: "1200", text: "new users per week" },
         { number: "+10,000", text: "active users per month" },
         { number: "+30,000", text: "papered walls per month" },
@@ -284,13 +284,13 @@ export default {
     businessQuote: {
       title: "Vad våra produktägare säger",
       quote:
-        "Det kan vara svårt att föreställa sig hur ens sovrum, vardagsrum eller kök kommer att se ut med en ny tapet när man bara har ett tapetprov. Med appen ser man direkt hur en viss tapet passar i ens egna hem. Och den är dessutom väldigt rolig att använda. Det är lätt att fastna med den och gå runt hemma och se rummen byta prägel med nya tapeter.",
+        null,
       saidBy: "Oskar Gissberg, Head of Digital på Boråstapeter",
     },
     statsUseCase: {
       title: "Ett Use Case: Boråstapeter",
       stats: [
-        { number: "+60,000", text: "användare enbart på iOS" },
+        { number: "+110,000", text: "användare på iOS och Android" },
         { number: "1200", text: "nya användare per vecka" },
         { number: "+10,000", text: "aktiva användare per månad" },
         { number: "+30,000", text: "tapetserade väggar per månad" },

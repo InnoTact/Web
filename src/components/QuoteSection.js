@@ -32,6 +32,17 @@ export default function QuoteSection({ title, quote, saidBy, url, light, ...prop
     }
   `
 
+  const QuotedNameNoAnchor = styled.p`
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-top: 1rem;
+    display: block;
+    @media (max-width: ${styles.breakpoints.sm + "px"}) {
+      font-size: 0.9rem;
+    }
+  `
+
   const QuoteName = styled(Anchor)`
     text-align: center;
     text-transform: uppercase;
@@ -43,10 +54,25 @@ export default function QuoteSection({ title, quote, saidBy, url, light, ...prop
     }
   `
 
+  let quotedBy
+  if (url) {
+    quotedBy = <QuoteName
+      target="_blank"
+      href={url}
+      style={{ 'pointerEvents': url ? 'unset' : 'none' }}
+      center
+      dark
+    >
+      {saidBy}
+    </QuoteName>
+  } else {
+    quotedBy = <QuotedNameNoAnchor>{saidBy}</QuotedNameNoAnchor>
+  }
+
   return (
     <Section
       style={{ paddingBottom: 0, paddingTop: 0 }}
-      backgroundColor={light ? colors.white :colors.lightgrey}
+      backgroundColor={light ? colors.white : colors.lightgrey}
       {...props}
     >
       <ContentWrapper>
@@ -55,15 +81,7 @@ export default function QuoteSection({ title, quote, saidBy, url, light, ...prop
           <Quote dark>
             {"\"" + quote + "\""}
           </Quote>
-          <QuoteName
-            target="_blank"
-            href={url}
-            style={{ 'pointerEvents': url ? 'unset' : 'none' }}
-            center
-            dark
-          >
-            {saidBy}
-          </QuoteName>
+          {quotedBy}
         </QuoteContainer>
       </ContentWrapper>
     </Section>
