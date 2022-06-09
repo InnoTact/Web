@@ -31,7 +31,7 @@ export default function WallpaperCompaniesLovingUs({ companies, title }) {
   `)
   return (
     <Section backgroundColor={colors.lightgrey}>
-      <ContentWrapper>
+      <ContentWrapper style={{ maxWidth: '90vw' }}>
         <SectionTop dark header={title} />
         <Container>
           {companies.map(c => {
@@ -53,14 +53,13 @@ function CompanyBlob({ children, text }) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: ${({ left }) => (left ? "flex-start" : "center")};
-    max-width: 550px;
     width: ${({ width }) => (width ? width + "px" : "unset")};
     margin: 2rem auto 0 auto;
     text-align: center;
   `
 
   return (
-    <Wrapper width={360}>
+    <Wrapper width={300}>
       {children}
       <Text center dark>
         {text}

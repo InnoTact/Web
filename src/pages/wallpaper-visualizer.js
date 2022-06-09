@@ -38,11 +38,6 @@ class WallpaperVisualizer extends Component {
           title={s.companies.title}
           companies={[
             {
-              text: s.companies.embellenceGroup,
-              url:
-                EmbellenceGroupLogo,
-            },
-            {
               text: s.companies.borastapeter,
               url:
                 "https://www.borastapeter.com/sites/borastapeter.com/themes/borastapeter/dist/images/logo.svg",
@@ -55,7 +50,7 @@ class WallpaperVisualizer extends Component {
             {
               text: s.companies.pj,
               url:
-                PJLogo,
+                "http://www.maison-deco.info/wp-content/uploads/2018/10/phillip-jeffries-logo.png",
             },
             {
               text: s.companies.bytTapet,
