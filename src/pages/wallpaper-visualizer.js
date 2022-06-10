@@ -14,6 +14,7 @@ import MultipleQuoteSection from "../components/MultipleQuoteSection"
 import ActionSection from "../components/ActionSection"
 import DetailedInfoSection from "../components/DetailedInfoSection"
 import FeatureGrid from "../components/FeatureGrid"
+import PlansAndPricing from "../components/PlansAndPricing"
 
 class WallpaperVisualizer extends Component {
   render() {
@@ -72,12 +73,13 @@ class WallpaperVisualizer extends Component {
           url={null}
           light={false}
         />
+        <PlansAndPricing light={true}></PlansAndPricing>
         <ActionSection
           title={s.takeAction.title}
           description={s.takeAction.description}
           btnText={s.takeAction.btnText}
           link={"/contact/#contact-form"}
-          dark={false}
+          dark={true}
         />
         <Footer />
       </React.Fragment>
