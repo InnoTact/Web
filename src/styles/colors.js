@@ -29,6 +29,7 @@ const colors = {
   lightdarkerGrey: '#efefef',
   mediumGrey: mediumGrey,
   gray: 'rgb(128, 131, 162)',
+  normalText: 'rgb(128, 131, 162)',
   mediumGreyLighten: lighten(0.5, mediumGrey),
   darkgrey: '#333333',
   green: '#3cba54',
