@@ -14,7 +14,7 @@ class PrivacyPolicy extends Component {
             <React.Fragment>
                 <CustomHelmet />
                 <Section backgroundColor={colors.lightgrey}>
-                    <ContentWrapper>
+                    <ContentWrapper maxWidth={null}>
                         <h1 style={{ color: colors.dark }} dark>Wonderwall AR by Boråstapeter > Privacy Policy</h1>
                         <Text dark>InnoTact Software built the Wonderwall AR by Boråstapeter app as a Free app. This SERVICE is provided by InnoTact Software at no cost and is intended for use as is.</Text>
 

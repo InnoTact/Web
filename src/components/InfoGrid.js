@@ -15,7 +15,7 @@ export default function InfoGrid({ title, infoCells, light }) {
 
   return (
     <Section backgroundColor={light ? colors.white : colors.lightgrey}>
-      <ContentWrapper>
+      <ContentWrapper maxWidth={null}>
         <SectionTop dark header={title} />
         <SolutionsContainer>
           {infoCells.map(cell => {

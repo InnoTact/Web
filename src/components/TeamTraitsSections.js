@@ -29,7 +29,7 @@ export default function TeamTraitsSections({ data }) {
 
   return (
     <Section backgroundColor={colors.lightgrey}>
-      <ContentWrapper>
+      <ContentWrapper maxWidth={null}>
         <div style={{ boxShadow: colors.normalBoxShadow }}>
           <Img
             alt="Team photo of InnoTact"

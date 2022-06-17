@@ -28,7 +28,7 @@ class ARAreasSection extends Component {
         backgroundColor={colors.white}
       >
         <React.Fragment>
-          <ContentWrapper>
+          <ContentWrapper maxWidth={null}>
             <SectionTop dark header={strings.title}>
               {strings.subTitle}
             </SectionTop>

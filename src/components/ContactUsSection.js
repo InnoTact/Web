@@ -53,7 +53,7 @@ export default function ContactUsSection() {
   return (
     <div>
       <Section id="contact-form" backgroundColor={colors.lightgrey}>
-        <ContentWrapper>
+        <ContentWrapper maxWidth={null}>
           <SectionTop dark header={strings.main.title}>
             {strings.main.subTitle}
           </SectionTop>

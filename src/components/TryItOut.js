@@ -18,7 +18,7 @@ export default function TryItOut({ title, children, light, ...props }) {
       backgroundColor={light ? colors.white : colors.lightgrey}
       {...props}
     >
-      <ContentWrapper>
+      <ContentWrapper maxWidth={null}>
         <SectionTop dark header={"Want to try it out?"}>
         <div style={{ textAlign: "center" }}>
           <DescText center dark>

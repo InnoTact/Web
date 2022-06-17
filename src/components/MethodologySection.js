@@ -20,7 +20,7 @@ export default function MethodologySection() {
 
   return (
     <Section backgroundColor={colors.lightgrey}>
-      <ContentWrapper>
+      <ContentWrapper maxWidth={null}>
         <SectionTop dark header={strings.title}>
           {strings.subTitle}
         </SectionTop>

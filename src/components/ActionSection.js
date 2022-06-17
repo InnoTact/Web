@@ -10,7 +10,7 @@ import { Link } from "gatsby"
 export default function ActionSection({ title, description, btnText, link, dark, ...props }) {
   return (
     <Section backgroundColor={dark ? colors.lightgrey : colors.white} {...props}>
-      <ContentWrapper>
+      <ContentWrapper maxWidth={null}>
         <SectionTop dark header={title}>
           {description}
         </SectionTop>

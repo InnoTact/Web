@@ -106,7 +106,7 @@ export default function DetailedInfoSection({
           }
           let innerMargin = lessThanLG ? 0 : halfInnerMargin
           return (
-            <ContentWrapper>
+            <ContentWrapper maxWidth={null}>
               <Container>
                 <SideContainer
                   style={{

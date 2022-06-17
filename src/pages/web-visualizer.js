@@ -30,7 +30,7 @@ class WebVisualizer extends Component {
         <Navbar light={false} />
         <Section backgroundColor={colors.white} style={{ marginTop: "3rem" }}
           light={true}>
-          <ContentWrapper>
+          <ContentWrapper maxWidth={null}>
             <SectionTop style={{ marginBottom: "2rem" }} dark h1 header={s.landing.productName}>
               {s.landing.shortPitch}
             </SectionTop>
@@ -128,7 +128,7 @@ function WebVisualizerDemo(props) {
 
   const { light, title, demos } = props;
   return <CustomSection backgroundColor={light ? colors.white : colors.lightgrey}>
-    <ContentWrapper>
+    <ContentWrapper maxWidth={null}>
       <Container>
 
         <Header dark

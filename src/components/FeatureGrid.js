@@ -18,7 +18,7 @@ export default function FeatureGrid({ features, title, light, ...props }) {
 
   return (
     <Section backgroundColor={light ? colors.white : colors.lightgrey} {...props}>
-      <ContentWrapper>
+      <ContentWrapper maxWidth={null}>
         <SectionTop dark header={title} />
         <Container>
           {features.map(f => {

@@ -75,7 +75,7 @@ export default function QuoteSection({ title, quote, saidBy, url, light, ...prop
       backgroundColor={light ? colors.white : colors.lightgrey}
       {...props}
     >
-      <ContentWrapper>
+      <ContentWrapper maxWidth={null}>
         <QuoteContainer>
           {title && <Header style={{ marginBottom: 0, display: 'block' }} dark text={title} />}
           <Quote dark>

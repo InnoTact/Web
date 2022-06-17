@@ -1,4 +1,4 @@
-import { lighten } from 'polished'
+import { lighten, rgb } from 'polished'
 
 const primary = '#216198' 
 const primaryHigher = '#ff9a00'
@@ -28,6 +28,8 @@ const colors = {
   lightgrey: '#f7f7f7',
   lightdarkerGrey: '#efefef',
   mediumGrey: mediumGrey,
+  gray: 'rgb(128, 131, 162)',
+  normalText: 'rgb(128, 131, 162)',
   mediumGreyLighten: lighten(0.5, mediumGrey),
   darkgrey: '#333333',
   green: '#3cba54',

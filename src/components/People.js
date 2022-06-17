@@ -20,7 +20,7 @@ export default ({ peopleImagesData }) => {
 
   return (
     <Section backgroundColor={colors.white}>
-      <ContentWrapper>
+      <ContentWrapper maxWidth={null}>
         <SectionTop dark header={strings.title}>
           {strings.subTitle}
         </SectionTop>

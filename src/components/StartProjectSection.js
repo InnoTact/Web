@@ -40,7 +40,7 @@ export default function StartProjectSection({ light }) {
 
   return (
     <Section backgroundColor={light ? colors.white : colors.lightgrey}>
-      <ContentWrapper>
+      <ContentWrapper maxWidth={null}>
         <SectionTop dark header={strings.title}>
           {strings.topSection}
         </SectionTop>

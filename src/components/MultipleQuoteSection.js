@@ -42,7 +42,7 @@ export default function MultipleQuoteSection({
       backgroundColor={light ? colors.white : colors.lightgrey}
       {...props}
     >
-      <ContentWrapper>
+      <ContentWrapper maxWidth={null}>
         <SectionTop dark header={title} />
         <ContentContainer>
           {quotes.map(q => {

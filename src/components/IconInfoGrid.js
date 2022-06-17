@@ -64,7 +64,7 @@ export default function IconInfoGrid({ title, iconCells, light }) {
 
   return (
     <Section backgroundColor={light ? colors.white : colors.lightgrey}>
-      <ContentWrapper>
+      <ContentWrapper maxWidth={null}>
         <SectionTop dark header={title} />
         <SolutionsContainer>
           {iconCells.map(cell => {
