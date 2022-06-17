@@ -36,6 +36,10 @@ export default function PlansAndPricing({ light }) {
     max-width: 1440px;
     margin: 0 auto;
     width: 98%;
+
+    @media (max-width: ${styles.breakpoints.lg + "px"}) {
+        width: 90%;
+    }
     `
     const CardTitle = styled.h4`
     
