@@ -23,9 +23,20 @@ export default function PlansAndPricing({ light }) {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 12px;
     margin-top: 2rem;
+
+    @media (max-width: ${styles.breakpoints.lg + "px"}) {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
   `
+    const CustomWrapper = styled.div`
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 98%;
+    `
     const CardTitle = styled.h4`
     
   `
@@ -64,7 +75,7 @@ export default function PlansAndPricing({ light }) {
 
     return (
         <Section backgroundColor={light ? colors.white : colors.lightgrey}>
-            <ContentWrapper maxWidth={'1440px'}>
+            <CustomWrapper>
                 <SectionTop dark header={"Plans and Pricing"}>
                     Help your customers make faster decisions, increase conversion, and reduce returns with the Wallpaper Visualizer. Even if you're a industry leader, a smaller company, or simply want to try it out, we got you covered.
                 </SectionTop>
@@ -94,12 +105,46 @@ export default function PlansAndPricing({ light }) {
                         features={appFeatures}
                     />
                 </MainContainer>
-            </ContentWrapper>
+            </CustomWrapper>
         </Section>
     )
 }
 
 function PlanCard({ color, title, description, price, priceDescription, features }) {
+    const PlanCard = styled.div`
+    padding: 2rem 3.3rem 2rem 3.3rem;
+    position: relative;
+    background-color: white;
+    box-shadow: ${colors.normalBoxShadow};
+    max-width: 500px;
+
+    @media (max-width: ${styles.breakpoints.sm + "px"}) {
+       padding: 1rem 1.65rem;
+       max-width: 440px;
+    }
+
+    @media (min-width: ${styles.breakpoints.lg + "px"}) {
+        max-width: 375px;
+        padding: 2rem 1.3rem 2rem 1.3rem;    
+    }
+
+    @media (min-width: ${"1500px"}) {
+        padding: 2rem 3.3rem 2rem 3.3rem;
+        max-width: 440px;  
+    }
+`
+const Title = styled(SubHeader)`
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 550;
+    margin-bottom: 1rem;
+    white-space: no-wrap;
+
+    @media (max-width: ${styles.breakpoints.sm + "px"}) {
+        margin-top: 1.2rem;    
+    }
+`
+
     const Price = styled.p`
     font-size: 1.4rem;
     font-weight: 500;
@@ -111,17 +156,6 @@ function PlanCard({ color, title, description, price, priceDescription, features
     font-size: 0.9rem;
     color: ${colors.normalText};
   `
-    const PlanCard = styled.div`
-    padding: 2rem 3.3rem 2rem 3.3rem;
-    position: relative;
-    background-color: white;
-    box-shadow: ${colors.normalBoxShadow};
-    max-width: 440px;
-
-    @media (max-width: ${styles.breakpoints.sm + "px"}) {
-    padding: 1rem 1.65rem;
-    }
-`
     const Description = styled(Text)`
         color: ${colors.normalText};
         min-height: 290px;
@@ -134,10 +168,10 @@ function PlanCard({ color, title, description, price, priceDescription, features
     return (
         <PlanCard>
             <span style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: color }}></span>
-            <SubHeader style={{ display: 'block', fontSize: '1.40rem', fontWeight: 550, marginBottom: '1rem' }} dark>{title}</SubHeader>
+            <Title dark>{title}</Title>
             {/* <Text dark center style={{ color: colors.normalText, minHeight: 290 }}>{description}</Text> */}
             <Description dark center>{description}</Description>
-            <div style={{ textAlign: 'center', marginBottom: 20 }}>
+            <div style={{ textAlign: 'center', marginBottom: '1.2rem' }}>
                 <Price>{price}</Price>
                 <PriceDescription>{priceDescription}</PriceDescription>
             </div>

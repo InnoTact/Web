@@ -11,7 +11,7 @@ const styles = {
         xs: 520,
         sm: 760, 
         md: 992,
-        lg: 1200
+        lg: 1200,
     }
 }
 
