@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const ContentWrapper = styled.div`
   width: 90%;
-  max-width: 1244px;
+  max-width: ${props => (props.maxWidth ? props.maxWidth : '1244px') };
   margin: 0 auto;
 `
 
