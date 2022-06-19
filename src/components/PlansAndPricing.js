@@ -50,7 +50,7 @@ export default function PlansAndPricing({ light }) {
         new Feature("Measurement tool", true),
         new Feature("Seamless web integration", true),
         new Feature("Maintenance & updates", true),
-        new Feature("10,000 user sessions per month", true)
+        new Feature("5000 user sessions per month", true)
     ]
     const premiumFeatures = [
         new Feature("AR Rendering Engine", true),
