@@ -186,7 +186,7 @@ export default {
         { number: "+382%", text: "increased conversion after using the tool", highlight: true },
         { number: "+10,000", text: "active users per month", highlight: false },
         { number: "+30,000", text: "papered walls per month", highlight: false },
-        { number: "+150,000", text: "impressions on AppStore", highlight: false },
+        { number: "+470,000", text: "impressions on AppStore", highlight: false },
         { number: "#4", text: "top rank in Sweden", highlight: false },
       ],
     },
