@@ -86,6 +86,7 @@ export default function PlansAndPricing({ light }) {
                 <MainContainer>
                     <PlanCard
                         title={'Standard – 1 month free trial'}
+                        subTitle={'Launching in August, sign-up available'}
                         color={colors.gray}
                         description={'Our newest offer is the the perfect way to get started with the Wallpaper Visualizer. It gives the full power of the AR wallpaper visualizer, seamless integration with your website, and you are live within days. Simply add your wallpapers in the admin interface to get started or integrate with a simple API.'}
                         price={'€499'}
@@ -94,6 +95,7 @@ export default function PlansAndPricing({ light }) {
                     />
                     <PlanCard
                         title={'Premium'}
+                        subTitle={'Launching in August, sign-up available'}
                         color={colors.primaryHighLighten}
                         description={'Perfect for mid-size or large businesses wanting to expand upon the Standard plan by getting a customized part of the platform with your branding and feel. Also get unlimited users, data analytics to guide business decisions, and ability to drive sales further with a checkout integration to your website.'}
                         price={'€999'}
@@ -102,6 +104,7 @@ export default function PlansAndPricing({ light }) {
                     />
                     <PlanCard
                         title={'Custom Apps'}
+                        subTitle={null}
                         color={colors.primary}
                         description={'With an iOS and Android app in your company name with AR wallpaper visualizer technology, you will revolutionize your customer experience. It will boost your marketing, increase sales, and has the ability to transform your business. We will custom-tailor the apps to your brand and unique requirements to help you reach your goals.'}
                         price={'Custom Pricing'}
@@ -114,7 +117,7 @@ export default function PlansAndPricing({ light }) {
     )
 }
 
-function PlanCard({ color, title, description, price, priceDescription, features }) {
+function PlanCard({ color, title, subTitle, description, price, priceDescription, features }) {
     const PlanCard = styled.div`
     padding: 2rem 3.3rem 2rem 3.3rem;
     position: relative;
@@ -141,7 +144,7 @@ const Title = styled(SubHeader)`
     display: block;
     font-size: 1.4rem;
     font-weight: 550;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
     white-space: no-wrap;
 
     @media (max-width: ${styles.breakpoints.sm + "px"}) {
@@ -162,7 +165,7 @@ const Title = styled(SubHeader)`
   `
     const Description = styled(Text)`
         color: ${colors.normalText};
-        min-height: 290px;
+        min-height: 0;
 
         @media (max-width: ${styles.breakpoints.lg + "px"}) {
             min-height: 0;
@@ -173,6 +176,7 @@ const Title = styled(SubHeader)`
         <PlanCard>
             <span style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: color }}></span>
             <Title dark>{title}</Title>
+            <Text center style={{ color: colors.gray, fontStyle: 'italic', fontSize: 16, marginBottom: '0.7rem' }}>{subTitle}</Text>
             {/* <Text dark center style={{ color: colors.normalText, minHeight: 290 }}>{description}</Text> */}
             <Description dark center>{description}</Description>
             <div style={{ textAlign: 'center', marginBottom: '1.2rem' }}>
