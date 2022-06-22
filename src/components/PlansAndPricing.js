@@ -50,15 +50,14 @@ export default function PlansAndPricing({ light }) {
         new Feature("Measurement tool", true),
         new Feature("Seamless web integration", true),
         new Feature("Maintenance & updates", true),
-        new Feature("5000 user sessions per month", true)
+        new Feature("15,000 included wallpaper renders per month, then €0.05 per additional render", true)
     ]
     const premiumFeatures = [
         new Feature("AR Rendering Engine", true),
         new Feature("Measurement tool", true),
         new Feature("Seamless web integration", true),
         new Feature("Maintenance & updates", true),
-        new Feature("Unlimited user sessions", true),
-        new Feature("Customized branding (colors, fonts, texts)", true),
+        new Feature("Unlimited users and renders", true),
         new Feature("Data analytics package", true),
         new Feature("Checkout and cart integration to website", true),
     ]
@@ -89,6 +88,7 @@ export default function PlansAndPricing({ light }) {
                         subTitle={'Launching in August, sign-up available'}
                         color={colors.gray}
                         description={'Our newest offer is the the perfect way to get started with the Wallpaper Visualizer. It gives the full power of the AR wallpaper visualizer, seamless integration with your website, and you are live within days. Simply add your wallpapers in the admin interface to get started or integrate with a simple API.'}
+                        startupFee={'No setup fee'}
                         price={'€499'}
                         priceDescription={'/ month after 1 month free trial'}
                         features={standardFeatures}
@@ -97,7 +97,8 @@ export default function PlansAndPricing({ light }) {
                         title={'Premium'}
                         subTitle={'Launching in August, sign-up available'}
                         color={colors.primaryHighLighten}
-                        description={'Perfect for mid-size or large businesses wanting to expand upon the Standard plan by getting a customized part of the platform with your branding and feel. Also get unlimited users, data analytics to guide business decisions, and ability to drive sales further with a checkout integration to your website.'}
+                        description={'Perfect for mid-size or large businesses wanting to expand upon the Standard plan by getting a customized part of the platform with your branding and feel. Also get unlimited renders, data analytics to guide business decisions, and ability to drive sales further with a checkout integration to your website.'}
+                        startupFee={'No setup fee'}
                         price={'€999'}
                         priceDescription={'/ month'}
                         features={premiumFeatures}
@@ -107,6 +108,7 @@ export default function PlansAndPricing({ light }) {
                         subTitle={null}
                         color={colors.primary}
                         description={'With an iOS and Android app in your company name with AR wallpaper visualizer technology, you will revolutionize your customer experience. It will boost your marketing, increase sales, and has the ability to transform your business. We will custom-tailor the apps to your brand and unique requirements to help you reach your goals.'}
+                        startupFee={null}
                         price={'Custom Pricing'}
                         priceDescription={''}
                         features={appFeatures}
@@ -117,7 +119,7 @@ export default function PlansAndPricing({ light }) {
     )
 }
 
-function PlanCard({ color, title, subTitle, description, price, priceDescription, features }) {
+function PlanCard({ color, title, subTitle, description, startupFee, price, priceDescription, features }) {
     const PlanCard = styled.div`
     padding: 2rem 3.3rem 2rem 3.3rem;
     position: relative;
@@ -140,7 +142,7 @@ function PlanCard({ color, title, subTitle, description, price, priceDescription
         max-width: 440px;  
     }
 `
-const Title = styled(SubHeader)`
+    const Title = styled(SubHeader)`
     display: block;
     font-size: 1.4rem;
     font-weight: 550;
@@ -177,9 +179,9 @@ const Title = styled(SubHeader)`
             <span style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: color }}></span>
             <Title dark>{title}</Title>
             <Text center style={{ color: colors.gray, fontStyle: 'italic', fontSize: 16, marginBottom: '0.7rem' }}>{subTitle}</Text>
-            {/* <Text dark center style={{ color: colors.normalText, minHeight: 290 }}>{description}</Text> */}
             <Description dark center>{description}</Description>
             <div style={{ textAlign: 'center', marginBottom: '1.2rem' }}>
+                {startupFee != null ? <span><Price>{startupFee}</Price><br/></span> : null}
                 <Price>{price}</Price>
                 <PriceDescription>{priceDescription}</PriceDescription>
             </div>
