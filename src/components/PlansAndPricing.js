@@ -87,7 +87,7 @@ export default function PlansAndPricing({ light }) {
                         title={'Standard – 1 month free trial'}
                         subTitle={'Launching in August, sign-up available'}
                         color={colors.gray}
-                        description={'Our newest offer is the the perfect way to get started with the Wallpaper Visualizer. It gives the full power of the AR wallpaper visualizer, seamless integration with your website, and you are live within days. Simply add your wallpapers in the admin interface to get started or integrate with a simple API.'}
+                        description={'The perfect way to get started with the Wallpaper Visualizer. It gives the full power of the AR wallpaper visualizer, seamless integration with your website, and you are live within days. Simply add your wallpapers in the admin interface to get started or integrate with a simple API.'}
                         startupFee={'No setup fee'}
                         price={'€499'}
                         priceDescription={'/ month after 1 month free trial'}
@@ -97,7 +97,7 @@ export default function PlansAndPricing({ light }) {
                         title={'Premium'}
                         subTitle={'Launching in August, sign-up available'}
                         color={colors.primaryHighLighten}
-                        description={'Perfect for mid-size or large businesses wanting to expand upon the Standard plan by getting a customized part of the platform with your branding and feel. Also get unlimited renders, data analytics to guide business decisions, and ability to drive sales further with a checkout integration to your website.'}
+                        description={'Ideal for mid-size or large businesses wanting to expand upon the Standard plan with unlimited users and renders, checkout integration, data analytics to guide business decisions, and ability to drive sales further with a checkout integration to your website.'}
                         startupFee={'No setup fee'}
                         price={'€999'}
                         priceDescription={'/ month'}
