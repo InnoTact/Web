@@ -90,6 +90,7 @@ export default function PlansAndPricing({ light }) {
                         description={'The perfect way to get started with the Wallpaper Visualizer. It gives the full power of the AR wallpaper visualizer, seamless integration with your website, and you are live within days. Simply add your wallpapers in the admin interface to get started or integrate with a simple API.'}
                         startupFee={'No setup fee'}
                         price={'€499'}
+                        customPricing={false}
                         priceDescription={'/ month after 1 month free trial'}
                         features={standardFeatures}
                     />
@@ -100,6 +101,7 @@ export default function PlansAndPricing({ light }) {
                         description={'Ideal for mid-size or large businesses wanting to expand upon the Standard plan with unlimited users and renders, checkout integration, data analytics to guide business decisions, and ability to drive sales further with a checkout integration to your website.'}
                         startupFee={'No setup fee'}
                         price={'€999'}
+                        customPricing={false}
                         priceDescription={'/ month'}
                         features={premiumFeatures}
                     />
@@ -110,6 +112,7 @@ export default function PlansAndPricing({ light }) {
                         description={'With an iOS and Android app in your company name with AR wallpaper visualizer technology, you will revolutionize your customer experience. It will boost your marketing, increase sales, and has the ability to transform your business. We will custom-tailor the apps to your brand and unique requirements to help you reach your goals.'}
                         startupFee={null}
                         price={'Custom Pricing'}
+                        customPricing={true}
                         priceDescription={''}
                         features={appFeatures}
                     />
@@ -119,7 +122,7 @@ export default function PlansAndPricing({ light }) {
     )
 }
 
-function PlanCard({ color, title, subTitle, description, startupFee, price, priceDescription, features }) {
+function PlanCard({ color, title, subTitle, description, startupFee, price, customPricing, priceDescription, features }) {
     const PlanCard = styled.div`
     padding: 2rem 3.3rem 2rem 3.3rem;
     position: relative;
@@ -159,7 +162,11 @@ function PlanCard({ color, title, subTitle, description, startupFee, price, pric
     font-weight: 500;
     color: ${colors.dark};
     display: inline-block;
-    margin-bottom: 0;
+    margin-bottom: ${customPricing ? "20px" : 0};
+
+    @media (max-width: ${styles.breakpoints.lg + "px"}) {
+        margin-bottom: 0;
+    }
   `
     const PriceDescription = styled.span`
     font-size: 0.9rem;
@@ -167,7 +174,7 @@ function PlanCard({ color, title, subTitle, description, startupFee, price, pric
   `
     const Description = styled(Text)`
         color: ${colors.normalText};
-        min-height: 0;
+        min-height: 235px;
 
         @media (max-width: ${styles.breakpoints.lg + "px"}) {
             min-height: 0;
