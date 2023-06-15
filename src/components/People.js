@@ -78,16 +78,30 @@ export default ({ peopleImagesData }) => {
             linkedin="https://www.linkedin.com/in/melker-veltman/"
           />
           <PeopleCard
-            name="Fredrik Hernqvist"
+            name="Lorenzo Björck"
             image={
               peopleImagesData
-                ? peopleImagesData.FredrikImage.childImageSharp.fixed
+                ? peopleImagesData.LorenzoImage.childImageSharp.fixed
                 : ""
             }
-            position={strings.fredrik.position}
-            town={strings.fredrik.city}
-            text={strings.fredrik.description}
-            linkedin="https://www.linkedin.com/in/fredrik-hernqvist-529479104/"
+            position={strings.lorenzo.position}
+            town={strings.lorenzo.city}
+            text={strings.lorenzo.description}
+            email="lorenzo@innotactsoftware.com"
+            linkedin="https://www.linkedin.com/in/lorenzo-björck/"
+          />
+          <PeopleCard
+            name="Jacob Cahn"
+            image={
+              peopleImagesData
+                ? peopleImagesData.JacobImage.childImageSharp.fixed
+                : ""
+            }
+            position={strings.jacob.position}
+            town={strings.jacob.city}
+            text={strings.jacob.description}
+            email="jacob@innotactsoftware.com"
+            linkedin="https://www.linkedin.com/in/jacobcahn/"
           />
         </PeopleContainer>
       </ContentWrapper>

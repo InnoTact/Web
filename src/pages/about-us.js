@@ -50,21 +50,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    NiklasImage: file(relativePath: { eq: "Niklas_Gustafsson.jpg" }) {
-      childImageSharp {
-        fixed(width: 300, height: 300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     AntonImage: file(relativePath: { eq: "Anton_Claesson.jpg" }) {
-      childImageSharp {
-        fixed(width: 300, height: 300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    CasperImage: file(relativePath: { eq: "Casper_Lindberg.jpg" }) {
       childImageSharp {
         fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed
@@ -93,6 +79,20 @@ export const pageQuery = graphql`
       }
     }
     MelkerImage: file(relativePath: { eq: "Melker_Veltman.jpg" }) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    LorenzoImage: file(relativePath: { eq: "Lorenzo_Bjorck.jpg" }) {
+      childImageSharp {
+        fixed(width: 300, height: 300) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    JacobImage: file(relativePath: { eq: "Jacob_Cahn.jpg" }) {
       childImageSharp {
         fixed(width: 300, height: 300) {
           ...GatsbyImageSharpFixed

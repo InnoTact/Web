@@ -33,6 +33,18 @@ export default {
       description:
         "As InnoTacts primary responsible for the backend, Melker lays the technical foundation necessary for us to revolutionize existing and new industries. With his bachelor degree in software engineering from Chalmers and several years of experience within the field, Melker has what it takes to shoulder that responsibility.",
     },
+    jacob: {
+      position: "COO",
+      city: "Gothenbug, Sweden",
+      description:
+        "As COO, Jacob is responsible for business development at InnoTact. This includes everything from customer relations and satisfaction to growth and strategy. Jacob holds an M.Sc. in Industrial Engineering and Management and has experience in running tech-startups. As a business developer he is social and outgoing, and as a generalist he is not the best person to ask, but a pretty good person to ask about anything.",
+    },
+    lorenzo: {
+      position: "CCO",
+      city: "Gothenbug, Sweden",
+      description:
+        "As the company’s CCO, Lorenzo keeps in contact with the customers and together with Jacob he is responsible business development. Lorenzo holds a M. Sc. in Industrial Engineering and Management from Chalmers University of Technology and has experience from management consulting. For questions regarding opportunities on how your company could benefit from collaborating with Innotact, Lorenzo is the right person to ask.",
+    },
   },
   sv: {
     title: "Teamet",
@@ -67,6 +79,18 @@ export default {
       city: "Göteborg, Sverige",
       description:
         "Som företagets främsta backend-ansvarig lägger Melker den tekniska grunden för att InnoTact ska fortsätta revolutionera befintliga och nya branscher. Med sin IT kandidat från Chalmers och flera års erfarenhet som backendutvecklare har Melker det som krävs för att axla det ansvaret.",
+    },
+    jacob: {
+      position: "COO",
+      city: "Göteborg, Sverige",
+      description:
+        "Som COO ansvarar Jacob för affärsutvecklingen inom InnoTact. Detta inkluderar allt från kundkontakt och kundnöjdhet till tillväxt och strategi. Jacob är civilingenjör i industriell ekonomi och har erfarenhet av att driva tech-startups. Som affärsutvecklare är han social och utåtriktad och som generalist är han inte den bästa personen att fråga, men en ganska bra person att fråga om vad som helst.",
+    },
+    lorenzo: {
+      position: "CCO",
+      city: "Göteborg, Sverige",
+      description:
+        "Som företagets CCO håller Lorenzo kontakt med kunderna och tillsammans med Jacob ansvarar han för affärsutveckling. Lorenzo har en M. Sc. i Industriell Teknik och Management från Chalmers Tekniska Högskola och har erfarenhet från managementkonsulting. För frågor om möjligheter om hur ditt företag kan dra nytta av att samarbeta med Innotact är Lorenzo rätt person att fråga.",
     },
   },
 }
